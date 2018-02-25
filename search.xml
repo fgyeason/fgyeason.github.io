@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[Sublime Text3 快捷键]]></title>
+    <url>%2Fsublime%E5%BF%AB%E6%8D%B7%E9%94%AE%2F</url>
+    <content type="text"><![CDATA[选择类Ctrl + D 选择单文本 Alt + F3 选中文件所有相同文本 Ctrl + L 选中整行 Ctrl + shift + M 选中括号中文本（与搜狗有热键冲突） Ctrl + M 光标移动结束或开始位置 Ctrl + Enter 在下一行插入新行 Ctrl + Shift + Enter 在上一行插入新行 Ctrl + Shift + [ 选中，折叠代码 Ctrl + Shift + ] 选中，展开代码 Ctrl + K + 0 展开所有折叠代码 Ctrl + ←/→ 快速移动光标 shift + ↑/↓ 向上/向下选中多行 Shift + ←/→ 向左/向右选中文本 Ctrl + Shift + ←/→ 向左/向右快速选择文本 编辑类Ctrl + J 合并多行代码为一行 Ctrl + Shift + D 复制整行，插入到下一行 Tab 向右缩进 &amp; Shift + Tab 向左缩进 Ctrl + K + K 从光标处开始删除代码至行尾。 Ctrl + Shift + K 删除整行。 Ctrl + / 注释单行。 Ctrl + Shift + / 注释多行。 Ctrl + K + U/L 转换大/小写。 Ctrl + Z 撤销 Ctrl + Y 恢复撤销 Ctrl + F2 设置书签 Ctrl + T 左右字母互换。 F6 单词检测拼写 搜索类Ctrl + F 文件内搜索 Ctrl + shift + F 文件夹内搜索 Ctrl + P 按类别搜索。举个栗子：1、输入当前项目中的文件名；快速搜索文件，2、输入@和关键字，查找文件中函数名；3、输入：和数字，跳转到文件中该行代码，4、输入#和关键字，查找变量名。 Ctrl + G 数字定位搜索 Ctrl + R 函数定位搜索 Ctrl + ： 变量、属性名定位搜索 Ctrl + Shift + P 打开命令框。场景栗子：打开命名框，输入关键字，调用sublime text或插件的功能，例如使用package安装插件。 显示类Ctrl + Tab 按浏览顺序切换窗口 Ctrl + PageDown 向左切换当前窗口的标签页 Ctrl + PageUp 向右切换当前窗口的标签页。 Alt + Shift + “1/2/3” 分屏 Ctrl + K + B 开启/关闭侧边栏。 F11 全屏模式 Shift + F11 免打扰模式]]></content>
+      <categories>
+        <category>指令</category>
+      </categories>
+      <tags>
+        <tag>sublime</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+      <categories>
+        <category>网页配置</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+</search>
