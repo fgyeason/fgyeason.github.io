@@ -3,16 +3,35 @@
 
 
     
+  <url>
+    <loc>http://yoursite.com/window%E4%B8%8A%E5%80%BC%E5%BE%97%E6%8E%A8%E8%8D%90%E7%9A%84%E5%B7%A5%E5%85%B7/</loc>
+    <lastmod>2018-02-26T16:08:03.894Z</lastmod>
+    <data>
+        <display>
+        <title>windows上值得推荐的工具</title>
+        <pubTime>2018-02-26T13:36:19.428Z</pubTime>
+        
+        <tag>效率</tag>
+         
+         
+           
+             
+              <breadCrumb title="工具" url="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7/"/>
+          
+        </display>
+    </data>
+    </url>
+
     
   <url>
     <loc>http://yoursite.com/hello-world/</loc>
-    <lastmod>2018-02-22T10:58:05.794Z</lastmod>
+    <lastmod>2018-02-25T13:11:14.319Z</lastmod>
     <data>
         <display>
         <title>Hello World</title>
         <pubTime>2018-02-16T15:20:02.641Z</pubTime>
         
-        <tag>hexo</tag>
+        <tag>HEXO</tag>
          
          
            
@@ -23,6 +42,7 @@
     </data>
     </url>
 
+    
     
   <url>
     <loc>http://yoursite.com/sublime%E5%BF%AB%E6%8D%B7%E9%94%AE/</loc>
