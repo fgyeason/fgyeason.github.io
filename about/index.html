@@ -87,17 +87,14 @@
 
 
 
-<meta name="description" content="追随本心">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Frank&#39;s Blog">
 <meta property="og:url" content="http://yoursite.com/about/index.html">
 <meta property="og:site_name" content="Frank&#39;s Blog">
-<meta property="og:description" content="追随本心">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:updated_time" content="2018-02-24T06:51:42.119Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Frank&#39;s Blog">
-<meta name="twitter:description" content="追随本心">
 
 
 
@@ -107,7 +104,7 @@
     root: '/',
     scheme: 'Muse',
     version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":true},
     fancybox: true,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
@@ -203,7 +200,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
             
-            关于
+            关于作者
           </a>
         </li>
       
@@ -278,7 +275,7 @@
     </div>
   
 </nav>
-
+<script src="https://cdn.bootcss.com/aplayer/1.6.0/APlayer.min.js"></script>
 
 
  </div>
@@ -348,6 +345,8 @@
   </div>
   <aside id="sidebar" class="sidebar">
     
+      <div id="sidebar-dimmer"></div>
+    
     <div class="sidebar-inner">
 
       
@@ -363,7 +362,7 @@
                 alt="FGY" />
             
               <p class="site-author-name" itemprop="name">FGY</p>
-              <p class="site-description motion-element" itemprop="description">追随本心</p>
+              <p class="site-description motion-element" itemprop="description"></p>
           </div>
 
           <nav class="site-state motion-element">
@@ -453,11 +452,7 @@
               <ul class="links-of-blogroll-list">
                 
                   <li class="links-of-blogroll-item">
-                    <a href="http://www.199it.com" title="199IT" target="_blank">199IT</a>
-                  </li>
-                
-                  <li class="links-of-blogroll-item">
-                    <a href="https://www.kaggle.com" title="Kaggle" target="_blank">Kaggle</a>
+                    <a href="https://zh.wikipedia.org/wiki/%E9%A6%96%E9%A1%B5" title="维基百科" target="_blank">维基百科</a>
                   </li>
                 
                   <li class="links-of-blogroll-item">
@@ -473,15 +468,15 @@
                   </li>
                 
                   <li class="links-of-blogroll-item">
-                    <a href="https://zh.wikipedia.org/wiki/%E9%A6%96%E9%A1%B5" title="维基百科" target="_blank">维基百科</a>
-                  </li>
-                
-                  <li class="links-of-blogroll-item">
                     <a href="https://sspai.com/?utm_source=infinitynewtab" title="少数派" target="_blank">少数派</a>
                   </li>
                 
                   <li class="links-of-blogroll-item">
-                    <a href="https://www.liaoxuefeng.com/" title="廖大" target="_blank">廖大</a>
+                    <a href="http://www.199it.com" title="199IT" target="_blank">199IT</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.kaggle.com" title="Kaggle" target="_blank">Kaggle</a>
                   </li>
                 
                   <li class="links-of-blogroll-item">
@@ -496,25 +491,17 @@
                     <a href="https://readthedocs.org/" title="readthedocs" target="_blank">readthedocs</a>
                   </li>
                 
-                  <li class="links-of-blogroll-item">
-                    <a href="https://www.zybuluo.com/mdeditor?url=https%3A%2F%2Fwww.zybuluo.com%2Fstatic%2Feditor%2Fmd-help.markdown" title="markdown" target="_blank">markdown</a>
-                  </li>
-                
               </ul>
             </div>
           
 
           
-
         </div>
       </section>
 
       
 
-      <div id="music163player">
-          <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=280 height=330 src="//music.163.com/outchain/player?type=0&id=2107908461&auto=1&height=430">
-          </iframe>
-      </div>
+
 
       
 
@@ -573,7 +560,7 @@
 <!--
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共1.7k字</span>
+  <span class="post-count">博客全站共1.8k字</span>
 </div>
 -->
 
@@ -599,6 +586,12 @@
       </div>
     
 
+    
+      <div id="needsharebutton-float">
+        <span class="btn">
+          <i class="fa fa-share-alt" aria-hidden="true"></i>
+        </span>
+      </div>
     
 
   </div>
@@ -1166,6 +1159,29 @@
 
   
   
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+
+  <script>
+    
+    
+      flOptions = {};
+      
+          flOptions.iconStyle = "box";
+      
+          flOptions.boxForm = "horizontal";
+      
+          flOptions.position = "middleRight";
+      
+          flOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-float', flOptions);
+    
+  </script>
 
   
 
@@ -1173,7 +1189,9 @@
 
   
 
+  
 
+<!-- -->
   
   <!-- custom analytics part create by xiamo -->
 <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>

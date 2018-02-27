@@ -4,19 +4,44 @@
 
     
   <url>
-    <loc>http://yoursite.com/windows%E4%B8%8A%E5%80%BC%E5%BE%97%E6%8E%A8%E8%8D%90%E7%9A%84%E5%B7%A5%E5%85%B7/</loc>
-    <lastmod>2018-02-26T17:01:42.134Z</lastmod>
+    <loc>http://yoursite.com/%E4%BC%98%E9%9B%85%E9%AB%98%E6%95%88%E5%9C%B0%E4%BD%BF%E7%94%A8windows/</loc>
+    <lastmod>2018-02-27T14:36:01.654Z</lastmod>
     <data>
         <display>
-        <title>windows上值得推荐的工具</title>
+        <title>优雅高效地使用windows</title>
         <pubTime>2018-02-26T13:36:19.428Z</pubTime>
         
-        <tag>效率</tag>
+        <tag>Windows</tag>
+         
+        <tag>chrome</tag>
          
          
            
              
-              <breadCrumb title="工具" url="http://yoursite.com/categories/%E5%B7%A5%E5%85%B7/"/>
+              <breadCrumb title="Software" url="http://yoursite.com/categories/Software/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+    
+    
+  <url>
+    <loc>http://yoursite.com/sublime%E5%BF%AB%E6%8D%B7%E9%94%AE/</loc>
+    <lastmod>2018-02-27T04:41:18.415Z</lastmod>
+    <data>
+        <display>
+        <title>Sublime Text3 快捷键</title>
+        <pubTime>2018-02-22T07:11:51.808Z</pubTime>
+        
+        <tag>Sublime</tag>
+         
+         
+           
+             
+              <breadCrumb title="编辑器" url="http://yoursite.com/categories/%E7%BC%96%E8%BE%91%E5%99%A8/"/>
           
         </display>
     </data>
@@ -44,25 +69,7 @@
 
     
     
-  <url>
-    <loc>http://yoursite.com/sublime%E5%BF%AB%E6%8D%B7%E9%94%AE/</loc>
-    <lastmod>2018-02-22T10:36:27.717Z</lastmod>
-    <data>
-        <display>
-        <title>Sublime Text3 快捷键</title>
-        <pubTime>2018-02-22T07:11:51.808Z</pubTime>
-        
-        <tag>sublime</tag>
-         
-         
-           
-             
-              <breadCrumb title="指令" url="http://yoursite.com/categories/%E6%8C%87%E4%BB%A4/"/>
-          
-        </display>
-    </data>
-    </url>
-
+    
     
     
 </urlset>
