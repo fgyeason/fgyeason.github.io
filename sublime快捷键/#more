@@ -90,7 +90,7 @@
 <meta name="keywords" content="Sublime">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Sublime Text3 快捷键">
-<meta property="og:url" content="http://frankblog.site/sublime快捷键/index.html">
+<meta property="og:url" content="http://frankblog.site/sublime快捷键/#more">
 <meta property="og:site_name" content="Frank&#39;s Blog">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://i.loli.net/2018/02/22/5a8e9d17ab4cd.jpg">
@@ -127,7 +127,7 @@
 
 
 
-  <link rel="canonical" href="http://frankblog.site/sublime快捷键/"/>
+  <link rel="canonical" href="http://frankblog.site/sublime快捷键/#more"/>
 
 
 
@@ -304,7 +304,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://frankblog.site/sublime快捷键/">
+    <link itemprop="mainEntityOfPage" href="http://frankblog.site/sublime快捷键/#more">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="FGY">
@@ -388,7 +388,7 @@
 
           
           
-             <span id="/sublime快捷键/" class="leancloud_visitors" data-flag-title="Sublime Text3 快捷键">
+             <span id="/sublime快捷键/#more" class="leancloud_visitors" data-flag-title="Sublime Text3 快捷键">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -553,7 +553,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://frankblog.site/sublime快捷键/" title="Sublime Text3 快捷键">http://frankblog.site/sublime快捷键/</a>
+    <a href="http://frankblog.site/sublime快捷键/#more" title="Sublime Text3 快捷键">http://frankblog.site/sublime快捷键/#more</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -581,7 +581,7 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/hello-world/" rel="next" title="Hello World">
+              <a href="/hello-world/#more" rel="next" title="Hello World">
                 <i class="fa fa-chevron-left"></i> Hello World
               </a>
             
@@ -591,7 +591,7 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/优雅高效地使用windows/" rel="prev" title="优雅高效地使用windows">
+              <a href="/优雅高效地使用windows/#more" rel="prev" title="优雅高效地使用windows">
                 优雅高效地使用windows <i class="fa fa-chevron-right"></i>
               </a>
             
