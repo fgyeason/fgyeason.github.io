@@ -1,4 +1,4 @@
-(function ($) {
+<script src="\assets\js\APlayer.min.js"> </script>(function ($) {
     // Settings
     var isShowNotification = false,
         isInitMarquee = true,

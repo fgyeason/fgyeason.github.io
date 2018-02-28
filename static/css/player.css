@@ -1,4 +1,4 @@
-#QPlayer {
+<script src="\assets\js\APlayer.min.js"> </script>#QPlayer {
 	position:fixed;
 	overflow:hidden;
 	bottom:62px;
