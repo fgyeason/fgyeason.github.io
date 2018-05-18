@@ -4,8 +4,30 @@
 
     
   <url>
+    <loc>http://frankblog.site/2018/05/18/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80/</loc>
+    <lastmod>2018-05-18T06:35:00.323Z</lastmod>
+    <data>
+        <display>
+        <title>机器学习基础（一）</title>
+        <pubTime>2018-05-18T04:57:16.128Z</pubTime>
+        
+        <tag>机器学习</tag>
+         
+        <tag>深度学习</tag>
+         
+         
+           
+             
+              <breadCrumb title="机器学习" url="http://frankblog.site/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://frankblog.site/2018/04/08/git%E5%AD%A6%E4%B9%A0/</loc>
-    <lastmod>2018-04-08T04:38:32.930Z</lastmod>
+    <lastmod>2018-04-16T04:13:39.531Z</lastmod>
     <data>
         <display>
         <title>Git学习</title>
