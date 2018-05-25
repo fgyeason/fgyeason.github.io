@@ -139,7 +139,7 @@
 <meta property="og:image" content="http://p4rlzrioq.bkt.clouddn.com/overfitting.jpg">
 <meta property="og:image" content="http://p4rlzrioq.bkt.clouddn.com/%E5%87%86%E4%B8%8E%E7%A1%AE.jpeg">
 <meta property="og:image" content="http://p4rlzrioq.bkt.clouddn.com/machine%20learning%20funny.jpg">
-<meta property="og:updated_time" content="2018-05-25T08:28:03.826Z">
+<meta property="og:updated_time" content="2018-05-25T09:11:26.795Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="机器学习基础（一）">
 <meta name="twitter:image" content="http://p4rlzrioq.bkt.clouddn.com/machine-learning-algorithms.jpg">
@@ -397,7 +397,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-05-25T16:28:03+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-05-25T17:11:26+08:00">
                 2018-05-25
               </time>
             
@@ -451,7 +451,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  6,480 字  
+                  6,501 字  
                 </span>
               
 
@@ -568,7 +568,8 @@
 <li>条件熵H(X|Y)度量了我们在知道Y以后X剩下的不确定性，那么H(X)-H(X|Y)呢？从上面的描述大家可以看出，它度量了X在知道Y以后不确定性减少程度，这个度量我们在信息论中称为互信息，，记为I(X,Y)。在决策树ID3算法中叫做信息增益。</li>
 <li>用下面这个图很容易明白他们的关系。左边的椭圆代表H(X),右边的椭圆代表H(Y),中间重合的部分就是我们的互信息或者信息增益I(X,Y), 左边的椭圆去掉重合部分就是H(X|Y),右边的椭圆去掉重合部分就是H(Y|X)。两个椭圆的并就是H(X,Y)。<br><img src="http://p4rlzrioq.bkt.clouddn.com/%E6%9D%A1%E4%BB%B6%E7%86%B5.png" alt=""></li>
 </ol>
-<h2 id="决策树构建中的分裂准则"><a href="#决策树构建中的分裂准则" class="headerlink" title="决策树构建中的分裂准则"></a>决策树构建中的分裂准则</h2><h3 id="信息增益（information-gain）"><a href="#信息增益（information-gain）" class="headerlink" title="信息增益（information gain）"></a><strong>信息增益（information gain）</strong></h3><p>属性划分减少的信息熵，信息熵是度量样本集合纯度的一种指标，假设第k类样本所占比例为pk，则数据集D的信息熵为：Ent(D)=-∑pklogpk，Ent(D)越小，D的纯度越高。 Gain(D,a)=Ent(D)-∑(Dv/D*Ent(Dv))，Dv是某个属性a的某个可能取值的样本集合</p>
+<h2 id="决策树构建中的分裂准则"><a href="#决策树构建中的分裂准则" class="headerlink" title="决策树构建中的分裂准则"></a>决策树构建中的分裂准则</h2><p>决策树可以通过一系列规则递归地分割特征空间</p>
+<h3 id="信息增益（information-gain）"><a href="#信息增益（information-gain）" class="headerlink" title="信息增益（information gain）"></a><strong>信息增益（information gain）</strong></h3><p>属性划分减少的信息熵，信息熵是度量样本集合纯度的一种指标，假设第k类样本所占比例为pk，则数据集D的信息熵为：Ent(D)=-∑pklogpk，Ent(D)越小，D的纯度越高。 Gain(D,a)=Ent(D)-∑(Dv/D*Ent(Dv))，Dv是某个属性a的某个可能取值的样本集合</p>
 <h3 id="增益率（gain-ratio）"><a href="#增益率（gain-ratio）" class="headerlink" title="增益率（gain ratio）"></a><strong>增益率（gain ratio）</strong></h3><p>信息增益准则对可取值数目较多的属性有偏好，为减少这种偏好的不利影响，使用增益率选择最优划分属性，增益率定义为:Gain_ratio(D,a)=Gain(D,a)/IV(a), IV(a)=-∑(Dv/D*log(Dv/D))，IV(a)称为为a的固有值。属性可能取值数目越多，IV(a)的值越大，增益率即增益/固有值。</p>
 <h3 id="基尼指数-Gini-index"><a href="#基尼指数-Gini-index" class="headerlink" title="基尼指数(Gini index)"></a><strong>基尼指数(Gini index)</strong></h3><p>基尼指数是另外一种数据的不纯度的度量方法，其定义如下：<br><img src="http://p4rlzrioq.bkt.clouddn.com/gini%E7%B3%BB%E6%95%B01.jpg" alt="">　　<br>其中的m仍然表示数据集D中类别C的个数，Pi表示D中任意一个记录属于Ci的概率，计算时Pi=(D中属于Ci类的集合的记录个数/|D|)。如果所有的记录都属于同一个类中，则P1=1，Gini(D)=0，此时不纯度最低。<br>在CART(Classification and Regression Tree)算法中利用基尼指数构造二叉决策树，对每个属性都会枚举其属性的非空真子集，以属性R分裂后的基尼系数为：<br><img src="http://p4rlzrioq.bkt.clouddn.com/%E5%9F%BA%E5%B0%BC%E7%B3%BB%E6%95%B02.jpg" alt=""><br>D1为D的一个非空真子集，D2为D1在D的补集，即D1+D2=D，对于属性R来说，有多个真子集，即GiniR(D)有多个值，但我们选取最小的那么值作为R的基尼指数。最后：<br><img src="http://p4rlzrioq.bkt.clouddn.com/%E5%9F%BA%E5%B0%BC%E7%B3%BB%E6%95%B03.jpg" alt=""><br>对于二类分类，基尼系数和熵之半的曲线如下：<br><img src="https://upload-images.jianshu.io/upload_images/40658-24f62052d3f57559.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700" alt="link"><br>从上图可以看出，基尼系数和熵之半的曲线非常接近，仅仅在45度角附近误差稍大。因此，基尼系数可以做为熵模型的一个近似替代</p>
 <h2 id="常用决策树模型"><a href="#常用决策树模型" class="headerlink" title="常用决策树模型"></a>常用决策树模型</h2><h3 id="决策树模型总结"><a href="#决策树模型总结" class="headerlink" title="决策树模型总结"></a>决策树模型总结</h3><table>
@@ -969,15 +970,9 @@
                   </span>
                 
                   <span class="links-of-author-item">
-                    <a href="https://stackoverflow.com/users/9321624/gy-fgy" target="_blank" title="StackOverflow">
+                    <a href="https://www.kaggle.com/fgy0303" target="_blank" title="Kaggle">
                       
-                        <i class="fa fa-fw fa-stack-overflow"></i>StackOverflow</a>
-                  </span>
-                
-                  <span class="links-of-author-item">
-                    <a href="mailto:fgy0303@gmail.com" target="_blank" title="E-Mail">
-                      
-                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                        <i class="fa fa-fw fa-spinner"></i>Kaggle</a>
                   </span>
                 
             </div>
@@ -997,7 +992,39 @@
               <ul class="links-of-blogroll-list">
                 
                   <li class="links-of-blogroll-item">
+                    <a href="https://www.lfd.uci.edu/~gohlke/pythonlibs/#wordcloud" title="py_whl" target="_blank">py_whl</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://public.tableau.com/en-us/s/gallery" title="Tableau" target="_blank">Tableau</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.coursera.org/" title="coursera" target="_blank">coursera</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://lightgbm.apachecn.org/cn/latest/" title="lightgbm" target="_blank">lightgbm</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://segmentfault.com/" title="segmentfault" target="_blank">segmentfault</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://glyphsearch.com/" title="font" target="_blank">font</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://liyangbit.com/math/jupyter-latex/" title="LaTex" target="_blank">LaTex</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
                     <a href="https://juejin.im" title="掘金" target="_blank">掘金</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://uqer.io/data/browse/0/?page=1" title="量化" target="_blank">量化</a>
                   </li>
                 
                   <li class="links-of-blogroll-item">
@@ -1005,11 +1032,7 @@
                   </li>
                 
                   <li class="links-of-blogroll-item">
-                    <a href="https://weibo.com/fly51fly?from=profile&wvr=6&is_all=1" title="AI前沿" target="_blank">AI前沿</a>
-                  </li>
-                
-                  <li class="links-of-blogroll-item">
-                    <a href="https://www.kaggle.com" title="Kaggle" target="_blank">Kaggle</a>
+                    <a href="http://tool.chinaz.com/" title="站长工具" target="_blank">站长工具</a>
                   </li>
                 
               </ul>
