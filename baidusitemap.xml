@@ -4,12 +4,12 @@
 
     
   <url>
-    <loc>http://frankblog.site/2018/05/18/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80/</loc>
-    <lastmod>2018-05-25T09:11:26.795Z</lastmod>
+    <loc>http://frankblog.site/2018/05/30/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80%EF%BC%88%E4%BA%8C%EF%BC%89/</loc>
+    <lastmod>2018-05-31T03:37:06.022Z</lastmod>
     <data>
         <display>
-        <title>机器学习基础（一）</title>
-        <pubTime>2018-05-18T04:57:16.128Z</pubTime>
+        <title>机器学习基础（二）</title>
+        <pubTime>2018-05-30T06:05:51.455Z</pubTime>
         
         <tag>机器学习</tag>
          
@@ -27,7 +27,7 @@
     
   <url>
     <loc>http://frankblog.site/2018/02/26/%E4%BC%98%E9%9B%85%E9%AB%98%E6%95%88%E5%9C%B0%E4%BD%BF%E7%94%A8windows/</loc>
-    <lastmod>2018-05-25T08:19:46.143Z</lastmod>
+    <lastmod>2018-05-30T08:35:58.092Z</lastmod>
     <data>
         <display>
         <title>优雅高效地使用windows</title>
@@ -41,6 +41,28 @@
            
              
               <breadCrumb title="Software" url="http://frankblog.site/categories/Software/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://frankblog.site/2018/05/18/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80/</loc>
+    <lastmod>2018-05-29T11:56:56.817Z</lastmod>
+    <data>
+        <display>
+        <title>机器学习基础（一）</title>
+        <pubTime>2018-05-18T04:57:16.128Z</pubTime>
+        
+        <tag>机器学习</tag>
+         
+        <tag>深度学习</tag>
+         
+         
+           
+             
+              <breadCrumb title="机器学习" url="http://frankblog.site/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
           
         </display>
     </data>

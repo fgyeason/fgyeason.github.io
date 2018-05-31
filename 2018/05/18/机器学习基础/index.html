@@ -107,10 +107,12 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://p4rlzrioq.bkt.clouddn.com/machine-learning-algorithms.jpg">
 <meta property="og:image" content="http://p4rlzrioq.bkt.clouddn.com/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF.png">
+<meta property="og:image" content="http://p4rlzrioq.bkt.clouddn.com/%E8%87%AA%E5%8A%A9%E6%B3%95.png">
 <meta property="og:image" content="https://www.zhihu.com/equation?tex=%5Cvec%7Bx%27%7D+%3D+%5Cfrac%7B%5Cvec%7Bx%7D%7D%7Bl%28%5Cvec%7Bx%7D%29%7D">
 <meta property="og:image" content="https://www.zhihu.com/equation?tex=x%27+%3D+%5Cfrac%7Bx%7D%7Bmax%28%7CX%7C%29%7D">
 <meta property="og:image" content="https://www.zhihu.com/equation?tex=x%27+%3D+%5Cfrac%7Bx+-+min%28X%29%7D%7Bmax%28X%29+-+min%28X%29%7D">
 <meta property="og:image" content="https://www.zhihu.com/equation?tex=x%27+%3D+%5Cfrac%7Bx+-+%5Cmu%7D%7B%5Csigma%7D">
+<meta property="og:image" content="http://p4rlzrioq.bkt.clouddn.com/L1,L2%E6%AD%A3%E5%88%99%E5%8C%96.png">
 <meta property="og:image" content="http://p4rlzrioq.bkt.clouddn.com/%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92%E5%AE%9A%E4%B9%89_%E7%9C%8B%E5%9B%BE%E7%8E%8B.png">
 <meta property="og:image" content="http://p4rlzrioq.bkt.clouddn.com/%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92_%E7%9C%8B%E5%9B%BE%E7%8E%8B.png">
 <meta property="og:image" content="http://p4rlzrioq.bkt.clouddn.com/%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92%E4%BC%BC%E7%84%B6%E5%87%BD%E6%95%B0_%E7%9C%8B%E5%9B%BE%E7%8E%8B.png">
@@ -139,7 +141,7 @@
 <meta property="og:image" content="http://p4rlzrioq.bkt.clouddn.com/overfitting.jpg">
 <meta property="og:image" content="http://p4rlzrioq.bkt.clouddn.com/%E5%87%86%E4%B8%8E%E7%A1%AE.jpeg">
 <meta property="og:image" content="http://p4rlzrioq.bkt.clouddn.com/machine%20learning%20funny.jpg">
-<meta property="og:updated_time" content="2018-05-25T09:11:26.795Z">
+<meta property="og:updated_time" content="2018-05-29T11:56:56.817Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="机器学习基础（一）">
 <meta name="twitter:image" content="http://p4rlzrioq.bkt.clouddn.com/machine-learning-algorithms.jpg">
@@ -397,8 +399,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-05-25T17:11:26+08:00">
-                2018-05-25
+              <time title="更新于" itemprop="dateModified" datetime="2018-05-29T19:56:56+08:00">
+                2018-05-29
               </time>
             
           </span>
@@ -451,7 +453,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  6,501 字  
+                  7,133 字  
                 </span>
               
 
@@ -467,7 +469,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  23 分钟  
+                  25 分钟  
                 </span>
               
             </div>
@@ -500,8 +502,12 @@
 <h1 id="【数据处理】"><a href="#【数据处理】" class="headerlink" title="【数据处理】"></a>【数据处理】</h1><h2 id="数据分类"><a href="#数据分类" class="headerlink" title="数据分类"></a>数据分类</h2><p>正例(positive example)<br>反例(negative example)<br>训练集(training set)<br>验证集(validation set)<br>用作超参数验证<br>测试集(test set)<br>用作模型测试<br>类别不平衡数据集（class-imbalanced data set）<br>两个类别的标签的分布频率有很大的差异。</p>
 <h2 id="采样方式"><a href="#采样方式" class="headerlink" title="采样方式"></a>采样方式</h2><h3 id="分层采样-stratified-sampling"><a href="#分层采样-stratified-sampling" class="headerlink" title="分层采样(stratified sampling)"></a>分层采样(stratified sampling)</h3><p>保留类别比例的采样方式通常称为分层采样</p>
 <h3 id="留出法（hold-out）"><a href="#留出法（hold-out）" class="headerlink" title="留出法（hold-out）"></a>留出法（hold-out）</h3><p>直接将数据集D划分为两个互斥的集合，其中一个集合作为训练集S，另一个作为测试集T，在S上训练出模型后，用T来评估其测试误差，作为对泛化误差的估计。</p>
+<p><table><tr><td bgcolor="black"></td></tr></table></p>
+<p></p>
 <h3 id="k折交叉验证（k-fold-cross-validation）"><a href="#k折交叉验证（k-fold-cross-validation）" class="headerlink" title="k折交叉验证（k-fold cross validation）"></a>k折交叉验证（k-fold cross validation）</h3><p>交叉验证先将数据集D划分为k个大小相似的互斥子集，每个子集从数据集中分层采样得到，然后，每次用k-1个子集的并集作为训练集，余下的一个子集作为测试集，这样就可以获得k组训练/测试集，最终返回k个测试结果的均值。</p>
-<h3 id="自助法-bootstrapping"><a href="#自助法-bootstrapping" class="headerlink" title="自助法(bootstrapping)"></a>自助法(bootstrapping)</h3><p>对数据集D有放回的采样m次后，得到包含m个样本的数据集D’做训练集。当m足够大时，根据极限有36.8%的样本不会被采到，用没采到的部分做测试集。由于我们的训练集有重复数据，这会改变数据的分布，因而训练结果会有估计偏差，因此，此种方法不是很常用，除非数据量真的很少，比如小于20个。</p>
+<h3 id="自助法-bootstrapping"><a href="#自助法-bootstrapping" class="headerlink" title="自助法(bootstrapping)"></a>自助法(bootstrapping)</h3><p>对数据集D有放回的随机采样m次后，一个样本不在样本集D1出现的概率：</p>
+<p><img src="http://p4rlzrioq.bkt.clouddn.com/%E8%87%AA%E5%8A%A9%E6%B3%95.png" alt=""></p>
+<p>当n足够大时，大约有36.8%的样本不会被采到，用没采到的部分做测试集，也是包外估计（out-of-bag-estimate）。由于我们的训练集有重复数据，这会改变数据的分布，因而训练结果会有估计偏差，因此，此种方法不是很常用，除非数据量真的很少，比如小于20个。</p>
 <h2 id="数据清洗"><a href="#数据清洗" class="headerlink" title="数据清洗"></a>数据清洗</h2><h3 id="处理缺失值"><a href="#处理缺失值" class="headerlink" title="处理缺失值"></a>处理缺失值</h3><ul>
 <li>使用一个全局常量填补</li>
 <li>使用属性的中心度量（平均数、中位数、众数等）</li>
@@ -544,34 +550,63 @@
 <li>Ridge回归在不抛弃任何一个特征的情况下，缩小了回归系数，使得模型相对而言比较的稳定，但和Lasso回归比，这会使得模型的特征留的特别多，模型解释性差。</li>
 <li>Ridge回归的求解比较简单，一般用最小二乘法。</li>
 </ul>
+<p><strong>L1正则化产生稀疏的权值, 具有特征选择的作用；L2正则化产生平滑的权值</strong>。</p>
+<p><img src="http://p4rlzrioq.bkt.clouddn.com/L1,L2%E6%AD%A3%E5%88%99%E5%8C%96.png" alt=""></p>
 <h2 id="最小二乘法的局限性"><a href="#最小二乘法的局限性" class="headerlink" title="最小二乘法的局限性"></a>最小二乘法的局限性</h2><ol>
 <li>最小二乘法需要计算XTX的逆矩阵，有可能它的逆矩阵不存在，这样就没有办法直接用最小二乘法了</li>
 <li>当样本特征n非常的大的时候，计算XTX的逆矩阵是一个非常耗时的工作（nxn的矩阵求逆），当然，我们可以通过对样本数据进行整理，去掉冗余特征。让XTX的行列式不为0，然后继续使用最小二乘法。</li>
 <li>如果拟合函数不是线性的，这时无法使用最小二乘法，需要通过一些技巧转化为线性才能使用</li>
 <li>当样本量m很少，小于特征数n的时候，这时拟合方程是欠定的，常用的优化方法都无法去拟合数据。当样本量m等于特征数n的时候，用方程组求解就可以了。当m大于n时，拟合方程是超定的，也就是我们常用与最小二乘法的场景了。</li>
 </ol>
-<h1 id="【逻辑回归模型】"><a href="#【逻辑回归模型】" class="headerlink" title="【逻辑回归模型】"></a>【逻辑回归模型】</h1><p>逻辑回归是一个分类算法，它可以处理二元分类以及多元分类。用sigmoid函数对线性回归模型进行变换。<br><img src="http://p4rlzrioq.bkt.clouddn.com/%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92%E5%AE%9A%E4%B9%89_%E7%9C%8B%E5%9B%BE%E7%8E%8B.png" alt=""><br>θ为分类模型的要求出的模型参数。对于模型输出hθ(x)，我们让它和我们的二元样本输出y（假设为0和1）有这样的对应关系，如果hθ(x)&gt;0.5 ，即xθ&gt;0, 则y为1。如果hθ(x)&lt;0.5，即xθ&lt;0。</p>
+<h1 id="【逻辑回归模型】"><a href="#【逻辑回归模型】" class="headerlink" title="【逻辑回归模型】"></a>【逻辑回归模型】</h1><p>逻辑回归是一个分类算法，它可以处理二元分类以及多元分类。用sigmoid函数对线性回归模型进行变换。</p>
+<p><img src="http://p4rlzrioq.bkt.clouddn.com/%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92%E5%AE%9A%E4%B9%89_%E7%9C%8B%E5%9B%BE%E7%8E%8B.png" alt=""></p>
+<p>θ为分类模型的要求出的模型参数。对于模型输出hθ(x)，我们让它和我们的二元样本输出y（假设为0和1）有这样的对应关系，如果hθ(x)&gt;0.5 ，即xθ&gt;0, 则y为1。如果hθ(x)&lt;0.5，即xθ&lt;0。</p>
 <h2 id="损失函数"><a href="#损失函数" class="headerlink" title="损失函数"></a>损失函数</h2><ul>
-<li>概率分布函数<br>根据二元逻辑回归的定义，假设我们的样本输出是0或者1两类。<br><img src="http://p4rlzrioq.bkt.clouddn.com/%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92_%E7%9C%8B%E5%9B%BE%E7%8E%8B.png" alt=""></li>
-<li>似然函数<br><img src="http://p4rlzrioq.bkt.clouddn.com/%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92%E4%BC%BC%E7%84%B6%E5%87%BD%E6%95%B0_%E7%9C%8B%E5%9B%BE%E7%8E%8B.png" alt=""></li>
-<li>损失函数<br>这里我们用对数似然函数最大化，对数似然函数取反即为我们的损失函数J(θ)<br><img src="http://p4rlzrioq.bkt.clouddn.com/%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0_%E7%9C%8B%E5%9B%BE%E7%8E%8B.png" alt=""><br>简写成矩阵形式<br><img src="http://p4rlzrioq.bkt.clouddn.com/%E7%BA%BF%E6%80%A7%E6%A8%A1%E5%9E%8B%E7%9F%A9%E9%98%B5%E5%BD%A2%E5%BC%8F%E7%9A%84%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0_%E7%9C%8B%E5%9B%BE%E7%8E%8B.png" alt=""></li>
-<li>损失函数优化方法<br>用梯度下降法对损失函数进行优化，得到迭代公式:<br><img src="http://p4rlzrioq.bkt.clouddn.com/%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D1_%E7%9C%8B%E5%9B%BE%E7%8E%8B.png" alt=""></li>
+<li>概率分布函数<br>根据二元逻辑回归的定义，假设我们的样本输出是0或者1两类。</li>
 </ul>
-<h1 id="【决策树】"><a href="#【决策树】" class="headerlink" title="【决策树】"></a>【决策树】</h1><h2 id="熵"><a href="#熵" class="headerlink" title="熵"></a>熵</h2><p>熵用来度量了事物的不确定性<br><img src="http://p4rlzrioq.bkt.clouddn.com/%E7%86%B5%E7%9A%84%E5%AE%9A%E4%B9%89_%E7%9C%8B%E5%9B%BE%E7%8E%8B.png" alt=""></p>
+<p><img src="http://p4rlzrioq.bkt.clouddn.com/%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92_%E7%9C%8B%E5%9B%BE%E7%8E%8B.png" alt=""></p>
 <ul>
-<li><p>联合熵<br>两个变量X和Y的联合熵<br><img src="http://p4rlzrioq.bkt.clouddn.com/%E8%81%94%E5%90%88%E7%86%B5_%E7%9C%8B%E5%9B%BE%E7%8E%8B.png" alt=""></p>
-</li>
-<li><p>条件熵</p>
-</li>
+<li>似然函数</li>
+</ul>
+<p><img src="http://p4rlzrioq.bkt.clouddn.com/%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92%E4%BC%BC%E7%84%B6%E5%87%BD%E6%95%B0_%E7%9C%8B%E5%9B%BE%E7%8E%8B.png" alt=""></p>
+<ul>
+<li>损失函数<br>这里我们用对数似然函数最大化，对数似然函数取反即为我们的损失函数J(θ)</li>
+</ul>
+<p><img src="http://p4rlzrioq.bkt.clouddn.com/%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0_%E7%9C%8B%E5%9B%BE%E7%8E%8B.png" alt=""></p>
+<ul>
+<li>简写成矩阵形式</li>
+</ul>
+<p><img src="http://p4rlzrioq.bkt.clouddn.com/%E7%BA%BF%E6%80%A7%E6%A8%A1%E5%9E%8B%E7%9F%A9%E9%98%B5%E5%BD%A2%E5%BC%8F%E7%9A%84%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0_%E7%9C%8B%E5%9B%BE%E7%8E%8B.png" alt=""></p>
+<ul>
+<li>损失函数优化方法<br>用梯度下降法对损失函数进行优化，得到迭代公式:</li>
+</ul>
+<p><img src="http://p4rlzrioq.bkt.clouddn.com/%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D1_%E7%9C%8B%E5%9B%BE%E7%8E%8B.png" alt=""></p>
+<h1 id="【决策树】"><a href="#【决策树】" class="headerlink" title="【决策树】"></a>【决策树】</h1><h2 id="熵"><a href="#熵" class="headerlink" title="熵"></a>熵</h2><p>熵用来度量事物的不确定性</p>
+<p><img src="http://p4rlzrioq.bkt.clouddn.com/%E7%86%B5%E7%9A%84%E5%AE%9A%E4%B9%89_%E7%9C%8B%E5%9B%BE%E7%8E%8B.png" alt=""></p>
+<ul>
+<li>联合熵<br>两个变量X和Y的联合熵</li>
+</ul>
+<p><img src="http://p4rlzrioq.bkt.clouddn.com/%E8%81%94%E5%90%88%E7%86%B5_%E7%9C%8B%E5%9B%BE%E7%8E%8B.png" alt=""></p>
+<ul>
+<li>条件熵</li>
 </ul>
 <ol>
 <li>条件熵H(X|Y)度量了我们在知道Y以后X剩下的不确定性，那么H(X)-H(X|Y)呢？从上面的描述大家可以看出，它度量了X在知道Y以后不确定性减少程度，这个度量我们在信息论中称为互信息，，记为I(X,Y)。在决策树ID3算法中叫做信息增益。</li>
-<li>用下面这个图很容易明白他们的关系。左边的椭圆代表H(X),右边的椭圆代表H(Y),中间重合的部分就是我们的互信息或者信息增益I(X,Y), 左边的椭圆去掉重合部分就是H(X|Y),右边的椭圆去掉重合部分就是H(Y|X)。两个椭圆的并就是H(X,Y)。<br><img src="http://p4rlzrioq.bkt.clouddn.com/%E6%9D%A1%E4%BB%B6%E7%86%B5.png" alt=""></li>
+<li>用下面这个图很容易明白他们的关系。左边的椭圆代表H(X),右边的椭圆代表H(Y),中间重合的部分就是我们的互信息或者信息增益I(X,Y), 左边的椭圆去掉重合部分就是H(X|Y),右边的椭圆去掉重合部分就是H(Y|X)。两个椭圆的并就是H(X,Y)。</li>
 </ol>
+<p><img src="http://p4rlzrioq.bkt.clouddn.com/%E6%9D%A1%E4%BB%B6%E7%86%B5.png" alt=""></p>
 <h2 id="决策树构建中的分裂准则"><a href="#决策树构建中的分裂准则" class="headerlink" title="决策树构建中的分裂准则"></a>决策树构建中的分裂准则</h2><p>决策树可以通过一系列规则递归地分割特征空间</p>
 <h3 id="信息增益（information-gain）"><a href="#信息增益（information-gain）" class="headerlink" title="信息增益（information gain）"></a><strong>信息增益（information gain）</strong></h3><p>属性划分减少的信息熵，信息熵是度量样本集合纯度的一种指标，假设第k类样本所占比例为pk，则数据集D的信息熵为：Ent(D)=-∑pklogpk，Ent(D)越小，D的纯度越高。 Gain(D,a)=Ent(D)-∑(Dv/D*Ent(Dv))，Dv是某个属性a的某个可能取值的样本集合</p>
 <h3 id="增益率（gain-ratio）"><a href="#增益率（gain-ratio）" class="headerlink" title="增益率（gain ratio）"></a><strong>增益率（gain ratio）</strong></h3><p>信息增益准则对可取值数目较多的属性有偏好，为减少这种偏好的不利影响，使用增益率选择最优划分属性，增益率定义为:Gain_ratio(D,a)=Gain(D,a)/IV(a), IV(a)=-∑(Dv/D*log(Dv/D))，IV(a)称为为a的固有值。属性可能取值数目越多，IV(a)的值越大，增益率即增益/固有值。</p>
-<h3 id="基尼指数-Gini-index"><a href="#基尼指数-Gini-index" class="headerlink" title="基尼指数(Gini index)"></a><strong>基尼指数(Gini index)</strong></h3><p>基尼指数是另外一种数据的不纯度的度量方法，其定义如下：<br><img src="http://p4rlzrioq.bkt.clouddn.com/gini%E7%B3%BB%E6%95%B01.jpg" alt="">　　<br>其中的m仍然表示数据集D中类别C的个数，Pi表示D中任意一个记录属于Ci的概率，计算时Pi=(D中属于Ci类的集合的记录个数/|D|)。如果所有的记录都属于同一个类中，则P1=1，Gini(D)=0，此时不纯度最低。<br>在CART(Classification and Regression Tree)算法中利用基尼指数构造二叉决策树，对每个属性都会枚举其属性的非空真子集，以属性R分裂后的基尼系数为：<br><img src="http://p4rlzrioq.bkt.clouddn.com/%E5%9F%BA%E5%B0%BC%E7%B3%BB%E6%95%B02.jpg" alt=""><br>D1为D的一个非空真子集，D2为D1在D的补集，即D1+D2=D，对于属性R来说，有多个真子集，即GiniR(D)有多个值，但我们选取最小的那么值作为R的基尼指数。最后：<br><img src="http://p4rlzrioq.bkt.clouddn.com/%E5%9F%BA%E5%B0%BC%E7%B3%BB%E6%95%B03.jpg" alt=""><br>对于二类分类，基尼系数和熵之半的曲线如下：<br><img src="https://upload-images.jianshu.io/upload_images/40658-24f62052d3f57559.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700" alt="link"><br>从上图可以看出，基尼系数和熵之半的曲线非常接近，仅仅在45度角附近误差稍大。因此，基尼系数可以做为熵模型的一个近似替代</p>
+<h3 id="基尼指数-Gini-index"><a href="#基尼指数-Gini-index" class="headerlink" title="基尼指数(Gini index)"></a><strong>基尼指数(Gini index)</strong></h3><p>基尼指数是另外一种数据的不纯度的度量方法，其定义如下：</p>
+<p><img src="http://p4rlzrioq.bkt.clouddn.com/gini%E7%B3%BB%E6%95%B01.jpg" alt="">　　</p>
+<p>其中的m仍然表示数据集D中类别C的个数，Pi表示D中任意一个记录属于Ci的概率，计算时Pi=(D中属于Ci类的集合的记录个数/|D|)。如果所有的记录都属于同一个类中，则P1=1，Gini(D)=0，此时不纯度最低。<br>在CART(Classification and Regression Tree)算法中利用基尼指数构造二叉决策树，对每个属性都会枚举其属性的非空真子集，以属性R分裂后的基尼系数为：</p>
+<p><img src="http://p4rlzrioq.bkt.clouddn.com/%E5%9F%BA%E5%B0%BC%E7%B3%BB%E6%95%B02.jpg" alt=""></p>
+<p>D1为D的一个非空真子集，D2为D1在D的补集，即D1+D2=D，对于属性R来说，有多个真子集，即GiniR(D)有多个值，但我们选取最小的那么值作为R的基尼指数。最后：</p>
+<p><img src="http://p4rlzrioq.bkt.clouddn.com/%E5%9F%BA%E5%B0%BC%E7%B3%BB%E6%95%B03.jpg" alt=""></p>
+<p>对于二类分类，基尼系数和熵之半的曲线如下：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/40658-24f62052d3f57559.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700" alt="link"></p>
+<p>从上图可以看出，基尼系数和熵之半的曲线非常接近，仅仅在45度角附近误差稍大。因此，基尼系数可以做为熵模型的一个近似替代</p>
 <h2 id="常用决策树模型"><a href="#常用决策树模型" class="headerlink" title="常用决策树模型"></a>常用决策树模型</h2><h3 id="决策树模型总结"><a href="#决策树模型总结" class="headerlink" title="决策树模型总结"></a>决策树模型总结</h3><table>
 <thead>
 <tr>
@@ -618,11 +653,6 @@
 <li>m个样本的连续特征A有m个，从小到大排列为a1,a2,…,ama1,a2,…,am,则CART算法取相邻两样本值的中位数，一共取得m-1个划分点。</li>
 <li>对于这m-1个点，分别计算以该点作为二元分类点时的基尼系数。选择基尼系数最小的点作为该连续特征的二元离散分类点。</li>
 </ol>
-<h3 id="GBDT"><a href="#GBDT" class="headerlink" title="GBDT"></a>GBDT</h3><ul>
-<li>一个通俗的例子解释，假如有个人30岁，我们首先用20岁去拟合，发现损失有10岁，这时我们用6岁去拟合剩下的损失，发现差距还有4岁，第三轮我们用3岁拟合剩下的差距，差距就只有一岁了。如果我们的迭代轮数还没有完，可以继续迭代下面，每一轮迭代，拟合的岁数误差都会减小。</li>
-<li>目前GBDT的算法比较好的库是xgboost。当然scikit-learn也可以。</li>
-</ul>
-<h3 id="xgboost相比GBDT的优势"><a href="#xgboost相比GBDT的优势" class="headerlink" title="xgboost相比GBDT的优势"></a>xgboost相比GBDT的优势</h3><p>1、传统GBDT以CART作为基分类器，xgboost还支持线性分类器，这个时候xgboost相当于带L1和L2正则化项的逻辑斯蒂回归（分类问题）或者线性回归（回归问题）。<br>2、传统GBDT在优化时只用到一阶导数信息，xgboost则对代价函数进行了二阶泰勒展开，同时用到了一阶和二阶导数。顺便提一下，xgboost工具支持自定义代价函数，只要函数可一阶和二阶求导。<br>3、xgboost在代价函数里加入了正则项，用于控制模型的复杂度。正则项里包含了树的叶子节点个数、每个叶子节点上输出的score的L2模的平方和。从Bias-variance tradeoff角度来讲，正则项降低了模型的variance，使学习出来的模型更加简单，防止过拟合，这也是xgboost优于传统GBDT的一个特性。<br>4、Shrinkage（缩减），相当于学习速率（xgboost中的eta）。xgboost在进行完一次迭代后，会将叶子节点的权重乘上该系数，主要是为了削弱每棵树的影响，让后面有更大的学习空间。实际应用中，一般把eta设置得小一点，然后迭代次数设置得大一点。（补充：传统GBDT的实现也有学习速率）<br>5、列抽样（column subsampling）。xgboost借鉴了随机森林的做法，支持列抽样，不仅能降低过拟合，还能减少计算，这也是xgboost异于传统gbdt的一个特性。</p>
 <h2 id="决策树优化方法"><a href="#决策树优化方法" class="headerlink" title="决策树优化方法"></a>决策树优化方法</h2><h3 id="后剪枝（postpruning）"><a href="#后剪枝（postpruning）" class="headerlink" title="后剪枝（postpruning）"></a>后剪枝（postpruning）</h3><p>先从训练集生成一颗完整的决策树，然后自底向上地对非叶节点进行考察，若将该结点子树替换成叶节点能提升泛化性能，则进行替换，后剪枝训练时间开销大。</p>
 <h3 id="预剪枝（prepruning）"><a href="#预剪枝（prepruning）" class="headerlink" title="预剪枝（prepruning）"></a>预剪枝（prepruning）</h3><p>在决策树生成过程中，对每个结点在划分前先进行估计，若当前结点的划分不能带来决策树泛化性能的提升，则停止划分并将当前结点标记为叶节点，预剪枝基于贪心存在欠拟合的风险。</p>
 <h3 id="抑制单颗决策树的复杂度的方法"><a href="#抑制单颗决策树的复杂度的方法" class="headerlink" title="抑制单颗决策树的复杂度的方法"></a>抑制单颗决策树的复杂度的方法</h3><ol>
@@ -668,13 +698,23 @@
 <li>梯度下降法是迭代求解，最小二乘法是计算解析解。如果样本量不算很大，且存在解析解，最小二乘法比起梯度下降法要有优势，计算速度很快。但是如果样本量很大，用最小二乘法由于需要求一个超级大的逆矩阵，这时就很难或者很慢才能求解解析解了，使用迭代的梯度下降法比较有优势。</li>
 </ul>
 <h1 id="【分类模型指标】"><a href="#【分类模型指标】" class="headerlink" title="【分类模型指标】"></a>【分类模型指标】</h1><h2 id="混淆矩阵（confusion-matrix）"><a href="#混淆矩阵（confusion-matrix）" class="headerlink" title="混淆矩阵（confusion matrix）"></a>混淆矩阵（confusion matrix）</h2><p><img src="https://upload-images.jianshu.io/upload_images/145616-0a7a7fd1ff77dcd9.png" alt="link"></p>
-<h2 id="准确率（Accuracy）"><a href="#准确率（Accuracy）" class="headerlink" title="准确率（Accuracy）"></a>准确率（Accuracy）</h2><p><strong>准确率</strong>是预测和标签一致的样本在所有样本中所占的比例<br><img src="http://p4rlzrioq.bkt.clouddn.com/%E5%87%86%E7%A1%AE%E7%8E%87%EF%BC%88Accuracy%EF%BC%89.svg" alt="link"></p>
-<h2 id="精确率（Precision）"><a href="#精确率（Precision）" class="headerlink" title="精确率（Precision）"></a>精确率（Precision）</h2><p><strong>精确率</strong>是你预测为正类的数据中，有多少确实是正类<br><img src="http://p4rlzrioq.bkt.clouddn.com/%E6%9F%A5%E5%87%86%E7%8E%87%EF%BC%88Precision%EF%BC%89.svg" alt="link"></p>
-<h2 id="召回率（Recall）"><a href="#召回率（Recall）" class="headerlink" title="召回率（Recall）"></a>召回率（Recall）</h2><p><strong>召回率</strong>是所有正类的数据中，你预测为正类的数据占比<br><img src="http://p4rlzrioq.bkt.clouddn.com/%E6%9F%A5%E5%85%A8%E7%8E%87%EF%BC%88Recall%EF%BC%89.svg" alt="link"><br><img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Precisionrecall.svg" alt="link"></p>
-<h2 id="F1-Score"><a href="#F1-Score" class="headerlink" title="F1 Score"></a>F1 Score</h2><p>有时也用一个F1值来综合评估精确率和召回率，它是精确率和召回率的调和均值。<br><img src="http://p4rlzrioq.bkt.clouddn.com/F1%20Score.svg" alt="link"></p>
-<h2 id="F-beta-Score"><a href="#F-beta-Score" class="headerlink" title="F-beta Score"></a>F-beta Score</h2><p>有时候我们对精确率和召回率并不是一视同仁，比如有时候我们更加重视精确率。我们用一个参数β来度量两者之间的关系。如果β&gt;1, 召回率有更大影响，如果β&lt;1,精确率有更大影响。<br><img src="http://p4rlzrioq.bkt.clouddn.com/F-beta%20Score.svg" alt="link"></p>
-<h2 id="ROC-（receiver-operating-characteristic-curve）"><a href="#ROC-（receiver-operating-characteristic-curve）" class="headerlink" title="ROC （receiver operating characteristic curve）"></a>ROC （receiver operating characteristic curve）</h2><p><img src="https://habrastorage.org/files/267/36b/ff1/26736bff158a4d82893ff85b2022cc5b.gif" alt=""></p>
-<h2 id="AUC（Area-Under-the-Curve）"><a href="#AUC（Area-Under-the-Curve）" class="headerlink" title="AUC（Area Under the Curve）"></a>AUC（Area Under the Curve）</h2><p>ROC曲线下的面积，AUC的取值范围一般在0.5和1之间。AUC越大代表分类器效果更好。<br><img src="https://upload-images.jianshu.io/upload_images/145616-ce8221a29d9c01ef.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700" alt="link"><br>理想目标：TPR=1，FPR=0，即图中(0,1)点，故ROC曲线越靠拢(0,1)点，越偏离45度对角线越好，Sensitivity、Specificity越大效果越好。</p>
+<h2 id="准确率（Accuracy）"><a href="#准确率（Accuracy）" class="headerlink" title="准确率（Accuracy）"></a>准确率（Accuracy）</h2><p><strong>准确率</strong>是预测和标签一致的样本在所有样本中所占的比例</p>
+<p><img src="http://p4rlzrioq.bkt.clouddn.com/%E5%87%86%E7%A1%AE%E7%8E%87%EF%BC%88Accuracy%EF%BC%89.svg" alt="link"></p>
+<h2 id="精确率（Precision）"><a href="#精确率（Precision）" class="headerlink" title="精确率（Precision）"></a>精确率（Precision）</h2><p><strong>精确率</strong>是你预测为正类的数据中，有多少确实是正类</p>
+<p><img src="http://p4rlzrioq.bkt.clouddn.com/%E6%9F%A5%E5%87%86%E7%8E%87%EF%BC%88Precision%EF%BC%89.svg" alt="link"></p>
+<h2 id="查全率（Recall）"><a href="#查全率（Recall）" class="headerlink" title="查全率（Recall）"></a>查全率（Recall）</h2><p><strong>查全率</strong>是所有正类的数据中，你预测为正类的数据占比</p>
+<p><img src="http://p4rlzrioq.bkt.clouddn.com/%E6%9F%A5%E5%85%A8%E7%8E%87%EF%BC%88Recall%EF%BC%89.svg" alt="link"></p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Precisionrecall.svg" alt="link"></p>
+<p>不同的问题，判别标准不同。对于推荐系统，更侧重于查准率；对于医学诊断系统，更侧重于查全率。查准率和查全率是一个矛盾体，往往差准率高的情况查重率比较低。</p>
+<h2 id="F1-Score"><a href="#F1-Score" class="headerlink" title="F1 Score"></a>F1 Score</h2><p>有时也用一个F1值来综合评估精确率和召回率，它是精确率和召回率的调和均值。</p>
+<p><img src="http://p4rlzrioq.bkt.clouddn.com/F1%20Score.svg" alt="link"></p>
+<h2 id="F-beta-Score"><a href="#F-beta-Score" class="headerlink" title="F-beta Score"></a>F-beta Score</h2><p>有时候我们对精确率和召回率并不是一视同仁，比如有时候我们更加重视精确率。我们用一个参数β来度量两者之间的关系。如果β&gt;1, 召回率有更大影响，如果β&lt;1,精确率有更大影响。</p>
+<p><img src="http://p4rlzrioq.bkt.clouddn.com/F-beta%20Score.svg" alt="link"></p>
+<h2 id="ROC-（receiver-operating-characteristic-curve）"><a href="#ROC-（receiver-operating-characteristic-curve）" class="headerlink" title="ROC （receiver operating characteristic curve）"></a>ROC （receiver operating characteristic curve）</h2><p>绘制方法：首先根据分类器的预测对样例进行排序，排在前面的是分类器被认为最可能为正例的样本。按照真例y方向走一个单位，遇到假例x方向走一个单位。<br>ROC曲线的横坐标为false positive rate（FPR），纵坐标为true positive rate（TPR）。<br>ROC曲线有个很好的特性：当测试集中的正负样本的分布变化的时候，ROC曲线能够保持不变。</p>
+<p><img src="https://habrastorage.org/files/267/36b/ff1/26736bff158a4d82893ff85b2022cc5b.gif" alt=""></p>
+<h2 id="AUC（Area-Under-the-Curve）"><a href="#AUC（Area-Under-the-Curve）" class="headerlink" title="AUC（Area Under the Curve）"></a>AUC（Area Under the Curve）</h2><p>ROC曲线下的面积，AUC的取值范围一般在0.5和1之间。AUC越大代表分类器效果更好。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/145616-ce8221a29d9c01ef.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/700" alt="link"></p>
+<p>理想目标：TPR=1，FPR=0，即图中(0,1)点，故ROC曲线越靠拢(0,1)点，越偏离45度对角线越好，Sensitivity、Specificity越大效果越好。</p>
 <h1 id="【集成学习】"><a href="#【集成学习】" class="headerlink" title="【集成学习】"></a>【集成学习】</h1><ol>
 <li>一般来说，集成学习指的同质基学习器的集成，而同质基学习器使用最多的模型是CART决策树和神经网络。</li>
 <li>同质基学习器按照个体学习器之间是否存在依赖关系可以分为两类，第一个是基学习器之间存在强依赖关系，基本都需要串行生成，代表算法是boosting系列算法，第二个是个体学习器之间不存在强依赖关系，可以并行生成，代表算法是bagging和随机森林（Random Forest）系列算法。</li>
@@ -688,8 +728,13 @@
 <li>大约36.8%的没有被采样到的数据，我们常常称之为袋外数据(Out Of Bag, 简称OOB)。这些数据没有参与训练集模型的拟合，因此可以用来检测模型的泛化能力。</li>
 </ol>
 <ul>
-<li>随机森林在bagging的样本随机采样基础上，又加上了特征的随机选择。</li>
+<li>随机森林在bagging的样本随机采样基础上，又加上了特征的随机选择。<h2 id="bagging-amp-boosting"><a href="#bagging-amp-boosting" class="headerlink" title="bagging&amp;boosting"></a>bagging&amp;boosting</h2>对于 Bagging 算法来说，由于我们会并行地训练很多不同的分类器的目的就是降低这个方差（variance），因为采用了相互独立的基分类器多了以后，h 的值自然就会靠近。所以对于每个基分类器来说，目标就是如何降低这个偏差（bias），所以我们会采用深度很深甚至不剪枝的决策树。</li>
 </ul>
+<p>对于 Boosting 来说，每一步我们都会在上一轮的基础上更加拟合原数据，所以可以保证偏差（bias），所以对于每个基分类器来说，问题就在于如何选择 variance 更小的分类器，即更简单的分类器，所以我们选择了深度很浅的决策树。</p>
+<h3 id="GBDT"><a href="#GBDT" class="headerlink" title="GBDT"></a>GBDT</h3><ul>
+<li>一个通俗的例子解释，假如有个人30岁，我们首先用20岁去拟合，发现损失有10岁，这时我们用6岁去拟合剩下的损失，发现差距还有4岁，第三轮我们用3岁拟合剩下的差距，差距就只有一岁了。如果我们的迭代轮数还没有完，可以继续迭代下面，每一轮迭代，拟合的岁数误差都会减小。</li>
+</ul>
+<h3 id="xgboost相比GBDT的优势"><a href="#xgboost相比GBDT的优势" class="headerlink" title="xgboost相比GBDT的优势"></a>xgboost相比GBDT的优势</h3><p>1、传统GBDT以CART作为基分类器，xgboost还支持线性分类器，这个时候xgboost相当于带L1和L2正则化项的逻辑斯蒂回归（分类问题）或者线性回归（回归问题）。<br>2、传统GBDT在优化时只用到一阶导数信息，xgboost则对代价函数进行了二阶泰勒展开，同时用到了一阶和二阶导数。顺便提一下，xgboost工具支持自定义代价函数，只要函数可一阶和二阶求导。<br>3、xgboost在代价函数里加入了正则项，用于控制模型的复杂度。正则项里包含了树的叶子节点个数、每个叶子节点上输出的score的L2模的平方和。从Bias-variance tradeoff角度来讲，正则项降低了模型的variance，使学习出来的模型更加简单，防止过拟合，这也是xgboost优于传统GBDT的一个特性。<br>4、Shrinkage（缩减），相当于学习速率（xgboost中的eta）。xgboost在进行完一次迭代后，会将叶子节点的权重乘上该系数，主要是为了削弱每棵树的影响，让后面有更大的学习空间。实际应用中，一般把eta设置得小一点，然后迭代次数设置得大一点。（补充：传统GBDT的实现也有学习速率）<br>5、列抽样（column subsampling）。xgboost借鉴了随机森林的做法，支持列抽样，不仅能降低过拟合，还能减少计算，这也是xgboost异于传统gbdt的一个特性。<br>6、xgboost的并行是在特征粒度上的。我们知道，决策树的学习最耗时的一个步骤就是对特征的值进行排序（因为要确定最佳分割点），xgboost在训练之前，预先对数据进行了排序，然后保存为block结构，后面的迭代中重复地使用这个结构，大大减小计算量。这个block结构也使得并行成为了可能，在进行节点的分裂时，需要计算每个特征的增益，最终选增益最大的那个特征去做分裂，那么各个特征的增益计算就可以开多线程进行。</p>
 <h2 id="随机森林的优劣"><a href="#随机森林的优劣" class="headerlink" title="随机森林的优劣"></a>随机森林的优劣</h2><ul>
 <li>优势：<br>1） 训练可以高度并行化，对于大数据时代的大样本训练速度有优势。<br>2） 由于可以随机选择决策树节点划分特征，这样在样本特征维度很高的时候，仍然能高效的训练模型。<br>3） 在训练后，可以给出各个特征对于输出的重要性<br>4） 由于采用了随机采样，训练出的模型的方差小，泛化能力强。<br>5） 相对于Boosting系列的Adaboost和GBDT， RF实现比较简单。<br>6） 对部分特征缺失不敏感。</li>
 <li>缺点：<br>1）在某些噪音比较大的样本集上，RF模型容易陷入过拟合。<br>2)  取值划分比较多的特征容易对RF的决策产生更大的影响，从而影响拟合的模型的效果。</li>
@@ -700,8 +745,7 @@
 <li>对于学习误差较大的情况，我们将训练集弱学习器的学习结果作为输入，将训练集的输出作为输出，重新训练一个学习器来得到最终结果，这种方法称为学习法。简单来说，对于测试集，我们首先用初级学习器预测一次，得到次级学习器的输入样本，再用次级学习器预测一次，得到最终的预测结果。</li>
 </ul>
 <h1 id="【聚类】"><a href="#【聚类】" class="headerlink" title="【聚类】"></a>【聚类】</h1><h2 id="K-means算法"><a href="#K-means算法" class="headerlink" title="K-means算法"></a>K-means算法</h2><ul>
-<li>算法思想：按照样本之间的距离大小，将样本集划分为K个簇。让簇内的点尽量紧密的连在一起，而让簇间的距离尽量的大。</li>
-<li><p>算法流程</p>
+<li><p>算法思想：按照样本之间的距离大小，将样本集划分为K个簇。让簇内的点尽量紧密的连在一起，而让簇间的距离尽量的大。</p>
 </li>
 <li><p>优点：<br>1）原理比较简单，实现也是很容易，收敛速度快。<br>2）聚类效果较优。<br>3）算法的可解释度比较强。<br>4）主要需要调参的参数仅仅是簇数k。</p>
 </li>
@@ -725,7 +769,7 @@
 </ul>
 <h1 id="【模型选择与评估】"><a href="#【模型选择与评估】" class="headerlink" title="【模型选择与评估】"></a>【模型选择与评估】</h1><h2 id="算法选择"><a href="#算法选择" class="headerlink" title="算法选择"></a>算法选择</h2><p><img src="http://p4rlzrioq.bkt.clouddn.com/sklearn%20%E4%B8%AD%E6%96%87.png" alt=""></p>
 <h2 id="泛化能力、欠拟合和过拟合"><a href="#泛化能力、欠拟合和过拟合" class="headerlink" title="泛化能力、欠拟合和过拟合"></a>泛化能力、欠拟合和过拟合</h2><p><img src="http://p4rlzrioq.bkt.clouddn.com/overfitting.jpg" alt=""></p>
-<h2 id="偏差和方差"><a href="#偏差和方差" class="headerlink" title="偏差和方差"></a>偏差和方差</h2><p><img src="http://p4rlzrioq.bkt.clouddn.com/%E5%87%86%E4%B8%8E%E7%A1%AE.jpeg" alt="link"></p>
+<h2 id="偏差和方差"><a href="#偏差和方差" class="headerlink" title="偏差和方差"></a>偏差和方差</h2><p>偏差方差分解解释了机器的泛化误差。偏差度量了算法的期望预测与真实结果之间的误差。方差度量了训练集的变动所导致的学习性能的变化。<br><img src="http://p4rlzrioq.bkt.clouddn.com/%E5%87%86%E4%B8%8E%E7%A1%AE.jpeg" alt="link"></p>
 <ul>
 <li>有一些算法天生是高方差的算法。如KNN、决策树。非参数学习通常是高方差算法，对数据较为敏感，因为不对数据进行任何假设。</li>
 <li>有一些算法天生就是高偏差算法。如线性回归。参数学习通常是高偏差算法，因为对数据具有极强的假设。</li>
@@ -738,7 +782,8 @@
 </ul>
 </li>
 </ul>
-<p>此图献给奋战在一线的调参侠们！<br><img src="http://p4rlzrioq.bkt.clouddn.com/machine%20learning%20funny.jpg" alt="link"></p>
+<p>此图献给奋战在一线的调参侠们！</p>
+<p><img src="http://p4rlzrioq.bkt.clouddn.com/machine%20learning%20funny.jpg" alt="link"></p>
 
       
     </div>
@@ -838,6 +883,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2018/05/30/机器学习基础（二）/" rel="prev" title="机器学习基础（二）">
+                机器学习基础（二） <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -919,7 +968,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -992,7 +1041,7 @@
               <ul class="links-of-blogroll-list">
                 
                   <li class="links-of-blogroll-item">
-                    <a href="https://www.lfd.uci.edu/~gohlke/pythonlibs/#wordcloud" title="py_whl" target="_blank">py_whl</a>
+                    <a href="https://www.lfd.uci.edu/~gohlke/pythonlibs/#wordcloud" title="Py_whl" target="_blank">Py_whl</a>
                   </li>
                 
                   <li class="links-of-blogroll-item">
@@ -1000,19 +1049,19 @@
                   </li>
                 
                   <li class="links-of-blogroll-item">
-                    <a href="https://www.coursera.org/" title="coursera" target="_blank">coursera</a>
+                    <a href="https://www.coursera.org/" title="Coursera" target="_blank">Coursera</a>
                   </li>
                 
                   <li class="links-of-blogroll-item">
-                    <a href="http://lightgbm.apachecn.org/cn/latest/" title="lightgbm" target="_blank">lightgbm</a>
+                    <a href="http://lightgbm.apachecn.org/cn/latest/" title="LightGBM" target="_blank">LightGBM</a>
                   </li>
                 
                   <li class="links-of-blogroll-item">
-                    <a href="https://segmentfault.com/" title="segmentfault" target="_blank">segmentfault</a>
+                    <a href="https://segmentfault.com/" title="Segmentfault" target="_blank">Segmentfault</a>
                   </li>
                 
                   <li class="links-of-blogroll-item">
-                    <a href="https://glyphsearch.com/" title="font" target="_blank">font</a>
+                    <a href="https://glyphsearch.com/" title="Font" target="_blank">Font</a>
                   </li>
                 
                   <li class="links-of-blogroll-item">
@@ -1054,7 +1103,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#【机器学习应用】"><span class="nav-number">1.</span> <span class="nav-text">【机器学习应用】</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#计算机视觉"><span class="nav-number">1.1.</span> <span class="nav-text">计算机视觉</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自然语言处理"><span class="nav-number">1.2.</span> <span class="nav-text">自然语言处理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#社会网络分析"><span class="nav-number">1.3.</span> <span class="nav-text">社会网络分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#推荐系统"><span class="nav-number">1.4.</span> <span class="nav-text">推荐系统</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#【数据处理】"><span class="nav-number">2.</span> <span class="nav-text">【数据处理】</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#数据分类"><span class="nav-number">2.1.</span> <span class="nav-text">数据分类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#采样方式"><span class="nav-number">2.2.</span> <span class="nav-text">采样方式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分层采样-stratified-sampling"><span class="nav-number">2.2.1.</span> <span class="nav-text">分层采样(stratified sampling)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#留出法（hold-out）"><span class="nav-number">2.2.2.</span> <span class="nav-text">留出法（hold-out）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#k折交叉验证（k-fold-cross-validation）"><span class="nav-number">2.2.3.</span> <span class="nav-text">k折交叉验证（k-fold cross validation）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自助法-bootstrapping"><span class="nav-number">2.2.4.</span> <span class="nav-text">自助法(bootstrapping)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据清洗"><span class="nav-number">2.3.</span> <span class="nav-text">数据清洗</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#处理缺失值"><span class="nav-number">2.3.1.</span> <span class="nav-text">处理缺失值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#处理噪声"><span class="nav-number">2.3.2.</span> <span class="nav-text">处理噪声</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#【特征工程】"><span class="nav-number">3.</span> <span class="nav-text">【特征工程】</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#特征编码"><span class="nav-number">3.1.</span> <span class="nav-text">特征编码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#归一化（Normalization）"><span class="nav-number">3.2.</span> <span class="nav-text">归一化（Normalization）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#区间缩放（scaling）"><span class="nav-number">3.3.</span> <span class="nav-text">区间缩放（scaling）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#标准化（Standardization）"><span class="nav-number">3.4.</span> <span class="nav-text">标准化（Standardization）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#特征变换"><span class="nav-number">3.5.</span> <span class="nav-text">特征变换</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#【线性回归模型】"><span class="nav-number">4.</span> <span class="nav-text">【线性回归模型】</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#线性回归的正则化"><span class="nav-number">4.1.</span> <span class="nav-text">线性回归的正则化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Lasso回归"><span class="nav-number">4.1.1.</span> <span class="nav-text">Lasso回归</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#岭回归"><span class="nav-number">4.1.2.</span> <span class="nav-text">岭回归</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最小二乘法的局限性"><span class="nav-number">4.2.</span> <span class="nav-text">最小二乘法的局限性</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#【逻辑回归模型】"><span class="nav-number">5.</span> <span class="nav-text">【逻辑回归模型】</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#损失函数"><span class="nav-number">5.1.</span> <span class="nav-text">损失函数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#【决策树】"><span class="nav-number">6.</span> <span class="nav-text">【决策树】</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#熵"><span class="nav-number">6.1.</span> <span class="nav-text">熵</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#决策树构建中的分裂准则"><span class="nav-number">6.2.</span> <span class="nav-text">决策树构建中的分裂准则</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#信息增益（information-gain）"><span class="nav-number">6.2.1.</span> <span class="nav-text">信息增益（information gain）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#增益率（gain-ratio）"><span class="nav-number">6.2.2.</span> <span class="nav-text">增益率（gain ratio）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基尼指数-Gini-index"><span class="nav-number">6.2.3.</span> <span class="nav-text">基尼指数(Gini index)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用决策树模型"><span class="nav-number">6.3.</span> <span class="nav-text">常用决策树模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#决策树模型总结"><span class="nav-number">6.3.1.</span> <span class="nav-text">决策树模型总结</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CART决策树属性分裂方法"><span class="nav-number">6.3.2.</span> <span class="nav-text">CART决策树属性分裂方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GBDT"><span class="nav-number">6.3.3.</span> <span class="nav-text">GBDT</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#xgboost相比GBDT的优势"><span class="nav-number">6.3.4.</span> <span class="nav-text">xgboost相比GBDT的优势</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#决策树优化方法"><span class="nav-number">6.4.</span> <span class="nav-text">决策树优化方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#后剪枝（postpruning）"><span class="nav-number">6.4.1.</span> <span class="nav-text">后剪枝（postpruning）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#预剪枝（prepruning）"><span class="nav-number">6.4.2.</span> <span class="nav-text">预剪枝（prepruning）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#抑制单颗决策树的复杂度的方法"><span class="nav-number">6.4.3.</span> <span class="nav-text">抑制单颗决策树的复杂度的方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#决策树算法的优点"><span class="nav-number">6.5.</span> <span class="nav-text">决策树算法的优点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#决策树算法的缺陷"><span class="nav-number">6.6.</span> <span class="nav-text">决策树算法的缺陷</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#【梯度】"><span class="nav-number">7.</span> <span class="nav-text">【梯度】</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#梯度下降法的超参数"><span class="nav-number">7.1.</span> <span class="nav-text">梯度下降法的超参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#梯度下降的算法调优"><span class="nav-number">7.2.</span> <span class="nav-text">梯度下降的算法调优</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#梯度下降方法总结"><span class="nav-number">7.3.</span> <span class="nav-text">梯度下降方法总结</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#批梯度下降-batch-gradient-descent-BGD"><span class="nav-number">7.3.1.</span> <span class="nav-text">批梯度下降(batch gradient descent/BGD)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#随机梯度下降（stochastic-gradient-descent-SGD）"><span class="nav-number">7.3.2.</span> <span class="nav-text">随机梯度下降（stochastic gradient descent/SGD）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#小批量随机梯度下降（mini-batch-stochastic-gradient-descent）"><span class="nav-number">7.3.3.</span> <span class="nav-text">小批量随机梯度下降（mini-batch stochastic gradient descent）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#梯度下降法与最小二乘法"><span class="nav-number">7.4.</span> <span class="nav-text">梯度下降法与最小二乘法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#【分类模型指标】"><span class="nav-number">8.</span> <span class="nav-text">【分类模型指标】</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#混淆矩阵（confusion-matrix）"><span class="nav-number">8.1.</span> <span class="nav-text">混淆矩阵（confusion matrix）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#准确率（Accuracy）"><span class="nav-number">8.2.</span> <span class="nav-text">准确率（Accuracy）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#精确率（Precision）"><span class="nav-number">8.3.</span> <span class="nav-text">精确率（Precision）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#召回率（Recall）"><span class="nav-number">8.4.</span> <span class="nav-text">召回率（Recall）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#F1-Score"><span class="nav-number">8.5.</span> <span class="nav-text">F1 Score</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#F-beta-Score"><span class="nav-number">8.6.</span> <span class="nav-text">F-beta Score</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ROC-（receiver-operating-characteristic-curve）"><span class="nav-number">8.7.</span> <span class="nav-text">ROC （receiver operating characteristic curve）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AUC（Area-Under-the-Curve）"><span class="nav-number">8.8.</span> <span class="nav-text">AUC（Area Under the Curve）</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#【集成学习】"><span class="nav-number">9.</span> <span class="nav-text">【集成学习】</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#boosting算法"><span class="nav-number">9.1.</span> <span class="nav-text">boosting算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#bagging算法"><span class="nav-number">9.2.</span> <span class="nav-text">bagging算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#随机森林的优劣"><span class="nav-number">9.3.</span> <span class="nav-text">随机森林的优劣</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#集合策略"><span class="nav-number">9.4.</span> <span class="nav-text">集合策略</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#【聚类】"><span class="nav-number">10.</span> <span class="nav-text">【聚类】</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#K-means算法"><span class="nav-number">10.1.</span> <span class="nav-text">K-means算法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#【关联规则】"><span class="nav-number">11.</span> <span class="nav-text">【关联规则】</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#【文本挖掘】"><span class="nav-number">12.</span> <span class="nav-text">【文本挖掘】</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#【模型选择与评估】"><span class="nav-number">13.</span> <span class="nav-text">【模型选择与评估】</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#算法选择"><span class="nav-number">13.1.</span> <span class="nav-text">算法选择</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#泛化能力、欠拟合和过拟合"><span class="nav-number">13.2.</span> <span class="nav-text">泛化能力、欠拟合和过拟合</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#偏差和方差"><span class="nav-number">13.3.</span> <span class="nav-text">偏差和方差</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#【机器学习应用】"><span class="nav-number">1.</span> <span class="nav-text">【机器学习应用】</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#计算机视觉"><span class="nav-number">1.1.</span> <span class="nav-text">计算机视觉</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自然语言处理"><span class="nav-number">1.2.</span> <span class="nav-text">自然语言处理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#社会网络分析"><span class="nav-number">1.3.</span> <span class="nav-text">社会网络分析</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#推荐系统"><span class="nav-number">1.4.</span> <span class="nav-text">推荐系统</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#【数据处理】"><span class="nav-number">2.</span> <span class="nav-text">【数据处理】</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#数据分类"><span class="nav-number">2.1.</span> <span class="nav-text">数据分类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#采样方式"><span class="nav-number">2.2.</span> <span class="nav-text">采样方式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分层采样-stratified-sampling"><span class="nav-number">2.2.1.</span> <span class="nav-text">分层采样(stratified sampling)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#留出法（hold-out）"><span class="nav-number">2.2.2.</span> <span class="nav-text">留出法（hold-out）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#k折交叉验证（k-fold-cross-validation）"><span class="nav-number">2.2.3.</span> <span class="nav-text">k折交叉验证（k-fold cross validation）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自助法-bootstrapping"><span class="nav-number">2.2.4.</span> <span class="nav-text">自助法(bootstrapping)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据清洗"><span class="nav-number">2.3.</span> <span class="nav-text">数据清洗</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#处理缺失值"><span class="nav-number">2.3.1.</span> <span class="nav-text">处理缺失值</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#处理噪声"><span class="nav-number">2.3.2.</span> <span class="nav-text">处理噪声</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#【特征工程】"><span class="nav-number">3.</span> <span class="nav-text">【特征工程】</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#特征编码"><span class="nav-number">3.1.</span> <span class="nav-text">特征编码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#归一化（Normalization）"><span class="nav-number">3.2.</span> <span class="nav-text">归一化（Normalization）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#区间缩放（scaling）"><span class="nav-number">3.3.</span> <span class="nav-text">区间缩放（scaling）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#标准化（Standardization）"><span class="nav-number">3.4.</span> <span class="nav-text">标准化（Standardization）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#特征变换"><span class="nav-number">3.5.</span> <span class="nav-text">特征变换</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#【线性回归模型】"><span class="nav-number">4.</span> <span class="nav-text">【线性回归模型】</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#线性回归的正则化"><span class="nav-number">4.1.</span> <span class="nav-text">线性回归的正则化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Lasso回归"><span class="nav-number">4.1.1.</span> <span class="nav-text">Lasso回归</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#岭回归"><span class="nav-number">4.1.2.</span> <span class="nav-text">岭回归</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最小二乘法的局限性"><span class="nav-number">4.2.</span> <span class="nav-text">最小二乘法的局限性</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#【逻辑回归模型】"><span class="nav-number">5.</span> <span class="nav-text">【逻辑回归模型】</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#损失函数"><span class="nav-number">5.1.</span> <span class="nav-text">损失函数</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#【决策树】"><span class="nav-number">6.</span> <span class="nav-text">【决策树】</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#熵"><span class="nav-number">6.1.</span> <span class="nav-text">熵</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#决策树构建中的分裂准则"><span class="nav-number">6.2.</span> <span class="nav-text">决策树构建中的分裂准则</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#信息增益（information-gain）"><span class="nav-number">6.2.1.</span> <span class="nav-text">信息增益（information gain）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#增益率（gain-ratio）"><span class="nav-number">6.2.2.</span> <span class="nav-text">增益率（gain ratio）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基尼指数-Gini-index"><span class="nav-number">6.2.3.</span> <span class="nav-text">基尼指数(Gini index)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用决策树模型"><span class="nav-number">6.3.</span> <span class="nav-text">常用决策树模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#决策树模型总结"><span class="nav-number">6.3.1.</span> <span class="nav-text">决策树模型总结</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CART决策树属性分裂方法"><span class="nav-number">6.3.2.</span> <span class="nav-text">CART决策树属性分裂方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#决策树优化方法"><span class="nav-number">6.4.</span> <span class="nav-text">决策树优化方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#后剪枝（postpruning）"><span class="nav-number">6.4.1.</span> <span class="nav-text">后剪枝（postpruning）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#预剪枝（prepruning）"><span class="nav-number">6.4.2.</span> <span class="nav-text">预剪枝（prepruning）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#抑制单颗决策树的复杂度的方法"><span class="nav-number">6.4.3.</span> <span class="nav-text">抑制单颗决策树的复杂度的方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#决策树算法的优点"><span class="nav-number">6.5.</span> <span class="nav-text">决策树算法的优点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#决策树算法的缺陷"><span class="nav-number">6.6.</span> <span class="nav-text">决策树算法的缺陷</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#【梯度】"><span class="nav-number">7.</span> <span class="nav-text">【梯度】</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#梯度下降法的超参数"><span class="nav-number">7.1.</span> <span class="nav-text">梯度下降法的超参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#梯度下降的算法调优"><span class="nav-number">7.2.</span> <span class="nav-text">梯度下降的算法调优</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#梯度下降方法总结"><span class="nav-number">7.3.</span> <span class="nav-text">梯度下降方法总结</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#批梯度下降-batch-gradient-descent-BGD"><span class="nav-number">7.3.1.</span> <span class="nav-text">批梯度下降(batch gradient descent/BGD)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#随机梯度下降（stochastic-gradient-descent-SGD）"><span class="nav-number">7.3.2.</span> <span class="nav-text">随机梯度下降（stochastic gradient descent/SGD）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#小批量随机梯度下降（mini-batch-stochastic-gradient-descent）"><span class="nav-number">7.3.3.</span> <span class="nav-text">小批量随机梯度下降（mini-batch stochastic gradient descent）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#梯度下降法与最小二乘法"><span class="nav-number">7.4.</span> <span class="nav-text">梯度下降法与最小二乘法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#【分类模型指标】"><span class="nav-number">8.</span> <span class="nav-text">【分类模型指标】</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#混淆矩阵（confusion-matrix）"><span class="nav-number">8.1.</span> <span class="nav-text">混淆矩阵（confusion matrix）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#准确率（Accuracy）"><span class="nav-number">8.2.</span> <span class="nav-text">准确率（Accuracy）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#精确率（Precision）"><span class="nav-number">8.3.</span> <span class="nav-text">精确率（Precision）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查全率（Recall）"><span class="nav-number">8.4.</span> <span class="nav-text">查全率（Recall）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#F1-Score"><span class="nav-number">8.5.</span> <span class="nav-text">F1 Score</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#F-beta-Score"><span class="nav-number">8.6.</span> <span class="nav-text">F-beta Score</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ROC-（receiver-operating-characteristic-curve）"><span class="nav-number">8.7.</span> <span class="nav-text">ROC （receiver operating characteristic curve）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AUC（Area-Under-the-Curve）"><span class="nav-number">8.8.</span> <span class="nav-text">AUC（Area Under the Curve）</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#【集成学习】"><span class="nav-number">9.</span> <span class="nav-text">【集成学习】</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#boosting算法"><span class="nav-number">9.1.</span> <span class="nav-text">boosting算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#bagging算法"><span class="nav-number">9.2.</span> <span class="nav-text">bagging算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#bagging-amp-boosting"><span class="nav-number">9.3.</span> <span class="nav-text">bagging&amp;boosting</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#GBDT"><span class="nav-number">9.3.1.</span> <span class="nav-text">GBDT</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#xgboost相比GBDT的优势"><span class="nav-number">9.3.2.</span> <span class="nav-text">xgboost相比GBDT的优势</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#随机森林的优劣"><span class="nav-number">9.4.</span> <span class="nav-text">随机森林的优劣</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#集合策略"><span class="nav-number">9.5.</span> <span class="nav-text">集合策略</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#【聚类】"><span class="nav-number">10.</span> <span class="nav-text">【聚类】</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#K-means算法"><span class="nav-number">10.1.</span> <span class="nav-text">K-means算法</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#【关联规则】"><span class="nav-number">11.</span> <span class="nav-text">【关联规则】</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#【文本挖掘】"><span class="nav-number">12.</span> <span class="nav-text">【文本挖掘】</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#【模型选择与评估】"><span class="nav-number">13.</span> <span class="nav-text">【模型选择与评估】</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#算法选择"><span class="nav-number">13.1.</span> <span class="nav-text">算法选择</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#泛化能力、欠拟合和过拟合"><span class="nav-number">13.2.</span> <span class="nav-text">泛化能力、欠拟合和过拟合</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#偏差和方差"><span class="nav-number">13.3.</span> <span class="nav-text">偏差和方差</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1121,7 +1170,7 @@
 <!--
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共16.0k字</span>
+  <span class="post-count">博客全站共25.3k字</span>
 </div>
 -->
 
