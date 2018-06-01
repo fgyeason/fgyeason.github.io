@@ -4,8 +4,28 @@
 
     
   <url>
+    <loc>http://frankblog.site/2018/06/01/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%B3%95%E6%80%BB%E7%BB%93/</loc>
+    <lastmod>2018-06-01T08:18:51.305Z</lastmod>
+    <data>
+        <display>
+        <title>梯度下降法总结</title>
+        <pubTime>2018-06-01T08:20:06.419Z</pubTime>
+        
+        <tag>优化算法</tag>
+         
+         
+           
+             
+              <breadCrumb title="机器学习" url="http://frankblog.site/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://frankblog.site/2018/06/01/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%B9%8BTensorflow(%E4%B8%80)/</loc>
-    <lastmod>2018-06-01T07:34:12.670Z</lastmod>
+    <lastmod>2018-06-01T08:13:10.930Z</lastmod>
     <data>
         <display>
         <title>深度学习之Tensorflow(一)</title>
