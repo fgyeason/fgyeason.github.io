@@ -86,7 +86,7 @@
 
 
 
-  <meta name="keywords" content="优化算法," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -99,20 +99,42 @@
 
 
 
-<meta name="keywords" content="优化算法">
-<meta property="og:type" content="article">
-<meta property="og:title" content="梯度下降法总结">
-<meta property="og:url" content="http://frankblog.site/2018/06/01/梯度下降法总结/index.html">
+<meta name="description" content="宁在一思进，莫在一思停       Deep Learning with Python Francois Chollet / Manning Publications / 2017-10-31 / USD 49.99 人工智能 Python Keras 深度学习     Effective Python : 编写高质量Python代码的59个有效方法 布雷特·斯拉特金（Brett Slatkin">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Frank&#39;s Blog">
+<meta property="og:url" content="http://frankblog.site/books/index.html">
 <meta property="og:site_name" content="Frank&#39;s Blog">
+<meta property="og:description" content="宁在一思进，莫在一思停       Deep Learning with Python Francois Chollet / Manning Publications / 2017-10-31 / USD 49.99 人工智能 Python Keras 深度学习     Effective Python : 编写高质量Python代码的59个有效方法 布雷特·斯拉特金（Brett Slatkin">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://p4rlzrioq.bkt.clouddn.com/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95.gif">
-<meta property="og:image" content="http://p4rlzrioq.bkt.clouddn.com/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D1.jpg">
-<meta property="og:image" content="http://p4rlzrioq.bkt.clouddn.com/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D2.jpg">
-<meta property="og:image" content="http://p4rlzrioq.bkt.clouddn.com/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D3.jpg">
-<meta property="og:updated_time" content="2018-06-02T01:11:54.456Z">
+<meta property="og:image" content="https://img1.doubanio.com/view/subject/m/public/s29444148.jpg">
+<meta property="og:image" content="https://img3.doubanio.com/view/subject/m/public/s28384052.jpg">
+<meta property="og:image" content="https://img3.doubanio.com/view/subject/m/public/s29644036.jpg">
+<meta property="og:image" content="https://img3.doubanio.com/view/subject/m/public/s26261105.jpg">
+<meta property="og:image" content="https://img3.doubanio.com/view/subject/m/public/s28855545.jpg">
+<meta property="og:image" content="https://img3.doubanio.com/view/subject/m/public/s26684895.jpg">
+<meta property="og:image" content="https://img3.doubanio.com/view/subject/m/public/s28033065.jpg">
+<meta property="og:image" content="https://img1.doubanio.com/view/subject/m/public/s1789059.jpg">
+<meta property="og:image" content="https://img3.doubanio.com/view/subject/m/public/s28493566.jpg">
+<meta property="og:image" content="https://img1.doubanio.com/view/subject/m/public/s29518349.jpg">
+<meta property="og:image" content="https://img1.doubanio.com/view/subject/m/public/s29608609.jpg">
+<meta property="og:image" content="https://img3.doubanio.com/view/subject/m/public/s27308066.jpg">
+<meta property="og:image" content="https://img3.doubanio.com/view/subject/m/public/s27935775.jpg">
+<meta property="og:image" content="https://img3.doubanio.com/view/subject/m/public/s28830003.jpg">
+<meta property="og:image" content="https://img3.doubanio.com/view/subject/m/public/s4379914.jpg">
+<meta property="og:image" content="https://img3.doubanio.com/view/subject/m/public/s28910563.jpg">
+<meta property="og:image" content="https://img3.doubanio.com/view/subject/m/public/s8892534.jpg">
+<meta property="og:image" content="https://img3.doubanio.com/view/subject/m/public/s29358625.jpg">
+<meta property="og:image" content="https://img1.doubanio.com/view/subject/m/public/s29667618.jpg">
+<meta property="og:image" content="https://img3.doubanio.com/view/subject/m/public/s29694901.jpg">
+<meta property="og:image" content="https://img1.doubanio.com/view/subject/m/public/s10345719.jpg">
+<meta property="og:image" content="https://img1.doubanio.com/view/subject/m/public/s27498509.jpg">
+<meta property="og:image" content="https://img1.doubanio.com/view/subject/m/public/s2623267.jpg">
+<meta property="og:image" content="https://img3.doubanio.com/view/subject/m/public/s4669554.jpg">
+<meta property="og:updated_time" content="2018-06-02T03:12:38.193Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="梯度下降法总结">
-<meta name="twitter:image" content="http://p4rlzrioq.bkt.clouddn.com/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95.gif">
+<meta name="twitter:title" content="Frank&#39;s Blog">
+<meta name="twitter:description" content="宁在一思进，莫在一思停       Deep Learning with Python Francois Chollet / Manning Publications / 2017-10-31 / USD 49.99 人工智能 Python Keras 深度学习     Effective Python : 编写高质量Python代码的59个有效方法 布雷特·斯拉特金（Brett Slatkin">
+<meta name="twitter:image" content="https://img1.doubanio.com/view/subject/m/public/s29444148.jpg">
 
 
 
@@ -142,13 +164,13 @@
 
 
 
-  <link rel="canonical" href="http://frankblog.site/2018/06/01/梯度下降法总结/"/>
+  <link rel="canonical" href="http://frankblog.site/books/"/>
 
 
 
 
 
-  <title>梯度下降法总结 | Frank's Blog</title>
+  <title> | Frank's Blog</title>
   
 
 
@@ -327,321 +349,194 @@
 
   <div id="posts" class="posts-expand">
     
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://frankblog.site/2018/06/01/梯度下降法总结/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="FGY">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/风景.jpeg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Frank's Blog">
-    </span>
-
     
+    
+    <div class="post-block page">
       <header class="post-header">
 
-        
-        
-          <h1 class="post-title" itemprop="name headline">梯度下降法总结</h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-01T16:20:06+08:00">
-                2018-06-01
-              </time>
-            
-
-            
-              <span class="post-meta-divider">|</span>
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">更新于&#58;</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2018-06-02T09:11:54+08:00">
-                2018-06-02
-              </time>
-            
-          </span>
-
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/机器学习/" itemprop="url" rel="index">
-                    <span itemprop="name">机器学习</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
+	<h1 class="post-title" itemprop="name headline"></h1>
 
 
 
-
-
-          
-            
-          
-
-        
-          
-
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  2,570 字  
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  11 分钟  
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
+</header>
 
       
       
-
       
-        <script src="\assets\js\APlayer.min.js"> </script><p><img src="http://p4rlzrioq.bkt.clouddn.com/%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95.gif" alt=""></p>
-<a id="more"></a>
-<blockquote class="blockquote-center"><font size="5">从IT时代走向DT时代</font></blockquote>
+      <div class="post-body">
+        
+        
+          <script src="\assets\js\APlayer.min.js"> </script><blockquote class="blockquote-center"><font size="5">宁在一思进，莫在一思停</font></blockquote>
 
+
+
+<ul>
+<li><a href="https://book.douban.com/subject/27038207/" target="_blank" rel="noopener"><img src="https://img1.doubanio.com/view/subject/m/public/s29444148.jpg" alt=""></a></li>
+</ul>
+<p><a href="https://book.douban.com/subject/27038207/" title="Deep Learning with Python" target="_blank" rel="noopener">Deep Learning with Python</a></p>
+<p>Francois Chollet / Manning Publications / 2017-10-31 / USD 49.99</p>
+<p>人工智能 Python Keras 深度学习</p>
 <hr>
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
-
-<h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>李航老师在《统计学习方法》中将机器学习的三要素总结为：模型、策略和算法。其大致含义如下：</p>
-<p><strong>模型</strong>：其实就是机器学习训练的过程中所要学习的条件概率分布或者决策函数。</p>
-<p><strong>策略</strong>：就是使用一种什么样的评价，度量模型训练过程中的学习好坏的方法，同时根据这个方法去实施的调整模型的参数，以期望训练的模型将来对未知的数据具有最好的预测准确度。</p>
-<p><strong>算法</strong>：算法是指模型的具体计算方法。它基于训练数据集，根据学习策略，从假设空间中选择最优模型，最后考虑用什么样的计算方法去求解这个最优模型。</p>
-<p>很多时候机器学习工程师又戏称调参工程师, 由此可见参数调优时作为机器学习工程师必须掌握的一项核心技能。    </p>
-<h1 id="1-梯度下降法（Gradient-Descent）"><a href="#1-梯度下降法（Gradient-Descent）" class="headerlink" title="1. 梯度下降法（Gradient Descent）"></a>1. 梯度下降法（Gradient Descent）</h1><h2 id="1-1-一般解释"><a href="#1-1-一般解释" class="headerlink" title="1.1 一般解释"></a>1.1 一般解释</h2><p>f(x)在\(x_0\)的梯度：就是f(x)f(x)变化最快的方向。梯度下降法是一个最优化算法，通常也称为<strong>最速下降法</strong>。</p>
-<p>假设f(x)是一座山，站在半山腰，往x方向走1米，高度上升0.4米，也就是说x方向上的偏导是 0.4；往y方向走1米，高度上升0.3米，也就是说y方向上的偏导是 0.3；这样梯度方向就是 (0.4 , 0.3)，也就是往这个方向走1米，所上升的高度最高。梯度不仅仅是f(x)在某一点变化最快的方向，而且是上升最快的方向；如果想下山，下降最快的方向就是逆着梯度的方向，这就是梯度下降法，又叫最速下降法。</p>
-<h2 id="1-2-梯度下降算法用途"><a href="#1-2-梯度下降算法用途" class="headerlink" title="1.2 梯度下降算法用途"></a>1.2 梯度下降算法用途</h2><p>最速下降法是求解无约束优化问题最简单和最古老的方法之一，虽然现在已经不具有实用性，但是许多有效算法都是以它为基础进行改进和修正而得到的。最速下降法是用负梯度方向为搜索方向的，最速下降法越接近目标值，步长越小，前进越慢。</p>
-<p>在梯度下降算法中，都是围绕以下这个式子展开：</p>
-<p><img src="http://p4rlzrioq.bkt.clouddn.com/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D1.jpg" alt=""></p>
-<p>其中在上面的式子中\(h_θ(x)\)代表，输入为x的时候的其当时θ参数下的输出值，与y相减则是一个相对误差，之后再平方乘以1/2，并且其中:</p>
-<p><img src="http://p4rlzrioq.bkt.clouddn.com/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D2.jpg" alt=""></p>
-<p>这里我列举了一个简单的例子，当然实际的x可以有n多个维度。我们知道曲面上方向导数的最大值的方向就代表了梯度的方向，因此我们在做梯度下降的时候，应该是沿着梯度的反方向进行权重的更新，可以有效的找到全局的最优解。这个θ的更新过程可以描述为:</p>
-<p><img src="http://p4rlzrioq.bkt.clouddn.com/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D3.jpg" alt=""></p>
-<p>这里就是根据每一个 x 的分量以及当时的偏差值进行 θ 的更新，其中 α 为步长，这个参数如果设置的太大，那么很容易就在最优值附加徘徊；相反，如果设置的太小，则会导致收敛速度过慢。</p>
-<p>关于步长和学习速率的关系,这里提一下其实这两个是一个概念，叫法不一样，最优化问题中叫步长，但一般在神经网络中也叫学习速率。</p>
-<h2 id="1-3-梯度下降、随机梯度下降、批量梯度下降"><a href="#1-3-梯度下降、随机梯度下降、批量梯度下降" class="headerlink" title="1.3 梯度下降、随机梯度下降、批量梯度下降"></a>1.3 梯度下降、随机梯度下降、批量梯度下降</h2><ul>
-<li><p><strong>梯度下降</strong>：梯度下降就是上面的推导，要留意，在梯度下降中，对于θ的更新，所有的样本都有贡献，也就是参与调整θ.其计算得到的是一个标准梯度。因而理论上来说一次更新的幅度是比较大的。如果样本不多的情况下，当然是这样收敛的速度会更快啦~</p>
-</li>
-<li><p><strong>随机梯度下降</strong>：可以看到多了随机两个字，随机也就是说用样本中的一个例子来近似所有的样本，来调整θ，因而随机梯度下降是会带来一定的问题，因为计算得到的并不是准确的一个梯度，容易陷入到局部最优解中。随机梯度下降每次迭代只使用一个样本，迭代一次计算量为n2，当样本个数m很大的时候，随机梯度下降迭代一次的速度要远高于批量梯度下降方法。</p>
-</li>
-<li><p><strong>批量梯度下降</strong>：其实批量的梯度下降就是一种折中的方法，他用了一些小样本来近似全部的，其本质就是随机指定一个例子替代样本不太准，而且批量的话还是非常可以反映样本的一个分布情况的。批量梯度下降最小化所有训练样本的损失函数，使得最终求解的是全局的最优解，即求解的参数是使得风险函数最小，但是对于大规模样本问题效率低下。</p>
-</li>
-<li><p><strong>概括</strong>：</p>
-<p>随机梯度下降是通过每个样本来迭代更新一次，如果样本量很大的情况（例如几十万），那么可能只用其中几万条或者几千条的样本，就已经将theta迭代到最优解了，对比批量梯度下降，迭代一次需要用到十几万训练样本，一次迭代不可能最优，如果迭代10次的话就需要遍历训练样本10次。但是，SGD伴随的一个问题是噪音较BGD要多，使得SGD并不是每次迭代都向着整体最优化方向。</p>
-<p>随机梯度下降每次迭代只使用一个样本，迭代一次计算量为n2，当样本个数m很大的时候，随机梯度下降迭代一次的速度要远高于批量梯度下降方法。两者的关系可以这样理解：随机梯度下降方法以损失很小的一部分精确度和增加一定数量的迭代次数为代价，换取了总体的优化效率的提升。增加的迭代次数远远小于样本的数量。</p>
-</li>
-<li><p><strong>对批量梯度下降法和随机梯度下降法的总结：</strong></p>
-<p>批量梯度下降—最小化所有训练样本的损失函数，使得最终求解的是全局的最优解，即求解的参数是使得风险函数最小，但是对于大规模样本问题效率低下。</p>
-<p>随机梯度下降—最小化每条样本的损失函数，虽然不是每次迭代得到的损失函数都向着全局最优方向， 但是大的整体的方向是向全局最优解的，最终的结果往往是在全局最优解附近，适用于大规模训练样本情况。</p>
-</li>
+<ul>
+<li><a href="https://book.douban.com/subject/26709315/" target="_blank" rel="noopener"><img src="https://img3.doubanio.com/view/subject/m/public/s28384052.jpg" alt=""></a></li>
 </ul>
-<h3 id="梯度下降代码"><a href="#梯度下降代码" class="headerlink" title="梯度下降代码:"></a>梯度下降代码:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">import random</span><br><span class="line">#This is a sample to simulate a function y = theta1*x1 + theta2*x2</span><br><span class="line">input_x = [[1,4], [2,5], [5,1], [4,2]] </span><br><span class="line">y = [19,26,19,20] </span><br><span class="line">theta = [1,1]</span><br><span class="line">loss = 10</span><br><span class="line">step_size = 0.001</span><br><span class="line">eps =0.0001</span><br><span class="line">max_iters = 10000</span><br><span class="line">error =0</span><br><span class="line">iter_count = 0</span><br><span class="line">while( loss &gt; eps and iter_count &lt; max_iters):</span><br><span class="line">    loss = 0</span><br><span class="line">	#这里更新权重的时候所有的样本点都用上了</span><br><span class="line">    for i in range (3):</span><br><span class="line"> 	pred_y = theta[0]*input_x[i][0]+theta[1]*input_x[i][1]</span><br><span class="line">	theta[0] = theta[0] - step_size * (pred_y - y[i]) * input_x[i][0]</span><br><span class="line"> 	theta[1] = theta[1] - step_size * (pred_y - y[i]) * input_x[i][1]</span><br><span class="line">    for i in range (3):</span><br><span class="line">	pred_y = theta[0]*input_x[i][0]+theta[1]*input_x[i][1]</span><br><span class="line">	error = 0.5*(pred_y - y[i])**2</span><br><span class="line">	loss = loss + error</span><br><span class="line">    iter_count += 1</span><br><span class="line">    print &apos;iters_count&apos;, iter_count</span><br><span class="line"></span><br><span class="line">print &apos;theta: &apos;,theta </span><br><span class="line">print &apos;final loss: &apos;, loss</span><br><span class="line">print &apos;iters: &apos;, iter_count</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">output:</span><br><span class="line"></span><br><span class="line">iters_count 219</span><br><span class="line">iters_count 220</span><br><span class="line">iters_count 221</span><br><span class="line">iters_count 222</span><br><span class="line">iters_count 223</span><br><span class="line">iters_count 224</span><br><span class="line">iters_count 225</span><br><span class="line">theta: [3.0027765778748003, 3.997918297015663]</span><br><span class="line">final loss: 9.68238055213e-05</span><br><span class="line">iters: 225</span><br><span class="line">[Finished in 0.2s]</span><br></pre></td></tr></table></figure>
-<h3 id="随机梯度下降代码"><a href="#随机梯度下降代码" class="headerlink" title="随机梯度下降代码:"></a>随机梯度下降代码:</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"># 每次选取一个值,随机一个点更新 θ</span><br><span class="line">import random</span><br><span class="line">#This is a sample to simulate a function y = theta1*x1 + theta2*x2</span><br><span class="line">input_x = [[1,4], [2,5], [5,1], [4,2]] </span><br><span class="line">y = [19,26,19,20] </span><br><span class="line">theta = [1,1]</span><br><span class="line">loss = 10</span><br><span class="line">step_size = 0.001</span><br><span class="line">eps =0.0001</span><br><span class="line">max_iters = 10000</span><br><span class="line">error =0</span><br><span class="line">iter_count = 0</span><br><span class="line">while( loss &gt; eps and iter_count &lt; max_iters):</span><br><span class="line">    loss = 0</span><br><span class="line"> #每一次选取随机的一个点进行权重的更新</span><br><span class="line">    i = random.randint(0,3)</span><br><span class="line">    pred_y = theta[0]*input_x[i][0]+theta[1]*input_x[i][1]</span><br><span class="line">    theta[0] = theta[0] - step_size * (pred_y - y[i]) * input_x[i][0]</span><br><span class="line">    theta[1] = theta[1] - step_size * (pred_y - y[i]) * input_x[i][1]</span><br><span class="line">    for i in range (3):</span><br><span class="line">	pred_y = theta[0]*input_x[i][0]+theta[1]*input_x[i][1]</span><br><span class="line">	error = 0.5*(pred_y - y[i])**2</span><br><span class="line">	loss = loss + error</span><br><span class="line">    iter_count += 1</span><br><span class="line">    print &apos;iters_count&apos;, iter_count</span><br><span class="line"></span><br><span class="line">print &apos;theta: &apos;,theta </span><br><span class="line">print &apos;final loss: &apos;, loss</span><br><span class="line">print &apos;iters: &apos;, iter_count</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">#output:</span><br><span class="line">iters_count 1226</span><br><span class="line">iters_count 1227</span><br><span class="line">iters_count 1228</span><br><span class="line">iters_count 1229</span><br><span class="line">iters_count 1230</span><br><span class="line">iters_count 1231</span><br><span class="line">iters_count 1232</span><br><span class="line">theta: [3.002441488688225, 3.9975844154600226]</span><br><span class="line">final loss: 9.989420302e-05</span><br><span class="line">iters: 1232</span><br><span class="line">[Finished in 0.3s]</span><br></pre></td></tr></table></figure>
-<h3 id="批量随机梯度下降代码："><a href="#批量随机梯度下降代码：" class="headerlink" title="批量随机梯度下降代码："></a>批量随机梯度下降代码：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"># 这里用2个样本点</span><br><span class="line">import random</span><br><span class="line">#This is a sample to simulate a function y = theta1*x1 + theta2*x2</span><br><span class="line">input_x = [[1,4], [2,5], [5,1], [4,2]] </span><br><span class="line">y = [19,26,19,20] </span><br><span class="line">theta = [1,1]</span><br><span class="line">loss = 10</span><br><span class="line">step_size = 0.001</span><br><span class="line">eps =0.0001</span><br><span class="line">max_iters = 10000</span><br><span class="line">error =0</span><br><span class="line">iter_count = 0</span><br><span class="line">while( loss &gt; eps and iter_count &lt; max_iters):</span><br><span class="line">    loss = 0</span><br><span class="line"></span><br><span class="line">    i = random.randint(0,3) #注意这里，我这里批量每次选取的是2个样本点做更新，另一个点是随机点+1的相邻点</span><br><span class="line">    j = (i+1)%4</span><br><span class="line">    pred_y = theta[0]*input_x[i][0]+theta[1]*input_x[i][1]</span><br><span class="line">    theta[0] = theta[0] - step_size * (pred_y - y[i]) * input_x[i][0]</span><br><span class="line">    theta[1] = theta[1] - step_size * (pred_y - y[i]) * input_x[i][1]</span><br><span class="line"></span><br><span class="line">    pred_y = theta[0]*input_x[j][0]+theta[1]*input_x[j][1]</span><br><span class="line">    theta[0] = theta[0] - step_size * (pred_y - y[j]) * input_x[j][0]</span><br><span class="line">    theta[1] = theta[1] - step_size * (pred_y - y[j]) * input_x[j][1]</span><br><span class="line">    for i in range (3):</span><br><span class="line">	pred_y = theta[0]*input_x[i][0]+theta[1]*input_x[i][1]</span><br><span class="line">	error = 0.5*(pred_y - y[i])**2</span><br><span class="line">	loss = loss + error</span><br><span class="line">    iter_count += 1</span><br><span class="line">    print &apos;iters_count&apos;, iter_count</span><br><span class="line"></span><br><span class="line">print &apos;theta: &apos;,theta </span><br><span class="line">print &apos;final loss: &apos;, loss</span><br><span class="line">print &apos;iters: &apos;, iter_count</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">output:</span><br><span class="line">iters_count 543</span><br><span class="line">iters_count 544</span><br><span class="line">iters_count 545</span><br><span class="line">iters_count 546</span><br><span class="line">iters_count 547</span><br><span class="line">iters_count 548</span><br><span class="line">iters_count 549</span><br><span class="line">theta: [3.0023012574840764, 3.997553282857357]</span><br><span class="line">final loss: 9.81717138358e-05</span><br><span class="line">iters: 549</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    
-    
-    
-
-    
-
-    <div>
-      
-        <div>
-    
-        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
-    
-</div>
-      
-    </div>
-
-    
-      <div>
-        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
-  <div>Donate comment here</div>
-  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
-    <span>打赏</span>
-  </button>
-  <div id="QR" style="display: none;">
-
-    
-      <div id="wechat" style="display: inline-block">
-        <img id="wechat_qr" src="/images/wechatpay.png" alt="FGY 微信支付"/>
-        <p>微信支付</p>
-      </div>
-    
-
-    
-      <div id="alipay" style="display: inline-block">
-        <img id="alipay_qr" src="/images/alipay.jpg" alt="FGY 支付宝"/>
-        <p>支付宝</p>
-      </div>
-    
-
-    
-
-  </div>
-</div>
-
-      </div>
-    
-
-    
-      <div>
-        <ul class="post-copyright">
-  <li class="post-copyright-author">
-    <strong>本文作者：</strong>
-    FGY
-  </li>
-  <li class="post-copyright-link">
-    <strong>本文链接：</strong>
-    <a href="http://frankblog.site/2018/06/01/梯度下降法总结/" title="梯度下降法总结">http://frankblog.site/2018/06/01/梯度下降法总结/</a>
-  </li>
-  <li class="post-copyright-license">
-    <strong>版权声明： </strong>
-    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
-  </li>
+<p><a href="https://book.douban.com/subject/26709315/" title="Effective Python" target="_blank" rel="noopener">Effective Python : 编写高质量Python代码的59个有效方法</a></p>
+<p>布雷特·斯拉特金（Brett Slatkin） / 爱飞翔 / 机械工业出版社 / 2016-1 / 59</p>
+<p>程序设计 python</p>
+<hr>
+<ul>
+<li><a href="https://book.douban.com/subject/27608466/" target="_blank" rel="noopener"><img src="https://img3.doubanio.com/view/subject/m/public/s29644036.jpg" alt=""></a></li>
 </ul>
+<p><a href="https://book.douban.com/subject/27608466/" title="Python数据分析与数据化运营" target="_blank" rel="noopener">Python数据分析与数据化运营</a></p>
+<p>宋天龙 / 机械工业出版社 / 2017-12 / 99</p>
+<p>数据分析 Python 数据化运营</p>
+<hr>
+<ul>
+<li><a href="https://book.douban.com/subject/6885949/" target="_blank" rel="noopener"><img src="https://img3.doubanio.com/view/subject/m/public/s26261105.jpg" alt=""></a></li>
+</ul>
+<p><a href="https://book.douban.com/subject/6885949/" title="网络、群体与市场" target="_blank" rel="noopener">网络、群体与市场 : 揭示高度互联世界的行为原理与效应机制</a><br>大卫·伊斯利(David Esley)、乔恩·克莱因伯格(Jon Kleinberg) / 李晓明、王卫红、杨韫利 / 清华大学出版社 / 2011-10-1 / CNY 69.00</p>
+<p>计算机 社会网络分析;互联网;复杂网络</p>
+<hr>
+<ul>
+<li><a href="https://book.douban.com/subject/26727997/" target="_blank" rel="noopener"><img src="https://img3.doubanio.com/view/subject/m/public/s28855545.jpg" alt=""></a></li>
+</ul>
+<p><a href="https://book.douban.com/subject/26727997/" title="Neural Networks and Deep Learning" target="_blank" rel="noopener">Neural Networks and Deep Learning</a></p>
+<p>deep_learning 数据科学</p>
+<hr>
+<ul>
+<li><a href="https://book.douban.com/subject/24538715/" target="_blank" rel="noopener"><img src="https://img3.doubanio.com/view/subject/m/public/s26684895.jpg" alt=""></a></li>
+</ul>
+<p><a href="https://book.douban.com/subject/24538715/" title="艾比斯之梦" target="_blank" rel="noopener">艾比斯之梦</a></p>
+<p>[日] 山本弘 / 张智渊 / 新星出版社 / 2013-6 / 36.00元<br>日本 人工智能 科幻</p>
+<hr>
+<ul>
+<li><a href="https://book.douban.com/subject/26295450/" target="_blank" rel="noopener"><img src="https://img3.doubanio.com/view/subject/m/public/s28033065.jpg" alt=""></a></li>
+</ul>
+<p><a href="https://book.douban.com/subject/26295450/" title="软件体的生命周期" target="_blank" rel="noopener">软件体的生命周期 : 特德·姜科幻小说集</a></p>
+<p>[美] 特德·姜 / 张博然、李克勤、王荣生、耿辉 / 译林出版社 / 2015-5 / 35.00元</p>
+<p>美国 科幻</p>
+<hr>
+<ul>
+<li><a href="https://book.douban.com/subject/1291204/" target="_blank" rel="noopener"><img src="https://img1.doubanio.com/view/subject/m/public/s1789059.jpg" alt=""></a><br><a href="https://book.douban.com/subject/1291204/" title="哥德尔、艾舍尔、巴赫" target="_blank" rel="noopener">哥德尔、艾舍尔、巴赫 : 集异璧之大成</a></li>
+</ul>
+<p>[美] 侯世达 / 严勇、刘皓明、莫大伟 / 商务印书馆 / 1997-5 / 88.00元</p>
+<p>人工智能 哲学</p>
+<ul>
+<li><a href="https://book.douban.com/subject/26741236/" target="_blank" rel="noopener"><img src="https://img3.doubanio.com/view/subject/m/public/s28493566.jpg" alt=""></a></li>
+</ul>
+<p><a href="https://book.douban.com/subject/26741236/" title="推理的迷宫" target="_blank" rel="noopener">推理的迷宫 : 悖论、谜题及知识的脆弱性</a></p>
+<p>[美]威廉·庞德斯通 / 李大强 / 中信出版集团股份有限公司 / 2015-12-1 / CNY 45.00</p>
+<p> 想读 推理</p>
+<hr>
+<ul>
+<li><a href="https://book.douban.com/subject/27087503/" target="_blank" rel="noopener"><img src="https://img1.doubanio.com/view/subject/m/public/s29518349.jpg" alt=""></a></li>
+</ul>
+<p><a href="https://book.douban.com/subject/27087503/" title="深度学习" target="_blank" rel="noopener">深度学习 : 又名“花书”</a></p>
+<p>[美] 伊恩·古德费洛、[加] 约书亚·本吉奥、[加] 亚伦·库维尔 / 赵申剑、黎彧君、符天凡、李凯 / 人民邮电出版社 / 2017-7-1 / 168</p>
+<p>计算机</p>
+<ul>
+<li><a href="https://book.douban.com/subject/27198046/" target="_blank" rel="noopener"><img src="https://img1.doubanio.com/view/subject/m/public/s29608609.jpg" alt=""></a></li>
+</ul>
+<p><a href="https://book.douban.com/subject/27198046/" title="Linux就该这么学" target="_blank" rel="noopener">Linux就该这么学 : 必读的Linux系统与红帽认证自学书籍</a></p>
+<p>刘遄 / 人民邮电出版社 / 2017-11-1 / 79</p>
+<p>linux</p>
+<hr>
+<ul>
+<li><a href="https://book.douban.com/subject/25910544/" target="_blank" rel="noopener"><img src="https://img3.doubanio.com/view/subject/m/public/s27308066.jpg" alt=""></a></li>
+</ul>
+<p><a href="https://book.douban.com/subject/25910544/" title="编写高质量代码：改善Python程序的91个建议" target="_blank" rel="noopener">编写高质量代码：改善Python程序的91个建议</a></p>
+<p>张颖、赖勇浩 / 机械工业出版社 / 2014-6 / 59.00元</p>
+<p>Python Programming</p>
+<hr>
+<ul>
+<li><a href="https://book.douban.com/subject/26278021/" target="_blank" rel="noopener"><img src="https://img3.doubanio.com/view/subject/m/public/s27935775.jpg" alt=""></a></li>
+</ul>
+<p><a href="https://book.douban.com/subject/26278021/" title="Fluent Python" target="_blank" rel="noopener">Fluent Python</a></p>
+<p>Luciano Ramalho / O’Reilly Media / 2015-8-20 / USD 39.99</p>
+<p>python Programming 进阶</p>
+<hr>
+<ul>
+<li><a href="https://book.douban.com/subject/26822106/" target="_blank" rel="noopener"><img src="https://img3.doubanio.com/view/subject/m/public/s28830003.jpg" alt=""></a></li>
+</ul>
+<p><a href="https://book.douban.com/subject/26822106/" title="图解密码技术（第3版）" target="_blank" rel="noopener">图解密码技术（第3版）</a></p>
+<p>[日] 结城浩 / 周自恒 / 人民邮电出版社 / 2016-6 / 89.00元</p>
+<p>安全 密码技术</p>
+<hr>
+<ul>
+<li><a href="https://book.douban.com/subject/4822685/" target="_blank" rel="noopener"><img src="https://img3.doubanio.com/view/subject/m/public/s4379914.jpg" alt=""></a></li>
+</ul>
+<p><a href="https://book.douban.com/subject/4822685/" title="编码" target="_blank" rel="noopener">编码 : 隐匿在计算机软硬件背后的语言</a></p>
+<p>[美] Charles Petzold / 左飞、薛佟佟 / 电子工业出版社 / 2010 / 55.00元</p>
+<p>编程 底层探索</p>
+<hr>
+<ul>
+<li><a href="https://book.douban.com/subject/26840215/" target="_blank" rel="noopener"><img src="https://img3.doubanio.com/view/subject/m/public/s28910563.jpg" alt=""></a></li>
+</ul>
+<p><a href="https://book.douban.com/subject/26840215/" title="Hands-On Machine Learning with Scikit-Learn and TensorFlow" target="_blank" rel="noopener">Hands-On Machine Learning with Scikit-Learn and TensorFlow : Concepts, Tools, and Techniques for Building Intelligent Systems</a></p>
+<p>Aurélien Géron / O’Reilly Media / 2017-1-25 / USD 49.99</p>
+<hr>
+<ul>
+<li><a href="https://book.douban.com/subject/1292405/" target="_blank" rel="noopener"><img src="https://img3.doubanio.com/view/subject/m/public/s8892534.jpg" alt=""></a></li>
+</ul>
+<p><a href="https://book.douban.com/subject/1292405/" title="自私的基因" target="_blank" rel="noopener">自私的基因</a></p>
+<p>(英)里查德.道金斯 / 卢允中 / 吉林人民出版社 / 1998 / 24.00元<br>科普 心理学</p>
+<hr>
+<ul>
+<li><a href="https://book.douban.com/subject/26979890/" target="_blank" rel="noopener"><img src="https://img3.doubanio.com/view/subject/m/public/s29358625.jpg" alt=""></a><br><a href="https://book.douban.com/subject/26979890/" title="算法图解" target="_blank" rel="noopener">算法图解</a></li>
+</ul>
+<p>[美] Aditya Bhargava / 袁国忠 / 人民邮电出版社 / 2017-3 / 49.00元</p>
+<p>算法</p>
+<hr>
+<ul>
+<li><a href="https://book.douban.com/subject/27667378/" target="_blank" rel="noopener"><img src="https://img1.doubanio.com/view/subject/m/public/s29667618.jpg" alt=""></a><br><a href="https://book.douban.com/subject/27667378/" title="Python数据科学手册" target="_blank" rel="noopener">Python数据科学手册</a></li>
+</ul>
+<p>Jake VanderPlas / 陶俊杰、陈小莉 / 人民邮电出版社 / 2018-1-20 / 109.00元</p>
+<p>机器学习</p>
+<hr>
+<ul>
+<li><a href="https://book.douban.com/subject/30147778/" target="_blank" rel="noopener"><img src="https://img3.doubanio.com/view/subject/m/public/s29694901.jpg" alt=""></a></li>
+</ul>
+<p><a href="https://book.douban.com/subject/30147778/" title="Python机器学习基础教程" target="_blank" rel="noopener">Python机器学习基础教程</a></p>
+<p>[德]安德里亚斯·穆勒、[美]莎拉·吉多 / 张亮 / 人民邮电出版社 / 2018-1 / 79.00元</p>
+<p>机器学习</p>
+<hr>
+<ul>
+<li><a href="https://book.douban.com/subject/10785583/" target="_blank" rel="noopener"><img src="https://img1.doubanio.com/view/subject/m/public/s10345719.jpg" alt=""></a></li>
+</ul>
+<p><a href="https://book.douban.com/subject/10785583/" title="思考，快与慢" target="_blank" rel="noopener">思考，快与慢</a></p>
+<p>[美] 丹尼尔·卡尼曼 / 胡晓姣、李爱民、何梦莹 / 中信出版社 / 2012-7 / 69.00元</p>
+<p> 心理</p>
+<hr>
+<ul>
+<li><a href="https://book.douban.com/subject/25934300/" target="_blank" rel="noopener"><img src="https://img1.doubanio.com/view/subject/m/public/s27498509.jpg" alt=""></a></li>
+</ul>
+<p><a href="https://book.douban.com/subject/25934300/" title="塞拉菲尼抄本" target="_blank" rel="noopener">塞拉菲尼抄本</a></p>
+<p>[意] 鹿易吉·塞拉菲尼 / 张密 / 北京联合出版公司 / 2014-11 / 799.00元</p>
+<p>社会学</p>
+<hr>
+<ul>
+<li><a href="https://book.douban.com/subject/2165076/" target="_blank" rel="noopener"><img src="https://img1.doubanio.com/view/subject/m/public/s2623267.jpg" alt=""></a></li>
+</ul>
+<p><a href="https://book.douban.com/subject/2165076/" title="玻璃球游戏" target="_blank" rel="noopener">玻璃球游戏</a></p>
+<p>[德]赫尔曼·黑塞 / 张佩芬 / 上海译文出版社 / 2007-07-01 / 31.00元</p>
+<p>社会学</p>
+<hr>
+<ul>
+<li><a href="https://book.douban.com/subject/6021440/" target="_blank" rel="noopener"><img src="https://img3.doubanio.com/view/subject/m/public/s4669554.jpg" alt=""></a></li>
+</ul>
+<p><a href="https://book.douban.com/subject/6021440/" title="黑客与画家" target="_blank" rel="noopener">黑客与画家 : 硅谷创业之父Paul Graham文集</a></p>
+<p>[美] Paul Graham / 阮一峰 / 人民邮电出版社 / 2011-4 / 49.00元</p>
+<p>互联网</p>
 
+        
       </div>
-    
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/优化算法/" rel="tag"><i class="fa fa-tag"></i> 优化算法</a>
-          
-        </div>
-      
-
       
       
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2018/06/01/深度学习之Tensorflow(一)/" rel="next" title="深度学习之Tensorflow(一)">
-                <i class="fa fa-chevron-left"></i> 深度学习之Tensorflow(一)
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/06/01/如何用形象的比喻描述大数据的技术生态？Hadoop、Hive、Spark 之间是什么关系？/" rel="prev" title="如何用形象的比喻描述大数据的技术生态？Hadoop、Hive、Spark 之间是什么关系？">
-                如何用形象的比喻描述大数据的技术生态？Hadoop、Hive、Spark 之间是什么关系？ <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-
-    <div class="post-spread">
       
     </div>
+    
+    
+    
   </div>
 
 
@@ -675,17 +570,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -836,22 +722,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#引言"><span class="nav-number">1.</span> <span class="nav-text">引言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#1-梯度下降法（Gradient-Descent）"><span class="nav-number">2.</span> <span class="nav-text">1. 梯度下降法（Gradient Descent）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-一般解释"><span class="nav-number">2.1.</span> <span class="nav-text">1.1 一般解释</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-梯度下降算法用途"><span class="nav-number">2.2.</span> <span class="nav-text">1.2 梯度下降算法用途</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-梯度下降、随机梯度下降、批量梯度下降"><span class="nav-number">2.3.</span> <span class="nav-text">1.3 梯度下降、随机梯度下降、批量梯度下降</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#梯度下降代码"><span class="nav-number">2.3.1.</span> <span class="nav-text">梯度下降代码:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#随机梯度下降代码"><span class="nav-number">2.3.2.</span> <span class="nav-text">随机梯度下降代码:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#批量随机梯度下降代码："><span class="nav-number">2.3.3.</span> <span class="nav-text">批量随机梯度下降代码：</span></a></li></ol></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=450 src="//music.163.com/outchain/player?type=0&id=2130685222&auto=1&height=430"></iframe>

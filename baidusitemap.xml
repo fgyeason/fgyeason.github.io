@@ -4,8 +4,33 @@
 
     
   <url>
+    <loc>http://frankblog.site/2018/03/06/%E6%95%B0%E5%AD%A6%E4%B9%8B%E7%BE%8E/</loc>
+    <lastmod>2018-06-02T03:14:11.099Z</lastmod>
+    <data>
+        <display>
+        <title>数学之美学习笔记</title>
+        <pubTime>2018-03-06T13:59:33.332Z</pubTime>
+        
+        <tag>统计算法</tag>
+         
+        <tag>NLP</tag>
+         
+         
+           
+             
+              <breadCrumb title="数学" url="http://frankblog.site/categories/%E6%95%B0%E5%AD%A6/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+    
+    
+  <url>
     <loc>http://frankblog.site/2018/06/01/%E6%A2%AF%E5%BA%A6%E4%B8%8B%E9%99%8D%E6%B3%95%E6%80%BB%E7%BB%93/</loc>
-    <lastmod>2018-06-01T08:56:05.757Z</lastmod>
+    <lastmod>2018-06-02T01:11:54.456Z</lastmod>
     <data>
         <display>
         <title>梯度下降法总结</title>
@@ -24,8 +49,30 @@
 
     
   <url>
+    <loc>http://frankblog.site/2018/06/01/%E5%A6%82%E4%BD%95%E7%94%A8%E5%BD%A2%E8%B1%A1%E7%9A%84%E6%AF%94%E5%96%BB%E6%8F%8F%E8%BF%B0%E5%A4%A7%E6%95%B0%E6%8D%AE%E7%9A%84%E6%8A%80%E6%9C%AF%E7%94%9F%E6%80%81%EF%BC%9FHadoop%E3%80%81Hive%E3%80%81Spark%20%E4%B9%8B%E9%97%B4%E6%98%AF%E4%BB%80%E4%B9%88%E5%85%B3%E7%B3%BB%EF%BC%9F/</loc>
+    <lastmod>2018-06-01T12:05:36.776Z</lastmod>
+    <data>
+        <display>
+        <title>如何用形象的比喻描述大数据的技术生态？Hadoop、Hive、Spark 之间是什么关系？</title>
+        <pubTime>2018-06-01T12:06:43.304Z</pubTime>
+        
+        <tag>hadoop</tag>
+         
+        <tag>spark</tag>
+         
+         
+           
+             
+              <breadCrumb title="大数据" url="http://frankblog.site/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://frankblog.site/2018/06/01/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%B9%8BTensorflow(%E4%B8%80)/</loc>
-    <lastmod>2018-06-01T08:13:10.930Z</lastmod>
+    <lastmod>2018-06-01T09:10:04.104Z</lastmod>
     <data>
         <display>
         <title>深度学习之Tensorflow(一)</title>
@@ -47,7 +94,7 @@
     
   <url>
     <loc>http://frankblog.site/2018/05/30/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80%EF%BC%88%E4%BA%8C%EF%BC%89/</loc>
-    <lastmod>2018-05-31T14:01:43.869Z</lastmod>
+    <lastmod>2018-06-01T07:48:32.933Z</lastmod>
     <data>
         <display>
         <title>机器学习基础（二）</title>
@@ -131,28 +178,6 @@
     </url>
 
     
-  <url>
-    <loc>http://frankblog.site/2018/03/06/%E6%95%B0%E5%AD%A6%E4%B9%8B%E7%BE%8E/</loc>
-    <lastmod>2018-03-14T02:44:01.381Z</lastmod>
-    <data>
-        <display>
-        <title>数学之美学习笔记</title>
-        <pubTime>2018-03-06T13:59:33.332Z</pubTime>
-        
-        <tag>统计算法</tag>
-         
-        <tag>NLP</tag>
-         
-         
-           
-             
-              <breadCrumb title="笔记" url="http://frankblog.site/categories/%E7%AC%94%E8%AE%B0/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
     
     
     
@@ -195,7 +220,6 @@
     </data>
     </url>
 
-    
     
     
     
