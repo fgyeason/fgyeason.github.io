@@ -3,10 +3,31 @@
 
 
     
+  <url>
+    <loc>http://frankblog.site/2018/06/03/Matplotlib%20%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</loc>
+    <lastmod>2018-06-04T01:42:15.913Z</lastmod>
+    <data>
+        <display>
+        <title>Matplotlib基本操作</title>
+        <pubTime>2018-06-03T03:59:17.192Z</pubTime>
+        
+        <tag>可视化</tag>
+         
+        <tag>Matplotlib</tag>
+         
+         
+           
+             
+              <breadCrumb title="可视化" url="http://frankblog.site/categories/%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+          
+        </display>
+    </data>
+    </url>
+
     
   <url>
     <loc>http://frankblog.site/2018/06/03/markdown%E5%85%AC%E5%BC%8F%E7%BC%96%E8%BE%91/</loc>
-    <lastmod>2018-06-03T13:25:58.556Z</lastmod>
+    <lastmod>2018-06-04T01:33:58.285Z</lastmod>
     <data>
         <display>
         <title>markdown公式编辑</title>
@@ -26,27 +47,6 @@
     </url>
 
     
-  <url>
-    <loc>http://frankblog.site/2018/06/03/Matplotlib%20%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</loc>
-    <lastmod>2018-06-03T13:25:32.424Z</lastmod>
-    <data>
-        <display>
-        <title>Matplotlib基本操作</title>
-        <pubTime>2018-06-03T03:59:17.192Z</pubTime>
-        
-        <tag>可视化</tag>
-         
-        <tag>Matplotlib</tag>
-         
-         
-           
-             
-              <breadCrumb title="可视化" url="http://frankblog.site/categories/%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
   <url>
     <loc>http://frankblog.site/2018/06/02/svm%E5%8F%AF%E8%A7%86%E5%8C%96/</loc>
