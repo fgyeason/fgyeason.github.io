@@ -86,7 +86,7 @@
 
 
 
-  <meta name="keywords" content="Windows,Chrome," />
+  <meta name="keywords" content="机器学习,决策树," />
 
 
 
@@ -99,17 +99,21 @@
 
 
 
-<meta name="keywords" content="Windows,Chrome">
+<meta name="keywords" content="机器学习,决策树">
 <meta property="og:type" content="article">
-<meta property="og:title" content="优雅高效地使用windows">
-<meta property="og:url" content="http://frankblog.site/2018/02/26/优雅高效地使用windows/index.html">
+<meta property="og:title" content="决策树之泰坦之灾">
+<meta property="og:url" content="http://frankblog.site/2018/06/05/决策树之泰坦之灾/index.html">
 <meta property="og:site_name" content="Frank&#39;s Blog">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://p4rlzrioq.bkt.clouddn.com/v2-bd237c6411061932e99836393728ec02_r.jpg">
-<meta property="og:updated_time" content="2018-05-30T08:35:58.092Z">
+<meta property="og:image" content="http://p4rlzrioq.bkt.clouddn.com/titanic.jpg">
+<meta property="og:image" content="http://p4rlzrioq.bkt.clouddn.com/%E4%BC%98%E5%8C%96%E6%A8%A1%E5%9E%8B%E5%8F%82%E6%95%B0.jpg">
+<meta property="og:image" content="http://p4rlzrioq.bkt.clouddn.com/%E6%9D%A5%E4%BC%98%E5%8C%96%E6%A8%A1%E5%9E%8B.jpg">
+<meta property="og:image" content="http://p4rlzrioq.bkt.clouddn.com/%E7%94%BB%E5%87%BA%E5%AD%A6%E4%B9%A0%E6%9B%B2%E7%BA%BF%EF%BC%9A.jpg">
+<meta property="og:image" content="http://p4rlzrioq.bkt.clouddn.com/%E5%A4%9A%E7%BB%84%E5%8F%82%E6%95%B0%E4%B9%8B%E9%97%B4%E9%80%89%E6%8B%A9%E6%9C%80%E4%BC%98%E5%8F%82%E6%95%B0%EF%BC%9A.jpg">
+<meta property="og:updated_time" content="2018-06-05T13:06:40.302Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="优雅高效地使用windows">
-<meta name="twitter:image" content="http://p4rlzrioq.bkt.clouddn.com/v2-bd237c6411061932e99836393728ec02_r.jpg">
+<meta name="twitter:title" content="决策树之泰坦之灾">
+<meta name="twitter:image" content="http://p4rlzrioq.bkt.clouddn.com/titanic.jpg">
 
 
 
@@ -139,13 +143,13 @@
 
 
 
-  <link rel="canonical" href="http://frankblog.site/2018/02/26/优雅高效地使用windows/"/>
+  <link rel="canonical" href="http://frankblog.site/2018/06/05/决策树之泰坦之灾/"/>
 
 
 
 
 
-  <title>优雅高效地使用windows | Frank's Blog</title>
+  <title>决策树之泰坦之灾 | Frank's Blog</title>
   
 
 
@@ -336,7 +340,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://frankblog.site/2018/02/26/优雅高效地使用windows/">
+    <link itemprop="mainEntityOfPage" href="http://frankblog.site/2018/06/05/决策树之泰坦之灾/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="FGY">
@@ -353,7 +357,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">优雅高效地使用windows</h1>
+          <h1 class="post-title" itemprop="name headline">决策树之泰坦之灾</h1>
         
 
         <div class="post-meta">
@@ -368,8 +372,8 @@
                 <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-26T21:36:19+08:00">
-                2018-02-26
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-05T18:17:19+08:00">
+                2018-06-05
               </time>
             
 
@@ -384,8 +388,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-05-30T16:35:58+08:00">
-                2018-05-30
+              <time title="更新于" itemprop="dateModified" datetime="2018-06-05T21:06:40+08:00">
+                2018-06-05
               </time>
             
           </span>
@@ -404,8 +408,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Software/" itemprop="url" rel="index">
-                    <span itemprop="name">Software</span>
+                  <a href="/categories/机器学习/" itemprop="url" rel="index">
+                    <span itemprop="name">机器学习</span>
                   </a>
                 </span>
 
@@ -438,7 +442,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,165 字  
+                  2,547 字  
                 </span>
               
 
@@ -454,7 +458,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  4 分钟  
+                  12 分钟  
                 </span>
               
             </div>
@@ -475,130 +479,96 @@
       
 
       
-        <script src="\assets\js\APlayer.min.js"> </script><p><img src="http://p4rlzrioq.bkt.clouddn.com/v2-bd237c6411061932e99836393728ec02_r.jpg" alt=""><br><a id="more"></a></p>
-<blockquote class="blockquote-center"><font size="5">工欲善其事，必先利其器！</font></blockquote>
+        <script src="\assets\js\APlayer.min.js"> </script><p><img src="http://p4rlzrioq.bkt.clouddn.com/titanic.jpg" alt=""></p>
+<a id="more"></a>
+<blockquote class="blockquote-center"><font size="5">从IT时代走向DT时代</font></blockquote>
 
 <hr>
-<h1 id="【日常工具】"><a href="#【日常工具】" class="headerlink" title="【日常工具】"></a>【<strong>日常工具</strong>】</h1><h2 id="文件搜索"><a href="#文件搜索" class="headerlink" title="文件搜索"></a>文件搜索</h2><ul>
-<li><a href="http://www.listary.com/" target="_blank" rel="noopener">Listary</a>：Windows文件浏览增强工具，double-ctrl调用，并且可以在(Xftp，clover 等等)窗口中使用，极其方便！</li>
-<li><a href="https://github.com/Wox-launcher/Wox" target="_blank" rel="noopener">Wox</a>：免费开源的效率启动器,不仅可以搜索文件还可以浏览网页，Alt+Space调用，以及定制的插件(<a href="http://www.getwox.com/plugin" target="_blank" rel="noopener">wox-plugin</a>)，堪比MAC上的 <strong>Alfred</strong></li>
+<h1 id="数据预处理"><a href="#数据预处理" class="headerlink" title="数据预处理"></a>数据预处理</h1><ul>
+<li>筛选特征值，丢掉不需要的特征数据</li>
+<li>对性别进行二值化处理（转换为0和1）</li>
+<li>港口转换成数值型数据</li>
+<li>处理缺失值（如年龄，有很多缺失值）</li>
 </ul>
-<h2 id="视频播放"><a href="#视频播放" class="headerlink" title="视频播放"></a>视频播放</h2><ul>
-<li><a href="https://potplayer.en.softonic.com/" target="_blank" rel="noopener">Potplayer</a>：拥有强大的内置解码器，不用额外针对某类视频去下载了</li>
+<h2 id="1、首先读取数据"><a href="#1、首先读取数据" class="headerlink" title="1、首先读取数据"></a>1、首先读取数据</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">import pandas as pd</span><br><span class="line">import numpy as np</span><br><span class="line"></span><br><span class="line">def read_dataset(fname):</span><br><span class="line">#     指定第一列作为行索引</span><br><span class="line">    data = pd.read_csv(fname, index_col=0)</span><br><span class="line">#     丢弃无用数据</span><br><span class="line">    data.drop([&apos;Name&apos;, &apos;Ticket&apos;, &apos;Cabin&apos;], axis=1, inplace=True)</span><br><span class="line">#     处理性别数据</span><br><span class="line">    lables = data[&apos;Sex&apos;].unique().tolist()</span><br><span class="line">    data[&apos;Sex&apos;] = [*map(lambda x: lables.index(x) , data[&apos;Sex&apos;])]</span><br><span class="line">#     处理登船港口数据</span><br><span class="line">    lables = data[&apos;Embarked&apos;].unique().tolist()</span><br><span class="line">    data[&apos;Embarked&apos;] = data[&apos;Embarked&apos;].apply(lambda n: lables.index(n))</span><br><span class="line">#     处理缺失数据填充0</span><br><span class="line">    data = data.fillna(0)</span><br><span class="line">    return data</span><br><span class="line">train = read_dataset(&apos;code/datasets/titanic/train.csv&apos;)</span><br></pre></td></tr></table></figure>
+<h2 id="2、拆分数据集"><a href="#2、拆分数据集" class="headerlink" title="2、拆分数据集"></a>2、拆分数据集</h2><p>把<code>Survived</code>列提取出来作为标签，然后在元数据集中将其丢弃。同时拆分数据集和交叉验证数据集<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">from sklearn.model_selection import train_test_split</span><br><span class="line"></span><br><span class="line">y = train[&apos;Survived&apos;].values</span><br><span class="line">X = train.drop([&apos;Survived&apos;], axis=1).values</span><br><span class="line"></span><br><span class="line">X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)</span><br><span class="line">print(&quot;X_train_shape:&quot;, X_train.shape, &quot; y_train_shape:&quot;, y_train.shape)</span><br><span class="line">print(&quot;X_test_shape:&quot;, X_test.shape,&quot;  y_test_shape:&quot;, y_test.shape)</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>X_train_shape: (712, 7)  y_train_shape: (712,)<br>X_test_shape: (179, 7)   y_test_shape: (179,)</p>
+</blockquote>
+<h2 id="3、拟合数据集"><a href="#3、拟合数据集" class="headerlink" title="3、拟合数据集"></a>3、拟合数据集</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">from sklearn.tree import DecisionTreeClassifier</span><br><span class="line"></span><br><span class="line">clf = DecisionTreeClassifier()</span><br><span class="line">clf.fit(X_train, y_train)</span><br><span class="line">print(&quot;train score:&quot;, clf.score(X_train, y_train))</span><br><span class="line">print(&quot;test score:&quot;, clf.score(X_test, y_test))</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>train score: 0.9845505617977528<br>test score: 0.7597765363128491</p>
+</blockquote>
+<h1 id="优化模型参数"><a href="#优化模型参数" class="headerlink" title="优化模型参数"></a>优化模型参数</h1><h2 id="1、通过max-depth参数来优化模型"><a href="#1、通过max-depth参数来优化模型" class="headerlink" title="1、通过max_depth参数来优化模型"></a>1、通过<code>max_depth</code>参数来优化模型</h2><p>从以上输出数据可以看出，针对训练样本评分很高，但针对测试数据集评分较低。很明显这是过拟合的特征。解决决策树过拟合的方法是剪枝，包括前剪枝和后剪枝。但是<code>sklearn</code>不支持后剪枝，这里通过<code>max_depth</code>参数限定决策树深度，在一定程度上避免过拟合。</p>
+<p>这里先创建一个函数使用不同的模型深度训练模型，并计算评分数据。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">def cv_score(d):</span><br><span class="line">    clf = DecisionTreeClassifier(max_depth=d)</span><br><span class="line">    clf.fit(X_train, y_train)</span><br><span class="line">    return(clf.score(X_train, y_train), clf.score(X_test, y_test))</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">from sklearn.model_selection import train_test_split</span><br><span class="line"></span><br><span class="line">X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)</span><br><span class="line">depths = np.arange(1,10)</span><br><span class="line">scores = [cv_score(d) for d in depths]</span><br><span class="line">tr_scores = [s[0] for s in scores]</span><br><span class="line">te_scores = [s[1] for s in scores]</span><br><span class="line"></span><br><span class="line"># 找出交叉验证数据集评分最高的索引</span><br><span class="line">tr_best_index = np.argmax(tr_scores)</span><br><span class="line">te_best_index = np.argmax(te_scores)</span><br><span class="line"></span><br><span class="line">print(&quot;bestdepth:&quot;, te_best_index+1, &quot; bestdepth_score:&quot;, te_scores[te_best_index], &apos;\n&apos;)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>bestdepth: 5  bestdepth_score: 0.8603351955307262 </p>
+</blockquote>
+<p><strong>这里由于以上<code>train_test_split</code>方法对数据切分是随机打散的，造成每次用不同的数据集训练模型总得到不同的最佳深度。</strong>这里写个循环反复测试，最终验证这里看到最佳的分支深度为5出现的频率最高，初步确定5为深度模型最佳。</p>
+<p>把模型参数和对应的评分画出来：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">%matplotlib inline</span><br><span class="line">from matplotlib import pyplot as plt</span><br><span class="line">depths = np.arange(1,10)</span><br><span class="line">plt.figure(figsize=(6,4), dpi=120)</span><br><span class="line">plt.grid()</span><br><span class="line">plt.xlabel(&apos;max depth of decison tree&apos;)</span><br><span class="line">plt.ylabel(&apos;Scores&apos;)</span><br><span class="line">plt.plot(depths, te_scores, label=&apos;test_scores&apos;)</span><br><span class="line">plt.plot(depths, tr_scores, label=&apos;train_scores&apos;)</span><br><span class="line">plt.legend()</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://p4rlzrioq.bkt.clouddn.com/%E4%BC%98%E5%8C%96%E6%A8%A1%E5%9E%8B%E5%8F%82%E6%95%B0.jpg" alt=""></p>
+<h2 id="2、通过min-impurity-decrease来优化模型"><a href="#2、通过min-impurity-decrease来优化模型" class="headerlink" title="2、通过min_impurity_decrease来优化模型"></a>2、通过<code>min_impurity_decrease</code>来优化模型</h2><p>这个参数用来指定信息墒或者基尼不纯度的阀值，当决策树分裂后，其信息增益低于这个阀值时则不再分裂。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)</span><br><span class="line"></span><br><span class="line">def minsplit_score(val):</span><br><span class="line">    clf = DecisionTreeClassifier(criterion=&apos;gini&apos;, min_impurity_decrease=val)</span><br><span class="line">    clf.fit(X_train, y_train)</span><br><span class="line">    return (clf.score(X_train, y_train), clf.score(X_test, y_test), )</span><br><span class="line"></span><br><span class="line"># 指定参数范围，分别训练模型并计算得分</span><br><span class="line"></span><br><span class="line">vals = np.linspace(0, 0.2, 100)</span><br><span class="line">scores = [minsplit_score(v) for v in vals]</span><br><span class="line">tr_scores = [s[0] for s in scores]</span><br><span class="line">te_scores = [s[1] for s in scores]</span><br><span class="line"></span><br><span class="line">bestmin_index = np.argmax(te_scores)</span><br><span class="line">bestscore = te_scores[bestmin_index]</span><br><span class="line">print(&quot;bestmin:&quot;, vals[bestmin_index])</span><br><span class="line">print(&quot;bestscore:&quot;, bestscore)</span><br><span class="line"></span><br><span class="line">plt.figure(figsize=(6,4), dpi=120)</span><br><span class="line">plt.grid()</span><br><span class="line">plt.xlabel(&quot;min_impurity_decrease&quot;)</span><br><span class="line">plt.ylabel(&quot;Scores&quot;)</span><br><span class="line">plt.plot(vals, te_scores, label=&apos;test_scores&apos;)</span><br><span class="line">plt.plot(vals, tr_scores, label=&apos;train_scores&apos;)</span><br><span class="line"></span><br><span class="line">plt.legend()</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>bestmin: 0.00202020202020202<br>bestscore: 0.7988826815642458</p>
+</blockquote>
+<p><img src="http://p4rlzrioq.bkt.clouddn.com/%E6%9D%A5%E4%BC%98%E5%8C%96%E6%A8%A1%E5%9E%8B.jpg" alt=""></p>
+<p><strong>问题：每次使用不同随机切割的数据集得出最佳参数为0.002很接近0，该怎么解读？</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">至此为我们找到了两个参数,最佳深度depth=5 和最佳min_impurity_decrease=0.002，下面我来用两个参数简历模型进行测试：</span><br><span class="line"></span><br><span class="line">X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)</span><br><span class="line">from sklearn import metrics </span><br><span class="line"></span><br><span class="line">model = DecisionTreeClassifier(max_depth=5, min_impurity_decrease=0.002)</span><br><span class="line">model.fit(X_train, y_train)</span><br><span class="line"></span><br><span class="line">print(&quot;tees_score:&quot;, model.score(X_test, y_test))</span><br><span class="line"></span><br><span class="line">y_pred = model.predict(X_test)</span><br><span class="line"></span><br><span class="line">print(&quot;查准率:&quot;,metrics.precision_score(y_test, y_pred))</span><br><span class="line">print(&quot;召回率:&quot;,metrics.recall_score(y_test, y_pred))</span><br><span class="line">print(&quot;F1_score:&quot;,metrics.f1_score(y_test, y_pred))</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>tees_score: 0.7821229050279329<br>查准率: 0.8461538461538461<br>召回率: 0.5866666666666667<br>F1_score: 0.6929133858267718</p>
+</blockquote>
+<h1 id="模型参数选择工具包"><a href="#模型参数选择工具包" class="headerlink" title="模型参数选择工具包"></a>模型参数选择工具包</h1><p>至此发现以上两种模型优化方法有两问题：</p>
+<ul>
+<li><p>1、数据不稳定：–&gt; 每次重新分配训练集测试集，原参数就不是最优了。 解决办法是多次计算求平均值。</p>
+</li>
+<li><p>2、不能一次选择多个参数：–&gt; 想考察max_depth和min_impurity_decrease两者结合起来的最优参数就没法实现。</p>
+</li>
 </ul>
-<h2 id="下载神器"><a href="#下载神器" class="headerlink" title="下载神器"></a>下载神器</h2><ul>
-<li><a href="https://www.internetdownloadmanager.com/" target="_blank" rel="noopener">IDM</a>(cracked version)： 全宇宙最快的下载器!唯一缺陷是不支持P2P，想下载磁力或者BT可以先用百度云网盘的离线功能，再通过油猴脚本抓取链接进行下载。</li>
-<li><a href="http://www.eagleget.com/cn/" target="_blank" rel="noopener">EagleGet</a>：下载后自动安装Chrome扩展探测视频，缺陷也是不支持BT/磁力链接，方法同上</li>
-<li><a href="http://download.flvcd.com/" target="_blank" rel="noopener">硕鼠</a>：主要是下载网站的视频，不过现在不支持像腾讯视频之类的大网站了</li>
-</ul>
-<h2 id="PDF阅读"><a href="#PDF阅读" class="headerlink" title="PDF阅读"></a>PDF阅读</h2><ul>
-<li><a href="https://www.foxitsoftware.cn/" target="_blank" rel="noopener">福昕阅读器</a>：功能算比较齐全了(会占用端口4000)</li>
-<li><a href="http://www.abbyy.cn/finereader/" target="_blank" rel="noopener">ABBYY_FineReader</a>：PDF转WORD</li>
-</ul>
-<h2 id="写作工具"><a href="#写作工具" class="headerlink" title="写作工具"></a>写作工具</h2><ul>
-<li><a href="https://zh.snipaste.com/" target="_blank" rel="noopener">snipaste</a>：<br>开源、免费的国产截图神器。比QQ截图工具清晰很多。</li>
-<li><a href="https://ivarptr.github.io/yu-writer.site/" target="_blank" rel="noopener">Yu writer</a>：windows上好用的markdown工具！</li>
-<li><a href="https://sourceforge.net/projects/ditto-cp/files/" target="_blank" rel="noopener">Ditto</a>：剪切板工具，保存所有复制过的文字和图片，用ctrl+`调用</li>
-<li><a href="https://www.pasteasy.com/" target="_blank" rel="noopener">Pasteasy</a>：全平台跨设备复制粘贴</li>
-</ul>
-<h2 id="素材库"><a href="#素材库" class="headerlink" title="素材库"></a>素材库</h2><ul>
-<li><a href="http://www.officeplus.cn/Template/Home.shtml" target="_blank" rel="noopener">OfficePLUS</a>：微软Office官方在线模板网站！</li>
-<li><a href="http://www.iconfont.cn/" target="_blank" rel="noopener">Iconfont</a>：阿里巴巴矢量图标库</li>
-<li><a href="https://pixabay.com/" target="_blank" rel="noopener">Free Images - Pixabay</a></li>
-<li><a href="http://icons8.com/" target="_blank" rel="noopener">icons8</a>：icon素材库</li>
-<li><a href="https://images.nasa.gov/" target="_blank" rel="noopener">NASA IMAGE</a>：NASA素材库</li>
-<li><a href="https://pixabay.com/zh/" target="_blank" rel="noopener">pixabay</a>:高清免费图片素材库</li>
-</ul>
-<h2 id="PPT制作"><a href="#PPT制作" class="headerlink" title="PPT制作"></a>PPT制作</h2><ul>
-<li><a href="http://www.nordritools.com/" target="_blank" rel="noopener">Nordri Tools</a>：超级好用的ppt插件</li>
-<li><a href="http://www.cr173.com/soft/285461.html" target="_blank" rel="noopener">Photozoom pro</a>：利用插值算法提高图片分辨率</li>
-<li><a href="http://ppt.baidu.com/" target="_blank" rel="noopener">PPT遥控器</a>：代替遥控笔</li>
-<li><a href="http://www.pptminimizer.com/chn/index.php" target="_blank" rel="noopener">FILEminimizer</a>：ppt压缩神器</li>
-<li><a href="www.screentogif.com">Screen to Gif</a>: Gif制作软件</li>
-<li><a href="https://wordart.com/" target="_blank" rel="noopener">Tagul</a>：文字云生成器</li>
-</ul>
-<h2 id="思维导图"><a href="#思维导图" class="headerlink" title="思维导图"></a>思维导图</h2><ul>
-<li><a href="https://www.xmind.cn/" target="_blank" rel="noopener">Xmind</a>：付费，全平台，模板多，支持鱼骨图、二维图、树形图等格式，可以与Evernote同步</li>
-<li><a href="https://mubu.com/" target="_blank" rel="noopener">幕布</a>：笔记一键生成思维导图</li>
-</ul>
-<h2 id="视频录制"><a href="#视频录制" class="headerlink" title="视频录制"></a>视频录制</h2><ul>
-<li><a href="https://obsproject.com/download" target="_blank" rel="noopener">OBS Studio</a>：功能齐全的视频录制工具，直播必备</li>
-<li><a href="https://www.adobe.com/cn/products/premiere/free-trial-download.html" target="_blank" rel="noopener">Adobe Premiere Pro CC</a>：视频剪辑工具</li>
-</ul>
-<h2 id="文件整理"><a href="#文件整理" class="headerlink" title="文件整理"></a>文件整理</h2><ul>
-<li><a href="https://www.softwareok.com/?seite=Freeware/Q-Dir" target="_blank" rel="noopener">Q-dir</a>：需要在文件夹之间移动文件的时候，这个整理神器就能派上用场了！</li>
-<li><a href="http://cn.ejie.me/" target="_blank" rel="noopener">Clover 3</a>：为资源管理器添加多标签页功能，可以将常用文件夹添加为书签</li>
-<li><a href="https://www.goodsync.com/" target="_blank" rel="noopener">Goodsyne</a>：强大的数据同步工具</li>
-<li><a href="https://www.bandisoft.com/bandizip/" target="_blank" rel="noopener">bandzip</a>：win10下好用的压缩软件</li>
-</ul>
-<h2 id="快速启动"><a href="#快速启动" class="headerlink" title="快速启动"></a>快速启动</h2><ul>
-<li><a href="http://www.truelaunchbar.com/" target="_blank" rel="noopener">TrueLaunchBar</a>：对快速启动项进行分组；允许你把任何文件夹组织成菜单的形式；实现剪切板管理、性能监视等功能</li>
-<li><a href="http://www.yingdev.com/projects/wgestures" target="_blank" rel="noopener">Wgestures</a>：全局鼠标手势！</li>
-</ul>
-<h1 id="【系统开发与优化工具】"><a href="#【系统开发与优化工具】" class="headerlink" title="【系统开发与优化工具】"></a>【<strong>系统开发与优化工具</strong>】</h1><h2 id="桌面优化"><a href="#桌面优化" class="headerlink" title="桌面优化"></a>桌面优化</h2><ul>
-<li><a href="https://www.stardock.com/products/fences/download" target="_blank" rel="noopener">Fences</a>：付费,桌面文件分类整理软件</li>
-<li><a href="http://store.steampowered.com/app/431960/Wallpaper_Engine/" target="_blank" rel="noopener">Wallpapaer</a>：动态壁纸软件，装逼神器！</li>
-</ul>
-<h2 id="屏保"><a href="#屏保" class="headerlink" title="屏保"></a>屏保</h2><ul>
-<li><a href="https://fliqlo.en.softonic.com/" target="_blank" rel="noopener">Fliqlo</a>：数字时钟的屏幕保护，逼格满满</li>
-<li><a href="https://justgetflux.com/" target="_blank" rel="noopener">Flux</a>： 视力保护，通过根据时间调节屏幕颜色，减少蓝光对视力的影响</li>
-</ul>
-<h2 id="系统管理"><a href="#系统管理" class="headerlink" title="系统管理"></a>系统管理</h2><ul>
-<li>PowerTool：查看系统进程等信息，安全修复！</li>
-<li><a href="https://www.chuyu.me/zh-Hans/" target="_blank" rel="noopener">Dism++</a>：简洁的系统管理软件，集成了很多小工具，还可以系统备份</li>
-<li><a href="https://www.ccleaner.com/ccleaner" target="_blank" rel="noopener">Ccleaner</a>：系统清理工具</li>
-</ul>
-<h2 id="文件修改"><a href="#文件修改" class="headerlink" title="文件修改"></a>文件修改</h2><ul>
-<li><a href="http://download.cnet.com/Bulk-Rename-Utility-64-Bit/3000-2248_4-75211571.html" target="_blank" rel="noopener">Bulk Rename Utility</a>：批量重命名工具 </li>
-<li><a href="https://sourceforge.net/projects/rem-empty-dir/files/" target="_blank" rel="noopener">remove empty directories</a>：删除空文件夹，强迫症的福音</li>
-</ul>
-<h2 id="系统安装"><a href="#系统安装" class="headerlink" title="系统安装"></a>系统安装</h2><ul>
-<li><a href="https://mirrors.tuna.tsinghua.edu.cn/" target="_blank" rel="noopener">清华大学开源软件镜像站</a>：可以下载到Linux镜像文件以及python第三方库文件等，速度很快！</li>
-<li><a href="http://cn.ultraiso.net/xiazai.html" target="_blank" rel="noopener">Ultraiso</a>：制作启动盘</li>
-</ul>
-<h2 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h2><ul>
-<li><a href="https://www.telerik.com/fiddler" target="_blank" rel="noopener">Fiddler</a>：抓包工具</li>
-</ul>
-<h2 id="文本编辑器"><a href="#文本编辑器" class="headerlink" title="文本编辑器"></a>文本编辑器</h2><ul>
-<li><a href="https://www.sublimetext.com/3" target="_blank" rel="noopener">Sublime Text3</a>：文本神器</li>
-<li><a href="https://atom.io/" target="_blank" rel="noopener">Atom</a>：中文友好，渲染插件多</li>
-</ul>
-<h2 id="IDE"><a href="#IDE" class="headerlink" title="IDE"></a>IDE</h2><ul>
-<li><a href="https://www.jetbrains.com/pycharm/download/" target="_blank" rel="noopener">Pycharm</a>：社区版免费，Python开发必备</li>
-<li><a href="https://www.anaconda.com/download/" target="_blank" rel="noopener">Anaconda</a>：集成了python科学计算的第三方库，内置spyder和jupyter notebook</li>
-<li><a href="https://www.jetbrains.com/idea/" target="_blank" rel="noopener">IntelliJ IDEA</a>：前端必备IDE</li>
-<li><a href="http://cmder.net/" target="_blank" rel="noopener">Cmder</a>：monokai配色主题，完美代替原生cmd</li>
-</ul>
-<h1 id="【chrome插件】"><a href="#【chrome插件】" class="headerlink" title="【chrome插件】"></a>【<strong>chrome插件</strong>】</h1><h2 id="开发必备"><a href="#开发必备" class="headerlink" title="开发必备"></a>开发必备</h2><ul>
-<li>Vimium(键盘浏览插件)</li>
-<li>JSONView(json数据进行转码和格式化)</li>
-<li>Proxy SwitchyOmega (代理)</li>
-<li>Qiniu upload files (七牛图床插件)</li>
-<li>Markdown Here (转化为markdown格式）</li>
-<li>The QR Code Extension (二维码生成器)</li>
-</ul>
-<h2 id="日常管理"><a href="#日常管理" class="headerlink" title="日常管理"></a>日常管理</h2><ul>
-<li>Extensity (扩展管理工具)</li>
-<li>LastPass (密码管理器)</li>
-</ul>
-<h2 id="浏览优化"><a href="#浏览优化" class="headerlink" title="浏览优化"></a>浏览优化</h2><ul>
-<li>书签侧边栏</li>
-<li>Imtranslator（翻译）</li>
-<li>Imagus (悬停放大图片)</li>
-<li>OneTab (内存优化神器)</li>
-<li>Better History (查看历史记录)</li>
-<li>Sexy Undo Close Tab (恢复关闭网页)</li>
-<li>Infinity (方便的新标签页定制)</li>
-<li>CrxMouse Chrome Gestures (鼠标手势、超级拖拽)</li>
-<li>Tampermonkey (油猴：脚本管理平台，神器！！)</li>
-<li>IE Tab (打开用IE内核支持的网页，常用于银行支付环境)</li>
-<li>Listen 1 (集成各大平台的音乐，再也不用为音乐版权的问题头疼了)</li>
-</ul>
-<h2 id="下载-amp-收藏"><a href="#下载-amp-收藏" class="headerlink" title="下载&amp;收藏"></a>下载&amp;收藏</h2><ul>
-<li>印象笔记裁剪</li>
-<li>网页截图：注释&amp;录屏</li>
-<li>RSS Subscription Extension </li>
-<li>Eagleget Free Download</li>
+<p>所幸<code>scikit-learn</code>在<code>sklearn.model_selection</code>包提供了大量的模型选择和评估的工具供我们使用。针对该问题可以使用<code>GridSearchCV</code>类来解决。</p>
+<h2 id="利用GridSearchCV求最优参数"><a href="#利用GridSearchCV求最优参数" class="headerlink" title="利用GridSearchCV求最优参数"></a>利用<code>GridSearchCV</code>求最优参数</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">from sklearn.model_selection import GridSearchCV</span><br><span class="line"></span><br><span class="line">thresholds = np.linspace(0, 0.2, 50)</span><br><span class="line">param_grid = &#123;&apos;min_impurity_decrease&apos;:thresholds&#125;</span><br><span class="line"></span><br><span class="line">clf = GridSearchCV(DecisionTreeClassifier(), param_grid, cv=5)</span><br><span class="line">clf.fit(X,y)</span><br><span class="line"></span><br><span class="line">print(&quot;best_parms:&#123;0&#125;\nbest_score:&#123;1&#125;&quot;.format(clf.best_params_, clf.best_score_))</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>best_parms:{‘min_impurity_decrease’: 0.00816326530612245}<br>best_score:0.8114478114478114</p>
+</blockquote>
+<p>模型解读：<br>1、关键字参数<code>param_grid</code>是一个字典，字典的关键字对应的值是一个列表。<code>GridSearchCV</code>会枚举列表里所有值来构建模型多次计算训练模型，并计算模型评分，最终得出指定参数值的平均评分及标准差。</p>
+<p>2、关键参数<code>sv</code>，用来指定交叉验证数据集的生成规则。这里sv=5表示每次计算都把数据集分成5份，拿其中一份作为交叉验证数据集，其他作为训练集。最终得出最优参数及最优评分保存在<code>clf.best_params_</code>和<code>clf.best_score_</code>里。</p>
+<p>3、此外<code>clf.cv_results_</code>里保存了计算过程的所有中间结果。</p>
+<h2 id="画出学习曲线："><a href="#画出学习曲线：" class="headerlink" title="画出学习曲线："></a>画出学习曲线：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">def plot_curve(train_sizes, cv_results, xlabel):</span><br><span class="line">    train_scores_mean = cv_results[&apos;mean_train_score&apos;]</span><br><span class="line">    train_scores_std = cv_results[&apos;std_train_score&apos;]</span><br><span class="line">    test_scores_mean = cv_results[&apos;mean_test_score&apos;]</span><br><span class="line">    test_scores_std = cv_results[&apos;std_test_score&apos;]</span><br><span class="line">    plt.figure(figsize=(6, 4), dpi=120)</span><br><span class="line">    plt.title(&apos;parameters turning&apos;)</span><br><span class="line">    plt.grid()</span><br><span class="line">    plt.xlabel(xlabel)</span><br><span class="line">    plt.ylabel(&apos;score&apos;)</span><br><span class="line">    plt.fill_between(train_sizes, train_scores_mean - train_scores_std,train_scores_mean + train_scores_std, alpha=0.1, color=&quot;r&quot;)</span><br><span class="line">    plt.fill_between(train_sizes, test_scores_mean - test_scores_std,test_scores_mean + test_scores_std, alpha=0.1, color=&quot;g&quot;)</span><br><span class="line">    plt.plot(train_sizes, train_scores_mean, &apos;.--&apos;, color=&quot;r&quot;,label=&quot;Training score&quot;)</span><br><span class="line">    plt.plot(train_sizes, test_scores_mean, &apos;.-&apos;, color=&quot;g&quot;,</span><br><span class="line">    label=&quot;Cross-validation score&quot;)</span><br><span class="line"></span><br><span class="line">    plt.legend(loc=&quot;best&quot;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">from sklearn.model_selection import GridSearchCV</span><br><span class="line"></span><br><span class="line">thresholds = np.linspace(0, 0.2, 50)</span><br><span class="line"># Set the parameters by cross-validation</span><br><span class="line">param_grid = &#123;&apos;min_impurity_decrease&apos;: thresholds&#125;</span><br><span class="line"></span><br><span class="line">clf = GridSearchCV(DecisionTreeClassifier(), param_grid, cv=5)</span><br><span class="line">clf.fit(X, y)</span><br><span class="line">print(&quot;best param: &#123;0&#125;\nbest score: &#123;1&#125;&quot;.format(clf.best_params_, </span><br><span class="line"> clf.best_score_))</span><br><span class="line"></span><br><span class="line"># plot_curve(thresholds, clf.cv_results_, xlabel=&apos;gini thresholds&apos;)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>best param: {‘min_impurity_decrease’: 0.00816326530612245}<br>best score: 0.8114478114478114</p>
+</blockquote>
+<p><img src="http://p4rlzrioq.bkt.clouddn.com/%E7%94%BB%E5%87%BA%E5%AD%A6%E4%B9%A0%E6%9B%B2%E7%BA%BF%EF%BC%9A.jpg" alt=""></p>
+<h2 id="多组参数之间选择最优参数："><a href="#多组参数之间选择最优参数：" class="headerlink" title="多组参数之间选择最优参数："></a>多组参数之间选择最优参数：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">from sklearn.model_selection import GridSearchCV</span><br><span class="line"></span><br><span class="line">entropy_thresholds = np.linspace(0, 1, 100)</span><br><span class="line">gini_thresholds = np.linspace(0, 0.2, 100)</span><br><span class="line">#设置参数矩阵：</span><br><span class="line">param_grid = [&#123;&apos;criterion&apos;: [&apos;entropy&apos;], &apos;min_impurity_decrease&apos;:entropy_thresholds&#125;,&#123;&apos;criterion&apos;: [&apos;gini&apos;], &apos;min_impurity_decrease&apos;: gini_thresholds&#125;,&#123;&apos;max_depth&apos;: np.arange(2,10)&#125;,&#123;&apos;min_samples_split&apos;: np.arange(2,30,2)&#125;]</span><br><span class="line">clf = GridSearchCV(DecisionTreeClassifier(), param_grid, cv=5)</span><br><span class="line">clf.fit(X, y)</span><br><span class="line">print(&quot;best param:&#123;0&#125;\nbest score:&#123;1&#125;&quot;.format(clf.best_params_, clf.best_score_))</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>best param:{‘min_impurity_decrease’: 0.00816326530612245}<br>best score:0.8114478114478114</p>
+</blockquote>
+<p>结果1、{‘criterion’: ‘gini’, ‘min_impurity_decrease’: 0.00816326530612245} -&gt;6</p>
+<p>结果2、{‘min_samples_split’: 22} -&gt;10</p>
+<p>结果3、{‘min_samples_split’: 20} -&gt;4</p>
+<p><strong>结果波动很大，这里做了20次测试，对应结果1出现6次，结果2出现10次，结果3出现4次。</strong></p>
+<p><strong>代码解读</strong>：<br>关键部分还是<code>param_grid</code>参数，他是一个列表。很对列表的第一个字典，选择信息墒<code>（entropy）</code>作为判断标准，取值0～1范围50等分；</p>
+<p>第二个字典选择基尼系数，<code>min_impurity_decrease</code>取值0～0.2范围50等分。</p>
+<p><code>GridSearchCV</code>会针对列表中的每个字典进行迭代，最终比较列表中每个字典所对应的参数组合，选择出最优的参数。</p>
+<h2 id="生成决策树图形"><a href="#生成决策树图形" class="headerlink" title="生成决策树图形"></a>生成决策树图形</h2><p>下面代码可以生成.dot文件，需要电脑上安装<code>graphviz</code>才能把文件转换成图片格式。</p>
+<p><code>Mac</code>上可以使用<code>brew install graphviz</code>命令来安装，它会同时安装8个依赖包。这里一定注意<code>Mac</code>环境下的权限问题：由于<code>Homebrew</code>默认是安装在<code>/usr/local</code>下，而<code>Mac</code>有强制保护不支持<code>sudo chown -R uname local</code>对<code>local</code>文件夹进行权限修改。</p>
+<p>这里的解决方式是把<code>local</code>下<code>bin</code>,<code>lib</code>,<code>Cellar</code>等所需单个文件夹下进行赋权，即可成功安装。</p>
+<ol>
+<li>在电脑上安装 graphviz</li>
+<li>运行 <code>dot -Tpng tree.dot -o filename.png</code></li>
+<li>在当前目录查看生成的决策树 filename.png</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">from sklearn.tree import DecisionTreeClassifier </span><br><span class="line">from sklearn import tree</span><br><span class="line"></span><br><span class="line">clf = DecisionTreeClassifier(min_samples_split=22)</span><br><span class="line">clf = clf.fit(X_train, y_train)</span><br><span class="line">train_score = clf.score(X_train, y_train)</span><br><span class="line">test_score = clf.score(X_test, y_test)</span><br><span class="line">print(&apos;train score: &#123;0&#125;; test score: &#123;1&#125;&apos;.format(train_score, test_score))</span><br><span class="line"></span><br><span class="line"># 导出 titanic.dot 文件</span><br><span class="line">with open(&quot;tree.dot&quot;, &apos;w&apos;) as f:</span><br><span class="line">    f = tree.export_graphviz(clf, out_file=f)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>train score: 0.8834269662921348; test score: 0.8268156424581006</p>
+</blockquote>
+<p><img src="http://p4rlzrioq.bkt.clouddn.com/%E5%A4%9A%E7%BB%84%E5%8F%82%E6%95%B0%E4%B9%8B%E9%97%B4%E9%80%89%E6%8B%A9%E6%9C%80%E4%BC%98%E5%8F%82%E6%95%B0%EF%BC%9A.jpg" alt=""></p>
+<h1 id="模型调参注意事项："><a href="#模型调参注意事项：" class="headerlink" title="模型调参注意事项："></a>模型调参注意事项：</h1><ul>
+<li>当样本少数量但是样本特征非常多的时候，决策树很容易过拟合，一般来说，样本数比特征数多一些会比较容易建立健壮的模型</li>
+<li>如果样本数量少但是样本特征非常多，在拟合决策树模型前，推荐先做维度规约，比如主成分分析（PCA），特征选择（Losso）或者独立成分分析（ICA）。这样特征的维度会大大减小。再来拟合决策树模型效果会好。</li>
+<li>推荐多用决策树的可视化，同时先限制决策树的深度（比如最多3层），这样可以先观察下生成的决策树里数据的初步拟合情况，然后再决定是否要增加深度。</li>
+<li>在训练模型先，注意观察样本的类别情况（主要指分类树），如果类别分布非常不均匀，就要考虑用class_weight来限制模型过于偏向样本多的类别。</li>
+<li>决策树的数组使用的是numpy的float32类型，如果训练数据不是这样的格式，算法会先做copy再运行。</li>
+<li>如果输入的样本矩阵是稀疏的，推荐在拟合前调用csc_matrix稀疏化，在预测前调用csr_matrix稀疏化。</li>
 </ul>
 
       
@@ -659,7 +629,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://frankblog.site/2018/02/26/优雅高效地使用windows/" title="优雅高效地使用windows">http://frankblog.site/2018/02/26/优雅高效地使用windows/</a>
+    <a href="http://frankblog.site/2018/06/05/决策树之泰坦之灾/" title="决策树之泰坦之灾">http://frankblog.site/2018/06/05/决策树之泰坦之灾/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -674,9 +644,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Windows/" rel="tag"><i class="fa fa-tag"></i> Windows</a>
+            <a href="/tags/机器学习/" rel="tag"><i class="fa fa-tag"></i> 机器学习</a>
           
-            <a href="/tags/Chrome/" rel="tag"><i class="fa fa-tag"></i> Chrome</a>
+            <a href="/tags/决策树/" rel="tag"><i class="fa fa-tag"></i> 决策树</a>
           
         </div>
       
@@ -689,8 +659,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/02/22/sublime快捷键/" rel="next" title="Sublime Text3 快捷键">
-                <i class="fa fa-chevron-left"></i> Sublime Text3 快捷键
+              <a href="/2018/06/05/sklearn之数据预处理和创建模型/" rel="next" title="sklearn之数据预处理和创建模型">
+                <i class="fa fa-chevron-left"></i> sklearn之数据预处理和创建模型
               </a>
             
           </div>
@@ -698,10 +668,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/03/06/数学之美/" rel="prev" title="数学之美学习笔记">
-                数学之美学习笔记 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -913,7 +879,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#【日常工具】"><span class="nav-number">1.</span> <span class="nav-text">【日常工具】</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#文件搜索"><span class="nav-number">1.1.</span> <span class="nav-text">文件搜索</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#视频播放"><span class="nav-number">1.2.</span> <span class="nav-text">视频播放</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#下载神器"><span class="nav-number">1.3.</span> <span class="nav-text">下载神器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PDF阅读"><span class="nav-number">1.4.</span> <span class="nav-text">PDF阅读</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#写作工具"><span class="nav-number">1.5.</span> <span class="nav-text">写作工具</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#素材库"><span class="nav-number">1.6.</span> <span class="nav-text">素材库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PPT制作"><span class="nav-number">1.7.</span> <span class="nav-text">PPT制作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#思维导图"><span class="nav-number">1.8.</span> <span class="nav-text">思维导图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#视频录制"><span class="nav-number">1.9.</span> <span class="nav-text">视频录制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文件整理"><span class="nav-number">1.10.</span> <span class="nav-text">文件整理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#快速启动"><span class="nav-number">1.11.</span> <span class="nav-text">快速启动</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#【系统开发与优化工具】"><span class="nav-number">2.</span> <span class="nav-text">【系统开发与优化工具】</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#桌面优化"><span class="nav-number">2.1.</span> <span class="nav-text">桌面优化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#屏保"><span class="nav-number">2.2.</span> <span class="nav-text">屏保</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#系统管理"><span class="nav-number">2.3.</span> <span class="nav-text">系统管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文件修改"><span class="nav-number">2.4.</span> <span class="nav-text">文件修改</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#系统安装"><span class="nav-number">2.5.</span> <span class="nav-text">系统安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网络"><span class="nav-number">2.6.</span> <span class="nav-text">网络</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文本编辑器"><span class="nav-number">2.7.</span> <span class="nav-text">文本编辑器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IDE"><span class="nav-number">2.8.</span> <span class="nav-text">IDE</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#【chrome插件】"><span class="nav-number">3.</span> <span class="nav-text">【chrome插件】</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#开发必备"><span class="nav-number">3.1.</span> <span class="nav-text">开发必备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#日常管理"><span class="nav-number">3.2.</span> <span class="nav-text">日常管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#浏览优化"><span class="nav-number">3.3.</span> <span class="nav-text">浏览优化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#下载-amp-收藏"><span class="nav-number">3.4.</span> <span class="nav-text">下载&amp;收藏</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#数据预处理"><span class="nav-number">1.</span> <span class="nav-text">数据预处理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、首先读取数据"><span class="nav-number">1.1.</span> <span class="nav-text">1、首先读取数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、拆分数据集"><span class="nav-number">1.2.</span> <span class="nav-text">2、拆分数据集</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、拟合数据集"><span class="nav-number">1.3.</span> <span class="nav-text">3、拟合数据集</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#优化模型参数"><span class="nav-number">2.</span> <span class="nav-text">优化模型参数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、通过max-depth参数来优化模型"><span class="nav-number">2.1.</span> <span class="nav-text">1、通过max_depth参数来优化模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、通过min-impurity-decrease来优化模型"><span class="nav-number">2.2.</span> <span class="nav-text">2、通过min_impurity_decrease来优化模型</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#模型参数选择工具包"><span class="nav-number">3.</span> <span class="nav-text">模型参数选择工具包</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#利用GridSearchCV求最优参数"><span class="nav-number">3.1.</span> <span class="nav-text">利用GridSearchCV求最优参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#画出学习曲线："><span class="nav-number">3.2.</span> <span class="nav-text">画出学习曲线：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多组参数之间选择最优参数："><span class="nav-number">3.3.</span> <span class="nav-text">多组参数之间选择最优参数：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#生成决策树图形"><span class="nav-number">3.4.</span> <span class="nav-text">生成决策树图形</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#模型调参注意事项："><span class="nav-number">4.</span> <span class="nav-text">模型调参注意事项：</span></a></li></ol></div>
             
 
           </div>
