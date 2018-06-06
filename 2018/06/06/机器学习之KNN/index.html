@@ -86,7 +86,7 @@
 
 
 
-  <meta name="keywords" content="机器学习,决策树," />
+  <meta name="keywords" content="机器学习,KNN," />
 
 
 
@@ -99,21 +99,23 @@
 
 
 
-<meta name="keywords" content="机器学习,决策树">
+<meta name="keywords" content="机器学习,KNN">
 <meta property="og:type" content="article">
-<meta property="og:title" content="决策树之泰坦之灾">
-<meta property="og:url" content="http://frankblog.site/2018/06/05/决策树之泰坦之灾/index.html">
+<meta property="og:title" content="机器学习之KNN">
+<meta property="og:url" content="http://frankblog.site/2018/06/06/机器学习之KNN/index.html">
 <meta property="og:site_name" content="Frank&#39;s Blog">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://p4rlzrioq.bkt.clouddn.com/titanic.jpg">
-<meta property="og:image" content="http://p4rlzrioq.bkt.clouddn.com/%E4%BC%98%E5%8C%96%E6%A8%A1%E5%9E%8B%E5%8F%82%E6%95%B0.jpg">
-<meta property="og:image" content="http://p4rlzrioq.bkt.clouddn.com/%E6%9D%A5%E4%BC%98%E5%8C%96%E6%A8%A1%E5%9E%8B.jpg">
-<meta property="og:image" content="http://p4rlzrioq.bkt.clouddn.com/%E7%94%BB%E5%87%BA%E5%AD%A6%E4%B9%A0%E6%9B%B2%E7%BA%BF%EF%BC%9A.jpg">
-<meta property="og:image" content="http://p4rlzrioq.bkt.clouddn.com/%E5%A4%9A%E7%BB%84%E5%8F%82%E6%95%B0%E4%B9%8B%E9%97%B4%E9%80%89%E6%8B%A9%E6%9C%80%E4%BC%98%E5%8F%82%E6%95%B0%EF%BC%9A.jpg">
-<meta property="og:updated_time" content="2018-06-06T02:29:11.443Z">
+<meta property="og:image" content="http://p4rlzrioq.bkt.clouddn.com/KNN.png">
+<meta property="og:image" content="http://p4rlzrioq.bkt.clouddn.com/kd%E6%A0%91.jpg">
+<meta property="og:image" content="http://p4rlzrioq.bkt.clouddn.com/%E4%BD%BF%E7%94%A8knn%E8%BF%9B%E8%A1%8C%E5%88%86%E7%B1%BB2.png">
+<meta property="og:image" content="http://p4rlzrioq.bkt.clouddn.com/%E4%BD%BF%E7%94%A8knn%E8%BF%9B%E8%A1%8C%E5%88%86%E7%B1%BB.png">
+<meta property="og:image" content="http://p4rlzrioq.bkt.clouddn.com/kneighborsRegressor.png">
+<meta property="og:image" content="http://p4rlzrioq.bkt.clouddn.com/%E6%A8%A1%E5%9E%8B%E7%9A%84%E8%AE%AD%E7%BB%83%E5%8F%8A%E5%88%86%E6%9E%90%20%E2%80%93%20%E5%AD%A6%E4%B9%A0%E6%9B%B2%E7%BA%BF.png">
+<meta property="og:image" content="http://p4rlzrioq.bkt.clouddn.com/%E7%89%B9%E5%BE%81%E9%80%89%E6%8B%A9%E5%8F%8A%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96.png">
+<meta property="og:updated_time" content="2018-06-06T04:00:34.996Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="决策树之泰坦之灾">
-<meta name="twitter:image" content="http://p4rlzrioq.bkt.clouddn.com/titanic.jpg">
+<meta name="twitter:title" content="机器学习之KNN">
+<meta name="twitter:image" content="http://p4rlzrioq.bkt.clouddn.com/KNN.png">
 
 
 
@@ -143,13 +145,13 @@
 
 
 
-  <link rel="canonical" href="http://frankblog.site/2018/06/05/决策树之泰坦之灾/"/>
+  <link rel="canonical" href="http://frankblog.site/2018/06/06/机器学习之KNN/"/>
 
 
 
 
 
-  <title>决策树之泰坦之灾 | Frank's Blog</title>
+  <title>机器学习之KNN | Frank's Blog</title>
   
 
 
@@ -340,7 +342,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://frankblog.site/2018/06/05/决策树之泰坦之灾/">
+    <link itemprop="mainEntityOfPage" href="http://frankblog.site/2018/06/06/机器学习之KNN/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="FGY">
@@ -357,7 +359,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">决策树之泰坦之灾</h1>
+          <h1 class="post-title" itemprop="name headline">机器学习之KNN</h1>
         
 
         <div class="post-meta">
@@ -372,8 +374,8 @@
                 <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-05T18:17:19+08:00">
-                2018-06-05
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-06T11:48:14+08:00">
+                2018-06-06
               </time>
             
 
@@ -388,7 +390,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-06-06T10:29:11+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-06-06T12:00:34+08:00">
                 2018-06-06
               </time>
             
@@ -442,7 +444,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2,547 字  
+                  3,185 字  
                 </span>
               
 
@@ -458,7 +460,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  12 分钟  
+                  14 分钟  
                 </span>
               
             </div>
@@ -479,97 +481,117 @@
       
 
       
-        <script src="\assets\js\APlayer.min.js"> </script><p><img src="http://p4rlzrioq.bkt.clouddn.com/titanic.jpg" alt=""></p>
+        <script src="\assets\js\APlayer.min.js"> </script><p><img src="http://p4rlzrioq.bkt.clouddn.com/KNN.png" alt=""></p>
 <a id="more"></a>
 <blockquote class="blockquote-center"><font size="5">从IT时代走向DT时代</font></blockquote>
 
 <hr>
-<h1 id="数据预处理"><a href="#数据预处理" class="headerlink" title="数据预处理"></a>数据预处理</h1><ul>
-<li>筛选特征值，丢掉不需要的特征数据</li>
-<li>对性别进行二值化处理（转换为0和1）</li>
-<li>港口转换成数值型数据</li>
-<li>处理缺失值（如年龄，有很多缺失值）</li>
-</ul>
-<h2 id="1、首先读取数据"><a href="#1、首先读取数据" class="headerlink" title="1、首先读取数据"></a>1、首先读取数据</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">import pandas as pd</span><br><span class="line">import numpy as np</span><br><span class="line"></span><br><span class="line">def read_dataset(fname):</span><br><span class="line">#     指定第一列作为行索引</span><br><span class="line">    data = pd.read_csv(fname, index_col=0)</span><br><span class="line">#     丢弃无用数据</span><br><span class="line">    data.drop([&apos;Name&apos;, &apos;Ticket&apos;, &apos;Cabin&apos;], axis=1, inplace=True)</span><br><span class="line">#     处理性别数据</span><br><span class="line">    lables = data[&apos;Sex&apos;].unique().tolist()</span><br><span class="line">    data[&apos;Sex&apos;] = [*map(lambda x: lables.index(x) , data[&apos;Sex&apos;])]</span><br><span class="line">#     处理登船港口数据</span><br><span class="line">    lables = data[&apos;Embarked&apos;].unique().tolist()</span><br><span class="line">    data[&apos;Embarked&apos;] = data[&apos;Embarked&apos;].apply(lambda n: lables.index(n))</span><br><span class="line">#     处理缺失数据填充0</span><br><span class="line">    data = data.fillna(0)</span><br><span class="line">    return data</span><br><span class="line">train = read_dataset(&apos;code/datasets/titanic/train.csv&apos;)</span><br></pre></td></tr></table></figure>
-<h2 id="2、拆分数据集"><a href="#2、拆分数据集" class="headerlink" title="2、拆分数据集"></a>2、拆分数据集</h2><p>把<code>Survived</code>列提取出来作为标签，然后在元数据集中将其丢弃。同时拆分数据集和交叉验证数据集<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">from sklearn.model_selection import train_test_split</span><br><span class="line"></span><br><span class="line">y = train[&apos;Survived&apos;].values</span><br><span class="line">X = train.drop([&apos;Survived&apos;], axis=1).values</span><br><span class="line"></span><br><span class="line">X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)</span><br><span class="line">print(&quot;X_train_shape:&quot;, X_train.shape, &quot; y_train_shape:&quot;, y_train.shape)</span><br><span class="line">print(&quot;X_test_shape:&quot;, X_test.shape,&quot;  y_test_shape:&quot;, y_test.shape)</span><br></pre></td></tr></table></figure></p>
-<blockquote>
-<p>X_train_shape: (712, 7)  y_train_shape: (712,)<br>X_test_shape: (179, 7)   y_test_shape: (179,)</p>
-</blockquote>
-<h2 id="3、拟合数据集"><a href="#3、拟合数据集" class="headerlink" title="3、拟合数据集"></a>3、拟合数据集</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">from sklearn.tree import DecisionTreeClassifier</span><br><span class="line"></span><br><span class="line">clf = DecisionTreeClassifier()</span><br><span class="line">clf.fit(X_train, y_train)</span><br><span class="line">print(&quot;train score:&quot;, clf.score(X_train, y_train))</span><br><span class="line">print(&quot;test score:&quot;, clf.score(X_test, y_test))</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>train score: 0.9845505617977528<br>test score: 0.7597765363128491</p>
-</blockquote>
-<h1 id="优化模型参数"><a href="#优化模型参数" class="headerlink" title="优化模型参数"></a>优化模型参数</h1><h2 id="1、通过max-depth参数来优化模型"><a href="#1、通过max-depth参数来优化模型" class="headerlink" title="1、通过max_depth参数来优化模型"></a>1、通过<code>max_depth</code>参数来优化模型</h2><p>从以上输出数据可以看出，针对训练样本评分很高，但针对测试数据集评分较低。很明显这是过拟合的特征。解决决策树过拟合的方法是剪枝，包括前剪枝和后剪枝。但是<code>sklearn</code>不支持后剪枝，这里通过<code>max_depth</code>参数限定决策树深度，在一定程度上避免过拟合。</p>
-<p>这里先创建一个函数使用不同的模型深度训练模型，并计算评分数据。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">def cv_score(d):</span><br><span class="line">    clf = DecisionTreeClassifier(max_depth=d)</span><br><span class="line">    clf.fit(X_train, y_train)</span><br><span class="line">    return(clf.score(X_train, y_train), clf.score(X_test, y_test))</span><br></pre></td></tr></table></figure></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">from sklearn.model_selection import train_test_split</span><br><span class="line"></span><br><span class="line">X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)</span><br><span class="line">depths = np.arange(1,10)</span><br><span class="line">scores = [cv_score(d) for d in depths]</span><br><span class="line">tr_scores = [s[0] for s in scores]</span><br><span class="line">te_scores = [s[1] for s in scores]</span><br><span class="line"></span><br><span class="line"># 找出交叉验证数据集评分最高的索引</span><br><span class="line">tr_best_index = np.argmax(tr_scores)</span><br><span class="line">te_best_index = np.argmax(te_scores)</span><br><span class="line"></span><br><span class="line">print(&quot;bestdepth:&quot;, te_best_index+1, &quot; bestdepth_score:&quot;, te_scores[te_best_index], &apos;\n&apos;)</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>bestdepth: 5  bestdepth_score: 0.8603351955307262 </p>
-</blockquote>
-<p><strong>这里由于以上<code>train_test_split</code>方法对数据切分是随机打散的，造成每次用不同的数据集训练模型总得到不同的最佳深度。</strong>这里写个循环反复测试，最终验证这里看到最佳的分支深度为5出现的频率最高，初步确定5为深度模型最佳。</p>
-<p>把模型参数和对应的评分画出来：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">%matplotlib inline</span><br><span class="line">from matplotlib import pyplot as plt</span><br><span class="line">depths = np.arange(1,10)</span><br><span class="line">plt.figure(figsize=(6,4), dpi=120)</span><br><span class="line">plt.grid()</span><br><span class="line">plt.xlabel(&apos;max depth of decison tree&apos;)</span><br><span class="line">plt.ylabel(&apos;Scores&apos;)</span><br><span class="line">plt.plot(depths, te_scores, label=&apos;test_scores&apos;)</span><br><span class="line">plt.plot(depths, tr_scores, label=&apos;train_scores&apos;)</span><br><span class="line">plt.legend()</span><br></pre></td></tr></table></figure></p>
-<p><img src="http://p4rlzrioq.bkt.clouddn.com/%E4%BC%98%E5%8C%96%E6%A8%A1%E5%9E%8B%E5%8F%82%E6%95%B0.jpg" alt=""></p>
-<h2 id="2、通过min-impurity-decrease来优化模型"><a href="#2、通过min-impurity-decrease来优化模型" class="headerlink" title="2、通过min_impurity_decrease来优化模型"></a>2、通过<code>min_impurity_decrease</code>来优化模型</h2><p>这个参数用来指定信息墒或者基尼不纯度的阈值，当决策树分裂后，其信息增益低于这个阈值时则不再分裂。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)</span><br><span class="line"></span><br><span class="line">def minsplit_score(val):</span><br><span class="line">    clf = DecisionTreeClassifier(criterion=&apos;gini&apos;, min_impurity_decrease=val)</span><br><span class="line">    clf.fit(X_train, y_train)</span><br><span class="line">    return (clf.score(X_train, y_train), clf.score(X_test, y_test), )</span><br><span class="line"></span><br><span class="line"># 指定参数范围，分别训练模型并计算得分</span><br><span class="line"></span><br><span class="line">vals = np.linspace(0, 0.2, 100)</span><br><span class="line">scores = [minsplit_score(v) for v in vals]</span><br><span class="line">tr_scores = [s[0] for s in scores]</span><br><span class="line">te_scores = [s[1] for s in scores]</span><br><span class="line"></span><br><span class="line">bestmin_index = np.argmax(te_scores)</span><br><span class="line">bestscore = te_scores[bestmin_index]</span><br><span class="line">print(&quot;bestmin:&quot;, vals[bestmin_index])</span><br><span class="line">print(&quot;bestscore:&quot;, bestscore)</span><br><span class="line"></span><br><span class="line">plt.figure(figsize=(6,4), dpi=120)</span><br><span class="line">plt.grid()</span><br><span class="line">plt.xlabel(&quot;min_impurity_decrease&quot;)</span><br><span class="line">plt.ylabel(&quot;Scores&quot;)</span><br><span class="line">plt.plot(vals, te_scores, label=&apos;test_scores&apos;)</span><br><span class="line">plt.plot(vals, tr_scores, label=&apos;train_scores&apos;)</span><br><span class="line"></span><br><span class="line">plt.legend()</span><br></pre></td></tr></table></figure></p>
-<blockquote>
-<p>bestmin: 0.00202020202020202<br>bestscore: 0.7988826815642458</p>
-</blockquote>
-<p><img src="http://p4rlzrioq.bkt.clouddn.com/%E6%9D%A5%E4%BC%98%E5%8C%96%E6%A8%A1%E5%9E%8B.jpg" alt=""></p>
-<p><strong>问题：每次使用不同随机切割的数据集得出最佳参数为0.002很接近0，该怎么解读？</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">至此为我们找到了两个参数,最佳深度depth=5 和最佳min_impurity_decrease=0.002，下面我来用两个参数简历模型进行测试：</span><br><span class="line"></span><br><span class="line">X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)</span><br><span class="line">from sklearn import metrics </span><br><span class="line"></span><br><span class="line">model = DecisionTreeClassifier(max_depth=5, min_impurity_decrease=0.002)</span><br><span class="line">model.fit(X_train, y_train)</span><br><span class="line"></span><br><span class="line">print(&quot;tees_score:&quot;, model.score(X_test, y_test))</span><br><span class="line"></span><br><span class="line">y_pred = model.predict(X_test)</span><br><span class="line"></span><br><span class="line">print(&quot;查准率:&quot;,metrics.precision_score(y_test, y_pred))</span><br><span class="line">print(&quot;召回率:&quot;,metrics.recall_score(y_test, y_pred))</span><br><span class="line">print(&quot;F1_score:&quot;,metrics.f1_score(y_test, y_pred))</span><br></pre></td></tr></table></figure></p>
-<blockquote>
-<p>tees_score: 0.7821229050279329<br>查准率: 0.8461538461538461<br>召回率: 0.5866666666666667<br>F1_score: 0.6929133858267718</p>
-</blockquote>
-<h1 id="模型参数选择工具包"><a href="#模型参数选择工具包" class="headerlink" title="模型参数选择工具包"></a>模型参数选择工具包</h1><p>至此发现以上两种模型优化方法有两问题：</p>
+<h1 id="KNN-算法核心：KDTree"><a href="#KNN-算法核心：KDTree" class="headerlink" title="KNN 算法核心：KDTree"></a>KNN 算法核心：KDTree</h1><p>KNN采用的就是 K 最近邻多数投票的思想。所以，算法的关键就是在给定的距离度量下，对预测实例如何准确快速地找到它的最近的 K 个邻居？</p>
+<p>也许绝大多数初学者会说，直接暴力寻找呗，反正 K 一般取值不会特别大。确实，特征空间维度不高并且训练样本容量小的时候确实可行，但是当特征空间维度特别高或者样本容量大时，计算就会非常耗时，因此该方法并不可行。</p>
+<p>因此，为了快速查找到 K 近邻，我们可以考虑使用特殊的数据结构存储训练数据，用来减少搜索次数。其中，KDTree 就是最著名的一种。</p>
+<h2 id="KD-树简介"><a href="#KD-树简介" class="headerlink" title="KD 树简介"></a>KD 树简介</h2><p><img src="http://p4rlzrioq.bkt.clouddn.com/kd%E6%A0%91.jpg" alt=""></p>
+<p>KD 树（K-dimension Tree）是一种对 K 维空间中的实例点进行存储以便对其进行快速检索的树形数据结构。KD 树是是一种二叉树，表示对 K 维空间的一个划分，构造 KD 树相当于不断地用垂直于坐标轴的超平面将 K 维空间切分，构成一系列的 K 维超矩形区域。KD 树的每个结点对应于一个 K 维超矩形区域。利用 KD 树可以省去对大部分数据点的搜索，从而减少搜索的计算量。</p>
+<h2 id="KD-树的构造"><a href="#KD-树的构造" class="headerlink" title="KD 树的构造"></a>KD 树的构造</h2><p>KD 树的构造是一个递归的方法：（1）构造根节点，使根节点对应于 K 维空间中包含的所有点的超矩形区域；（2）不断地对 K 维空间进行切分，生成子节点。</p>
 <ul>
-<li><p>1、数据不稳定：–&gt; 每次重新分配训练集测试集，原参数就不是最优了。 解决办法是多次计算求平均值。</p>
+<li><p><strong>构造跟节点</strong></p>
+<p>首先，在包含所有节点的超矩形区域选择一个坐标轴和在此坐标轴上的一个切分点，确定一个垂直于该坐标轴的超平面，这个超平面将当前区域划分为两个子区域（也即二叉树的两左右孩子节点）。</p>
 </li>
-<li><p>2、不能一次选择多个参数：–&gt; 想考察max_depth和min_impurity_decrease两者结合起来的最优参数就没法实现。</p>
+<li><p><strong>递归构造子节点</strong></p>
+<p>递归地对两个子区域进行相同的划分，直到子区域内没有实例时终止（此时只有叶子节点）。</p>
+<p>通常我们循环地选择坐标轴对空间进行划分，当选定一个维度坐标时，切分点我们选择所有训练实例在该坐标轴上的中位数。此时我们来构造的 KD 树是平衡二叉树，但是平衡二叉树在搜索时不一定是最高效的。</p>
 </li>
 </ul>
-<p>所幸<code>scikit-learn</code>在<code>sklearn.model_selection</code>包提供了大量的模型选择和评估的工具供我们使用。针对该问题可以使用<code>GridSearchCV</code>类来解决。</p>
-<h2 id="利用GridSearchCV求最优参数"><a href="#利用GridSearchCV求最优参数" class="headerlink" title="利用GridSearchCV求最优参数"></a>利用<code>GridSearchCV</code>求最优参数</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">from sklearn.model_selection import GridSearchCV</span><br><span class="line"></span><br><span class="line">thresholds = np.linspace(0, 0.2, 50)</span><br><span class="line">param_grid = &#123;&apos;min_impurity_decrease&apos;:thresholds&#125;</span><br><span class="line"></span><br><span class="line">clf = GridSearchCV(DecisionTreeClassifier(), param_grid, cv=5)</span><br><span class="line">clf.fit(X,y)</span><br><span class="line"></span><br><span class="line">print(&quot;best_parms:&#123;0&#125;\nbest_score:&#123;1&#125;&quot;.format(clf.best_params_, clf.best_score_))</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>best_parms:{‘min_impurity_decrease’: 0.00816326530612245}<br>best_score:0.8114478114478114</p>
-</blockquote>
-<p>模型解读：<br>1、关键字参数<code>param_grid</code>是一个字典，字典的关键字对应的值是一个列表。<code>GridSearchCV</code>会枚举列表里所有值来构建模型多次计算训练模型，并计算模型评分，最终得出指定参数值的平均评分及标准差。</p>
-<p>2、关键参数<code>sv</code>，用来指定交叉验证数据集的生成规则。这里sv=5表示每次计算都把数据集分成5份，拿其中一份作为交叉验证数据集，其他作为训练集。最终得出最优参数及最优评分保存在<code>clf.best_params_</code>和<code>clf.best_score_</code>里。</p>
-<p>3、此外<code>clf.cv_results_</code>里保存了计算过程的所有中间结果。</p>
-<h2 id="画出学习曲线："><a href="#画出学习曲线：" class="headerlink" title="画出学习曲线："></a>画出学习曲线：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">def plot_curve(train_sizes, cv_results, xlabel):</span><br><span class="line">    train_scores_mean = cv_results[&apos;mean_train_score&apos;]</span><br><span class="line">    train_scores_std = cv_results[&apos;std_train_score&apos;]</span><br><span class="line">    test_scores_mean = cv_results[&apos;mean_test_score&apos;]</span><br><span class="line">    test_scores_std = cv_results[&apos;std_test_score&apos;]</span><br><span class="line">    plt.figure(figsize=(6, 4), dpi=120)</span><br><span class="line">    plt.title(&apos;parameters turning&apos;)</span><br><span class="line">    plt.grid()</span><br><span class="line">    plt.xlabel(xlabel)</span><br><span class="line">    plt.ylabel(&apos;score&apos;)</span><br><span class="line">    plt.fill_between(train_sizes, train_scores_mean - train_scores_std,train_scores_mean + train_scores_std, alpha=0.1, color=&quot;r&quot;)</span><br><span class="line">    plt.fill_between(train_sizes, test_scores_mean - test_scores_std,test_scores_mean + test_scores_std, alpha=0.1, color=&quot;g&quot;)</span><br><span class="line">    plt.plot(train_sizes, train_scores_mean, &apos;.--&apos;, color=&quot;r&quot;,label=&quot;Training score&quot;)</span><br><span class="line">    plt.plot(train_sizes, test_scores_mean, &apos;.-&apos;, color=&quot;g&quot;,</span><br><span class="line">    label=&quot;Cross-validation score&quot;)</span><br><span class="line"></span><br><span class="line">    plt.legend(loc=&quot;best&quot;)</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">from sklearn.model_selection import GridSearchCV</span><br><span class="line"></span><br><span class="line">thresholds = np.linspace(0, 0.2, 50)</span><br><span class="line"># Set the parameters by cross-validation</span><br><span class="line">param_grid = &#123;&apos;min_impurity_decrease&apos;: thresholds&#125;</span><br><span class="line"></span><br><span class="line">clf = GridSearchCV(DecisionTreeClassifier(), param_grid, cv=5)</span><br><span class="line">clf.fit(X, y)</span><br><span class="line">print(&quot;best param: &#123;0&#125;\nbest score: &#123;1&#125;&quot;.format(clf.best_params_, </span><br><span class="line"> clf.best_score_))</span><br><span class="line"></span><br><span class="line"># plot_curve(thresholds, clf.cv_results_, xlabel=&apos;gini thresholds&apos;)</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>best param: {‘min_impurity_decrease’: 0.00816326530612245}<br>best score: 0.8114478114478114</p>
-</blockquote>
-<p><img src="http://p4rlzrioq.bkt.clouddn.com/%E7%94%BB%E5%87%BA%E5%AD%A6%E4%B9%A0%E6%9B%B2%E7%BA%BF%EF%BC%9A.jpg" alt=""></p>
-<h2 id="多组参数之间选择最优参数："><a href="#多组参数之间选择最优参数：" class="headerlink" title="多组参数之间选择最优参数："></a>多组参数之间选择最优参数：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">from sklearn.model_selection import GridSearchCV</span><br><span class="line"></span><br><span class="line">entropy_thresholds = np.linspace(0, 1, 100)</span><br><span class="line">gini_thresholds = np.linspace(0, 0.2, 100)</span><br><span class="line">#设置参数矩阵：</span><br><span class="line">param_grid = [&#123;&apos;criterion&apos;: [&apos;entropy&apos;], &apos;min_impurity_decrease&apos;:entropy_thresholds&#125;,&#123;&apos;criterion&apos;: [&apos;gini&apos;], &apos;min_impurity_decrease&apos;: gini_thresholds&#125;,&#123;&apos;max_depth&apos;: np.arange(2,10)&#125;,&#123;&apos;min_samples_split&apos;: np.arange(2,30,2)&#125;]</span><br><span class="line">clf = GridSearchCV(DecisionTreeClassifier(), param_grid, cv=5)</span><br><span class="line">clf.fit(X, y)</span><br><span class="line">print(&quot;best param:&#123;0&#125;\nbest score:&#123;1&#125;&quot;.format(clf.best_params_, clf.best_score_))</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>best param:{‘min_impurity_decrease’: 0.00816326530612245}<br>best score:0.8114478114478114</p>
-</blockquote>
-<p>结果1、{‘criterion’: ‘gini’, ‘min_impurity_decrease’: 0.00816326530612245} -&gt;6</p>
-<p>结果2、{‘min_samples_split’: 22} -&gt;10</p>
-<p>结果3、{‘min_samples_split’: 20} -&gt;4</p>
-<p><strong>结果波动很大，这里做了20次测试，对应结果1出现6次，结果2出现10次，结果3出现4次。</strong></p>
-<p><strong>代码解读</strong>：<br>关键部分还是<code>param_grid</code>参数，他是一个列表。很对列表的第一个字典，选择信息墒<code>（entropy）</code>作为判断标准，取值0～1范围50等分；</p>
-<p>第二个字典选择基尼系数，<code>min_impurity_decrease</code>取值0～0.2范围50等分。</p>
-<p><code>GridSearchCV</code>会针对列表中的每个字典进行迭代，最终比较列表中每个字典所对应的参数组合，选择出最优的参数。</p>
-<h2 id="生成决策树图形"><a href="#生成决策树图形" class="headerlink" title="生成决策树图形"></a>生成决策树图形</h2><p>下面代码可以生成.dot文件，需要电脑上安装<code>graphviz</code>才能把文件转换成图片格式。</p>
-<p><code>Mac</code>上可以使用<code>brew install graphviz</code>命令来安装，它会同时安装8个依赖包。这里一定注意<code>Mac</code>环境下的权限问题：由于<code>Homebrew</code>默认是安装在<code>/usr/local</code>下，而<code>Mac</code>有强制保护不支持<code>sudo chown -R uname local</code>对<code>local</code>文件夹进行权限修改。</p>
-<p>这里的解决方式是把<code>local</code>下<code>bin</code>,<code>lib</code>,<code>Cellar</code>等所需单个文件夹下进行赋权，即可成功安装。</p>
-<ol>
-<li>在电脑上安装 graphviz</li>
-<li>运行 <code>dot -Tpng tree.dot -o filename.png</code></li>
-<li>在当前目录查看生成的决策树 filename.png</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">from sklearn.tree import DecisionTreeClassifier </span><br><span class="line">from sklearn import tree</span><br><span class="line"></span><br><span class="line">clf = DecisionTreeClassifier(min_samples_split=22)</span><br><span class="line">clf = clf.fit(X_train, y_train)</span><br><span class="line">train_score = clf.score(X_train, y_train)</span><br><span class="line">test_score = clf.score(X_test, y_test)</span><br><span class="line">print(&apos;train score: &#123;0&#125;; test score: &#123;1&#125;&apos;.format(train_score, test_score))</span><br><span class="line"></span><br><span class="line"># 导出 titanic.dot 文件</span><br><span class="line">with open(&quot;tree.dot&quot;, &apos;w&apos;) as f:</span><br><span class="line">    f = tree.export_graphviz(clf, out_file=f)</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>train score: 0.8834269662921348; test score: 0.8268156424581006</p>
-</blockquote>
-<p><img src="http://p4rlzrioq.bkt.clouddn.com/%E5%A4%9A%E7%BB%84%E5%8F%82%E6%95%B0%E4%B9%8B%E9%97%B4%E9%80%89%E6%8B%A9%E6%9C%80%E4%BC%98%E5%8F%82%E6%95%B0%EF%BC%9A.jpg" alt=""></p>
-<h1 id="模型调参注意事项："><a href="#模型调参注意事项：" class="headerlink" title="模型调参注意事项："></a>模型调参注意事项：</h1><ul>
-<li>当样本少数量但是样本特征非常多的时候，决策树很容易过拟合，一般来说，样本数比特征数多一些会比较容易建立健壮的模型</li>
-<li>如果样本数量少但是样本特征非常多，在拟合决策树模型前，推荐先做维度规约，比如主成分分析（PCA），特征选择（Losso）或者独立成分分析（ICA）。这样特征的维度会大大减小。再来拟合决策树模型效果会好。</li>
-<li>推荐多用决策树的可视化，同时先限制决策树的深度（比如最多3层），这样可以先观察下生成的决策树里数据的初步拟合情况，然后再决定是否要增加深度。</li>
-<li>在训练模型先，注意观察样本的类别情况（主要指分类树），如果类别分布非常不均匀，就要考虑用class_weight来限制模型过于偏向样本多的类别。</li>
-<li>决策树的数组使用的是numpy的float32类型，如果训练数据不是这样的格式，算法会先做copy再运行。</li>
-<li>如果输入的样本矩阵是稀疏的，推荐在拟合前调用csc_matrix稀疏化，在预测前调用csr_matrix稀疏化。</li>
+<h1 id="KNN算法原理"><a href="#KNN算法原理" class="headerlink" title="KNN算法原理"></a>KNN算法原理</h1><p>KNN算法的核心思想是为预测样本的类别，即使最邻近的k个邻居中类别占比最高的的类别：</p>
+<p>假设X_test为未标记的数据样本，X_train为已标记类别的样本，算法原理伪代码如下：</p>
+<ul>
+<li>遍历X_train中所有样本，计算每个样本与X_test的距离，并保存在Distance数组中</li>
+<li>对Distance数组进行排序，取距离最近的k个点，记为X_knn</li>
+<li>在X_knn中统计每个类别的个数</li>
+<li>代表记得样本的类别，就是在X_knn中样本最多的类别</li>
 </ul>
+<h2 id="算法优缺点"><a href="#算法优缺点" class="headerlink" title="算法优缺点"></a>算法优缺点</h2><p><strong>优点：</strong>准确性高，对异常值和噪声有较高的容忍度</p>
+<p><strong>缺点：</strong>计算量大，对内存的需求也较大</p>
+<h2 id="算法参数（k）"><a href="#算法参数（k）" class="headerlink" title="算法参数（k）"></a>算法参数（k）</h2><p><strong>k越大：模型偏差越大，对噪声越不敏感。过大是造成欠拟合</strong></p>
+<p><strong>k越小：模型的方差就会越大。太小是会造成过拟合</strong></p>
+<h2 id="算法的变种"><a href="#算法的变种" class="headerlink" title="算法的变种"></a>算法的变种</h2><p><strong>增加邻居的权重：</strong>默认情况下X_knn的权重相等，我们可以指定算法的<code>weights</code>参数调整成距离越近权重越大</p>
+<p><strong>使用一定半径内的点取代距离最近的kk个点</strong>，<code>RadiusNeighborsClassifier</code>类实现了这个算法</p>
+<h1 id="使用KNN作分类"><a href="#使用KNN作分类" class="headerlink" title="使用KNN作分类"></a>使用KNN作分类</h1><ul>
+<li><code>sklearn.neighbors.KNeighborsClassifier</code></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">from sklearn.datasets.samples_generator import make_blobs</span><br><span class="line"># 生成n_samples个训练样本，分布在centers参数指定的中心点周围。 cluster_std为标准差，指定生成的点分布的稀疏程度</span><br><span class="line">centers = [[-2,2], [2,2], [0,4]]</span><br><span class="line">X , y = make_blobs(n_samples=100, centers=centers, random_state=0, cluster_std=0.60)</span><br><span class="line"></span><br><span class="line"># 画出数据</span><br><span class="line">%matplotlib inline</span><br><span class="line">from matplotlib import pyplot as plt</span><br><span class="line">import numpy as np</span><br><span class="line">import pandas as pd</span><br><span class="line"></span><br><span class="line">plt.figure(figsize=(8,5), dpi=100)</span><br><span class="line">c = np.array(centers)</span><br><span class="line">plt.scatter(X[:,0], X[:,1], c=y, s=10, cmap=&apos;cool&apos;)</span><br><span class="line">plt.scatter(c[:,0], c[:,1], s=50, marker=&apos;^&apos;, c=&apos;red&apos;)</span><br></pre></td></tr></table></figure>
+<p><img src="http://p4rlzrioq.bkt.clouddn.com/%E4%BD%BF%E7%94%A8knn%E8%BF%9B%E8%A1%8C%E5%88%86%E7%B1%BB2.png" alt=""></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">from sklearn.neighbors import KNeighborsClassifier</span><br><span class="line"></span><br><span class="line">k = 5</span><br><span class="line">clf = KNeighborsClassifier(n_neighbors=k)</span><br><span class="line">clf.fit(X, y)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># X_test = np.array([0, 2]).reshape(1,-1)</span><br><span class="line">X_test = [[0,2]]</span><br><span class="line">y_test = clf.predict(X_test)</span><br><span class="line">neighbors = clf.kneighbors(X_test, return_distance=False)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">from sklearn.datasets.samples_generator import make_blobs</span><br><span class="line"># 生成n_samples个训练样本，分布在centers参数指定的中心点周围。 cluster_std为标准差，指定生成的点分布的稀疏程度</span><br><span class="line">centers = [[-2,2], [2,2], [0,4]]</span><br><span class="line">X , y = make_blobs(n_samples=100, centers=centers, random_state=0, cluster_std=0.60)</span><br><span class="line"></span><br><span class="line"># 画出数据</span><br><span class="line">%matplotlib inline</span><br><span class="line">from matplotlib import pyplot as plt</span><br><span class="line">import numpy as np</span><br><span class="line">import pandas as pd</span><br><span class="line"></span><br><span class="line">plt.figure(figsize=(8,5), dpi=100)</span><br><span class="line">c = np.array(centers)</span><br><span class="line">plt.scatter(X[:,0], X[:,1], c=y, s=10, cmap=&apos;cool&apos;)  # 样本</span><br><span class="line">plt.scatter(c[:,0], c[:,1], s=50, marker=&apos;^&apos;, c=&apos;red&apos;) # 中心点</span><br><span class="line">plt.scatter(X_test[0][0], X_test[0][1], marker=&apos;x&apos;, s=50, c=&apos;blue&apos;) # 中心点</span><br><span class="line"></span><br><span class="line">for i in neighbors[0]:</span><br><span class="line">    plt.plot([X[i][0], X_test[0][0]], [X[i][1], X_test[0][1]],&apos;k--&apos;, linewidth=0.5)</span><br></pre></td></tr></table></figure>
+<p><img src="http://p4rlzrioq.bkt.clouddn.com/%E4%BD%BF%E7%94%A8knn%E8%BF%9B%E8%A1%8C%E5%88%86%E7%B1%BB.png" alt=""></p>
+<h1 id="KNN回归拟合"><a href="#KNN回归拟合" class="headerlink" title="KNN回归拟合"></a>KNN回归拟合</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">from sklearn.neighbors import KNeighborsRegressor</span><br><span class="line">import numpy as np</span><br><span class="line">%matplotlib inline</span><br><span class="line">from matplotlib import pyplot as plt</span><br><span class="line"></span><br><span class="line">n = 50</span><br><span class="line">X = 5 * np.random.rand(n ,1)</span><br><span class="line">y = np.cos(X).ravel()</span><br><span class="line"># 添加一些噪声</span><br><span class="line">y += 0.2 * np.random.rand(n) - 0.1</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">k = 5</span><br><span class="line">knn = KNeighborsRegressor(k)</span><br><span class="line">knn.fit(X, y)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>KNeighborsRegressor(algorithm=’auto’, leaf_size=30,metric=’minkowski’,metric_params=None, n_jobs=1,n_neighbors=5, p=2,weights=’uniform’)</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">T = np.linspace(0,5, 500)[:, np.newaxis]</span><br><span class="line">y_pred = knn.predict(T)</span><br><span class="line">knn.score(X,y)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>0.9909058023770559</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">plt.figure(figsize=(8,5), dpi=100)</span><br><span class="line">plt.scatter(X, y, label=&apos;data&apos;, s=10)</span><br><span class="line">plt.scatter(T, y_pred, label=&apos;prediction&apos;, lw=4, s=0.1)</span><br><span class="line">plt.axis(&apos;tight&apos;)</span><br><span class="line">plt.title(&quot;KNeighborsRegressor (k=%i)&quot; % k)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<p><img src="http://p4rlzrioq.bkt.clouddn.com/kneighborsRegressor.png" alt=""></p>
+<h1 id="糖尿病预测"><a href="#糖尿病预测" class="headerlink" title="糖尿病预测"></a>糖尿病预测</h1><p>总共有768个数据、8个特征，其中Outcome为标记值（1表示有糖尿病）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">import numpy as np</span><br><span class="line">import pandas as pd</span><br><span class="line">data = pd.read_csv(&apos;code/datasets/pima-indians-diabetes/diabetes.csv&apos;)</span><br><span class="line">X = data.iloc[:,0:8]</span><br><span class="line">y = data.iloc[:,8]</span><br><span class="line"></span><br><span class="line">from sklearn.model_selection import train_test_split</span><br><span class="line">X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2)</span><br></pre></td></tr></table></figure></p>
+<h2 id="模型比较"><a href="#模型比较" class="headerlink" title="模型比较"></a>模型比较</h2><ul>
+<li>分别使用普通KNN，加权重KNN，和指定权重的KNN分别对数据拟合计算评分</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">from sklearn.neighbors import KNeighborsClassifier, KNeighborsRegressor, RadiusNeighborsClassifier</span><br><span class="line"></span><br><span class="line">models = []</span><br><span class="line">models.append((&quot;KNN&quot;, KNeighborsClassifier(n_neighbors=10)))</span><br><span class="line">models.append((&quot;KNN + weights&quot;, KNeighborsClassifier(</span><br><span class="line">n_neighbors=10, weights=&quot;distance&quot;)))</span><br><span class="line">models.append((&quot;Radius Neighbors&quot;, RadiusNeighborsClassifier(n_neighbors=10, radius=500.0)))</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">results = []</span><br><span class="line">for name, model in models:</span><br><span class="line">    model.fit(X_train, y_train)</span><br><span class="line">    results.append((name, model.score(X_test, y_test)))</span><br><span class="line">for i in range(len(results)):</span><br><span class="line">    print(&quot;name:&#123;&#125;; score:&#123;&#125;&quot;.format(results[i][0], results[i][1]))</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>name:KNN; score:0.7207792207792207<br>name:KNN + weights; score:0.6818181818181818<br>name:Radius Neighbors; score:0.6558441558441559</p>
+</blockquote>
+<ul>
+<li>此时单从得分上看，普通的KNN性能是最好的，但是我们的训练样本和测试样本是随机分配的，不同的训练集、测试集会造成不同得分。</li>
+<li>为了消除随机样本集对得分结果可能的影响，scikit-learn提供了<code>KFold和cross_val_score()</code>函数来处理这个问题</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">from sklearn.model_selection import KFold</span><br><span class="line">from sklearn.model_selection import cross_val_score</span><br><span class="line"></span><br><span class="line">results = []</span><br><span class="line">for name , model in models:</span><br><span class="line">    kfold = KFold(n_splits=10)</span><br><span class="line">    cv_result = cross_val_score(model, X, y, cv=kfold) # 这里要给模型全部的样本集</span><br><span class="line">    results.append((name, cv_result))</span><br><span class="line">for i in range(len(results)):</span><br><span class="line">    print(&quot;name:&#123;&#125;; cross_val_score:&#123;&#125;&quot;.format(results[i][0], results[i][1].mean()))</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>name:KNN; cross_val_score:0.74865003417635<br>name:KNN + weights; cross_val_score:0.7330485304169514<br>name:Radius Neighbors; cross_val_score:0.6497265892002735</p>
+</blockquote>
+<h2 id="用查准率和召回率以及F1对该模型进行评估："><a href="#用查准率和召回率以及F1对该模型进行评估：" class="headerlink" title="用查准率和召回率以及F1对该模型进行评估："></a>用查准率和召回率以及F1对该模型进行评估：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">from sklearn.metrics import f1_score, precision_score, recall_score</span><br><span class="line"></span><br><span class="line">knn = KNeighborsClassifier(10)</span><br><span class="line">knn.fit(X_train, y_train)</span><br><span class="line">y_pred = knn.predict(X_test)</span><br><span class="line"></span><br><span class="line">print(&quot;该模型查准率为：&quot;, precision_score(y_test, y_pred))</span><br><span class="line">print(&quot;该模型召回率为：&quot;, recall_score(y_test, y_pred))</span><br><span class="line">print(&quot;该模型F1_score为：&quot;, f1_score(y_test, y_pred))</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>该模型查准率为： 0.6086956521739131<br>该模型召回率为： 0.5283018867924528<br>该模型F1_score为： 0.5656565656565657</p>
+</blockquote>
+<h2 id="模型的训练及分析-–-学习曲线"><a href="#模型的训练及分析-–-学习曲线" class="headerlink" title="模型的训练及分析 – 学习曲线"></a>模型的训练及分析 – 学习曲线</h2><p>下面就选择用普通KNN算法模型对数据集进行训练，并查看训练样本的拟合情况及对策测试样本的预测准确性：</p>
+<p>输入参数：</p>
+<blockquote>
+<p>estimator : 你用的分类器。<br>title : 表格的标题。<br>X : 输入的feature，numpy类型<br>y : 输入的target vector<br>ylim : tuple格式的(ymin, ymax), 设定图像中纵坐标的最低点和最高点<br>cv : 做cross-validation的时候，数据分成的份数，其中一份作为cv集，其余n-1份作为training(默认为3份)<br>n_jobs : 并行的的任务数(默认1))</p>
+</blockquote>
+<p>输出参数：</p>
+<blockquote>
+<p>train_sizes_abs :训练样本数<br>train_scores:训练集上准确率<br>test_scores:交叉验证集上的准确率) </p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">knn = KNeighborsClassifier(n_neighbors=2)</span><br><span class="line">knn.fit(X_train, y_train)</span><br><span class="line">train_score = knn.score(X_train, y_train)</span><br><span class="line">test_score = knn.score(X_test, y_test)</span><br><span class="line">print(&apos;训练集得分：&apos;,train_score)</span><br><span class="line">print(&apos;测试集得分：&apos;,test_score)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>训练集得分： 0.8517915309446255<br>测试集得分： 0.6948051948051948</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">from sklearn.model_selection import learning_curve</span><br><span class="line">from sklearn.model_selection import ShuffleSplit</span><br><span class="line"># from common.utils import plot_learning_curve</span><br><span class="line"></span><br><span class="line">def plot_learn_curve(estimator, title, X, y, ylim = None, cv=None, n_jobs=1, train_sizes=np.linspace(.1, 1., 10)):</span><br><span class="line">    plt.title(title)</span><br><span class="line">    if ylim is not None:</span><br><span class="line">         plt.ylim(*ylim)</span><br><span class="line">    plt.xlabel(&quot;train exs&quot;)</span><br><span class="line">    plt.ylabel(&quot;Score&quot;)</span><br><span class="line">    train_sizes, train_scores, test_scores = learning_curve(estimator, X, y, cv=cv, n_jobs=n_jobs, train_sizes=train_sizes)</span><br><span class="line">    train_score_mean = np.mean(train_scores, axis=1)</span><br><span class="line">    train_score_std = np.std(train_scores, axis=1)</span><br><span class="line">    test_score_mean = np.mean(test_scores, axis=1)</span><br><span class="line">    test_score_std = np.std(test_scores, axis=1)</span><br><span class="line">    plt.grid()</span><br><span class="line"></span><br><span class="line">    plt.fill_between(train_sizes, train_score_mean - train_score_std, train_score_mean + train_score_std, alpha=0.1, color=&apos;r&apos;)</span><br><span class="line">    plt.fill_between(train_sizes, test_score_mean - test_score_std, test_score_mean + test_score_std, alpha=0.1, color=&apos;g&apos;)</span><br><span class="line">    plt.plot(train_sizes, train_score_mean, &apos;o-&apos;, color=&apos;r&apos;, label=&apos;train score训练得分&apos;)</span><br><span class="line">    plt.plot(train_sizes, test_score_mean, &apos;o-&apos;, color=&apos;g&apos;, label=&apos;cross-validation score交叉验证得分&apos;)</span><br><span class="line"></span><br><span class="line">    plt.legend(loc=&apos;best&apos;)</span><br><span class="line">    return plt</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">data = pd.read_csv(&apos;code/datasets/pima-indians-diabetes/diabetes.csv&apos;)</span><br><span class="line">X = data.iloc[:,0:8]</span><br><span class="line">y = data.iloc[:,8]</span><br><span class="line"></span><br><span class="line">cv = ShuffleSplit(n_splits=10, test_size=0.2, random_state=0)</span><br><span class="line"></span><br><span class="line">plt.figure(figsize=(8,6), dpi=100)</span><br><span class="line">plot_learn_curve(KNeighborsClassifier(2),&quot;KNN score&quot;,X, y, ylim=(0.5, 1), cv=cv)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<p><img src="http://p4rlzrioq.bkt.clouddn.com/%E6%A8%A1%E5%9E%8B%E7%9A%84%E8%AE%AD%E7%BB%83%E5%8F%8A%E5%88%86%E6%9E%90%20%E2%80%93%20%E5%AD%A6%E4%B9%A0%E6%9B%B2%E7%BA%BF.png" alt=""></p>
+<p>当训练集和测试集的误差收敛但却很高时，为高偏差。<br>左上角的偏差很高，训练集和验证集的准确率都很低，很可能是欠拟合。<br>我们可以增加模型参数，比如，构建更多的特征，减小正则项。<br>此时通过增加数据量是不起作用的。</p>
+<p>当训练集和测试集的误差之间有大的差距时，为高方差。<br>当训练集的准确率比其他独立数据集上的测试结果的准确率要高时，一般都是过拟合。<br>右上角方差很高，训练集和验证集的准确率相差太多，应该是过拟合。<br>我们可以增大训练集，降低模型复杂度，增大正则项，或者通过特征选择减少特征数。</p>
+<p>理想情况是是找到偏差和方差都很小的情况，即收敛且误差较小。</p>
+<h2 id="特征选择及数据可视化"><a href="#特征选择及数据可视化" class="headerlink" title="特征选择及数据可视化"></a>特征选择及数据可视化</h2><p><strong>使用sklearn.feature_selection.SelectKBest选择相关性最大的两个特征</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">from sklearn.feature_selection import SelectKBest</span><br><span class="line">from sklearn.neighborse import KN</span><br><span class="line"></span><br><span class="line">selector = SelectKBest(k=2)</span><br><span class="line">X_new = selector.fit_transform(X,y)</span><br><span class="line">X_new[0:5] #把相关性最大的两个特征放到X_new里并查看前5个数据样本</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>array([[148. ,  33.6],[ 85. ,  26.6],[183. ,  23.3],[ 89. ,  28.1],[137. ,  43.1]])</p>
+</blockquote>
+<ul>
+<li>使用相关性最大的两个特征，对3种不同的KNN算法进行检验</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">from sklearn.model_selection import KFold</span><br><span class="line">from sklearn.model_selection import cross_val_score</span><br><span class="line">from sklearn.neighbors import KNeighborsClassifier, KNeighborsRegressor, RadiusNeighborsClassifier</span><br><span class="line">models = []</span><br><span class="line">models.append((&quot;KNN&quot;, KNeighborsClassifier(n_neighbors=5)))</span><br><span class="line">models.append((&quot;KNN + weights&quot;, KNeighborsClassifier(n_neighbors=5, weights=&quot;distance&quot;)))</span><br><span class="line">models.append((&quot;Radius Neighbors&quot;, RadiusNeighborsClassifier(n_neighbors=5, radius=500.0)))</span><br><span class="line"></span><br><span class="line">results = []</span><br><span class="line">for name, model in models:</span><br><span class="line">    kfold = KFold(n_splits=10)</span><br><span class="line">    cv_result = cross_val_score(model, X_new, y, cv=kfold)</span><br><span class="line">    results.append((name, cv_result))</span><br><span class="line">for i in range(len(results)):</span><br><span class="line">    print(&quot;name: &#123;&#125;; cross_val_score: &#123;&#125;&quot;.format(results[i][0], results[i][1].mean()))</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>name: KNN; cross_val_score: 0.7369104579630894<br>name: KNN + weights; cross_val_score: 0.7199419002050581<br>name: Radius Neighbors; cross_val_score: 0.6510252904989747</p>
+</blockquote>
+<p>从输出结果来看，还是普通KNN的准确性更高，与所有特征放到一起训练的准确性差不多，这也侧面证明了SelectKNBest特征选取的准确性。</p>
+<p>回到目标上来，我们是想看看为什么KNN不能很好的拟合训练样本。现在我们至于2个特征可以很方便的在二维坐标上画出所有的训练样本，观察这些数据分布情况</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">%matplotlib inline</span><br><span class="line">from matplotlib import pyplot as plt</span><br><span class="line"></span><br><span class="line">plt.figure(figsize=(8,6), dpi=100)</span><br><span class="line">plt.ylabel(&quot;BMI&quot;)</span><br><span class="line">plt.xlabel(&quot;Glucose&quot;)</span><br><span class="line"></span><br><span class="line">plt.scatter(X_new[y==0][:,0], X_new[y==0][:,1], marker=&apos;o&apos;, s=10)</span><br><span class="line">plt.scatter(X_new[y==1][:,0], X_new[y==1][:,1], marker=&apos;^&apos;, s=10)</span><br></pre></td></tr></table></figure>
+<p><img src="http://p4rlzrioq.bkt.clouddn.com/%E7%89%B9%E5%BE%81%E9%80%89%E6%8B%A9%E5%8F%8A%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96.png" alt=""></p>
+<p>横坐标是血糖值，纵坐标是BMI值反应身体肥胖情况。在数据密集的区域，代表糖尿病的阴性和阳性的样本几乎重叠到了一起。这样就很直观的看到，KNN在糖尿病预测的这个问题上无法达到很高的预测准确性。</p>
 
       
     </div>
@@ -629,7 +651,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://frankblog.site/2018/06/05/决策树之泰坦之灾/" title="决策树之泰坦之灾">http://frankblog.site/2018/06/05/决策树之泰坦之灾/</a>
+    <a href="http://frankblog.site/2018/06/06/机器学习之KNN/" title="机器学习之KNN">http://frankblog.site/2018/06/06/机器学习之KNN/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>
@@ -646,7 +668,7 @@
           
             <a href="/tags/机器学习/" rel="tag"><i class="fa fa-tag"></i> 机器学习</a>
           
-            <a href="/tags/决策树/" rel="tag"><i class="fa fa-tag"></i> 决策树</a>
+            <a href="/tags/KNN/" rel="tag"><i class="fa fa-tag"></i> KNN</a>
           
         </div>
       
@@ -659,8 +681,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/06/05/sklearn之数据预处理和创建模型/" rel="next" title="sklearn之数据预处理和创建模型">
-                <i class="fa fa-chevron-left"></i> sklearn之数据预处理和创建模型
+              <a href="/2018/06/05/决策树之泰坦之灾/" rel="next" title="决策树之泰坦之灾">
+                <i class="fa fa-chevron-left"></i> 决策树之泰坦之灾
               </a>
             
           </div>
@@ -668,10 +690,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/06/06/机器学习之KNN/" rel="prev" title="机器学习之KNN">
-                机器学习之KNN <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -883,7 +901,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#数据预处理"><span class="nav-number">1.</span> <span class="nav-text">数据预处理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、首先读取数据"><span class="nav-number">1.1.</span> <span class="nav-text">1、首先读取数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、拆分数据集"><span class="nav-number">1.2.</span> <span class="nav-text">2、拆分数据集</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、拟合数据集"><span class="nav-number">1.3.</span> <span class="nav-text">3、拟合数据集</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#优化模型参数"><span class="nav-number">2.</span> <span class="nav-text">优化模型参数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、通过max-depth参数来优化模型"><span class="nav-number">2.1.</span> <span class="nav-text">1、通过max_depth参数来优化模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、通过min-impurity-decrease来优化模型"><span class="nav-number">2.2.</span> <span class="nav-text">2、通过min_impurity_decrease来优化模型</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#模型参数选择工具包"><span class="nav-number">3.</span> <span class="nav-text">模型参数选择工具包</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#利用GridSearchCV求最优参数"><span class="nav-number">3.1.</span> <span class="nav-text">利用GridSearchCV求最优参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#画出学习曲线："><span class="nav-number">3.2.</span> <span class="nav-text">画出学习曲线：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多组参数之间选择最优参数："><span class="nav-number">3.3.</span> <span class="nav-text">多组参数之间选择最优参数：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#生成决策树图形"><span class="nav-number">3.4.</span> <span class="nav-text">生成决策树图形</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#模型调参注意事项："><span class="nav-number">4.</span> <span class="nav-text">模型调参注意事项：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#KNN-算法核心：KDTree"><span class="nav-number">1.</span> <span class="nav-text">KNN 算法核心：KDTree</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#KD-树简介"><span class="nav-number">1.1.</span> <span class="nav-text">KD 树简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#KD-树的构造"><span class="nav-number">1.2.</span> <span class="nav-text">KD 树的构造</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#KNN算法原理"><span class="nav-number">2.</span> <span class="nav-text">KNN算法原理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#算法优缺点"><span class="nav-number">2.1.</span> <span class="nav-text">算法优缺点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#算法参数（k）"><span class="nav-number">2.2.</span> <span class="nav-text">算法参数（k）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#算法的变种"><span class="nav-number">2.3.</span> <span class="nav-text">算法的变种</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#使用KNN作分类"><span class="nav-number">3.</span> <span class="nav-text">使用KNN作分类</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#KNN回归拟合"><span class="nav-number">4.</span> <span class="nav-text">KNN回归拟合</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#糖尿病预测"><span class="nav-number">5.</span> <span class="nav-text">糖尿病预测</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#模型比较"><span class="nav-number">5.1.</span> <span class="nav-text">模型比较</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#用查准率和召回率以及F1对该模型进行评估："><span class="nav-number">5.2.</span> <span class="nav-text">用查准率和召回率以及F1对该模型进行评估：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模型的训练及分析-–-学习曲线"><span class="nav-number">5.3.</span> <span class="nav-text">模型的训练及分析 – 学习曲线</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#特征选择及数据可视化"><span class="nav-number">5.4.</span> <span class="nav-text">特征选择及数据可视化</span></a></li></ol></li></ol></div>
             
 
           </div>
