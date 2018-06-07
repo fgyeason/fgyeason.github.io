@@ -112,7 +112,7 @@
 <meta property="og:image" content="http://p4rlzrioq.bkt.clouddn.com/mapreduce3.png">
 <meta property="og:image" content="http://p4rlzrioq.bkt.clouddn.com/MapReduceWordCountOverview1.png">
 <meta property="og:image" content="http://p4rlzrioq.bkt.clouddn.com/python%20%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0.jpg">
-<meta property="og:updated_time" content="2018-06-07T12:55:37.957Z">
+<meta property="og:updated_time" content="2018-06-07T13:17:40.610Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="浅谈分布式">
 <meta name="twitter:image" content="http://p4rlzrioq.bkt.clouddn.com/%E5%88%86%E5%B8%83%E5%BC%8F%E5%B0%81%E9%9D%A2.jpg">
@@ -390,7 +390,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-06-07T20:55:37+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-06-07T21:17:40+08:00">
                 2018-06-07
               </time>
             
@@ -444,7 +444,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  787 字  
+                  792 字  
                 </span>
               
 
@@ -488,7 +488,7 @@
 <hr>
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 
-<p>分布式，按字面意思就是并行计算，对于一些串行的计算可以运用。一些本来就并行的就不可以。</p>
+<h1 id="分布式基础"><a href="#分布式基础" class="headerlink" title="分布式基础"></a>分布式基础</h1><p>分布式，按字面意思就是并行计算，对于一些串行的计算可以运用。一些本来就并行的就不可以。</p>
 <p>之前聊起这个，就会说mapreduce，就是把任务分拆开来，最后计算的时候再合并。但后来发现这样的回答太水了，看了几篇介绍分布式计算的PPT，特此写下来分布式到底是怎么一回事。</p>
 <p>我们用一个矩阵运算作为例子：</p>
 <p>对于两个矩阵，A和B：</p>
@@ -505,11 +505,13 @@
 <p>下图中，对于矩阵A，因为矩阵B一共两列，所以p=2，所以key会有（1，1）和（1，2）。而对于每个key，每一行中每一个位置的数据都得变成value，即value=”a:j,aij”</p>
 <p>同理，对于矩阵B，k就在key的前面，因为是每一列拿出来做相乘。Value中也变成按行遍历。</p>
 <p><img src="http://p4rlzrioq.bkt.clouddn.com/mapreduce%201_%E7%9C%8B%E5%9B%BE%E7%8E%8B_%E7%9C%8B%E5%9B%BE%E7%8E%8B.jpg" alt=""></p>
-<center><br><img src="http://p4rlzrioq.bkt.clouddn.com/mapreduce3.png" width="56"><br></center>
-
-<p>在shuffle阶段，就把相同的key放在一起</p>
-<p>在reduce阶段，在同一个key中，value第一维相同的匹配一起，其第二维相乘，最后把所有相加（如key（1，1）中，1<em>10+3</em>11，因为a:2没有匹配的，所以去掉a:2）</p>
+<p>在shuffle阶段，就把相同的key放在一起<br>在reduce阶段，在同一个key中，value第一维相同的匹配一起，其第二维相乘，最后把所有相加（如key（1，1）中，\(1<em>10+3</em>11\)，因为a:2没有匹配的，所以去掉a:2）</p>
 <p>最后把每一个key相加就可以得到结果了。</p>
+<center><br><img src="http://p4rlzrioq.bkt.clouddn.com/mapreduce3.png" width="120"><br></center>
+
+
+
+
 <p><img src="http://p4rlzrioq.bkt.clouddn.com/MapReduceWordCountOverview1.png" alt=""></p>
 <h2 id="Python代码实现"><a href="#Python代码实现" class="headerlink" title="Python代码实现"></a><strong>Python代码实现</strong></h2><p>对于wordcount，如果是串行的话，等于是对于每个word进行一次循环。而并行的话可以多个word一起遍历。</p>
 <p>map代码如下：</p>
@@ -832,7 +834,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Python代码实现"><span class="nav-number">1.</span> <span class="nav-text">Python代码实现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实战中怎么运用并行化处理"><span class="nav-number">2.</span> <span class="nav-text">实战中怎么运用并行化处理</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#分布式基础"><span class="nav-number">1.</span> <span class="nav-text">分布式基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Python代码实现"><span class="nav-number">1.1.</span> <span class="nav-text">Python代码实现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实战中怎么运用并行化处理"><span class="nav-number">1.2.</span> <span class="nav-text">实战中怎么运用并行化处理</span></a></li></ol></li></ol></div>
             
 
           </div>
