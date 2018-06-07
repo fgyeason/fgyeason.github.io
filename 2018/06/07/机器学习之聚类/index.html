@@ -121,7 +121,7 @@
 <meta property="og:image" content="http://p4rlzrioq.bkt.clouddn.com/fm%E6%8C%87%E6%95%B0.png">
 <meta property="og:image" content="http://p4rlzrioq.bkt.clouddn.com/%E5%86%85%E9%83%A8%E6%8C%87%E6%A0%87.png">
 <meta property="og:image" content="http://p4rlzrioq.bkt.clouddn.com/dunn%E6%8C%87%E6%95%B02.png">
-<meta property="og:updated_time" content="2018-06-07T07:49:27.280Z">
+<meta property="og:updated_time" content="2018-06-07T07:56:45.820Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="机器学习之聚类">
 <meta name="twitter:image" content="http://p4rlzrioq.bkt.clouddn.com/%E6%9D%83%E5%8A%9B%E7%9A%84%E6%B8%B8%E6%88%8F_%E7%9C%8B%E5%9B%BE%E7%8E%8B.jpg">
@@ -399,7 +399,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-06-07T15:49:27+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-06-07T15:56:45+08:00">
                 2018-06-07
               </time>
             
@@ -453,7 +453,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  3,150 字  
+                  2,993 字  
                 </span>
               
 
@@ -498,19 +498,17 @@
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 
 <p>无监督学习方法在现实场景中还是有很多应用的，例如在金融和计算广告等反欺诈场景中，我们是不可能能够获取大量的标签数据的，因为欺诈用户不会告诉你他是欺诈用户的。这时候，如果想要利用机器学习方法检测出他们来，只能使用无监督方法。</p>
-<h1 id="K-Means算法"><a href="#K-Means算法" class="headerlink" title="K-Means算法"></a>K-Means算法</h1><p>$$<br>\begin{align} MSE=\sum_{i=1}^k\sum_{x \in C_i}||x-u_i||_2^2 \end{align}<br>$$<br>上式刻画了类内样本到类中心点 ui的紧密程度，MSE 值越小，说明类内样本相似度越高。但是最优化上式的值是一个 NP 难问题，因为要精确地找到它的最优解需要对样本集 D 的所有划分的情况进行一一列举。因此，K-Means 算法最终采用的是贪心的策略，通过迭代优化的方式来近似求解最优 MSE 值。算法流程如下：</p>
-<ul>
-<li><strong>输入：</strong> 样本集 D={x1,x2,⋯,xm}，最终聚类的类别树 k；</li>
-<li><strong>算法流程：</strong> 随机选择 k 个样本点作为类标中心；</li>
-</ul>
-<h2 id="步骤描述"><a href="#步骤描述" class="headerlink" title="步骤描述"></a>步骤描述</h2><p>下面具体看到该算法的步骤：</p>
-<p>（1）根据设定的聚类数 K，随机地选择 K 个聚类中心（Cluster Centroid），这就好比古代乱世，天下诸侯并起而逐鹿</p>
+<h1 id="K-Means算法"><a href="#K-Means算法" class="headerlink" title="K-Means算法"></a>K-Means算法</h1><h2 id="算法描述"><a href="#算法描述" class="headerlink" title="算法描述"></a>算法描述</h2><p>下面具体看到该算法的步骤：</p>
+<p>（1）根据设定的聚类数 K，随机地选择 K 个聚类中心（Cluster Centroid）</p>
 <p><img src="http://p4rlzrioq.bkt.clouddn.com/%E8%81%9A%E7%B1%BB%E4%B8%AD%E5%BF%83.png" alt=""></p>
-<p>（2）评估各个样本到聚类中心的距离，如果样本距离第 i 个聚类中心更近，则认为其属于第 ii 簇，这可以看做四方义士纷纷投奔诸侯，形成不同的势力。</p>
+<p>（2）评估各个样本到聚类中心的距离，如果样本距离第 i 个聚类中心更近，则认为其属于第 ii 簇</p>
 <p><img src="http://p4rlzrioq.bkt.clouddn.com/%E5%88%92%E5%BD%92%E5%88%B0%E7%B0%87.png" alt=""></p>
-<p>（3）计算每个簇中样本的<strong>平均（Mean）</strong>位置，将聚类中心移动至该位置，该过程可以被认为是诸侯调整战略根据地以达到最强的控制力和凝聚力。</p>
+<p>（3）计算每个簇中样本的<strong>平均（Mean）</strong>位置，将聚类中心移动至该位置</p>
 <p><img src="http://p4rlzrioq.bkt.clouddn.com/%E7%A7%BB%E5%8A%A8%E8%81%9A%E7%B1%BB%E4%B8%AD%E5%BF%83.png" alt=""></p>
 <p>重复以上步骤直至各个聚类中心的位置不再发生改变。</p>
+<h2 id="变量标准化"><a href="#变量标准化" class="headerlink" title=".变量标准化"></a>.变量标准化</h2><p>在聚类前，通常需要对个连续变量进行标准化，因为方差大的变量比方差晓得变量对距离或相似度的影响更大，从而对聚类结果的影响更大。</p>
+<p>常用的方法有：</p>
+<p><strong>正态标准化</strong>：\(x_i=\frac {x_i-mean(X)}{std(X}\)<br><strong>归一化</strong>：\(x_i=\frac {x_i-min(X)}{max(X)-min(X)}\)</p>
 <h2 id="如何确定聚类数"><a href="#如何确定聚类数" class="headerlink" title="如何确定聚类数"></a>如何确定聚类数</h2><p>实际上，一开始是很难确定聚类数的，下图的两种聚类数似乎都是可行的：</p>
 <p><img src="http://p4rlzrioq.bkt.clouddn.com/%E8%81%9A%E7%B1%BB%E6%95%B01.png" alt=""><img src="http://p4rlzrioq.bkt.clouddn.com/%E8%81%9A%E7%B1%BB%E6%95%B02.png" alt=""></p>
 <p>但是，也存在一种称之为<strong>肘部法则（Elbow Method）</strong>的方法来选定适当的K值：</p>
@@ -963,7 +961,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#K-Means算法"><span class="nav-number">1.</span> <span class="nav-text">K-Means算法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#步骤描述"><span class="nav-number">1.1.</span> <span class="nav-text">步骤描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何确定聚类数"><span class="nav-number">1.2.</span> <span class="nav-text">如何确定聚类数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#质心的目标函数"><span class="nav-number">1.3.</span> <span class="nav-text">质心的目标函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#K-means优缺点"><span class="nav-number">1.4.</span> <span class="nav-text">K-means优缺点</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#优点"><span class="nav-number">1.4.1.</span> <span class="nav-text">优点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#缺点"><span class="nav-number">1.4.2.</span> <span class="nav-text">缺点</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#密度聚类方法"><span class="nav-number">2.</span> <span class="nav-text">密度聚类方法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本名词"><span class="nav-number">2.1.</span> <span class="nav-text">基本名词</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DBSCAN算法步骤"><span class="nav-number">2.2.</span> <span class="nav-text">DBSCAN算法步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#选择-DBSCAN-参数"><span class="nav-number">2.3.</span> <span class="nav-text">选择 DBSCAN 参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#优点和缺点"><span class="nav-number">2.4.</span> <span class="nav-text">优点和缺点</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#层次聚类方法"><span class="nav-number">3.</span> <span class="nav-text">层次聚类方法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#簇之间的临近性"><span class="nav-number">3.1.</span> <span class="nav-text">簇之间的临近性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#时间和空间复杂性"><span class="nav-number">3.2.</span> <span class="nav-text">时间和空间复杂性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#层次聚类的主要问题"><span class="nav-number">3.3.</span> <span class="nav-text">层次聚类的主要问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#缺乏全局目标函数"><span class="nav-number">3.3.1.</span> <span class="nav-text">缺乏全局目标函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#处理不同大小簇的能力"><span class="nav-number">3.3.2.</span> <span class="nav-text">处理不同大小簇的能力</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#合并不可逆"><span class="nav-number">3.3.3.</span> <span class="nav-text">合并不可逆</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#评价指标"><span class="nav-number">4.</span> <span class="nav-text">评价指标</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#外部指标"><span class="nav-number">4.1.</span> <span class="nav-text">外部指标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#内部指标"><span class="nav-number">4.2.</span> <span class="nav-text">内部指标</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#K-Means算法"><span class="nav-number">1.</span> <span class="nav-text">K-Means算法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#算法描述"><span class="nav-number">1.1.</span> <span class="nav-text">算法描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#变量标准化"><span class="nav-number">1.2.</span> <span class="nav-text">.变量标准化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何确定聚类数"><span class="nav-number">1.3.</span> <span class="nav-text">如何确定聚类数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#质心的目标函数"><span class="nav-number">1.4.</span> <span class="nav-text">质心的目标函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#K-means优缺点"><span class="nav-number">1.5.</span> <span class="nav-text">K-means优缺点</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#优点"><span class="nav-number">1.5.1.</span> <span class="nav-text">优点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#缺点"><span class="nav-number">1.5.2.</span> <span class="nav-text">缺点</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#密度聚类方法"><span class="nav-number">2.</span> <span class="nav-text">密度聚类方法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#基本名词"><span class="nav-number">2.1.</span> <span class="nav-text">基本名词</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DBSCAN算法步骤"><span class="nav-number">2.2.</span> <span class="nav-text">DBSCAN算法步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#选择-DBSCAN-参数"><span class="nav-number">2.3.</span> <span class="nav-text">选择 DBSCAN 参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#优点和缺点"><span class="nav-number">2.4.</span> <span class="nav-text">优点和缺点</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#层次聚类方法"><span class="nav-number">3.</span> <span class="nav-text">层次聚类方法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#簇之间的临近性"><span class="nav-number">3.1.</span> <span class="nav-text">簇之间的临近性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#时间和空间复杂性"><span class="nav-number">3.2.</span> <span class="nav-text">时间和空间复杂性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#层次聚类的主要问题"><span class="nav-number">3.3.</span> <span class="nav-text">层次聚类的主要问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#缺乏全局目标函数"><span class="nav-number">3.3.1.</span> <span class="nav-text">缺乏全局目标函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#处理不同大小簇的能力"><span class="nav-number">3.3.2.</span> <span class="nav-text">处理不同大小簇的能力</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#合并不可逆"><span class="nav-number">3.3.3.</span> <span class="nav-text">合并不可逆</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#评价指标"><span class="nav-number">4.</span> <span class="nav-text">评价指标</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#外部指标"><span class="nav-number">4.1.</span> <span class="nav-text">外部指标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#内部指标"><span class="nav-number">4.2.</span> <span class="nav-text">内部指标</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1030,7 +1028,7 @@
 <!--
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共58.1k字</span>
+  <span class="post-count">博客全站共58.0k字</span>
 </div>
 -->
 
