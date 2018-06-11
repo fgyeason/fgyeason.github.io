@@ -128,7 +128,7 @@
 <meta property="og:image" content="http://p4rlzrioq.bkt.clouddn.com/%E5%9F%BA%E5%B0%BC%E7%B3%BB%E6%95%B0%EF%BC%88Gini%20Index%EF%BC%892.jpeg">
 <meta property="og:image" content="http://p4rlzrioq.bkt.clouddn.com/%E5%A4%9A%E6%A0%B7%E6%80%A71.jpeg">
 <meta property="og:image" content="http://p4rlzrioq.bkt.clouddn.com/%E5%A4%9A%E6%A0%B7%E6%80%A72.jpeg">
-<meta property="og:updated_time" content="2018-06-11T06:56:55.088Z">
+<meta property="og:updated_time" content="2018-06-11T07:00:22.418Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="浅谈推荐系统">
 <meta name="twitter:image" content="http://p4rlzrioq.bkt.clouddn.com/%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F.png">
@@ -406,7 +406,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-06-11T14:56:55+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-06-11T15:00:22+08:00">
                 2018-06-11
               </time>
             
@@ -503,19 +503,19 @@
 
 <hr>
 <p><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script></p>
-<h3 id="什么是推荐系统"><a href="#什么是推荐系统" class="headerlink" title="什么是推荐系统"></a>什么是推荐系统</h3><h4 id="1-为什么需要推荐系统"><a href="#1-为什么需要推荐系统" class="headerlink" title="1. 为什么需要推荐系统"></a>1. 为什么需要推荐系统</h4><p><strong>结论是，为了解决互联网时代下的信息超载问题。</strong></p>
+<h1 id="什么是推荐系统"><a href="#什么是推荐系统" class="headerlink" title="什么是推荐系统"></a>什么是推荐系统</h1><h2 id="1-为什么需要推荐系统"><a href="#1-为什么需要推荐系统" class="headerlink" title="1. 为什么需要推荐系统"></a>1. 为什么需要推荐系统</h2><p><strong>结论是，为了解决互联网时代下的信息超载问题。</strong></p>
 <p>正如《大数据时代》中作者所言，这仅仅是一个开始，人们与世界的交流方式，从原来对因果关系的渴求，转变为现在对相关关系的发现和使用上。</p>
-<h4 id="2-搜索引擎与推荐系统"><a href="#2-搜索引擎与推荐系统" class="headerlink" title="2. 搜索引擎与推荐系统"></a>2. 搜索引擎与推荐系统</h4><p>众所周知，解决信息过载问题，最有代表性的解决方案是【分类目录】和【搜索引擎】，这两种解决方案分别催生了互联网领域的两家著名公司–雅虎和谷歌。</p>
+<h2 id="2-搜索引擎与推荐系统"><a href="#2-搜索引擎与推荐系统" class="headerlink" title="2. 搜索引擎与推荐系统"></a>2. 搜索引擎与推荐系统</h2><p>众所周知，解决信息过载问题，最有代表性的解决方案是【分类目录】和【搜索引擎】，这两种解决方案分别催生了互联网领域的两家著名公司–雅虎和谷歌。</p>
 <p><img src="http://p4rlzrioq.bkt.clouddn.com/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E5%92%8C%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F.jpeg" alt=""></p>
 <p>推荐系统，和搜索引擎一样，是一种帮助用户快速发展有用信息的工具。通过分析用户的历史行为，给用户的兴趣建模，从而主动给用户推荐能够满足他们兴趣和需求的信息。</p>
 <p>并且，推荐系统能够很好的发掘物品的长尾，挑战传统的2/8原则（80%的销售额来自20%的热门品牌）。</p>
 <p>从技术角度来看，搜索引擎和推荐系统的区别在于：<br>1）搜索引擎，注重搜索结果之间的关系和排序；<br>2）推荐系统，需要研究用户的兴趣模型，利用社交网络的信息进行个性化的计算；<br>3）搜索引擎，由用户主导，需要输入关键词，自行选择结果。如果结果不满意，需要修改关键词，再次搜索；<br>4）推荐系统，由系统主导，根据用户的浏览顺序，引导用户发现自己感兴趣的信息；</p>
-<h3 id="推荐算法详述"><a href="#推荐算法详述" class="headerlink" title="推荐算法详述"></a>推荐算法详述</h3><p><img src="http://p4rlzrioq.bkt.clouddn.com/%E6%8E%A8%E8%8D%90%E7%AE%97%E6%B3%95_%E7%9C%8B%E5%9B%BE%E7%8E%8B.png" alt=""></p>
-<h4 id="1-基于内容的推荐"><a href="#1-基于内容的推荐" class="headerlink" title="1 基于内容的推荐"></a>1 基于内容的推荐</h4><p>原理是基于用户感兴趣的物品A，找到和A内容信息相近的物品B。<br>利用用户和物品本身的内容特征，如用户的地理位置、性别、年龄，电影物品的导演、演员、发布时间等。<br>所以提取推荐对象的特征，是内容推荐算法的关键。但是对于多媒体内容，如视频、音乐，很难找到它们之间的特性关联性。</p>
+<h1 id="推荐算法详述"><a href="#推荐算法详述" class="headerlink" title="推荐算法详述"></a>推荐算法详述</h1><p><img src="http://p4rlzrioq.bkt.clouddn.com/%E6%8E%A8%E8%8D%90%E7%AE%97%E6%B3%95_%E7%9C%8B%E5%9B%BE%E7%8E%8B.png" alt=""></p>
+<h2 id="1-基于内容的推荐"><a href="#1-基于内容的推荐" class="headerlink" title="1 基于内容的推荐"></a>1 基于内容的推荐</h2><p>原理是基于用户感兴趣的物品A，找到和A内容信息相近的物品B。<br>利用用户和物品本身的内容特征，如用户的地理位置、性别、年龄，电影物品的导演、演员、发布时间等。<br>所以提取推荐对象的特征，是内容推荐算法的关键。但是对于多媒体内容，如视频、音乐，很难找到它们之间的特性关联性。</p>
 <p><strong>基于内容的推荐的优点如下：</strong><br>(1) 简单、有效，推荐结果直观，容易理解，不需要领域知识。<br>(2) 不需要用户的历史数据，如对对象的评价等。<br>(3) 没有关于新推荐对象出现的冷启动问题。<br>(4) 没有稀疏问题。<br>(5) 算法成熟，如数据挖掘、聚类分析等。</p>
 <p><strong>基于内容的推荐的缺点如下：</strong><br>(1) 受到了推荐对象特征提取能力的限制。<br>比如图像、视频，没有有效的特征提取方法。即便是文本资源，特征提取也只能反应一部分内容，难以提取内容质量，会影响用户满意度。<br>(2) 很难出现新的推荐结果。<br>根据用户兴趣的喜好进行推荐，很难出现惊喜。对于时间敏感的内容，如新闻，推荐内容基本相同，体验度较差。<br>(3)存在新用户出现时的冷启动问题。<br>当新用户出现时， 系统较难获得该用户的兴趣偏好，无法进行有效推荐。<br>(4) 推荐对象内容分类方法需要的数据量较大。</p>
-<h4 id="2-协同过滤算法"><a href="#2-协同过滤算法" class="headerlink" title="2 协同过滤算法"></a>2 协同过滤算法</h4><p>仅仅基于用户行为数据设计的推荐算法，称为协同过滤算法。此方法主要根据用户对物品的历史行为，寻找用户或物品的近邻集合，以此计算用户对物品的偏好。</p>
-<h5 id="基于用户的协同过滤算法（UserCF）"><a href="#基于用户的协同过滤算法（UserCF）" class="headerlink" title="基于用户的协同过滤算法（UserCF）"></a>基于用户的协同过滤算法（UserCF）</h5><p>算法的关键是计算两个用户的兴趣相似度。协同过滤计算用户兴趣相似度是利用用户行为的相似度。</p>
+<h2 id="2-协同过滤算法"><a href="#2-协同过滤算法" class="headerlink" title="2 协同过滤算法"></a>2 协同过滤算法</h2><p>仅仅基于用户行为数据设计的推荐算法，称为协同过滤算法。此方法主要根据用户对物品的历史行为，寻找用户或物品的近邻集合，以此计算用户对物品的偏好。</p>
+<h3 id="基于用户的协同过滤算法（UserCF）"><a href="#基于用户的协同过滤算法（UserCF）" class="headerlink" title="基于用户的协同过滤算法（UserCF）"></a>基于用户的协同过滤算法（UserCF）</h3><p>算法的关键是计算两个用户的兴趣相似度。协同过滤计算用户兴趣相似度是利用用户行为的相似度。</p>
 <p><img src="http://p4rlzrioq.bkt.clouddn.com/%E5%8D%8F%E5%90%8C%E8%BF%87%E6%BB%A41.jpeg" alt=""></p>
 <p>关键在于计算用户与用户之间的兴趣相似度。</p>
 <ul>
@@ -536,7 +536,7 @@
 </ol>
 <p><a href="http://p4rlzrioq.bkt.clouddn.com/%E5%8D%8F%E5%90%8C%E8%BF%87%E6%BB%A42.gif" target="_blank" rel="noopener"><img src="http://p4rlzrioq.bkt.clouddn.com/%E5%8D%8F%E5%90%8C%E8%BF%87%E6%BB%A42.gif" alt=""></a></p>
 <p>S(u,K) 为和用户 u 兴趣最接近的 K 个用户， N(i) 为对物品 i 有正反馈的用户集合， W[u][v] 为用户 u 和用户 v 的兴趣相似度，rvi 为用户 v 对物品 i 的兴趣。</p>
-<h5 id="基于物品的协同过滤算法（ItemCF）"><a href="#基于物品的协同过滤算法（ItemCF）" class="headerlink" title="基于物品的协同过滤算法（ItemCF）"></a>基于物品的协同过滤算法（ItemCF）</h5><p>这种算法给用户推荐和他之前喜欢的物品相似的物品。<br>该算法是目前业界应用最多的算法，如亚马逊、Netflix、YouTube，都是以该算法为基础。</p>
+<h3 id="基于物品的协同过滤算法（ItemCF）"><a href="#基于物品的协同过滤算法（ItemCF）" class="headerlink" title="基于物品的协同过滤算法（ItemCF）"></a>基于物品的协同过滤算法（ItemCF）</h3><p>这种算法给用户推荐和他之前喜欢的物品相似的物品。<br>该算法是目前业界应用最多的算法，如亚马逊、Netflix、YouTube，都是以该算法为基础。</p>
 <p><img src="http://p4rlzrioq.bkt.clouddn.com/%E5%8D%8F%E5%90%8C%E8%BF%87%E6%BB%A43.gif" alt=""></p>
 <p>物品之间的相似度可以使用如下公式计算：</p>
 <p>$$<br>w_{ij} = \frac{|N(i) \cap N(j)|}{\sqrt{|N(i)|| N(j)|}}<br>$$<br>从上面的定义可以看到，在协同过滤中两个物品产生相似度是因为它们共同被很多用户喜欢，也就是说每个用户都可以通过他们的历史兴趣列表给物品“贡献”相似度。</p>
@@ -562,7 +562,7 @@
 <li>UserCF 与 ItemCF 的优缺点</li>
 </ul>
 <p><img src="http://p4rlzrioq.bkt.clouddn.com/%E5%8D%8F%E5%90%8C%E8%BF%87%E6%BB%A45.jpeg" alt=""></p>
-<h4 id="3-基于关联规则的推荐"><a href="#3-基于关联规则的推荐" class="headerlink" title="3 基于关联规则的推荐"></a>3 基于关联规则的推荐</h4><p>关联规则分析中的关键概念包括：<strong>支持度(Support)、置信度(Confidence)与提升度(Lift)</strong>。首先，我们简单温故下这3个关键指标~</p>
+<h2 id="3-基于关联规则的推荐"><a href="#3-基于关联规则的推荐" class="headerlink" title="3 基于关联规则的推荐"></a>3 基于关联规则的推荐</h2><p>关联规则分析中的关键概念包括：<strong>支持度(Support)、置信度(Confidence)与提升度(Lift)</strong>。首先，我们简单温故下这3个关键指标~</p>
 <p><strong>1、支持度 (Support)：</strong>支持度是两件商品（A∩B）在总销售笔数(N)中出现的概率，<strong>即A与B同时被购买的概率。</strong>类似于中学学的交集，需要原始同时满足条件。</p>
 <p><img src="http://p4rlzrioq.bkt.clouddn.com/%E5%85%B3%E8%81%94%E8%A7%84%E5%88%99.jpg" alt=""></p>
 <p><strong>公式：</strong></p>
@@ -579,16 +579,16 @@
 <p><img src="http://p4rlzrioq.bkt.clouddn.com/%E5%85%B3%E8%81%94%E8%A7%84%E5%88%993.jpg" alt=""></p>
 <p><strong>例子说明：</strong></p>
 <p>可乐和薯片的关联规则的支持度是20%，购买可乐的支持度是3%，购买薯片的支持度是5%，则提升度是1.33&gt;1, A-B规则对于商品B有提升效果。</p>
-<h4 id="4-隐语义模型"><a href="#4-隐语义模型" class="headerlink" title="4 隐语义模型"></a>4 隐语义模型</h4><p>待学习</p>
-<h3 id="推荐系统评测"><a href="#推荐系统评测" class="headerlink" title="推荐系统评测"></a>推荐系统评测</h3><p><img src="http://p4rlzrioq.bkt.clouddn.com/%E6%8E%A8%E8%8D%90%E8%AF%84%E6%B5%8B.png" alt="link"></p>
-<h4 id="1-实验方法"><a href="#1-实验方法" class="headerlink" title="1. 实验方法"></a>1. 实验方法</h4><p>获得评测指标的实验方法，通常分3种：</p>
+<h2 id="4-隐语义模型"><a href="#4-隐语义模型" class="headerlink" title="4 隐语义模型"></a>4 隐语义模型</h2><p>待学习</p>
+<h1 id="推荐系统评测"><a href="#推荐系统评测" class="headerlink" title="推荐系统评测"></a>推荐系统评测</h1><p><img src="http://p4rlzrioq.bkt.clouddn.com/%E6%8E%A8%E8%8D%90%E8%AF%84%E6%B5%8B.png" alt="link"></p>
+<h2 id="1-实验方法"><a href="#1-实验方法" class="headerlink" title="1. 实验方法"></a>1. 实验方法</h2><p>获得评测指标的实验方法，通常分3种：</p>
 <ul>
 <li>离线实验（offline experiment）</li>
 <li>用户调查（user study）</li>
 <li>在线实验（online experiment）</li>
 </ul>
 <p>我们分别介绍3种实验方法的优缺点。</p>
-<h5 id="1）离线实验"><a href="#1）离线实验" class="headerlink" title="1）离线实验"></a>1）离线实验</h5><p>离线实验的方法的步骤如下：<br>a）通过日志系统获得用户行为数据，并按照一定格式生成一个标准的数据集；<br>b）将数据集按照一定的规则分成训练集和测试集；<br>c）在训练集上训练用户兴趣模型，在测试集上进行预测；<br>d）通过事先定义的离线指标，评测算法在测试集上的预测结果。</p>
+<h3 id="1）离线实验"><a href="#1）离线实验" class="headerlink" title="1）离线实验"></a>1）离线实验</h3><p>离线实验的方法的步骤如下：<br>a）通过日志系统获得用户行为数据，并按照一定格式生成一个标准的数据集；<br>b）将数据集按照一定的规则分成训练集和测试集；<br>c）在训练集上训练用户兴趣模型，在测试集上进行预测；<br>d）通过事先定义的离线指标，评测算法在测试集上的预测结果。</p>
 <p>从以上步骤看出，离线实验的都是在数据集上完成的。意味着，它不需要一个实际的系统作为支撑，只需要有一个从日志中提取的数据集即可。</p>
 <p><strong>离线实验的优点是：</strong></p>
 <ul>
@@ -602,7 +602,7 @@
 <li>评价结果的客观性，无法得到用户主观性的评价；</li>
 <li>难以找到离线评价指标和在线真实反馈(如 点击率、转化率、点击深度、购买客单价、购买商 品类别等)之间的关联关系；</li>
 </ul>
-<h5 id="2）用户调查"><a href="#2）用户调查" class="headerlink" title="2）用户调查"></a>2）用户调查</h5><p>用户调查需要一些真实的用户，让他们在需要测试的推荐系统上完成一些任务。在他们完成任务时，需要观察和记录用户的行为，并让他们回答一些问题。</p>
+<h3 id="2）用户调查"><a href="#2）用户调查" class="headerlink" title="2）用户调查"></a>2）用户调查</h3><p>用户调查需要一些真实的用户，让他们在需要测试的推荐系统上完成一些任务。在他们完成任务时，需要观察和记录用户的行为，并让他们回答一些问题。</p>
 <p>最后，我们通过分析他们的行为和答案，了解测试系统的性能。</p>
 <p><strong>用户调查的优点是：</strong></p>
 <ul>
@@ -613,7 +613,7 @@
 <li>招募测试用户代价较大；</li>
 <li>无法组织大规模的测试用户，统计意义不足；</li>
 </ul>
-<h5 id="3）在线实验"><a href="#3）在线实验" class="headerlink" title="3）在线实验"></a>3）在线实验</h5><p>在完成离线实验和用户调查之后，可以将系统上线做AB测试，将它和旧算法进行比较。</p>
+<h3 id="3）在线实验"><a href="#3）在线实验" class="headerlink" title="3）在线实验"></a>3）在线实验</h3><p>在完成离线实验和用户调查之后，可以将系统上线做AB测试，将它和旧算法进行比较。</p>
 <p>在线实验最常用的评测算法是【A/B测试】，它通过一定的规则将用户随机分成几组，对不同组的用户采用不同的算法，然后通过统计不同组的评测指标，比较不同算法的好坏。</p>
 <p>它的核心思想是:<br>a) 多个方案并行测试;<br>b) 每个方案只有一个变量不同;<br>c) 以某种规则优胜劣汰。</p>
 <p>其中第2点暗示了A/B 测试的应用范围：A/B测试必须是单变量。<br>对于推荐系统的评价中，唯一变量就是–推荐算法。</p>
@@ -629,21 +629,21 @@
 <li>周期较长，必须进行长期的实验才能得到可靠的结果；</li>
 </ul>
 <p>大型网站做AB测试，可能会因为不同团队同时进行各种测试对结果造成干扰，所以切分流量是AB测试中的关键。</p>
-<h5 id="4）总结"><a href="#4）总结" class="headerlink" title="4）总结"></a>4）总结</h5><p>一般来说，一个新的推荐算法最终上线，需要完成上述的3个实验。</p>
+<h3 id="4）总结"><a href="#4）总结" class="headerlink" title="4）总结"></a>4）总结</h3><p>一般来说，一个新的推荐算法最终上线，需要完成上述的3个实验。</p>
 <ul>
 <li>首先，通过离线实验证明它在很多离线指标上优于现有的算法；</li>
 <li>其次，通过用户调查确定用户满意度不低于现有的算法；</li>
 <li>最后，通过在线AB测试确定它在我们关心的指标上优于现有的算法；</li>
 </ul>
-<h4 id="2-评测指标"><a href="#2-评测指标" class="headerlink" title="2. 评测指标"></a>2. 评测指标</h4><p>评测指标用于评测推荐系统的性能，有些可以定量计算，有些只能定性描述。</p>
-<h5 id="1）用户满意度"><a href="#1）用户满意度" class="headerlink" title="1）用户满意度"></a>1）用户满意度</h5><p>用户满意度是评测推荐系统的重要指标，无法离线计算，只能通过用户调查或者在线实验获得。</p>
+<h2 id="2-评测指标"><a href="#2-评测指标" class="headerlink" title="2. 评测指标"></a>2. 评测指标</h2><p>评测指标用于评测推荐系统的性能，有些可以定量计算，有些只能定性描述。</p>
+<h3 id="1）用户满意度"><a href="#1）用户满意度" class="headerlink" title="1）用户满意度"></a>1）用户满意度</h3><p>用户满意度是评测推荐系统的重要指标，无法离线计算，只能通过用户调查或者在线实验获得。</p>
 <p>调查问卷，需要考虑到用户各方面的感受，用户才能针对问题给出准确的回答。</p>
 <p>在线系统中，用户满意度通过统计用户行为得到。比如用户如果购买了推荐的商品，就表示他们在一定程度上满意，可以用购买率度量用户满意度。</p>
 <p>一般情况，我们可以用用户点击率、停留时间、转化率等指标度量用户的满意度。</p>
-<h5 id="2）预测准确度"><a href="#2）预测准确度" class="headerlink" title="2）预测准确度"></a>2）预测准确度</h5><p>预测准确度，度量的是推荐系统预测用户行为的能力。 是推荐系统最重要的离线评测指标。</p>
+<h3 id="2）预测准确度"><a href="#2）预测准确度" class="headerlink" title="2）预测准确度"></a>2）预测准确度</h3><p>预测准确度，度量的是推荐系统预测用户行为的能力。 是推荐系统最重要的离线评测指标。</p>
 <p>大部分的关于推荐系统评测指标的研究，都是针对预测准确度的。因为该指标可以通过离线实验计算，方便了学术界的研究人员。</p>
 <p>由于离线的推荐算法有不同的研究方向，准确度指标也不同，根据研究方向，可分为：预测评分准确度和TopN推荐。</p>
-<h6 id="a）预测评分准确度"><a href="#a）预测评分准确度" class="headerlink" title="a）预测评分准确度"></a>a）预测评分准确度</h6><p>预测评分的准确度，衡量的是算法预测的评分与用户的实际评分的贴近程度。<br>这针对于一些需要用户给物品评分的网站。</p>
+<h2 id="a）预测评分准确度"><a href="#a）预测评分准确度" class="headerlink" title="a）预测评分准确度"></a>a）预测评分准确度</h2><p>预测评分的准确度，衡量的是算法预测的评分与用户的实际评分的贴近程度。<br>这针对于一些需要用户给物品评分的网站。</p>
 <p>预测评分的准确度指标，一般通过以下指标计算：</p>
 <ul>
 <li>平均绝对误差（MAE）</li>
@@ -656,7 +656,7 @@
 </ul>
 <p><img src="http://p4rlzrioq.bkt.clouddn.com/%E9%A2%84%E6%B5%8B%E5%87%86%E7%A1%AE%E5%BA%A62.png" alt=""></p>
 <p>Netflix认为RMSE加大了对预测不准的用户物品评分的惩罚（平方项的惩罚），因而对系统的评测更加苛刻。<br>研究表明，如果评分系统是基于整数建立的（即用户给的评分都是整数），那么对预测结果取整数会降低MAE的误差。</p>
-<h6 id="b）TopN推荐"><a href="#b）TopN推荐" class="headerlink" title="b）TopN推荐"></a>b）TopN推荐</h6><p>网站提供推荐服务时，一般是给用户一个个性化的推荐列表，这种推荐叫做TopN推荐。</p>
+<h2 id="b）TopN推荐"><a href="#b）TopN推荐" class="headerlink" title="b）TopN推荐"></a>b）TopN推荐</h2><p>网站提供推荐服务时，一般是给用户一个个性化的推荐列表，这种推荐叫做TopN推荐。</p>
 <p>TopN推荐的预测准确率，一般通过2个指标度量：</p>
 <ul>
 <li>准确率（precision）</li>
@@ -668,7 +668,7 @@
 <p><img src="http://p4rlzrioq.bkt.clouddn.com/topN1.jpeg" alt=""></p>
 <p>R(u)是根据用户在训练集上的行为给用户做出的推荐列表，T(u)是用户在测试集上的行为列表。</p>
 <p>TopN推荐更符合实际的应用需求，比如预测用户是否会看一部电影，比预测用户看了电影之后会给它什么评分更重要。</p>
-<h5 id="3）覆盖率"><a href="#3）覆盖率" class="headerlink" title="3）覆盖率"></a>3）覆盖率</h5><p>覆盖率（coverage）是描述一个推荐系统对物品长尾的发掘能力。<br>最简单的定义是，推荐系统推荐出来的物品占总物品的比例。</p>
+<h3 id="3）覆盖率"><a href="#3）覆盖率" class="headerlink" title="3）覆盖率"></a>3）覆盖率</h3><p>覆盖率（coverage）是描述一个推荐系统对物品长尾的发掘能力。<br>最简单的定义是，推荐系统推荐出来的物品占总物品的比例。</p>
 <p>假设系统的用户集合为U，推荐系统给每个用户推荐一个长度为N的物品列表R(u)，覆盖率公式为：</p>
 <p><img src="https://upload-images.jianshu.io/upload_images/610388-dc450d844bcc84be.jpeg?imageMogr2/auto-orient/strip%7CimageView2/2/w/229" alt=""></p>
 <p>覆盖率是内容提供者关心的指标，覆盖率为100%的推荐系统可以将每个物品都推荐给至少一个用户。</p>
@@ -692,17 +692,17 @@
 <p>马太效应，是指强者越强，弱者越弱的效应。推荐系统的初衷是希望消除马太效应，使得各物品都能被展示给对它们感兴趣的人群。</p>
 <p>但是，很多研究表明，现在的主流推荐算法（协同过滤）是具有马太效应的。评测推荐系统是否具有马太效应可以使用基尼系数。</p>
 <p>如，G1是从初始用户行为中计算出的物品流行度的基尼系数，G2是从推荐列表中计算出的物品流行度的基尼系数，那么如果G1&gt;G2，就说明推荐算法具有马太效应。</p>
-<h5 id="4）多样性"><a href="#4）多样性" class="headerlink" title="4）多样性"></a>4）多样性</h5><p>为了满足用户广泛的兴趣，推荐列表需要能够覆盖用户不同兴趣的领域，即需要具有多样性。</p>
+<h3 id="4）多样性"><a href="#4）多样性" class="headerlink" title="4）多样性"></a>4）多样性</h3><p>为了满足用户广泛的兴趣，推荐列表需要能够覆盖用户不同兴趣的领域，即需要具有多样性。</p>
 <p>多样性描述了推荐列表中物品两两之间的不相似性。假设s(i,j)在[0,1]区间定义了物品i和j之间的相似度，那么用户u的推荐列表R(u)的多样性定义如下：</p>
 <p><img src="http://p4rlzrioq.bkt.clouddn.com/%E5%A4%9A%E6%A0%B7%E6%80%A71.jpeg" alt=""></p>
 <p>推荐系统整体多样性可以定义为所有用户推荐列表多样性的平均值：</p>
 <p><img src="http://p4rlzrioq.bkt.clouddn.com/%E5%A4%9A%E6%A0%B7%E6%80%A72.jpeg" alt=""></p>
-<h5 id="5）新颖性"><a href="#5）新颖性" class="headerlink" title="5）新颖性"></a>5）新颖性</h5><p>新颖性也是影响用户体验的重要指标之一。它指的是向用户推荐非热门非流行物品的能力。</p>
+<h3 id="5）新颖性"><a href="#5）新颖性" class="headerlink" title="5）新颖性"></a>5）新颖性</h3><p>新颖性也是影响用户体验的重要指标之一。它指的是向用户推荐非热门非流行物品的能力。</p>
 <p>评测新颖度最简单的方法，是利用推荐结果的平均流行度，因为越不热门的物品，越可能让用户觉得新颖。</p>
 <p>此计算比较粗糙，需要配合用户调查准确统计新颖度。</p>
-<h5 id="6）惊喜度"><a href="#6）惊喜度" class="headerlink" title="6）惊喜度"></a>6）惊喜度</h5><p>推荐结果和用户的历史兴趣不相似，但却让用户满意，这样就是惊喜度很高。</p>
+<h3 id="6）惊喜度"><a href="#6）惊喜度" class="headerlink" title="6）惊喜度"></a>6）惊喜度</h3><p>推荐结果和用户的历史兴趣不相似，但却让用户满意，这样就是惊喜度很高。</p>
 <p>目前惊喜度还没有公认的指标定义方式，最近几年研究的人很多，深入研究可以参考一些论文。</p>
-<h5 id="7）信任度"><a href="#7）信任度" class="headerlink" title="7）信任度"></a>7）信任度</h5><p>如果用户信任推荐系统，就会增加用户和推荐系统的交互。</p>
+<h3 id="7）信任度"><a href="#7）信任度" class="headerlink" title="7）信任度"></a>7）信任度</h3><p>如果用户信任推荐系统，就会增加用户和推荐系统的交互。</p>
 <p><strong>提高信任度的方式有两种：</strong></p>
 <ul>
 <li><p>增加系统透明度<br>提供推荐解释，让用户了解推荐系统的运行机制。</p>
@@ -711,12 +711,12 @@
 </li>
 </ul>
 <p>度量信任度的方式，只能通过问卷调查。</p>
-<h5 id="8）实时性"><a href="#8）实时性" class="headerlink" title="8）实时性"></a>8）实时性</h5><p>推荐系统的实时性，包括两方面：</p>
+<h3 id="8）实时性"><a href="#8）实时性" class="headerlink" title="8）实时性"></a>8）实时性</h3><p>推荐系统的实时性，包括两方面：</p>
 <ul>
 <li>实时更新推荐列表满足用户新的行为变化；</li>
 <li>将新加入系统的物品推荐给用户；</li>
 </ul>
-<h5 id="9）健壮性"><a href="#9）健壮性" class="headerlink" title="9）健壮性"></a>9）健壮性</h5><p>任何能带来利益的算法系统都会被攻击，最典型的案例就是搜索引擎的作弊与反作弊斗争。</p>
+<h3 id="9）健壮性"><a href="#9）健壮性" class="headerlink" title="9）健壮性"></a>9）健壮性</h3><p>任何能带来利益的算法系统都会被攻击，最典型的案例就是搜索引擎的作弊与反作弊斗争。</p>
 <p>健壮性（robust，鲁棒性）衡量了推荐系统抗击作弊的能力。</p>
 <blockquote>
 <p>2011年的推荐系统大会专门有一个推荐系统健壮性的教程，作者总结了很多作弊方法，最著名的是行为注入攻击（profile injection attack）。<br>就是注册很多账号，用这些账号同时购买A和自己的商品。此方法针对亚马逊的一种推荐方法，“购买商品A的用户也经常购买的其他商品”。</p>
@@ -729,7 +729,7 @@
 <li>选择代价较高的用户行为，如购买行为比浏览行为代价高；</li>
 <li>在使用数据前，进行攻击检测，从而对数据进行清理。</li>
 </ul>
-<h4 id="3-评测维度"><a href="#3-评测维度" class="headerlink" title="3. 评测维度"></a>3. 评测维度</h4><p>增加评测维度的目的，就是知道一个算法在什么情况下性能最好。</p>
+<h2 id="3-评测维度"><a href="#3-评测维度" class="headerlink" title="3. 评测维度"></a>3. 评测维度</h2><p>增加评测维度的目的，就是知道一个算法在什么情况下性能最好。</p>
 <p>一般评测维度分3种：</p>
 <ul>
 <li>用户维度<br>主要包括用户的人口统计学信息、活跃度以及是不是新用户等；</li>
@@ -737,7 +737,7 @@
 <li>时间维度<br>包括季节，是工作日还是周末，白天还是晚上等；</li>
 </ul>
 <p>如果推荐系统的评测报告中，包含了不同维度下的系统评测指标，就能帮我们全面了解系统性能。</p>
-<h3 id="冷启动问题"><a href="#冷启动问题" class="headerlink" title="冷启动问题"></a>冷启动问题</h3><p><strong>1 解决方案：</strong></p>
+<h1 id="冷启动问题"><a href="#冷启动问题" class="headerlink" title="冷启动问题"></a>冷启动问题</h1><p><strong>1 解决方案：</strong></p>
 <ul>
 <li>提供非个性化推荐，如热门排行。等有了数据之后再推荐。</li>
 <li>利用用户注册信息，做粗粒度的个性化。</li>
@@ -770,7 +770,7 @@
 <li>基于矩阵分解的推荐: 基于SVD/ALS算法对用户进行内容推荐。相比起SVD，ALS更加适合解决稀疏矩阵的问题。Spark mlib中已经集成了对als算法的实现，需要做的就是在etl-1中把数据转换为als需要的数据格式以及调整als算法的各种参数。这里有一篇文章比较具体地描述了如何使用spark来做基于ALS的推荐：<a href="http://colobu.com/2015/11/30/movie-recommendation-for-douban-users-by-spark-mllib/" target="_blank" rel="noopener">http://colobu.com/2015/11/30/movie-recommendation-for-douban-users-by-spark-mllib/</a>。</li>
 <li>用户&amp;物品协同过滤推荐：包括UserBased CF和ItemBased CF。对于这两者，需要根据业务的不同来选择不同的算法。当用户非常多的时候，考虑到维护用户矩阵的成本，一般是不推荐选择用户协同过滤的，而对于候选item很多的时候，则不推荐使用物品协同过滤</li>
 </ul>
-<p>参考文献：<br>项亮《推荐系统实践》<br>参考论文：<br><a href="http://t.cn/RjXktmC" target="_blank" rel="noopener">http://t.cn/RjXktmC</a> <a href="http://t.cn/RjXkiFP" target="_blank" rel="noopener">http://t.cn/RjXkiFP</a> <a href="http://blog.csdn.net/qingqingpiaoguo/article/details/60882309" target="_blank" rel="noopener">http://blog.csdn.net/qingqingpiaoguo/article/details/60882309</a> <a href="https://www.zhihu.com/question/27141495/answer/161027882" target="_blank" rel="noopener">https://www.zhihu.com/question/27141495/answer/161027882</a></p>
+<p>参考文献：<br>项亮《推荐系统实践》<br>参考论文：<br><a href="http://t.cn/RjXktmC" target="_blank" rel="noopener">http://t.cn/RjXktmC</a><br><a href="http://t.cn/RjXkiFP" target="_blank" rel="noopener">http://t.cn/RjXkiFP</a><br><a href="http://blog.csdn.net/qingqingpiaoguo/article/details/60882309" target="_blank" rel="noopener">http://blog.csdn.net/qingqingpiaoguo/article/details/60882309</a> <a href="https://www.zhihu.com/question/27141495/answer/161027882" target="_blank" rel="noopener">https://www.zhihu.com/question/27141495/answer/161027882</a></p>
 
       
     </div>
@@ -1080,7 +1080,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是推荐系统"><span class="nav-number">1.</span> <span class="nav-text">什么是推荐系统</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-为什么需要推荐系统"><span class="nav-number">1.1.</span> <span class="nav-text">1. 为什么需要推荐系统</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-搜索引擎与推荐系统"><span class="nav-number">1.2.</span> <span class="nav-text">2. 搜索引擎与推荐系统</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#推荐算法详述"><span class="nav-number">2.</span> <span class="nav-text">推荐算法详述</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-基于内容的推荐"><span class="nav-number">2.1.</span> <span class="nav-text">1 基于内容的推荐</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-协同过滤算法"><span class="nav-number">2.2.</span> <span class="nav-text">2 协同过滤算法</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#基于用户的协同过滤算法（UserCF）"><span class="nav-number">2.2.1.</span> <span class="nav-text">基于用户的协同过滤算法（UserCF）</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#基于物品的协同过滤算法（ItemCF）"><span class="nav-number">2.2.2.</span> <span class="nav-text">基于物品的协同过滤算法（ItemCF）</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-基于关联规则的推荐"><span class="nav-number">2.3.</span> <span class="nav-text">3 基于关联规则的推荐</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-隐语义模型"><span class="nav-number">2.4.</span> <span class="nav-text">4 隐语义模型</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#推荐系统评测"><span class="nav-number">3.</span> <span class="nav-text">推荐系统评测</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-实验方法"><span class="nav-number">3.1.</span> <span class="nav-text">1. 实验方法</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1）离线实验"><span class="nav-number">3.1.1.</span> <span class="nav-text">1）离线实验</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2）用户调查"><span class="nav-number">3.1.2.</span> <span class="nav-text">2）用户调查</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3）在线实验"><span class="nav-number">3.1.3.</span> <span class="nav-text">3）在线实验</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4）总结"><span class="nav-number">3.1.4.</span> <span class="nav-text">4）总结</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-评测指标"><span class="nav-number">3.2.</span> <span class="nav-text">2. 评测指标</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1）用户满意度"><span class="nav-number">3.2.1.</span> <span class="nav-text">1）用户满意度</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2）预测准确度"><span class="nav-number">3.2.2.</span> <span class="nav-text">2）预测准确度</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#a）预测评分准确度"><span class="nav-number">3.2.2.1.</span> <span class="nav-text">a）预测评分准确度</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#b）TopN推荐"><span class="nav-number">3.2.2.2.</span> <span class="nav-text">b）TopN推荐</span></a></li></ol></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3）覆盖率"><span class="nav-number">3.2.3.</span> <span class="nav-text">3）覆盖率</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4）多样性"><span class="nav-number">3.2.4.</span> <span class="nav-text">4）多样性</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#5）新颖性"><span class="nav-number">3.2.5.</span> <span class="nav-text">5）新颖性</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#6）惊喜度"><span class="nav-number">3.2.6.</span> <span class="nav-text">6）惊喜度</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#7）信任度"><span class="nav-number">3.2.7.</span> <span class="nav-text">7）信任度</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#8）实时性"><span class="nav-number">3.2.8.</span> <span class="nav-text">8）实时性</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#9）健壮性"><span class="nav-number">3.2.9.</span> <span class="nav-text">9）健壮性</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-评测维度"><span class="nav-number">3.3.</span> <span class="nav-text">3. 评测维度</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#冷启动问题"><span class="nav-number">4.</span> <span class="nav-text">冷启动问题</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#什么是推荐系统"><span class="nav-number">1.</span> <span class="nav-text">什么是推荐系统</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-为什么需要推荐系统"><span class="nav-number">1.1.</span> <span class="nav-text">1. 为什么需要推荐系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-搜索引擎与推荐系统"><span class="nav-number">1.2.</span> <span class="nav-text">2. 搜索引擎与推荐系统</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#推荐算法详述"><span class="nav-number">2.</span> <span class="nav-text">推荐算法详述</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-基于内容的推荐"><span class="nav-number">2.1.</span> <span class="nav-text">1 基于内容的推荐</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-协同过滤算法"><span class="nav-number">2.2.</span> <span class="nav-text">2 协同过滤算法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基于用户的协同过滤算法（UserCF）"><span class="nav-number">2.2.1.</span> <span class="nav-text">基于用户的协同过滤算法（UserCF）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基于物品的协同过滤算法（ItemCF）"><span class="nav-number">2.2.2.</span> <span class="nav-text">基于物品的协同过滤算法（ItemCF）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-基于关联规则的推荐"><span class="nav-number">2.3.</span> <span class="nav-text">3 基于关联规则的推荐</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-隐语义模型"><span class="nav-number">2.4.</span> <span class="nav-text">4 隐语义模型</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#推荐系统评测"><span class="nav-number">3.</span> <span class="nav-text">推荐系统评测</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-实验方法"><span class="nav-number">3.1.</span> <span class="nav-text">1. 实验方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1）离线实验"><span class="nav-number">3.1.1.</span> <span class="nav-text">1）离线实验</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2）用户调查"><span class="nav-number">3.1.2.</span> <span class="nav-text">2）用户调查</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3）在线实验"><span class="nav-number">3.1.3.</span> <span class="nav-text">3）在线实验</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4）总结"><span class="nav-number">3.1.4.</span> <span class="nav-text">4）总结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-评测指标"><span class="nav-number">3.2.</span> <span class="nav-text">2. 评测指标</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1）用户满意度"><span class="nav-number">3.2.1.</span> <span class="nav-text">1）用户满意度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2）预测准确度"><span class="nav-number">3.2.2.</span> <span class="nav-text">2）预测准确度</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#a）预测评分准确度"><span class="nav-number">3.3.</span> <span class="nav-text">a）预测评分准确度</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#b）TopN推荐"><span class="nav-number">3.4.</span> <span class="nav-text">b）TopN推荐</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3）覆盖率"><span class="nav-number">3.4.1.</span> <span class="nav-text">3）覆盖率</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4）多样性"><span class="nav-number">3.4.2.</span> <span class="nav-text">4）多样性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5）新颖性"><span class="nav-number">3.4.3.</span> <span class="nav-text">5）新颖性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6）惊喜度"><span class="nav-number">3.4.4.</span> <span class="nav-text">6）惊喜度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7）信任度"><span class="nav-number">3.4.5.</span> <span class="nav-text">7）信任度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8）实时性"><span class="nav-number">3.4.6.</span> <span class="nav-text">8）实时性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9）健壮性"><span class="nav-number">3.4.7.</span> <span class="nav-text">9）健壮性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-评测维度"><span class="nav-number">3.5.</span> <span class="nav-text">3. 评测维度</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#冷启动问题"><span class="nav-number">4.</span> <span class="nav-text">冷启动问题</span></a></li></ol></div>
             
 
           </div>
