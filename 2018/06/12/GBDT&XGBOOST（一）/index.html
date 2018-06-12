@@ -86,7 +86,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="机器学习,集成学习,boosting," />
 
 
 
@@ -99,13 +99,20 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Frank&#39;s Blog">
-<meta property="og:url" content="http://frankblog.site/tags/NLP/index.html">
+<meta name="keywords" content="机器学习,集成学习,boosting">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GBDT&amp;XGBOOST（一）">
+<meta property="og:url" content="http://frankblog.site/2018/06/12/GBDT&XGBOOST（一）/index.html">
 <meta property="og:site_name" content="Frank&#39;s Blog">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://p4rlzrioq.bkt.clouddn.com/boosting2.png">
+<meta property="og:image" content="http://p4rlzrioq.bkt.clouddn.com/gbdt1_%E7%9C%8B%E5%9B%BE%E7%8E%8B.png">
+<meta property="og:image" content="http://p4rlzrioq.bkt.clouddn.com/gbdt2_%E7%9C%8B%E5%9B%BE%E7%8E%8B.png">
+<meta property="og:image" content="http://p4rlzrioq.bkt.clouddn.com/GBM%E8%BF%87%E7%A8%8B.png">
+<meta property="og:updated_time" content="2018-06-12T14:17:53.287Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Frank&#39;s Blog">
+<meta name="twitter:title" content="GBDT&amp;XGBOOST（一）">
+<meta name="twitter:image" content="http://p4rlzrioq.bkt.clouddn.com/boosting2.png">
 
 
 
@@ -135,13 +142,13 @@
 
 
 
-  <link rel="canonical" href="http://frankblog.site/tags/NLP/"/>
+  <link rel="canonical" href="http://frankblog.site/2018/06/12/GBDT&XGBOOST（一）/"/>
 
 
 
 
 
-  <title>标签: NLP | Frank's Blog</title>
+  <title>GBDT&XGBOOST（一） | Frank's Blog</title>
   
 
 
@@ -158,7 +165,7 @@
   
     
   
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
     
     <a href="https://github.com/fgyeason" class="github-corner" aria-label="View source on Github"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
@@ -318,54 +325,355 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>NLP<small>标签</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://frankblog.site/2018/06/12/GBDT&XGBOOST（一）/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="FGY">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/风景.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Frank's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018/03/06/数学之美/" itemprop="url">
-              
-                <span itemprop="name">数学之美学习笔记</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">GBDT&XGBOOST（一）</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-03-06T21:59:33+08:00"
-              content="2018-03-06" >
-          03-06
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+              
+                <span class="post-meta-item-text">发表于</span>
+              
 
-    </header>
-  </article>
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-12T22:03:50+08:00">
+                2018-06-12
+              </time>
+            
 
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2018-06-12T22:17:53+08:00">
+                2018-06-12
+              </time>
+            
+          </span>
+
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/机器学习/" itemprop="url" rel="index">
+                    <span itemprop="name">机器学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+
+
+
+
+          
+            
+          
+
+        
+          
+
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  2,667 字  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  10 分钟  
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <script src="\assets\js\APlayer.min.js"> </script><p><img src="http://p4rlzrioq.bkt.clouddn.com/boosting2.png" alt=""></p>
+<a id="more"></a>
+<blockquote class="blockquote-center"><font size="5">从IT时代走向DT时代</font></blockquote>
+
+<hr>
+<p><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script></p>
+<h1 id="GBDT（梯度提升决策树）"><a href="#GBDT（梯度提升决策树）" class="headerlink" title="GBDT（梯度提升决策树）"></a>GBDT（梯度提升决策树）</h1><p>GBDT（Gradient Boosting Decision Tree）又叫 MART（Multiple Additive Regression Tree），是一种迭代的决策树算法，该算法由多棵决策树组成，所有树的结论累加起来做最终结果.</p>
+<p>要理解 GBDT，就要先理解 GB ，然后才是 DT，而且这里的 DT 是回归树，而不是分类树.</p>
+<h2 id="DT（决策回归树）"><a href="#DT（决策回归树）" class="headerlink" title="DT（决策回归树）"></a><strong>DT（决策回归树）</strong></h2><p>这里先补充一下什么是回归树，因为之前所讲的决策树都是属于分类树.</p>
+<p>先回顾下分类树:</p>
+<blockquote>
+<p>我们知道 分类树在每次分枝时，是穷举每一个 feature 的每一个阈值，找到使得按照 <code>feature &lt;= 阈值</code>和<code>feature &gt; 阈值</code>分成两枝的熵最大的 feature 和阈值，按照该标准分枝得到的两个新节点，按同样的方法递归分裂下去，直到所有样本都被分入唯一的叶子节点，或达到预设的终止条件（如果叶子节点的样本不唯一，则以多数类作为叶子节点的分类结果）.</p>
+</blockquote>
+<p>回归树大致流程类似:</p>
+<blockquote>
+<p>不过在每个节点（不一定是叶子节点）都会得到一个预测值，以人的年龄为例，该预测值等于属于这个节点的所有人的年龄的平均值。分枝时穷举每一个feature的每个阈值找最好的分割点，但衡量最好的标准不再是最大熵，而是最小化均方差—即（每个人的年龄-预测年龄）平方的总和除以 N（总人数），或者说是每个人的预测误差平方和 除以 N。这很好理解，被预测出错的人数越多，错的越离谱，均方差就越大，通过最小化均方差能够找到最靠谱的分枝依据。直到每个叶子节点上人的年龄都唯一，或者达到预设终止条件，若最终叶子节点上的人的年龄不唯一，就以该节点上所有人的平均年龄作为该叶子节点的预测值.</p>
+<p>就是分类树是按多数投票，以多数类的类别标号作为叶子节点的分类类别；回归树是按叶子节点的样本平均值作为该节点的预测值.</p>
+</blockquote>
+<h2 id="GBDT-实例"><a href="#GBDT-实例" class="headerlink" title="GBDT 实例"></a><strong>GBDT 实例</strong></h2><p>GBDT的核心就在于，<strong>_每一棵树学的是之前所有树结论和的残差，这个残差就是一个加预测值后能得真实值的累加量_</strong>。</p>
+<p>比如以年龄预测的例子来说明，A 的真实年龄是 18 岁，但第一棵树的预测年龄是 12 岁，差了 6 岁，即残差为 6 岁。那么在第二棵树里我们把 A 的年龄设为 6 岁去学习，如果第二棵树真的能把 A 分到 6 岁的叶子节点，那累加两棵树的结论就是 A 的真实年龄；如果第二棵树的结论是 5 岁，则 A 仍然存在 1 岁的残差，第三棵树里 A 的年龄就变成 1 岁，继续学。</p>
+<p>我们来详细的说一下这个例子，为简单起见训练集只有4个人，A,B,C,D，他们的年龄分别是14,16,24,26。其中A、B分别是高一和高三学生；C,D分别是应届毕业生和工作两年的员工。如果是用一棵传统的回归决策树来训练，会得到如下图1所示结果：</p>
+<p><img src="http://p4rlzrioq.bkt.clouddn.com/gbdt1_%E7%9C%8B%E5%9B%BE%E7%8E%8B.png" alt="gbdt1"></p>
+<p>现在我们使用GBDT来做这件事，由于数据太少，我们限定叶子节点做多有两个，即每棵树都只有一个分枝，并且限定只学两棵树。我们会得到如下图2所示结果：</p>
+<p><img src="http://p4rlzrioq.bkt.clouddn.com/gbdt2_%E7%9C%8B%E5%9B%BE%E7%8E%8B.png" alt="gbdt2"></p>
+<p>在第一棵树分枝和图1一样，由于A,B年龄较为相近，C,D年龄较为相近，他们被分为两拨，每拨用平均年龄作为预测值。</p>
+<p>此时计算残差（残差的意思就是： A的预测值 + A的残差 = A的实际值），所以A的残差就是 16-15=1（注意，A 的预测值是指前面所有树累加的和，这里前面只有一棵树所以直接是 15，如果还有树则需要都累加起来作为 A 的预测值）。进而得到 A,B,C,D 的残差分别为 (-1,1,-1,1)。</p>
+<p>然后我们拿残差替代 A,B,C,D 的原值，到第二棵树去学习，如果我们的预测值和它们的残差相等，则只需把第二棵树的结论累加到第一棵树上就能得到真实年龄了。这里的数据显然是我可以做的，第二棵树只有两个值 1 和 -1，直接分成两个节点。此时所有人的残差都是0，即每个人都得到了真实的预测值。</p>
+<p>换句话说，现在 A,B,C,D 的预测值都和真实年龄一致了。Perfect!：</p>
+<p>A: 14 岁高一学生，购物较少，经常问学长问题；预测年龄 A = 15 + (– 1) = 14</p>
+<p>B: 16 岁高三学生，购物较少，经常被学弟问问题；预测年龄 B= 15 + (1) = 16</p>
+<p>C: 24 岁应届毕业生，购物较多，经常问师兄问题；预测年龄 C = 25 + (-1) = 24</p>
+<p>D: 26 岁工作两年员工，购物较多，经常被师弟问问题；预测年龄 D = 25 + (– 1) = 26</p>
+<blockquote>
+<p>那么哪里体现了Gradient呢？其实回到第一棵树结束时想一想，无论此时的cost function是什么，是均方差还是均差，只要它以误差作为衡量标准，残差向量 (-1, 1, -1, 1) 都是它的全局最优方向，这就是Gradient。</p>
+<p>其实 GBDT 大致的过程就是这例子中所讲的，下面我们再做一些深入的理解</p>
+</blockquote>
+<h2 id="GBDT-深入理解"><a href="#GBDT-深入理解" class="headerlink" title="GBDT 深入理解"></a><strong>GBDT 深入理解</strong></h2><p>前面说了，GBDT 是先有 GB（梯度提升），再有 DT（决策树），所以我们先从 GB 讲起.</p>
+<h3 id="Boosting"><a href="#Boosting" class="headerlink" title="_Boosting_"></a><strong>_Boosting_</strong></h3><p>boosting 在前面讲 AdaBoost提升算法的时候讲了，就是通过训练多个弱分类器来组合成一个强分类器，形式如下:</p>
+<script type="math/tex; mode=display">
+F_m(x) = f_0 + \alpha_1 f_1(x) + \alpha_2 f_2(x) + \cdots + \alpha_m f_m(x)</script><p>其中，\(f_i(x),i = 1,2,\cdots,m\),是弱分类器，比如在 AdaBoost提升中是 C4.5决策树；\(F_m(x)\)是最终得到的强分类器。</p>
+<h3 id="Gradient-Boosting-Modeling"><a href="#Gradient-Boosting-Modeling" class="headerlink" title="_Gradient Boosting Modeling_"></a><strong>_Gradient Boosting Modeling_</strong></h3><p>给定一个问题，我们如何构造这些弱分类器呢？</p>
+<p>Gradient Boosting Modeling （梯度提升模型） 就是构造这些弱分类器的一种方法。它指的不是某个具体的算法，而是一种思想.</p>
+<p>我们先从普通的梯度优化问题入手来理解:</p>
+<script type="math/tex; mode=display">
+find \ \hat{x} = arg \min_{x} f(x)</script><p>针对这种问题，有个经典的算法叫 <strong>_Steepest Gradient Descent_</strong>，也就是最深梯度下降法。算法的大致过程是:</p>
+<ol>
+<li>给定一个起始点 \(x_0\)</li>
+<li>对 \(i = 1,2,\cdots,K\)分别做如下迭代:<br>\(\qquad x_i = x_{i-1} + \gamma_{i-1} \times g_{i-1}\)<br>其中 \(g_{i-1} = -\frac{\partial f}{\partial x} |_{x = x_{i-1}}\)表示  f在 \(x_{i-1}\)点的梯度</li>
+<li>直到 \(|g_{i-1}\)足够小，或者是 \(|x_i - x_{i-1}|\)足够小</li>
+</ol>
+<p>以上迭代过程可以理解为: <strong>_整个寻优的过程就是小步快跑的过程，每跑一小步，都往函数当前下降最快的那个方向走一点，直到达到可接受的点_</strong>.</p>
+<p>我们将这个迭代过程展开得到寻优的结果:</p>
+<script type="math/tex; mode=display">
+x_k = x_0 + \gamma_1 g_1 + \gamma_2 g_2 + \cdots + \gamma_k g_k</script><p>这个形式是不是与最开始我们要求的\(F_m(x)\)类似；构造\(F_m(x)\) 本身也是一个寻优的过程，只不过我们寻找的不是一个最优点，而是一个最优的函数。</p>
+<p>寻找最优函数这个目标，也是定义一个损失函数来做:</p>
+<script type="math/tex; mode=display">
+find \ F_m = arg \ \min_{F} L(F) = arg \  \min_{F} \sum_{i=0}^N Loss(F(x_i),y_i)</script><p>其中，\(Loss(F(x_i),y_i)\)表示损失函数\(Loss()\)  在第i个样本上的损失值， \(x_i,y_i\)分别表示第i个样本的特征和目标值。<br>类似最速梯度下降法，我们可以通过梯度下降法来构造弱分类器 \(f_1,f_2,\cdots,f_m\)，只不过每次迭代时，令:</p>
+<script type="math/tex; mode=display">
+g_i = -\frac{\partial L}{\partial F}|_{F=F_{i-1}}</script><p>即损失函数L()对F求取梯度。</p>
+<p>但是函数对函数求导不好理解，而且通常都无法通过上述公式直接求解。于是就采取一个近似的方法，把函数  理解成在所有样本上的离散的函数值，即:\(F_{i-1}\)理解成在所有样本上的离散的函数值，即:</p>
+<script type="math/tex; mode=display">
+\left[ F_{i-1}(x_1),F_{i-1}(x_2),\cdots,F_{i-1}(x_N) \right]</script><p>这是一个N 维向量，然后计算:</p>
+<script type="math/tex; mode=display">
+\hat{g}_i(x_k) = -\frac{\partial L}{\partial F(x_k)}|_{F = F_{i-1}},k = 1,2,\cdots,N</script><p>这是一个函数对向量的求导，得到的也是一个梯度向量。注意，这里求导时的变量还是函数F，不是样本Xk ，只不过对F(Xk)求导时，其他的 Xi 都可以看成常数。</p>
+<p><img src="http://p4rlzrioq.bkt.clouddn.com/GBM%E8%BF%87%E7%A8%8B.png" alt=""></p>
+<h3 id="Gradient-Boosting-Decision-Tree"><a href="#Gradient-Boosting-Decision-Tree" class="headerlink" title="_Gradient Boosting Decision Tree_"></a><strong>_Gradient Boosting Decision Tree_</strong></h3><p>在上述算法过程中，如何通过 \(\hat{g}_{i-1}(x_j),j = 1,2,\cdots,N\)构造拟合函数\(g_{i-1}\)呢，这里我们用的就是 Decision Tree（决策树）了.</p>
+<p>所以理解 GBDT，重点是先理解 Gradient Boosting，其次才是 Decision Tree；也就是说 GBDT 是 Gradient Boosting 的一种具体实现，这个拟合函数也可以改用其他的方法，只不过决策树好用一点。</p>
+<h3 id="损失函数"><a href="#损失函数" class="headerlink" title="_损失函数_"></a><strong>_损失函数_</strong></h3><p>谈到 GBDT 常听到的一种描述是 <code>先构造一个(决策)树，然后不断在已有模型和实际样本输出的残差上再构造一棵树，依次迭代</code>；其实这个说法不全面，尽管在本篇开头的那个 GBDT 的例子中是这样描述的，但拟合残差只是 GDBT 的一种特殊情况，下面对损失函数进行解释就清楚了.</p>
+<p>从对 GBM 的描述里可以看到 Gradient Boosting 过程和具体用什么样的弱分类器是完全独立的，可以任意组合，因此这里不再刻意强调用决策树来构造弱分类器，转而我们来仔细看看弱分类器拟合的目标值，即梯度| \(\hat{g}_{i-1}(x_j)\)，之前我们已经提到过</p>
+<script type="math/tex; mode=display">\hat{g}_i(x_k) = -\frac{\partial L}{\partial F(x_k)}|_{F = F_{i-1}},k = 1,2,\cdots,N</script><p>因此  \(\frac{\partial L}{\partial F(x_k)}\)很重要，以平方差损失函数为例，得:</p>
+<script type="math/tex; mode=display">
+\frac{\partial L}{\partial F(x_k)}|_{F = F_{i-1}} = 2(F_{i-1}(x_k) - y_k)</script><p>忽略 2 倍，后面括号中正是当前已经构造好的函数\(F_{i-1}\)在样本上和目标值Yk之间的差值.<br>如果我们换一个损失函数，比如绝对差:</p>
+<script type="math/tex; mode=display">
+Loss(F(x_i),y_i) = |F(x_i) - y_i|</script><p>这个损失函数的梯度是个符号函数:</p>
+<script type="math/tex; mode=display">
+{\frac{\partial L}{\partial F(x_k)}|_{F = F_{i-1}} = sign(F_{i-1}(x_k) - y_k)}</script><p>由此可以看到，只有当损失函数为平方差函数时，才能说 GBDT 是通过拟合残差来构造弱分类器的，比如上面说的对残差不断的用决策回归树来拟合。</p>
 
       
     </div>
+    
+    
+    
 
+    
+
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+      
+    </div>
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>Donate comment here</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.png" alt="FGY 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="FGY 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    FGY
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://frankblog.site/2018/06/12/GBDT&XGBOOST（一）/" title="GBDT&XGBOOST（一）">http://frankblog.site/2018/06/12/GBDT&XGBOOST（一）/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/机器学习/" rel="tag"><i class="fa fa-tag"></i> 机器学习</a>
+          
+            <a href="/tags/集成学习/" rel="tag"><i class="fa fa-tag"></i> 集成学习</a>
+          
+            <a href="/tags/boosting/" rel="tag"><i class="fa fa-tag"></i> boosting</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/06/12/Pyecharts连接Mysql进行可视化/" rel="next" title="pyecharts链接mysql进行数据可视化">
+                <i class="fa fa-chevron-left"></i> pyecharts链接mysql进行数据可视化
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -373,6 +681,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -394,8 +706,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -530,6 +851,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#GBDT（梯度提升决策树）"><span class="nav-number">1.</span> <span class="nav-text">GBDT（梯度提升决策树）</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#DT（决策回归树）"><span class="nav-number">1.1.</span> <span class="nav-text">DT（决策回归树）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GBDT-实例"><span class="nav-number">1.2.</span> <span class="nav-text">GBDT 实例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GBDT-深入理解"><span class="nav-number">1.3.</span> <span class="nav-text">GBDT 深入理解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Boosting"><span class="nav-number">1.3.1.</span> <span class="nav-text">_Boosting_</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Gradient-Boosting-Modeling"><span class="nav-number">1.3.2.</span> <span class="nav-text">_Gradient Boosting Modeling_</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Gradient-Boosting-Decision-Tree"><span class="nav-number">1.3.3.</span> <span class="nav-text">_Gradient Boosting Decision Tree_</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#损失函数"><span class="nav-number">1.3.4.</span> <span class="nav-text">_损失函数_</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=450 src="//music.163.com/outchain/player?type=0&id=2130685222&auto=1&height=430"></iframe>
@@ -707,6 +1044,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -1106,26 +1447,6 @@
   
 
   
-  
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
 

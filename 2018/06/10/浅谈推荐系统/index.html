@@ -460,7 +460,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  6,862 字  
+                  6,836 字  
                 </span>
               
 
@@ -505,7 +505,7 @@
 <p><script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script></p>
 <h1 id="什么是推荐系统"><a href="#什么是推荐系统" class="headerlink" title="什么是推荐系统"></a>什么是推荐系统</h1><h2 id="1-为什么需要推荐系统"><a href="#1-为什么需要推荐系统" class="headerlink" title="1. 为什么需要推荐系统"></a>1. 为什么需要推荐系统</h2><p><strong>结论是，为了解决互联网时代下的信息超载问题。</strong></p>
 <p>正如《大数据时代》中作者所言，这仅仅是一个开始，人们与世界的交流方式，从原来对因果关系的渴求，转变为现在对相关关系的发现和使用上。</p>
-<h2 id="2-搜索引擎与推荐系统"><a href="#2-搜索引擎与推荐系统" class="headerlink" title="2. 搜索引擎与推荐系统"></a>2. 搜索引擎与推荐系统</h2><p>众所周知，解决信息过载问题，最有代表性的解决方案是【分类目录】和【搜索引擎】，这两种解决方案分别催生了互联网领域的两家著名公司–雅虎和谷歌。</p>
+<h2 id="2-搜索引擎与推荐系统"><a href="#2-搜索引擎与推荐系统" class="headerlink" title="2. 搜索引擎与推荐系统"></a>2. 搜索引擎与推荐系统</h2><p>众所周知，解决信息过载问题，最有代表性的解决方案是【分类目录】和【搜索引擎】，这两种解决方案分别催生了互联网领域的两家著名公司—雅虎和谷歌。</p>
 <p><img src="http://p4rlzrioq.bkt.clouddn.com/%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E5%92%8C%E6%8E%A8%E8%8D%90%E7%B3%BB%E7%BB%9F.jpeg" alt=""></p>
 <p>推荐系统，和搜索引擎一样，是一种帮助用户快速发展有用信息的工具。通过分析用户的历史行为，给用户的兴趣建模，从而主动给用户推荐能够满足他们兴趣和需求的信息。</p>
 <p>并且，推荐系统能够很好的发掘物品的长尾，挑战传统的2/8原则（80%的销售额来自20%的热门品牌）。</p>
@@ -526,7 +526,8 @@
 </ul>
 </li>
 </ul>
-<p>$$<br>w_{uv} = \frac{|N(u) \cap N(v)|}{\sqrt{|N(u)|| N(v)|}}<br>$$<br>\(w_{uv}\)代表用户 u 与 v 之间的兴趣相似度，N(u)表示用户 u 曾经喜欢过的物品集合, N(v) 表示用户 v 曾经喜欢过的物品集合。</p>
+<script type="math/tex; mode=display">
+w_{uv} = \frac{|N(u) \cap N(v)|}{\sqrt{|N(u)|| N(v)|}}</script><p>\(w_{uv}\)代表用户 u 与 v 之间的兴趣相似度，N(u)表示用户 u 曾经喜欢过的物品集合, N(v) 表示用户 v 曾经喜欢过的物品集合。</p>
 <p>根据上述核心思想，可以有如下算法步骤：</p>
 <ol>
 <li>建立物品-用户的倒排表</li>
@@ -539,7 +540,8 @@
 <h3 id="基于物品的协同过滤算法（ItemCF）"><a href="#基于物品的协同过滤算法（ItemCF）" class="headerlink" title="基于物品的协同过滤算法（ItemCF）"></a>基于物品的协同过滤算法（ItemCF）</h3><p>这种算法给用户推荐和他之前喜欢的物品相似的物品。<br>该算法是目前业界应用最多的算法，如亚马逊、Netflix、YouTube，都是以该算法为基础。</p>
 <p><img src="http://p4rlzrioq.bkt.clouddn.com/%E5%8D%8F%E5%90%8C%E8%BF%87%E6%BB%A43.gif" alt=""></p>
 <p>物品之间的相似度可以使用如下公式计算：</p>
-<p>$$<br>w_{ij} = \frac{|N(i) \cap N(j)|}{\sqrt{|N(i)|| N(j)|}}<br>$$<br>从上面的定义可以看到，在协同过滤中两个物品产生相似度是因为它们共同被很多用户喜欢，也就是说每个用户都可以通过他们的历史兴趣列表给物品“贡献”相似度。</p>
+<script type="math/tex; mode=display">
+w_{ij} = \frac{|N(i) \cap N(j)|}{\sqrt{|N(i)|| N(j)|}}</script><p>从上面的定义可以看到，在协同过滤中两个物品产生相似度是因为它们共同被很多用户喜欢，也就是说每个用户都可以通过他们的历史兴趣列表给物品“贡献”相似度。</p>
 <ul>
 <li>用户活跃度对物品相似度的影响<br>IUF（Inverse User Frequence），用户活跃度对数的倒数的参数。<br>论文提出的观点是，活跃用户对物品相似度的贡献应该小于不活跃的用户。用IUF修正物品相似度的计算。</li>
 <li>物品相似度的归一化<br>研究表明，将ItemCF的相似度矩阵按最大值归一，可以提高推荐的准确率。</li>
@@ -616,7 +618,7 @@
 <h3 id="3）在线实验"><a href="#3）在线实验" class="headerlink" title="3）在线实验"></a>3）在线实验</h3><p>在完成离线实验和用户调查之后，可以将系统上线做AB测试，将它和旧算法进行比较。</p>
 <p>在线实验最常用的评测算法是【A/B测试】，它通过一定的规则将用户随机分成几组，对不同组的用户采用不同的算法，然后通过统计不同组的评测指标，比较不同算法的好坏。</p>
 <p>它的核心思想是:<br>a) 多个方案并行测试;<br>b) 每个方案只有一个变量不同;<br>c) 以某种规则优胜劣汰。</p>
-<p>其中第2点暗示了A/B 测试的应用范围：A/B测试必须是单变量。<br>对于推荐系统的评价中，唯一变量就是–推荐算法。</p>
+<p>其中第2点暗示了A/B 测试的应用范围：A/B测试必须是单变量。<br>对于推荐系统的评价中，唯一变量就是—推荐算法。</p>
 <blockquote>
 <p>有个很棒的网站，<a href="https://link.jianshu.com/?t=http%3A%2F%2Fwww.abtests.com" target="_blank" rel="noopener">http://www.abtests.com</a>，里面有很多通过实际AB测试提高网站用户满意度的例子。</p>
 </blockquote>
@@ -756,7 +758,7 @@
 <p>如何设计一个选择启动物品集合的系统？Nadav Golbandi在论文中提出用一个决策树解决。</p>
 <p>首先，给定一群用户，用这群用户对物品评分的方差度量这群用户兴趣的一致程度。如果方差很小，说明这一群用户的兴趣不太一致，也就是物品具有比较大的区分度，反之则说明这群用户的兴趣比较一致。</p>
 <p>再根据用户的评分方差计算物品的区分度。</p>
-<p>也就是说，对于物品i，将用户分为3类–喜欢物品i的用户，不喜欢物品i的用户和不知道物品i的用户。如果这3类用户集合内的用户对其他的物品兴趣很不一致，说明物品i具有较高的区分度。</p>
+<p>也就是说，对于物品i，将用户分为3类—喜欢物品i的用户，不喜欢物品i的用户和不知道物品i的用户。如果这3类用户集合内的用户对其他的物品兴趣很不一致，说明物品i具有较高的区分度。</p>
 <p>算法首先从所有用户中找到具有最高区分度的物品i，然后将用户分成3类。然后在每类用户中再找到最具区分度的物品，然后将每一类用户又各自分为3类，也就是将总用户分为9类，然后继续这样下去，最终可以通过对一系列物品的看法将用户进行分类。</p>
 <p>在冷启动时，从根节点开始询问用户对该节点物品的看法，然后根据用户的选择将用户放到不同的分枝，直到进入最后的叶子节点，此时对用户的兴趣有了比较清楚的了解，从而可以开始对用户进行比较准确地个性化推荐。</p>
 <p><strong>4 利用物品的内容信息</strong></p>
@@ -955,7 +957,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">22</span>
+                  <span class="site-state-item-count">23</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -966,7 +968,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -977,7 +979,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">32</span>
+                  <span class="site-state-item-count">31</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -1147,7 +1149,7 @@
 <!--
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共72.6k字</span>
+  <span class="post-count">博客全站共74.2k字</span>
 </div>
 -->
 

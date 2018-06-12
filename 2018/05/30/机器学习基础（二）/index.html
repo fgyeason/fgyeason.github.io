@@ -499,7 +499,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  12,325 字  
+                  11,813 字  
                 </span>
               
 
@@ -515,7 +515,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  46 分钟  
+                  43 分钟  
                 </span>
               
             </div>
@@ -602,8 +602,7 @@
 <h3 id="1-闵可夫斯基距离"><a href="#1-闵可夫斯基距离" class="headerlink" title="1.闵可夫斯基距离"></a>1.<strong>闵可夫斯基距离</strong></h3><ul>
 <li>从严格意义上讲，闵可夫斯基距离不是一种距离，而是一组距离的定义：</li>
 </ul>
-<p>$$d_{12} =\sqrt[p]{\sum_{k=1}^{n}{\left( x_{1k} -x_{2k} \right) ^{p} } } $$</p>
-<ul>
+<script type="math/tex; mode=display">d_{12} =\sqrt[p]{\sum_{k=1}^{n}{\left( x_{1k} -x_{2k} \right) ^{p} } }</script><ul>
 <li>实际上，当p=1时，就是<strong>曼哈顿距离</strong>；当p=2时，就是<strong>欧式距离</strong>。当p=无穷时，就是<strong>切比雪夫距离</strong></li>
 </ul>
 <p><img src="http://p4rlzrioq.bkt.clouddn.com/%E6%98%8E%E5%BC%8F%E8%B7%9D%E7%A6%BB.png" alt=""></p>
@@ -620,7 +619,7 @@
 <p>由于皮尔逊系数具有的良好性质，在各个领域都应用广泛，例如，在推荐系统根据为某一用户查找喜好相似的用户,进而提供推荐，优点是可以不受每个用户评分标准不同和观看影片数量不一样的影响。</p>
 <h3 id="3-分类数据点间的距离"><a href="#3-分类数据点间的距离" class="headerlink" title="3. 分类数据点间的距离"></a>3. 分类数据点间的距离</h3><p><strong>汉明距离</strong>（Hamming distance）是指，两个等长字符串s1与s2之间的汉明距离定义为将其中一个变为另外一个所需要作的最小替换次数。举个维基百科上的例子：</p>
 <p><img src="http://p4rlzrioq.bkt.clouddn.com/%E6%B1%89%E6%98%8E%E8%B7%9D%E7%A6%BB.png" alt=""></p>
-<p>还可以用简单的<strong><em>匹配系数</em></strong>来表示两点之间的相似度——匹配字符数/总字符数。</p>
+<p>还可以用简单的<strong>_匹配系数_</strong>来表示两点之间的相似度——匹配字符数/总字符数。</p>
 <p>在一些情况下，某些特定的值相等并不能代表什么。举个例子，用 1 表示用户看过该电影，用 0 表示用户没有看过，那么用户看电影的的信息就可用 0,1 表示成一个序列。考虑到电影基数非常庞大，用户看过的电影只占其中非常小的一部分，如果两个用户都没有看过某一部电影（两个都是 0），并不能说明两者相似。反而言之，如果两个用户都看过某一部电影（序列中都是 1），则说明用户有很大的相似度。在这个例子中，序列中等于 1 所占的权重应该远远大于 0 的权重，这就引出下面要说的<strong>杰卡德相似系数</strong>（Jaccard similarity）。</p>
 <p>在上面的例子中，用 M11 表示两个用户都看过的电影数目，M10 表示用户 A 看过，用户 B 没看过的电影数目，M01 表示用户 A 没看过，用户 B 看过的电影数目，M00 表示两个用户都没有看过的电影数目。Jaccard 相似性系数可以表示为：</p>
 <p><img src="http://p4rlzrioq.bkt.clouddn.com/Jaccard%20%E7%9B%B8%E4%BC%BC%E6%80%A7%E7%B3%BB%E6%95%B0.png" alt=""></p>
@@ -635,22 +634,15 @@
 <p>现在我们想知道的是：在做完检测显示为阳性后，某人的患病率<strong>P(患病|显示阳性)</strong>，这个其实就称为<strong>“后验概率”。</strong></p>
 <p>而这个叫贝叶斯的人其实就是为我们提供了一种可以<strong>利用先验概率计算后验概率</strong>的方法，我们将其称为<strong>“贝叶斯公式”。</strong></p>
 <p>这里先了解<strong>条件概率公式</strong>：</p>
-<p>$$P\left( B|A \right)=\frac{P\left( AB \right)}{P\left( A \right)} , P\left( A|B \right)=\frac{P\left( AB \right)}{P\left( B \right)}$$</p>
-<p>由条件概率可以得到<strong>乘法公式</strong>：</p>
-<p>$$P\left( AB \right)=P\left( B|A \right)P\left( A \right)=P\left( A|B \right)P\left( B \right)$$<br>将条件概率公式和乘法公式结合可以得到：</p>
-<p>$$P\left( B|A \right)=\frac{P\left( A|B \right)\cdot P\left( B \right)}{P\left( A \right)}$$</p>
-<p>再由<strong>全概率公式</strong>：</p>
-<p>$$P\left( A \right)=\sum_{i=1}^{N}{P\left( A|B_{i} \right) \cdot P\left( B_{i}\right)} $$</p>
-<p>代入可以得到<strong>贝叶斯公式</strong>：</p>
-<p>$$P\left( B_{i}|A \right)=\frac{P\left( A|B_{i} \right)\cdot P\left( B_{i} \right)}{\sum_{i=1}^{N}{P\left( A|B_{i} \right) \cdot P\left( B_{i}\right)} }$$</p>
-<h2 id="4-常见分布函数"><a href="#4-常见分布函数" class="headerlink" title="4.常见分布函数"></a>4.<strong>常见分布函数</strong></h2><h3 id="0-1分布"><a href="#0-1分布" class="headerlink" title="0-1分布"></a><strong>0-1分布</strong></h3><p>0-1分布是单个二值型离散随机变量的分布，其概率分布函数为：</p>
-<p>$$P\left( X=1 \right) =p$$<br>$$P\left( X=0 \right) =1-p$$</p>
-<h3 id="几何分布"><a href="#几何分布" class="headerlink" title="几何分布"></a><strong>几何分布</strong></h3><p>几何分布是离散型概率分布，其定义为：在n次伯努利试验中，试验k次才得到第一次成功的机率。即：前k-1次皆失败，第k次成功的概率。其概率分布函数为：</p>
-<p>$$P\left( X=k \right) =\left( 1-p \right) ^{k-1} p$$</p>
-<p>性质：<br>\(E\left( X \right) =\frac{1}{p}\)<br>\(Var\left( X \right) =\frac{1-p}{p^{2} }\)</p>
+<script type="math/tex; mode=display">P\left( B|A \right)=\frac{P\left( AB \right)}{P\left( A \right)} , P\left( A|B \right)=\frac{P\left( AB \right)}{P\left( B \right)}</script><p>由条件概率可以得到<strong>乘法公式</strong>：</p>
+<script type="math/tex; mode=display">P\left( AB \right)=P\left( B|A \right)P\left( A \right)=P\left( A|B \right)P\left( B \right)</script><p>将条件概率公式和乘法公式结合可以得到：</p>
+<script type="math/tex; mode=display">P\left( B|A \right)=\frac{P\left( A|B \right)\cdot P\left( B \right)}{P\left( A \right)}</script><p>再由<strong>全概率公式</strong>：</p>
+<script type="math/tex; mode=display">P\left( A \right)=\sum_{i=1}^{N}{P\left( A|B_{i} \right) \cdot P\left( B_{i}\right)}</script><p>代入可以得到<strong>贝叶斯公式</strong>：</p>
+<script type="math/tex; mode=display">P\left( B_{i}|A \right)=\frac{P\left( A|B_{i} \right)\cdot P\left( B_{i} \right)}{\sum_{i=1}^{N}{P\left( A|B_{i} \right) \cdot P\left( B_{i}\right)} }</script><h2 id="4-常见分布函数"><a href="#4-常见分布函数" class="headerlink" title="4.常见分布函数"></a>4.<strong>常见分布函数</strong></h2><h3 id="0-1分布"><a href="#0-1分布" class="headerlink" title="0-1分布"></a><strong>0-1分布</strong></h3><p>0-1分布是单个二值型离散随机变量的分布，其概率分布函数为：</p>
+<script type="math/tex; mode=display">P\left( X=1 \right) =p</script><script type="math/tex; mode=display">P\left( X=0 \right) =1-p</script><h3 id="几何分布"><a href="#几何分布" class="headerlink" title="几何分布"></a><strong>几何分布</strong></h3><p>几何分布是离散型概率分布，其定义为：在n次伯努利试验中，试验k次才得到第一次成功的机率。即：前k-1次皆失败，第k次成功的概率。其概率分布函数为：</p>
+<script type="math/tex; mode=display">P\left( X=k \right) =\left( 1-p \right) ^{k-1} p</script><p>性质：<br>\(E\left( X \right) =\frac{1}{p}\)<br>\(Var\left( X \right) =\frac{1-p}{p^{2} }\)</p>
 <h3 id="二项分布"><a href="#二项分布" class="headerlink" title="二项分布"></a><strong>二项分布</strong></h3><p>二项分布即重复n次伯努利试验，各次试验之间都相互独立，并且每次试验中只有两种可能的结果，而且这两种结果发生与否相互对立。如果每次试验时，事件发生的概率为p，不发生的概率为1-p，则n次重复独立试验中发生k次的概率为：</p>
-<p>$$P\left( X=k \right) =C_{n}^{k} p^{k} \left( 1-p \right) ^{n-k}$$</p>
-<p>性质：<br>\(E\left( X \right) =np\)<br>\(Var\left( X \right) =np\left( 1-p \right)\)</p>
+<script type="math/tex; mode=display">P\left( X=k \right) =C_{n}^{k} p^{k} \left( 1-p \right) ^{n-k}</script><p>性质：<br>\(E\left( X \right) =np\)<br>\(Var\left( X \right) =np\left( 1-p \right)\)</p>
 <h3 id="高斯分布"><a href="#高斯分布" class="headerlink" title="高斯分布"></a><strong>高斯分布</strong></h3><p>高斯分布又叫正态分布，其曲线呈钟型，两头低，中间高，左右对称因其曲线呈钟形，如下图所示：<br><img src="http://p4rlzrioq.bkt.clouddn.com/488px-Normal_Distribution_PDF.svg.png" alt=""></p>
 <p><img src="http://p4rlzrioq.bkt.clouddn.com/%E6%AD%A3%E6%80%81%E5%88%86%E5%B8%83.png" alt=""></p>
 <p>若随机变量X服从一个数学期望为\(\mu\)，方差为\(\sigma ^{2}\)的正态分布，则我们将其记为：\(N\left( \mu ,\sigma^{2} \right)\)决定了正态分布的位置，其标准差\(\sigma\)（方差的开方）决定了正态分布的幅度。</p>
@@ -661,10 +653,9 @@
 <li>奶粉销售的时间间隔</li>
 </ul>
 <p>指数分布的公式可以从泊松分布推断出来。如果下一个婴儿要间隔时间t，就等同于t之内没有任何婴儿出生，即：</p>
-<p>$$P\left( X\geq t \right) =P\left( N\left( t \right) =0 \right) =\frac{\left( \lambda t \right) ^{0}\cdot e^{-\lambda t} }{0!}=e^{-\lambda t} $$<br>则：</p>
-<p>$$P\left( X\leq t \right) =1-P\left( X\geq t \right) =1-e^{-\lambda t}$$<br>如：接下来15分钟，会有婴儿出生的概率为：</p>
-<p>$$P\left( X\leq \frac{1}{4} \right) =1-e^{-3\cdot \frac{1}{4} } \approx 0.53$$</p>
-<p><img src="http://p4rlzrioq.bkt.clouddn.com/%E6%8C%87%E6%95%B0%E5%88%86%E5%B8%83.jpg" alt=""></p>
+<script type="math/tex; mode=display">P\left( X\geq t \right) =P\left( N\left( t \right) =0 \right) =\frac{\left( \lambda t \right) ^{0}\cdot e^{-\lambda t} }{0!}=e^{-\lambda t}</script><p>则：</p>
+<script type="math/tex; mode=display">P\left( X\leq t \right) =1-P\left( X\geq t \right) =1-e^{-\lambda t}</script><p>如：接下来15分钟，会有婴儿出生的概率为：</p>
+<script type="math/tex; mode=display">P\left( X\leq \frac{1}{4} \right) =1-e^{-3\cdot \frac{1}{4} } \approx 0.53</script><p><img src="http://p4rlzrioq.bkt.clouddn.com/%E6%8C%87%E6%95%B0%E5%88%86%E5%B8%83.jpg" alt=""></p>
 <h3 id="泊松分布"><a href="#泊松分布" class="headerlink" title="泊松分布"></a><strong>泊松分布</strong></h3><p>日常生活中，大量事件是有固定频率的，比如：</p>
 <ul>
 <li>某医院平均每小时出生3个婴儿</li>
@@ -673,13 +664,12 @@
 </ul>
 <p>它们的特点就是，我们可以预估这些事件的总数，但是没法知道具体的发生时间。已知平均每小时出生3个婴儿，请问下一个小时，会出生几个？有可能一下子出生6个，也有可能一个都不出生，这是我们没法知道的。</p>
 <p><strong>泊松分布就是描述某段时间内，事件具体的发生概率。</strong>其概率函数为：</p>
-<p>$$P\left( N\left( t \right) =n \right) =\frac{\left( \lambda t \right) ^{n}e^{-\lambda t} }{n!} $$<br>其中：</p>
+<script type="math/tex; mode=display">P\left( N\left( t \right) =n \right) =\frac{\left( \lambda t \right) ^{n}e^{-\lambda t} }{n!}</script><p>其中：</p>
 <p>P表示概率，N表示某种函数关系，t表示时间，n表示数量，1小时内出生3个婴儿的概率，就表示为 P(N(1) = 3) ；λ 表示事件的频率。</p>
 <p>还是以上面医院平均每小时出生3个婴儿为例，则\(\lambda =3\)；</p>
 <p>那么，接下来两个小时，一个婴儿都不出生的概率可以求得为：</p>
-<p>$$P\left( N\left(2 \right) =0 \right) =\frac{\left( 3\cdot 2 \right) ^{o} \cdot e^{-3\cdot 2} }{0!} \approx 0.0025$$<br>同理，我们可以求接下来一个小时，至少出生两个婴儿的概率：</p>
-<p>$$P\left( N\left( 1 \right) \geq 2 \right) =1-P\left( N\left( 1 \right)=0 \right) - P\left( N\left( 1 \right)=1 \right)\approx 0.8$$</p>
-<h2 id="5-常见的分布总结"><a href="#5-常见的分布总结" class="headerlink" title="5.常见的分布总结"></a>5.常见的分布总结</h2><p><img src="http://p4rlzrioq.bkt.clouddn.com/%E5%B8%B8%E8%A7%81%E5%88%86%E5%B8%83.jpg" alt="常见分布"></p>
+<script type="math/tex; mode=display">P\left( N\left(2 \right) =0 \right) =\frac{\left( 3\cdot 2 \right) ^{o} \cdot e^{-3\cdot 2} }{0!} \approx 0.0025</script><p>同理，我们可以求接下来一个小时，至少出生两个婴儿的概率：</p>
+<script type="math/tex; mode=display">P\left( N\left( 1 \right) \geq 2 \right) =1-P\left( N\left( 1 \right)=0 \right) - P\left( N\left( 1 \right)=1 \right)\approx 0.8</script><h2 id="5-常见的分布总结"><a href="#5-常见的分布总结" class="headerlink" title="5.常见的分布总结"></a>5.常见的分布总结</h2><p><img src="http://p4rlzrioq.bkt.clouddn.com/%E5%B8%B8%E8%A7%81%E5%88%86%E5%B8%83.jpg" alt="常见分布"></p>
 <h2 id="6-极大似然估计（MLE）"><a href="#6-极大似然估计（MLE）" class="headerlink" title="6.极大似然估计（MLE）"></a>6.极大似然估计（MLE）</h2><p>极大似然估计是建立在这样的思想上：已知某个参数能使这个样本出现的概率最大，我们当然不会再去选择其他小概率的样本，所以干脆就把这个参数作为估计的真实值。</p>
 <p>求极大似然函数估计值的一般步骤：</p>
 <p>（1） 写出似然函数，即每个随机实验出现概率相乘，为这个抽样出现的概率。<br>（2） 对似然函数取对数，为了方便求导；<br>（3） 对参数求导数。<br>（4） 令导数=0，即求解极值，由实际情况知，该极值为极大值。解似然方程。</p>
@@ -749,7 +739,8 @@
 <p>H(X|Y) = H(X) - I(X, Y), </p>
 <p>互信息为0，则随机变量X和Y是互相独立的。</p>
 <p><img src="http://p4rlzrioq.bkt.clouddn.com/%E4%BA%92%E4%BF%A1%E6%81%AF1.png" alt=""></p>
-<h2 id="信息论与机器学习的关系"><a href="#信息论与机器学习的关系" class="headerlink" title="信息论与机器学习的关系"></a>信息论与机器学习的关系</h2><table>
+<h2 id="信息论与机器学习的关系"><a href="#信息论与机器学习的关系" class="headerlink" title="信息论与机器学习的关系"></a>信息论与机器学习的关系</h2><div class="table-container">
+<table>
 <thead>
 <tr>
 <th>信息论视角</th>
@@ -779,6 +770,7 @@
 </tr>
 </tbody>
 </table>
+</div>
 <h2 id="最大熵模型"><a href="#最大熵模型" class="headerlink" title="最大熵模型"></a><strong>最大熵模型</strong></h2><p>最大熵模型的原则：</p>
 <ul>
 <li>承认已知事物（知识）；</li>
@@ -806,7 +798,8 @@
 <p>softmax 函数在多分类问题中非常常见。这个函数的作用就是使得在负无穷到0的区间趋向于0，在0到正无穷的区间趋向于1。上面表达式其实是多分类问题中计算某个样本 \(x_{i}\) 的类别标签 \(y_{i}\)属于K个类别的概率，最后判别 \(y_{i}\)所属类别时就是将其归为对应概率最大的那一个。</p>
 <p>当式中的\(w_{k} x_{i} +b\)都是很小的负数时，\(e^{w_{k} x_{i} +b }\)就会发生下溢，这意味着上面函数的分母会变成0，导致结果是未定的；同理，当式中的\(x_{w_{k} x_{i} +b}\)是很大的正数时，\(e^{w_{k} x_{i} +b }\)就会发生上溢导致结果是未定的。</p>
 <hr>
-<h1 id="凸优化"><a href="#凸优化" class="headerlink" title="凸优化"></a><strong>凸优化</strong></h1><h2 id="1-凸集-Convex-Sets"><a href="#1-凸集-Convex-Sets" class="headerlink" title="1.凸集(Convex Sets)"></a>1.凸集(Convex Sets)</h2><p>集合C是凸的，如果对于所有的\(x,y\in C\)和\(\theta\in\mathbb{R},0\leq\theta\leq 1\)有：<br>$$\theta x+(1-\theta)y\in C$$<br>可以这样理解：在集合C中任选两点，在这两点的连线上的所有点都属于集合C。<br><img src="http://p4rlzrioq.bkt.clouddn.com/%E5%87%B8%E9%9B%86.jpg" alt=""></p>
+<h1 id="凸优化"><a href="#凸优化" class="headerlink" title="凸优化"></a><strong>凸优化</strong></h1><h2 id="1-凸集-Convex-Sets"><a href="#1-凸集-Convex-Sets" class="headerlink" title="1.凸集(Convex Sets)"></a>1.凸集(Convex Sets)</h2><p>集合C是凸的，如果对于所有的\(x,y\in C\)和\(\theta\in\mathbb{R},0\leq\theta\leq 1\)有：</p>
+<script type="math/tex; mode=display">\theta x+(1-\theta)y\in C</script><p>可以这样理解：在集合C中任选两点，在这两点的连线上的所有点都属于集合C。<br><img src="http://p4rlzrioq.bkt.clouddn.com/%E5%87%B8%E9%9B%86.jpg" alt=""></p>
 <h2 id="2-凸函数-Convex-Fuctions"><a href="#2-凸函数-Convex-Fuctions" class="headerlink" title="2.凸函数(Convex Fuctions)"></a>2.凸函数(Convex Fuctions)</h2><p>如果函数的定义域\({\cal D}(f)\)是一个凸集，并且对于所有的\(x,y\in {\cal D}(f)\)和\(\theta\in\mathbb{R},0\leq\theta\leq1\)，都有：<br>\(f(\theta x+(1-\theta)y)\leq\theta f(x)+(1-\theta)f(y)\)<br><img src="http://oddpnmpll.bkt.clouddn.com/2016-10-05-01%3A23%3A27.jpg" alt=""></p>
 <h3 id="凸函数的一阶条件"><a href="#凸函数的一阶条件" class="headerlink" title="凸函数的一阶条件"></a>凸函数的一阶条件</h3><p><img src="http://p4rlzrioq.bkt.clouddn.com/%E5%87%B8%E5%87%BD%E6%95%B0%E7%9A%84%E4%B8%80%E9%98%B6%E6%9D%A1%E4%BB%B6.png" alt=""><br>直观上可以这样理解，在函数上随便挑一个点，该点的切线必然在函数的下方<br><img src="http://oddpnmpll.bkt.clouddn.com/2016-10-05-01%3A27%3A53.jpg" alt=""></p>
 <h3 id="凸性质的二阶条件"><a href="#凸性质的二阶条件" class="headerlink" title="凸性质的二阶条件"></a>凸性质的二阶条件</h3><p><img src="http://p4rlzrioq.bkt.clouddn.com/%E5%87%B8%E5%87%BD%E6%95%B0%E7%9A%84%E4%BA%8C%E9%98%B6%E6%9D%A1%E4%BB%B6.png" alt=""></p>
@@ -823,13 +816,11 @@
 <p><img src="http://p4rlzrioq.bkt.clouddn.com/%E7%89%9B%E9%A1%BF%E6%B3%95.jpg" alt=""></p>
 <p>或者从几何上说，<strong>牛顿法就是用一个二次曲面去拟合你当前所处位置的局部曲面，而梯度下降法是用一个平面去拟合当前的局部曲面</strong>，通常情况下，二次曲面的拟合会比平面更好，所以牛顿法选择的下降路径会更符合真实的最优下降路径。</p>
 <h3 id="牛顿法的推导"><a href="#牛顿法的推导" class="headerlink" title="牛顿法的推导"></a><strong>牛顿法的推导</strong></h3><p>将目标函数\(f\left( x \right)\) 在\(x_{k}\)处进行二阶泰勒展开，可得：</p>
-<p>$$f\left( x \right) =f\left( x_{k} \right) +f^{‘} \left( x_{k} \right) \left( x-x_{k} \right) +\frac{1}{2} f^{‘’}\left( x_{k} \right) \left( x-x_{k} \right) ^{2}$$<br>因为目标函数\(f\left( x \right)\)有极值的必要条件是在极值点处一阶导数为0，即：\(f^{‘} \left( x \right) =0\)</p>
+<script type="math/tex; mode=display">f\left( x \right) =f\left( x_{k} \right) +f^{'} \left( x_{k} \right) \left( x-x_{k} \right) +\frac{1}{2} f^{''}\left( x_{k} \right) \left( x-x_{k} \right) ^{2}</script><p>因为目标函数\(f\left( x \right)\)有极值的必要条件是在极值点处一阶导数为0，即：\(f^{‘} \left( x \right) =0\)</p>
 <p>所以对上面的展开式两边同时求导（注意\({x}\)才是变量，\(x_{k}\)是常量\(\Rightarrow f^{‘} \left( x_{k} \right) ,f^{‘’} \left( x_{k} \right)\)都是常量），并令\(f^{‘} \left( x \right) =0\)可得：</p>
-<p>$$f^{‘} \left( x_{k} \right) +f^{‘’} \left( x_{k} \right) \left( x-x_{k} \right) =0$$<br>即：</p>
-<p>$$x=x_{k} -\frac{f^{‘} \left( x_{k} \right) }{f^{‘’} \left( x_{k} \right) } $$</p>
-<p>于是可以构造如下的迭代公式：</p>
-<p>$$x_{k+1} =x_{k} -\frac{f^{‘} \left( x_{k} \right) }{f^{‘’} \left( x_{k} \right) }$$</p>
-<p>这样，我们就可以利用该迭代式依次产生的序列逐渐逼近\(f\left( x \right)\)的极小值点了。</p>
+<script type="math/tex; mode=display">f^{'} \left( x_{k} \right) +f^{''} \left( x_{k} \right) \left( x-x_{k} \right) =0</script><p>即：</p>
+<script type="math/tex; mode=display">x=x_{k} -\frac{f^{'} \left( x_{k} \right) }{f^{''} \left( x_{k} \right) }</script><p>于是可以构造如下的迭代公式：</p>
+<script type="math/tex; mode=display">x_{k+1} =x_{k} -\frac{f^{'} \left( x_{k} \right) }{f^{''} \left( x_{k} \right) }</script><p>这样，我们就可以利用该迭代式依次产生的序列逐渐逼近\(f\left( x \right)\)的极小值点了。</p>
 <p>牛顿法的迭代示意图如下：</p>
 <p><img src="http://p4rlzrioq.bkt.clouddn.com/%E7%89%9B%E9%A1%BF%E6%B3%95%E7%9A%84%E8%BF%AD%E4%BB%A3%E7%A4%BA%E6%84%8F%E5%9B%BE%E5%A6%82%E4%B8%8B.jpg" alt=""></p>
 <p>上面讨论的是2维情况，<strong>高维情况</strong>的牛顿迭代公式是：</p>
@@ -847,24 +838,21 @@
 </ul>
 <h2 id="5-阻尼牛顿法"><a href="#5-阻尼牛顿法" class="headerlink" title="5.阻尼牛顿法"></a>5.<strong>阻尼牛顿法</strong></h2><h3 id="引入"><a href="#引入" class="headerlink" title="引入"></a><strong>引入</strong></h3><p>注意到，牛顿法的迭代公式中没有步长因子，是定步长迭代。对于非二次型目标函数，有时候会出现\(f\left( x_{k+1} \right) &gt;f\left( x_{k} \right)\)的情况，这表明，原始牛顿法不能保证函数值稳定的下降。在严重的情况下甚至会造成序列发散而导致计算失败。</p>
 <p>为消除这一弊病，人们又提出阻尼牛顿法。阻尼牛顿法每次迭代的方向仍然是\(x_{k}\)，但每次迭代会沿此方向做一维搜索，寻求最优的步长因子\(\lambda _{k}\)，即：</p>
-<p>\(\lambda <em>{k} = minf\left( x</em>{k} +\lambda d_{k} \right)\)</p>
+<p>\(\lambda _{k} = minf\left( x_{k} +\lambda d_{k} \right)\)</p>
 <h3 id="算法过程"><a href="#算法过程" class="headerlink" title="算法过程"></a><strong>算法过程</strong></h3><ul>
 <li>1、给定初值\(x_{0}\)和精度阈值\(\varepsilon\)，并令\(k=0\)；</li>
 <li>2、计算\(g_{k}\)（\(f\left( x \right)\)在\(x_{k}\)处的梯度值）和\(H_{k}\)；</li>
 <li>3、若\(\left| \left| g_{k} \right| \right| &lt;\varepsilon\)则停止迭代；否则确定搜索方向：\(d_{k} =-H_{k}^{-1} \cdot g_{k}\)；</li>
-<li>4、利用\(d_{k} =-H_{k}^{-1} \cdot g_{k}\)得到步长\(\lambda <em>{k}\)，并令\(x</em>{k+1} =x_{k} +\lambda <em>{k} d</em>{k}\)</li>
+<li>4、利用\(d_{k} =-H_{k}^{-1} \cdot g_{k}\)得到步长\(\lambda _{k}\)，并令\(x_{k+1} =x_{k} +\lambda _{k} d_{k}\)</li>
 <li>5、令\(k=k+1\)，转至2。</li>
 </ul>
 <h2 id="6-拟牛顿法"><a href="#6-拟牛顿法" class="headerlink" title="6.拟牛顿法"></a>6.<strong>拟牛顿法</strong></h2><h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a><strong>概述</strong></h3><p>由于<strong>牛顿法</strong>每一步都要求解目标函数的<strong>Hessen矩阵的逆矩阵</strong>，<strong>计算量比较大</strong>（求矩阵的逆运算量比较大），因此提出一种<strong>改进方法</strong>，即<strong>通过正定矩阵近似代替Hessen矩阵的逆矩阵，简化这一计算过程</strong>，改进后的方法称为<strong>拟牛顿法</strong>。</p>
 <h3 id="拟牛顿法的推导"><a href="#拟牛顿法的推导" class="headerlink" title="拟牛顿法的推导"></a><strong>拟牛顿法的推导</strong></h3><p>先将目标函数在\(x_{k+1}\)处展开，得到：</p>
-<p>$$f\left( x \right) =f\left( x_{k+1} \right) +f^{‘} \left( x_{k+1} \right) \left( x-x_{k+1} \right) +\frac{1}{2} f^{‘’}\left( x_{k+1} \right) \left( x-x_{k+1} \right) ^{2}$$<br>两边同时取梯度，得：</p>
-<p>$$f^{‘}\left( x \right) = f^{‘} \left( x_{k+1} \right) +f^{‘’} \left( x_{k+1} \right) \left( x-x_{k+1} \right)$$</p>
-<p>取上式中的\(x=x_{k}\)，得：</p>
-<p>$$f^{‘}\left( x_{k} \right) = f^{‘} \left( x_{k+1} \right) +f^{‘’} \left( x_{k+1} \right) \left( x-x_{k+1} \right)$$</p>
-<p>即：</p>
-<p>$$g_{k+1} -g_{k} =H_{k+1} \cdot \left( x_{k+1} -x_{k} \right)$$<br>可得：</p>
-<p>$$H_{k}^{-1} \cdot \left( g_{k+1} -g_{k} \right) =x_{k+1} -x_{k}$$</p>
-<p>上面这个式子称为<strong>“拟牛顿条件”</strong>，由它来对Hessen矩阵做约束。</p>
+<script type="math/tex; mode=display">f\left( x \right) =f\left( x_{k+1} \right) +f^{'} \left( x_{k+1} \right) \left( x-x_{k+1} \right) +\frac{1}{2} f^{''}\left( x_{k+1} \right) \left( x-x_{k+1} \right) ^{2}</script><p>两边同时取梯度，得：</p>
+<script type="math/tex; mode=display">f^{'}\left( x \right) = f^{'} \left( x_{k+1} \right) +f^{''} \left( x_{k+1} \right) \left( x-x_{k+1} \right)</script><p>取上式中的\(x=x_{k}\)，得：</p>
+<script type="math/tex; mode=display">f^{'}\left( x_{k} \right) = f^{'} \left( x_{k+1} \right) +f^{''} \left( x_{k+1} \right) \left( x-x_{k+1} \right)</script><p>即：</p>
+<script type="math/tex; mode=display">g_{k+1} -g_{k} =H_{k+1} \cdot \left( x_{k+1} -x_{k} \right)</script><p>可得：</p>
+<script type="math/tex; mode=display">H_{k}^{-1} \cdot \left( g_{k+1} -g_{k} \right) =x_{k+1} -x_{k}</script><p>上面这个式子称为<strong>“拟牛顿条件”</strong>，由它来对Hessen矩阵做约束。</p>
 <hr>
 <h1 id="计算复杂性与NP问题"><a href="#计算复杂性与NP问题" class="headerlink" title="计算复杂性与NP问题"></a><strong>计算复杂性与NP问题</strong></h1><h2 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h2><p>表明问题规模扩大后，程序需要的时间长度增长得有多快。程序的时间复杂度一般可以分为两种级别：</p>
 <ul>
@@ -1077,7 +1065,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">22</span>
+                  <span class="site-state-item-count">23</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1088,7 +1076,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -1099,7 +1087,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">32</span>
+                  <span class="site-state-item-count">31</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -1269,7 +1257,7 @@
 <!--
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共72.6k字</span>
+  <span class="post-count">博客全站共74.2k字</span>
 </div>
 -->
 

@@ -454,7 +454,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  4,876 字  
+                  4,754 字  
                 </span>
               
 
@@ -470,7 +470,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  20 分钟  
+                  19 分钟  
                 </span>
               
             </div>
@@ -499,7 +499,8 @@
 <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default"></script>
 
 <h1 id="逻辑回归基础"><a href="#逻辑回归基础" class="headerlink" title="逻辑回归基础"></a>逻辑回归基础</h1><h2 id="Sigmoid预测函数"><a href="#Sigmoid预测函数" class="headerlink" title="Sigmoid预测函数"></a>Sigmoid预测函数</h2><p>在逻辑回归中，定义预测函数为：</p>
-<p>$$<br>h_\theta (x) = g(z)<br>$$<br>其中，\(z=\theta^Tx\)是<strong>分类边界</strong>，且\(g(z)=\frac{1}{1+e^{-z}}\)<br>g(z)称之为 Sigmoid Function，亦称 Logic Function，其函数图像如下：</p>
+<script type="math/tex; mode=display">
+h_\theta (x) = g(z)</script><p>其中，\(z=\theta^Tx\)是<strong>分类边界</strong>，且\(g(z)=\frac{1}{1+e^{-z}}\)<br>g(z)称之为 Sigmoid Function，亦称 Logic Function，其函数图像如下：</p>
 <p><img src="http://p4rlzrioq.bkt.clouddn.com/sigmoid%E5%87%BD%E6%95%B0.jpg" alt=""></p>
 <p>可以看到，预测函数 hθ(x)被很好地限制在了 0、1 之间，并且，sigmoid 是一个非常好的阈值函数：阈值为 0.5，大于 0.5为 1 类，反之为 0 类。函数曲线过渡光滑自然，关于 0.5中心对称也极具美感。</p>
 <h2 id="决策边界"><a href="#决策边界" class="headerlink" title="决策边界"></a>决策边界</h2><ul>
@@ -511,11 +512,19 @@
 <h2 id="预测代价函数"><a href="#预测代价函数" class="headerlink" title="预测代价函数"></a>预测代价函数</h2><p>下面两幅图中，左图这样犬牙差互的代价曲线（非凸函数）显然会使我们在做梯度下降的时候陷入迷茫，任何一个极小值都有可能被错认为最小值，但无法获得最优预测精度。但在右图的代价曲线中，就像滑梯一样，我们就很容易达到最小值：</p>
 <p><img src="http://p4rlzrioq.bkt.clouddn.com/%E5%87%B8%E4%B8%8E%E9%9D%9E%E5%87%B8%E4%BB%A3%E4%BB%B7%E5%87%BD%E6%95%B0%E6%9B%B2%E7%BA%BF.png" alt=""></p>
 <p>逻辑回归定义的代价函数为：</p>
-<p>$$<br>J(\theta)=\frac{1}{m}\sum\limits_{i=1}^mCost(h_\theta(x^{(i)}),y^{(i)})<br>$$</p>
-<p>为保证代价函数呈凸形曲线，则定义 \(Cost(h_\theta(x^{(i)}),y^{(i)})\)：</p>
-<p>$$<br>Cost(h_\theta(x),y)=<br>\begin{cases}<br>-log(h_\theta(x)),&amp;\mbox{if $y=1$}\<br>-log(1-h_\theta(x)),&amp;\mbox{if $y=0$}<br>\end{cases}<br>$$<br>该函数等价于：</p>
-<p>$$<br>\begin{align<em>}<br>Cost(h_\theta(x),y) &amp;=-ylog(h_\theta(x))-(1-y)log(1-h_\theta(x)) \<br>&amp;= (\,log\,(g(X\theta))^Ty+(\,log\,(1-g(X\theta))^T(1-y)<br>\end{align</em>}<br>$$</p>
-<p>代价函数随预测值 hθ(x)hθ(x) 的变化如下：</p>
+<script type="math/tex; mode=display">
+J(\theta)=\frac{1}{m}\sum\limits_{i=1}^mCost(h_\theta(x^{(i)}),y^{(i)})</script><p>为保证代价函数呈凸形曲线，则定义 \(Cost(h_\theta(x^{(i)}),y^{(i)})\)：</p>
+<script type="math/tex; mode=display">
+Cost(h_\theta(x),y)=
+\begin{cases}
+-log(h_\theta(x)),&\mbox{if $y=1$}\\
+-log(1-h_\theta(x)),&\mbox{if $y=0$}
+\end{cases}</script><p>该函数等价于：</p>
+<script type="math/tex; mode=display">
+\begin{align*}
+Cost(h_\theta(x),y) &=-ylog(h_\theta(x))-(1-y)log(1-h_\theta(x)) \\
+&= (\,log\,(g(X\theta))^Ty+(\,log\,(1-g(X\theta))^T(1-y)
+\end{align*}</script><p>代价函数随预测值 hθ(x)hθ(x) 的变化如下：</p>
 <p><img src="http://p4rlzrioq.bkt.clouddn.com/%E4%BB%A3%E4%BB%B7%E5%87%BD%E6%95%B01.png" alt=""> </p>
 <p><img src="http://p4rlzrioq.bkt.clouddn.com/%E4%BB%A3%E4%BB%B7%E5%87%BD%E6%95%B02.png" alt=""></p>
 <h2 id="手推LR"><a href="#手推LR" class="headerlink" title="手推LR"></a>手推LR</h2><p><img src="http://p4rlzrioq.bkt.clouddn.com/%E6%89%8B%E6%8E%A8LR1.png" alt="link"></p>
@@ -536,10 +545,9 @@
 <hr>
 <h1 id="scikit-learn-逻辑回归类"><a href="#scikit-learn-逻辑回归类" class="headerlink" title="scikit-learn 逻辑回归类"></a>scikit-learn 逻辑回归类</h1><h2 id="带L1与L2正则的逻辑回归损失函数"><a href="#带L1与L2正则的逻辑回归损失函数" class="headerlink" title="带L1与L2正则的逻辑回归损失函数"></a>带L1与L2正则的逻辑回归损失函数</h2><p>scikit-learn在<code>LogisticRegression</code>的<code>sklearn.linear_model.LogisticRegression</code>类中实现了二分类（binary）、一对多分类（one-vs-rest）及多项式 logistic 回归，并带有可选的 L1 和 L2 正则化。</p>
 <p>作为优化问题，带 L2 正则的二分类 logistic 回归要最小化以下代价函数（cost function）：</p>
-<p>$$\underset{w, c}{min\,} \frac{1}{2}w^T w + C \sum_{i=1}^n \log(\exp(- y_i (X_i^T w + c)) + 1) $$</p>
-<p>类似地，带 L1 正则的 logistic 回归解决的是如下优化问题：</p>
-<p>$$<br>\underset{w, c}{min\,} |w|<em>1 + C \sum</em>{i=1}^n \log(\exp(- y_i (X_i^T w + c)) + 1)$$</p>
-<p> L1 范数作为正则项由以下几个用途：</p>
+<script type="math/tex; mode=display">\underset{w, c}{min\,} \frac{1}{2}w^T w + C \sum_{i=1}^n \log(\exp(- y_i (X_i^T w + c)) + 1)</script><p>类似地，带 L1 正则的 logistic 回归解决的是如下优化问题：</p>
+<script type="math/tex; mode=display">
+\underset{w, c}{min\,} \|w\|_1 + C \sum_{i=1}^n \log(\exp(- y_i (X_i^T w + c)) + 1)</script><p> L1 范数作为正则项由以下几个用途：</p>
 <ul>
 <li>特征选择： 它会让模型参数向量里的元素为0的点尽量多。 因此可以排除掉那些对预测值没有什么影响的特征，从而简化问题。所以 L1 范数解决过拟合措施实际上是减少特征数量。</li>
 <li>可解释性： 模型参数向量稀疏化后，只会留下那些对预测值有重要影响的特征。 这样我们就容易解释模型的因果关系。 比如针对某个癌症的筛查，如果有100个特征，那么我们无从解释到底哪些特征对阳性成关键作用。 稀疏化后，只留下几个关键特征，就更容易看到因果关系</li>
@@ -553,6 +561,7 @@
 <li>sag：即随机平均梯度下降，是梯度下降法的变种，和普通梯度下降法的区别是每次迭代仅仅用一部分的样本来计算梯度，适合于样本数据多的时候。</li>
 <li>saga：线性收敛的随机优化算法的的变重。</li>
 </ul>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -575,6 +584,7 @@
 </tr>
 </tbody>
 </table>
+</div>
 <p>“saga” 一般都是最佳的选择，但出于一些历史遗留原因默认的是 “liblinear”</p>
 <h1 id="乳腺癌检测"><a href="#乳腺癌检测" class="headerlink" title="乳腺癌检测"></a>乳腺癌检测</h1><p>使用逻辑回归算法解决乳腺癌检测问题。 我们需要先采集肿瘤病灶造影图片， 然后对图片进行分析， 从图片中提取特征， 在根据特征来训练模型。 最终使用模型来检测新采集到的肿瘤病灶造影， 判断是良性还是恶性。 这个是典型的二元分类问题。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"># 加载数据</span><br><span class="line">import numpy as np</span><br><span class="line">import pandas as pd</span><br><span class="line">from sklearn.datasets import load_breast_cancer</span><br><span class="line"></span><br><span class="line">cancer = load_breast_cancer()</span><br><span class="line">X = cancer.data</span><br><span class="line">y = cancer.target</span><br><span class="line"></span><br><span class="line">print(X.shape, y.shape,&apos;\n&apos;, X[0], &apos;\n&apos;, y[0])</span><br></pre></td></tr></table></figure></p>
 <blockquote>
@@ -862,7 +872,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">22</span>
+                  <span class="site-state-item-count">23</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -873,7 +883,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -884,7 +894,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">32</span>
+                  <span class="site-state-item-count">31</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -1054,7 +1064,7 @@
 <!--
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共72.6k字</span>
+  <span class="post-count">博客全站共74.2k字</span>
 </div>
 -->
 

@@ -4,6 +4,30 @@
 
     
   <url>
+    <loc>http://frankblog.site/2018/06/12/GBDT&XGBOOST%EF%BC%88%E4%B8%80%EF%BC%89/</loc>
+    <lastmod>2018-06-12T14:17:53.287Z</lastmod>
+    <data>
+        <display>
+        <title>GBDT&XGBOOST（一）</title>
+        <pubTime>2018-06-12T14:03:50.675Z</pubTime>
+        
+        <tag>机器学习</tag>
+         
+        <tag>集成学习</tag>
+         
+        <tag>boosting</tag>
+         
+         
+           
+             
+              <breadCrumb title="机器学习" url="http://frankblog.site/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://frankblog.site/2018/06/12/Pyecharts%E8%BF%9E%E6%8E%A5Mysql%E8%BF%9B%E8%A1%8C%E5%8F%AF%E8%A7%86%E5%8C%96/</loc>
     <lastmod>2018-06-12T12:42:33.911Z</lastmod>
     <data>

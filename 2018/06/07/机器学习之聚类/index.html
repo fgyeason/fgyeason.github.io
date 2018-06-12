@@ -454,7 +454,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2,751 字  
+                  2,702 字  
                 </span>
               
 
@@ -520,6 +520,7 @@
 <p><img src="http://p4rlzrioq.bkt.clouddn.com/%E6%9C%8D%E9%A5%B0%E5%A4%A7%E5%B0%8F.png" alt=""></p>
 <h2 id="质心的目标函数"><a href="#质心的目标函数" class="headerlink" title="质心的目标函数"></a>质心的目标函数</h2><p>聚类的目标通常用一个目标函数表示，该函数依赖于点之间，或点到簇的质心的临近性</p>
 <p>常见的邻近度、质心和目标函数组合</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -551,6 +552,7 @@
 </tr>
 </tbody>
 </table>
+</div>
 <p><code>Bregman散度</code>实际上是一类紧邻性度量，包括平方欧几里得距离。<code>Bregman散度函数</code>的重要性在于，任意这类函数都可以用作以均值为质心的 K-means 类型的聚类算法的基础。</p>
 <h2 id="K-means优缺点"><a href="#K-means优缺点" class="headerlink" title="K-means优缺点"></a>K-means优缺点</h2><h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><ul>
 <li>简单并且可以用于各种数据类型；</li>
@@ -620,27 +622,29 @@
 <h1 id="评价指标"><a href="#评价指标" class="headerlink" title="评价指标"></a>评价指标</h1><p>众所周知，对于有监督学习方法的分类预测结果，我们有很多种不同的评价指标来度量分类效果的好坏。例如，召回率、精准率、准确率、F1-Score 以及 AUC 值等等。但是，由于无监督学习方法与有监督学习不同，绝大多数情况下，我们根本不知道它的真实类别标签，所以我们不可能完全依据有监督学习方法的评价指标来度量聚类算法。</p>
 <p><img src="http://p4rlzrioq.bkt.clouddn.com/%E8%AF%84%E4%BB%B7%E6%8C%87%E6%A0%87.jpg" alt=""></p>
 <p>无监督聚类算法的评价指标大致可以分为两大类：一类是聚类的结果具有某个参考模型作为人为基准进行比较，称之为<strong>外部指标</strong>；第二种是直接考察聚类结果而不参考任何模型，称之为内部指标。</p>
-<h2 id="外部指标"><a href="#外部指标" class="headerlink" title="外部指标"></a>外部指标</h2><p>对数据集 \(D={x_1, x_2,\cdots,x_m}\)，假定通过聚类算法将样本聚为 \(C={C_1,C_2,\cdots,C_k}\)，参考模型给出的簇划分为 \(C^<em>={C_1^</em>,C_2^<em>,\cdots,C_s^</em>}\)。相应的，令 λ 与 \(λ^∗\) 分别表示与 C 与 \(C^∗\)对应的簇标记向量。我们将样本两两配对考虑，定义如下：</p>
+<h2 id="外部指标"><a href="#外部指标" class="headerlink" title="外部指标"></a>外部指标</h2><p>对数据集 \(D=\{x_1, x_2,\cdots,x_m\}\)，假定通过聚类算法将样本聚为 \(C=\{C_1,C_2,\cdots,C_k\}\)，参考模型给出的簇划分为 \(C^<em>=\{C_1^</em>,C_2^<em>,\cdots,C_s^</em>\}\)。相应的，令 λ 与 \(λ^∗\) 分别表示与 C 与 \(C^∗\)对应的簇标记向量。我们将样本两两配对考虑，定义如下：</p>
 <p><img src="http://p4rlzrioq.bkt.clouddn.com/%E5%A4%96%E9%83%A8%E6%8C%87%E6%A0%8711.png" alt=""></p>
 <p>其中集合 S1包含了在 C 中属于相同的簇并且在 C∗中也属于相同的簇的样本； S2 包含了在 C 中属于相同的簇并且在 C∗中不属于相同的簇的样本……以此类推。对每个样本对 (xi,xj) (i &lt; j) 仅能出现在一个集合中，因此有 a+b+c+d=m(m−1)/2。</p>
 <p>基于以上定义，对无监督聚类算法的聚类结果，我们有如下的性能度量指标：</p>
 <ul>
 <li>Jaccard 系数（简记为 JCI）</li>
 </ul>
-<p>$$<br>\begin{align} JCI = \frac{a}{a+b+c} \end{align}<br>$$</p>
-<ul>
+<script type="math/tex; mode=display">
+\begin{align} JCI = \frac{a}{a+b+c} \end{align}</script><ul>
 <li>FM 指数（简记为FMI）</li>
 </ul>
 <p><img src="http://p4rlzrioq.bkt.clouddn.com/fm%E6%8C%87%E6%95%B0.png" alt=""></p>
 <ul>
 <li>Rand 指数（简记为 RI）</li>
 </ul>
-<p>$$<br>\begin{align} RI=\frac{2(a+d)}{m(m-1)} \end{align}<br>$$<br>很显然，上述指数值都在 <code>[0,1]</code> 之间，并且值越大越好。</p>
-<h2 id="内部指标"><a href="#内部指标" class="headerlink" title="内部指标"></a>内部指标</h2><p>对于聚类结果\(C={C_1,C_2,\cdots,C_k}\)，作如下定义：</p>
+<script type="math/tex; mode=display">
+\begin{align} RI=\frac{2(a+d)}{m(m-1)} \end{align}</script><p>很显然，上述指数值都在 <code>[0,1]</code> 之间，并且值越大越好。</p>
+<h2 id="内部指标"><a href="#内部指标" class="headerlink" title="内部指标"></a>内部指标</h2><p>对于聚类结果\(C=\{C_1,C_2,\cdots,C_k\}\)，作如下定义：</p>
 <p><img src="http://p4rlzrioq.bkt.clouddn.com/%E5%86%85%E9%83%A8%E6%8C%87%E6%A0%87.png" alt="内部指标"></p>
 <p>其中，\(dist(x_i,x_j)\)用于计算两个样本间的距离 \(μ_i\)代表类 \(C_j\) 的样本中心。基于以上定义如下内部指标：</p>
 <ul>
-<li><strong>DB 指数（简称 DBI）</strong><br>$$<br>\begin{align} DBI=\frac{1}{k}\sum_{i=1}^k\max_{j\ne i}\bigl(\frac{avg(C_i)+avg(C_j)}{d_{cen}(\mu_i,\mu_j)}\bigl) \end{align}<br>$$</li>
+<li><strong>DB 指数（简称 DBI）</strong><script type="math/tex; mode=display">
+\begin{align} DBI=\frac{1}{k}\sum_{i=1}^k\max_{j\ne i}\bigl(\frac{avg(C_i)+avg(C_j)}{d_{cen}(\mu_i,\mu_j)}\bigl) \end{align}</script></li>
 <li><strong>Dunn 指数（简称 DI）</strong></li>
 </ul>
 <p><img src="http://p4rlzrioq.bkt.clouddn.com/dunn%E6%8C%87%E6%95%B02.png" alt=""><br>显然，DBI 的值越小越好，而 DI 值越大越好。</p>
@@ -828,7 +832,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">22</span>
+                  <span class="site-state-item-count">23</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -839,7 +843,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -850,7 +854,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">32</span>
+                  <span class="site-state-item-count">31</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -1020,7 +1024,7 @@
 <!--
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共72.6k字</span>
+  <span class="post-count">博客全站共74.2k字</span>
 </div>
 -->
 

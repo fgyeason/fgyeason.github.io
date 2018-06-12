@@ -492,10 +492,10 @@
 <p>之前聊起这个，就会说mapreduce，就是把任务分拆开来，最后计算的时候再合并。但后来发现这样的回答太水了，看了几篇介绍分布式计算的PPT，特此写下来分布式到底是怎么一回事。</p>
 <p>我们用一个矩阵运算作为例子：</p>
 <p>对于两个矩阵，A和B：</p>
-<p>A = \(\begin{pmatrix}1 &amp; 2 &amp; 3\\  4 &amp; 5 &amp;0 \\  7 &amp; 8&amp;9\\  10 &amp; 11&amp;12\end{pmatrix}\)</p>
-<p>B =  \(\begin{pmatrix}10 &amp; 15\\  0 &amp;2 \\ 11 &amp;9\end{pmatrix}\)</p>
+<p>A = \(\begin{pmatrix}1 &amp; 2 &amp; 3\\\\  4 &amp; 5 &amp;0 \\\\  7 &amp; 8&amp;9\\\\  10 &amp; 11&amp;12\end{pmatrix}\)</p>
+<p>B =  \(\begin{pmatrix}10 &amp; 15\\\\  0 &amp;2 \\\\ 11 &amp;9\end{pmatrix}\)</p>
 <p>有</p>
-<p>C = AB = \(\begin{pmatrix}43 &amp; 46\\  40 &amp;70 \\ 169 &amp;202\\ 232 &amp;280\end{pmatrix}\)</p>
+<p>C = AB = \(\begin{pmatrix}43 &amp; 46\\\\  40 &amp;70 \\\\ 169 &amp;202\\\\ 232 &amp;280\end{pmatrix}\)</p>
 <p>我们要改变矩阵存储方式，只存储那些非零的数值。</p>
 <p>所以矩阵A可以表示成</p>
 <p><img src="http://p4rlzrioq.bkt.clouddn.com/A%E7%9F%A9%E9%98%B5.jpg" alt=""></p>
@@ -507,7 +507,9 @@
 <p><img src="http://p4rlzrioq.bkt.clouddn.com/mapreduce%201_%E7%9C%8B%E5%9B%BE%E7%8E%8B_%E7%9C%8B%E5%9B%BE%E7%8E%8B.jpg" alt=""></p>
 <p>在shuffle阶段，就把相同的key放在一起<br>在reduce阶段，在同一个key中，value第一维相同的匹配一起，其第二维相乘，最后把所有相加（如key（1，1）中，\(1<em>10+3</em>11\)，因为a:2没有匹配的，所以去掉a:2）</p>
 <p>最后把每一个key相加就可以得到结果了。</p>
-<center><br><img src="http://p4rlzrioq.bkt.clouddn.com/mapreduce3.png" width="120"><br></center>
+<center>  
+<img src="http://p4rlzrioq.bkt.clouddn.com/mapreduce3.png" width="120"> 
+</center>
 
 
 <p>整体的流程实现如下图：</p>
@@ -712,7 +714,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">22</span>
+                  <span class="site-state-item-count">23</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -723,7 +725,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -734,7 +736,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">32</span>
+                  <span class="site-state-item-count">31</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -904,7 +906,7 @@
 <!--
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共72.6k字</span>
+  <span class="post-count">博客全站共74.2k字</span>
 </div>
 -->
 

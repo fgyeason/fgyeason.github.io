@@ -531,7 +531,7 @@
 <h2 id="标记编码方法"><a href="#标记编码方法" class="headerlink" title="标记编码方法"></a>标记编码方法</h2><p>在监督学习中，经常需要处理各种各样的标记。这些标记可能是数字，也可能是单词。如果标记是数字，那么算法可以直接使用它们，但是，许多情况下，标记都需要以人们可理解的形式存在，因此，人们通常会用单词标记训练数据集。标记编码就是要把单词标记转换成数值形式，让算法懂得如何操作标记。接下来看看如何标记编码。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">from sklearn import preprocessing</span><br><span class="line"># 定义一个标记编码器</span><br><span class="line">label_encoder = preprocessing.LabelEncoder()</span><br><span class="line"></span><br><span class="line"># label_encoder对象知道如何理解单词标记，接下来创建标记</span><br><span class="line">input_classes = [&apos;audi&apos;, &apos;ford&apos;, &apos;audi&apos;, &apos;toyota&apos;, &apos;ford&apos;, &apos;bmw&apos;]</span><br><span class="line"># 开始标记</span><br><span class="line">label_encoder.fit(input_classes)</span><br><span class="line">print(&quot;Classes mapping: 结果显示单词背转换成从0开始的索引值&quot;)</span><br><span class="line">for i, item in enumerate(lable_encoder.classes_):</span><br><span class="line">print(item, &apos;--&gt;&apos;, i)</span><br></pre></td></tr></table></figure>
 <blockquote>
-<p>Classes mapping: 结果显示单词背转换成从0开始的索引值<br>audi –&gt; 0<br>bmw –&gt; 1<br>ford –&gt; 2<br>toyota –&gt; 3</p>
+<p>Classes mapping: 结果显示单词背转换成从0开始的索引值<br>audi —&gt; 0<br>bmw —&gt; 1<br>ford —&gt; 2<br>toyota —&gt; 3</p>
 </blockquote>
 <p>这时，如果遇到一组数据就可以轻松的转换它们了。（如药品数据的药品名）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">labels = [&apos;toyota&apos;, &apos;f</span><br><span class="line">ord&apos;, &apos;audi&apos;]</span><br><span class="line">encoded_labels = label_encoder.transform(labels)</span><br><span class="line">print (&quot;\nLabels =&quot;, labels)</span><br><span class="line">print (&quot;Encoded labels =&quot;, list(encoded_labels))</span><br></pre></td></tr></table></figure></p>
 <blockquote>
@@ -578,8 +578,8 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">from sklearn.externals import joblib</span><br><span class="line">joblib.dump(linear_regr, &apos;regr.pkl&apos;) </span><br><span class="line">regr2 = joblib.load(&apos;regr.pkl&apos;) </span><br><span class="line">regr2.predict(X_test)</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>array([2.20369892, 4.45873314, 2.12918475, 3.1253216 , 3.21944477,3.75673118, 3.91360313, 2.66647116, 3.32925513, 2.77235973])</p>
-</blockquote>
-<h1 id="创建岭回归"><a href="#创建岭回归" class="headerlink" title="创建岭回归"></a>创建岭回归</h1><p>线性回归的主要问题是对异常值敏感。在真实世界的数据收集过程中，经常会遇到错误的度量结果。而线性回归使用的普通最小二乘法，其目标是使平方误差最小化。这时，由于异常值误差的绝对值很大，因此会引起问题，从而破坏整个模型。</p>
+<h1 id="创建岭回归"><a href="#创建岭回归" class="headerlink" title="创建岭回归"></a>创建岭回归</h1></blockquote>
+<p>线性回归的主要问题是对异常值敏感。在真实世界的数据收集过程中，经常会遇到错误的度量结果。而线性回归使用的普通最小二乘法，其目标是使平方误差最小化。这时，由于异常值误差的绝对值很大，因此会引起问题，从而破坏整个模型。</p>
 <p>普通最小二乘法在建模时会考虑每个数据点的影响，因此，最终模型就会瘦异常值影响较大。显然，我们发现这个模型不是最优的。为了避免这个问题，我们引入正则化项 的系数作为阈值来消除异常值的影响。这个方法被称为岭回归 。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">import pandas as pd</span><br><span class="line">X = []</span><br><span class="line">y = []</span><br><span class="line">with open(&apos;data_multivar.txt&apos;, &apos;r&apos;) as f:</span><br><span class="line">    for line in f.readlines():</span><br><span class="line">    data = [float(i) for i in line.split(&apos;,&apos;)]</span><br><span class="line">    xt, yt = data[:-1], data[-1]</span><br><span class="line">    X.append(xt)</span><br><span class="line">    y.append(yt)</span><br><span class="line"># 80%训练集和20%测试集</span><br><span class="line">num_train = int(0.8 * len(X))</span><br><span class="line">num_test = len(X) - num_train</span><br><span class="line">X_train = np.array(X[:num_train]).reshape(num_train,3)</span><br><span class="line">y_train = np.array(y[:num_train])</span><br><span class="line"></span><br><span class="line">X_test = np.array(X[num_train:]).reshape(num_test, 3)</span><br><span class="line">y_test = np.array(y[num_train:])</span><br></pre></td></tr></table></figure>
 <p>alpha 参数控制回归器的复杂程度。当alpha 趋于0 时，岭回归器就是用普通最小二乘法的线性回归器。因此，如果你希望模型对异常值不那么敏感，就需要设置一个较大的alpha 值。这里把alpha 值设置为0.01 。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">rid = linear_model.Ridge(alpha=0.01, fit_intercept=True, max_iter=10000)</span><br><span class="line"></span><br><span class="line">rid.fit(X_train, y_train)</span><br><span class="line">y_test_pred = rid.predict(X_test)</span><br><span class="line"></span><br><span class="line">import sklearn.metrics as sm</span><br><span class="line"></span><br><span class="line">print(&quot;平均绝对误差（mean absolute error） ：&quot;</span><br><span class="line"> , round(sm.mean_absolute_error(y_test, y_test_pred), 2))</span><br><span class="line"></span><br><span class="line">print(&quot;均方误差（mean squared error） ：&quot;</span><br><span class="line"> , round(sm.mean_squared_error(y_test, y_test_pred), 2))</span><br><span class="line"></span><br><span class="line">print(&quot;中位数绝对误差（median absolute error） ：&quot;</span><br><span class="line"> , round(sm.median_absolute_error(y_test, y_test_pred), 2))</span><br><span class="line"></span><br><span class="line">print(&quot;解释方差分（explained variance score） ：&quot;</span><br><span class="line"> , round(sm.explained_variance_score(y_test, y_test_pred), 2))</span><br><span class="line"></span><br><span class="line">print(&quot;R方得分（R2 score） ：&quot;</span><br><span class="line"> , round(sm.r2_score(y_test, y_test_pred)))</span><br></pre></td></tr></table></figure></p>
@@ -607,7 +607,7 @@
 <blockquote>
 <p>决策树-均方误差:  12.74782456548819<br>决策树-解释方差:  0.8454595720920495<br>AbaBoost决策树-均方误差:  7.015648111222207<br>AbaBoost决策树-解释方差:  0.9147414844474588</p>
 </blockquote>
-<h1 id="计算特征的相对重要性-（如交通案例计算各出口贡献率）"><a href="#计算特征的相对重要性-（如交通案例计算各出口贡献率）" class="headerlink" title="计算特征的相对重要性 （如交通案例计算各出口贡献率）"></a>计算特征的相对重要性 （如交通案例计算各出口贡献率）</h1><p><strong>(<em>modle.feature__importances</em>)</strong></p>
+<h1 id="计算特征的相对重要性-（如交通案例计算各出口贡献率）"><a href="#计算特征的相对重要性-（如交通案例计算各出口贡献率）" class="headerlink" title="计算特征的相对重要性 （如交通案例计算各出口贡献率）"></a>计算特征的相对重要性 （如交通案例计算各出口贡献率）</h1><p><strong>(_modle.feature__importances_)</strong></p>
 <p>在这个案例中，我们用了13个特征，它们对模型都有贡献。但是，有一个重要的问题出现了：如何判断哪个特征更加重要？显然，所有的特征对结果的贡献是不一样的。如果需要忽略一些特征，就需要知道哪些特征不太重要。scikit-learn里面有这样的功能。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">def plot_feature_importances(feature_importances, title, feature_names):</span><br><span class="line"> # 将重要性值标准化</span><br><span class="line">    feature_importances = 100.0 * (feature_importances / max(feature_importances))</span><br><span class="line"></span><br><span class="line"> # 将得分从高到低排序</span><br><span class="line">    index_sorted = np.flipud(np.argsort(feature_importances))</span><br><span class="line"></span><br><span class="line"> # 让X坐标轴上的标签居中显示</span><br><span class="line">    pos = np.arange(index_sorted.shape[0]) + 0.5</span><br><span class="line"></span><br><span class="line"> # 画条形图</span><br><span class="line"> plt.figure()</span><br><span class="line"> plt.bar(pos, feature_importances[index_sorted], align=&apos;center&apos;)</span><br><span class="line"> plt.xticks(pos, feature_names[index_sorted])</span><br><span class="line"> plt.ylabel(&apos;Relative Importance&apos;)</span><br><span class="line"> plt.title(title)</span><br><span class="line"> plt.show()</span><br><span class="line"></span><br><span class="line"># 画出特征的相对重要性</span><br><span class="line">plot_feature_importances(dtre.feature_importances_, &apos;Decision Tree regressor&apos;, hous_data.feature_names)</span><br><span class="line">plot_feature_importances(abre.feature_importances_, &apos;AdaBoost regressor&apos;, hous_data.feature_names)</span><br></pre></td></tr></table></figure></p>
 <p><img src="http://p4rlzrioq.bkt.clouddn.com/%E8%AE%A1%E7%AE%97%E7%89%B9%E5%BE%81%E7%9A%84%E7%9B%B8%E5%AF%B9%E9%87%8D%E8%A6%81%E6%80%A71.png" alt=""></p>
 <p><img src="http://p4rlzrioq.bkt.clouddn.com/%E8%AE%A1%E7%AE%97%E7%89%B9%E5%BE%81%E7%9A%84%E7%9B%B8%E5%AF%B9%E9%87%8D%E8%A6%81%E6%80%A72.png" alt=""></p>
@@ -818,7 +818,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">22</span>
+                  <span class="site-state-item-count">23</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -829,7 +829,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -840,7 +840,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">32</span>
+                  <span class="site-state-item-count">31</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -1010,7 +1010,7 @@
 <!--
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共72.6k字</span>
+  <span class="post-count">博客全站共74.2k字</span>
 </div>
 -->
 
