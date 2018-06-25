@@ -1,0 +1,1665 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+ <script>     
+    (function(){
+        if(''){
+            if (prompt('请输入文章密码') !== ''){
+                alert('密码错误！');
+                history.back();
+            }
+        }
+    })();
+</script>
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="面经," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Frank's Blog" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="keywords" content="面经">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据挖掘面试总结(一)">
+<meta property="og:url" content="http://frankblog.site/2018/06/25/数据挖掘面试总结(一)/index.html">
+<meta property="og:site_name" content="Frank&#39;s Blog">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://p4rlzrioq.bkt.clouddn.com/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD.jpg">
+<meta property="og:image" content="http://p4rlzrioq.bkt.clouddn.com/%E7%BA%BF%E6%80%A7%E7%B4%A2%E5%BC%95%E6%9F%A5%E6%89%BE.png">
+<meta property="og:image" content="http://p4rlzrioq.bkt.clouddn.com/%E7%BA%BF%E6%80%A7%E7%B4%A2%E5%BC%95%E6%9F%A5%E6%89%BE1.png">
+<meta property="og:image" content="http://p4rlzrioq.bkt.clouddn.com/%E4%BA%8C%E5%8F%89%E6%A0%91.png">
+<meta property="og:image" content="http://p4rlzrioq.bkt.clouddn.com/%E6%95%A3%E5%88%97%E8%A1%A81.png">
+<meta property="og:image" content="http://p4rlzrioq.bkt.clouddn.com/%E6%95%A3%E5%88%97%E8%A1%A82.png">
+<meta property="og:image" content="http://p4rlzrioq.bkt.clouddn.com/%E6%95%A3%E5%88%97%E8%A1%A83.png">
+<meta property="og:image" content="http://p4rlzrioq.bkt.clouddn.com/%E6%89%8B%E6%8E%A8lr01.jpg">
+<meta property="og:image" content="http://p4rlzrioq.bkt.clouddn.com/%E6%89%8B%E6%8E%A8lr02.jpg">
+<meta property="og:image" content="http://p4rlzrioq.bkt.clouddn.com/svm1_%E7%9C%8B%E5%9B%BE%E7%8E%8B.jpg">
+<meta property="og:image" content="http://p4rlzrioq.bkt.clouddn.com/svm2_%E7%9C%8B%E5%9B%BE%E7%8E%8B.jpg">
+<meta property="og:image" content="http://p4rlzrioq.bkt.clouddn.com/svm3_%E7%9C%8B%E5%9B%BE%E7%8E%8B.jpg">
+<meta property="og:image" content="http://p4rlzrioq.bkt.clouddn.com/svm4_%E7%9C%8B%E5%9B%BE%E7%8E%8B.jpg">
+<meta property="og:image" content="http://p4rlzrioq.bkt.clouddn.com/svm5_%E7%9C%8B%E5%9B%BE%E7%8E%8B.jpg">
+<meta property="og:image" content="http://p4rlzrioq.bkt.clouddn.com/svm6_%E7%9C%8B%E5%9B%BE%E7%8E%8B.jpg">
+<meta property="og:updated_time" content="2018-06-25T15:26:30.524Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="数据挖掘面试总结(一)">
+<meta name="twitter:image" content="http://p4rlzrioq.bkt.clouddn.com/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":true},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://frankblog.site/2018/06/25/数据挖掘面试总结(一)/"/>
+
+
+
+
+
+  <title>数据挖掘面试总结(一) | Frank's Blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+  
+  
+    
+  
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+    
+    <a href="https://github.com/fgyeason" class="github-corner" aria-label="View source on Github"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Frank's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Enjoy everything fun and challenging</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-books">
+          <a href="/books/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-book"></i> <br />
+            
+            书籍
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-films">
+          <a href="/films/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-film"></i> <br />
+            
+            电影
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+<script src="https://cdn.bootcss.com/aplayer/1.6.0/APlayer.min.js"></script>
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://frankblog.site/2018/06/25/数据挖掘面试总结(一)/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="FGY">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/风景.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Frank's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">数据挖掘面试总结(一)</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-25T23:10:12+08:00">
+                2018-06-25
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2018-06-25T23:26:30+08:00">
+                2018-06-25
+              </time>
+            
+          </span>
+
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/面经/" itemprop="url" rel="index">
+                    <span itemprop="name">面经</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+
+
+
+
+          
+            
+          
+
+        
+          
+
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  4,626 字  
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  17 分钟  
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <script src="\assets\js\APlayer.min.js"> </script><p><img src="http://p4rlzrioq.bkt.clouddn.com/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD.jpg" alt=""></p>
+<a id="more"></a>
+<blockquote class="blockquote-center"><font size="5">从IT时代走向DT时代</font></blockquote>
+
+
+<hr>
+<h1 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h1><p>栈(stack)又称之为堆栈是一个特殊的有序表，其插入和删除操作都在栈顶进行操作，并且按照先进后出，后进先出的规则进行运作。</p>
+<h2 id="栈的接口"><a href="#栈的接口" class="headerlink" title="栈的接口"></a>栈的接口</h2><p>如果你创建了一个栈，那么那么应该具有以下接口来进行对栈的操作</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>接口</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>push()</td>
+<td>入栈</td>
+</tr>
+<tr>
+<td>pop()</td>
+<td>出栈</td>
+</tr>
+<tr>
+<td>isEmpty()</td>
+<td>判断是否为空栈</td>
+</tr>
+<tr>
+<td>length()</td>
+<td>获取栈的长度</td>
+</tr>
+<tr>
+<td>getTop()</td>
+<td>取栈顶的元素，元素不出栈</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>知道栈需要上述的接口后，那么在Python中，列表就类似是一个栈，提供接口如下：</p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th>操作</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>s = []</td>
+<td>创建一个栈</td>
+</tr>
+<tr>
+<td>s.append(x)</td>
+<td>往栈内添加一个元素</td>
+</tr>
+<tr>
+<td>s.pop()</td>
+<td>在栈内删除一个元素</td>
+</tr>
+<tr>
+<td>not s</td>
+<td>判断是否为空栈</td>
+</tr>
+<tr>
+<td>len(s)</td>
+<td>获取栈内元素的数量</td>
+</tr>
+<tr>
+<td>s[-1]</td>
+<td>获取栈顶的元素</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h2><p>查找（Searching）就是根据给定的某个值，在查找表中确定一个其关键字等于给定值的数据元素（或记录）。</p>
+<p>查找表（Search Table）：由同一类型的数据元素（或记录）构成的集合<br>关键字（Key）：数据元素中某个数据项的值，又称为键值。<br>主键（Primary Key）：可唯一地标识某个数据元素或记录的关键字。</p>
+<p>查找表按照操作方式可分为：</p>
+<ul>
+<li>静态查找表（Static Search Table）：只做查找操作的查找表。它的主要操作是：</li>
+<li>查询某个“特定的”数据元素是否在表中</li>
+<li>检索某个“特定的”数据元素和各种属性</li>
+<li>动态查找表（Dynamic Search Table）：在查找中同时进行插入或删除等操作：</li>
+<li>查找时插入数据</li>
+<li>查找时删除数据</li>
+</ul>
+<h2 id="无序表查找"><a href="#无序表查找" class="headerlink" title="无序表查找"></a>无序表查找</h2><p>算法分析：最好情况是在第一个位置就找到了，此为O(1)；最坏情况在最后一个位置才找到，此为O(n)；所以平均查找次数为(n+1)/2。<strong>最终时间复杂度为O(n)</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"># 最基础的遍历无序列表的查找算法</span><br><span class="line"># 时间复杂度O(n)</span><br><span class="line">def sequential_search(lis,  key):</span><br><span class="line">    length  =  len(lis)</span><br><span class="line">    for  i  in  range(length):</span><br><span class="line">        if  lis[i]  ==  key:</span><br><span class="line">            return  i</span><br><span class="line">        else:</span><br><span class="line">            return  False</span><br><span class="line">if  __name__  ==  &apos;__main__&apos;:</span><br><span class="line">    LIST  =  [1,  5,  8,  123,  22,  54,  7,  99,  300,  222]</span><br><span class="line">    result  =  sequential_search(LIST,  123)</span><br><span class="line">    print(result)</span><br></pre></td></tr></table></figure></p>
+<h2 id="有序表查找"><a href="#有序表查找" class="headerlink" title="有序表查找"></a>有序表查找</h2><h3 id="1-二分查找-Binary-Search"><a href="#1-二分查找-Binary-Search" class="headerlink" title="1. 二分查找(Binary Search)"></a>1. 二分查找(Binary Search)</h3><p>算法核心：在查找表中不断取中间元素与查找值进行比较，以二分之一的倍率进行表范围的缩小。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"># 针对有序查找表的二分查找算法</span><br><span class="line"># 时间复杂度O(log(n))</span><br><span class="line">def  binary_search(lis,  key):</span><br><span class="line">    low  =  0</span><br><span class="line">    high  =  len(lis)  -  1</span><br><span class="line">    time  =  0</span><br><span class="line">    while  low  &lt;  high:</span><br><span class="line">        time  +=  1</span><br><span class="line">        mid  =  int((low  +  high)  /  2)</span><br><span class="line">        if  key  &lt;  lis[mid]:</span><br><span class="line">            high  =  mid  -  1</span><br><span class="line">        elif  key  &gt;  lis[mid]:</span><br><span class="line">            low  =  mid  +  1</span><br><span class="line">        else:</span><br><span class="line">            # 打印折半的次数</span><br><span class="line">            print(&quot;times: %s&quot;  %  time)</span><br><span class="line">            return  mid</span><br><span class="line">    print(&quot;times: %s&quot;  %  time)</span><br><span class="line">    return  False</span><br><span class="line">if  __name__  ==  &apos;__main__&apos;:</span><br><span class="line">    LIST  =  [1,  5,  7,  8,  22,  54,  99,  123,  200,  222,  444]</span><br><span class="line">    result  =  binary_search(LIST,  99)</span><br><span class="line">    print(result)</span><br></pre></td></tr></table></figure></p>
+<h3 id="2-插值查找"><a href="#2-插值查找" class="headerlink" title="2. 插值查找"></a>2. 插值查找</h3><p>二分查找法虽然已经很不错了，但还有可以优化的地方。<br>有的时候，对半过滤还不够狠，要是每次都排除十分之九的数据岂不是更好？选择这个值就是关键问题，插值的意义就是：以更快的速度进行缩减。</p>
+<p>插值的核心就是使用公式：<br>value = (key – list[low])/(list[high] – list[low])</p>
+<p>用这个value来代替二分查找中的1/2。<br>上面的代码可以直接使用，只需要改一句。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"># 插值查找算法</span><br><span class="line"># 时间复杂度O(log(n))</span><br><span class="line">def  binary_search(lis,  key):</span><br><span class="line">    low  =  0</span><br><span class="line">    high  =  len(lis)  -  1</span><br><span class="line">    time  =  0</span><br><span class="line">    while  low  &lt;  high:</span><br><span class="line">        time  +=  1</span><br><span class="line">        # 计算mid值是插值算法的核心代码</span><br><span class="line">        mid  =  low  +  int((high  -  low)  *  (key  -  lis[low])/(lis[high]  -  lis[low]))</span><br><span class="line">        print(&quot;mid=%s, low=%s, high=%s&quot;  %  (mid,  low,  high))</span><br><span class="line">        if  key  &lt;  lis[mid]:</span><br><span class="line">            high  =  mid  -  1</span><br><span class="line">        elif  key  &gt;  lis[mid]:</span><br><span class="line">            low  =  mid  +  1</span><br><span class="line">        else:</span><br><span class="line">            # 打印查找的次数</span><br><span class="line">            print(&quot;times: %s&quot;  %  time)</span><br><span class="line">            return  mid</span><br><span class="line">    print(&quot;times: %s&quot;  %  time)</span><br><span class="line">    return  False</span><br><span class="line">if  __name__  ==  &apos;__main__&apos;:</span><br><span class="line">    LIST  =  [1,  5,  7,  8,  22,  54,  99,  123,  200,  222,  444]</span><br><span class="line">    result  =  binary_search(LIST,  444)</span><br><span class="line">    print(result)</span><br></pre></td></tr></table></figure></p>
+<p>插值算法的总体时间复杂度仍然属于O(log(n))级别的。其优点是，对于表内数据量较大，且关键字分布比较均匀的查找表，使用插值算法的平均性能比二分查找要好得多。反之，对于分布极端不均匀的数据，则不适合使用插值算法。</p>
+<h2 id="线性索引查找"><a href="#线性索引查找" class="headerlink" title="线性索引查找"></a>线性索引查找</h2><p>对于海量的无序数据，为了提高查找速度，一般会为其构造索引表。<br>索引就是把一个关键字与它相对应的记录进行关联的过程。<br>一个索引由若干个索引项构成，每个索引项至少包含关键字和其对应的记录在存储器中的位置等信息。<br>索引按照结构可以分为：线性索引、树形索引和多级索引。<br>线性索引：将索引项的集合通过线性结构来组织，也叫索引表。<br>线性索引可分为：稠密索引、分块索引和倒排索引</p>
+<ol>
+<li><p>稠密索引<br>稠密索引指的是在线性索引中，为数据集合中的每个记录都建立一个索引项。<br><img src="http://p4rlzrioq.bkt.clouddn.com/%E7%BA%BF%E6%80%A7%E7%B4%A2%E5%BC%95%E6%9F%A5%E6%89%BE.png" alt="image_1b2cl8r0dk1v1u0ssf0rmk8o29.png-157.4kB"><br>这其实就相当于给无序的集合，建立了一张有序的线性表。其索引项一定是按照关键码进行有序的排列。<br>这也相当于把查找过程中需要的排序工作给提前做了。</p>
+</li>
+<li><p>分块索引<br>给大量的无序数据集合进行分块处理，使得块内无序，块与块之间有序。<br>这其实是有序查找和无序查找的一种中间状态或者说妥协状态。因为数据量过大，建立完整的稠密索引耗时耗力，占用资源过多；但如果不做任何排序或者索引，那么遍历的查找也无法接受，只能折中，做一定程度的排序或索引。<br><img src="http://p4rlzrioq.bkt.clouddn.com/%E7%BA%BF%E6%80%A7%E7%B4%A2%E5%BC%95%E6%9F%A5%E6%89%BE1.png" alt="image_1b2clkecf3mt1j7a8hn3v5vbrm.png-136.6kB"><br>分块索引的效率比遍历查找的O(n)要高一些，但与二分查找的O(logn)还是要差不少。</p>
+</li>
+<li><p>倒排索引<br>不是由记录来确定属性值，而是由属性值来确定记录的位置，这种被称为倒排索引。其中记录号表存储具有相同次关键字的所有记录的地址或引用（可以是指向记录的指针或该记录的主关键字）。<br>倒排索引是最基础的搜索引擎索引技术。</p>
+</li>
+</ol>
+<h2 id="二叉树遍历"><a href="#二叉树遍历" class="headerlink" title="二叉树遍历"></a>二叉树遍历</h2><p> 二叉树是有限个元素的集合，该集合或者为空、或者有一个称为根节点（root）的元素及两个互不相交的、分别被称为左子树和右子树的二叉树组成。</p>
+<ul>
+<li>二叉树的每个结点至多只有二棵子树(不存在度大于2的结点)，二叉树的子树有左右之分，次序不能颠倒。</li>
+<li>二叉树的第i层至多有2^{i-1}个结点</li>
+<li>深度为k的二叉树至多有2^k-1个结点；</li>
+<li>对任何一棵二叉树T，如果其终端结点数为N0，度为2的结点数为N2，则N0=N2+1</li>
+</ul>
+<p>首先构建二叉树：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">class Node:    </span><br><span class="line">	def __init__(self,value=None,left=None,right=None)         </span><br><span class="line">		self.value=value          </span><br><span class="line">		self.left=left    #左子树</span><br><span class="line">		self.right=right  #右子树</span><br></pre></td></tr></table></figure></p>
+<p>下面给出二叉树的前序遍历／中序遍历／后序遍历<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">def preTraverse(root):  </span><br><span class="line">    &apos;&apos;&apos;</span><br><span class="line">    前序遍历</span><br><span class="line">    &apos;&apos;&apos;</span><br><span class="line">    if root==None:  </span><br><span class="line">        return  </span><br><span class="line">    print(root.value)  </span><br><span class="line">    preTraverse(root.left)  </span><br><span class="line">    preTraverse(root.right)  </span><br><span class="line"></span><br><span class="line">def midTraverse(root): </span><br><span class="line">    &apos;&apos;&apos;</span><br><span class="line">    中序遍历</span><br><span class="line">    &apos;&apos;&apos;</span><br><span class="line">    if root==None:  </span><br><span class="line">        return  </span><br><span class="line">    midTraverse(root.left)  </span><br><span class="line">    print(root.value)  </span><br><span class="line">    midTraverse(root.right)  </span><br><span class="line">  </span><br><span class="line">def afterTraverse(root):  </span><br><span class="line">    &apos;&apos;&apos;</span><br><span class="line">    后序遍历</span><br><span class="line">    &apos;&apos;&apos;</span><br><span class="line">    if root==None:  </span><br><span class="line">        return  </span><br><span class="line">    afterTraverse(root.left)  </span><br><span class="line">    afterTraverse(root.right)  </span><br><span class="line">    print(root.value)</span><br></pre></td></tr></table></figure></p>
+<p>下面给出一个例子，验证一下程序</p>
+<p> <img src="http://p4rlzrioq.bkt.clouddn.com/%E4%BA%8C%E5%8F%89%E6%A0%91.png" alt=""></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">if __name__==&apos;__main__&apos;:</span><br><span class="line">	root=Node(&apos;D&apos;,Node(&apos;B&apos;,Node(&apos;A&apos;),Node(&apos;C&apos;)),Node(&apos;E&apos;,right=Node(&apos;G&apos;,Node(&apos;F&apos;))))</span><br><span class="line">    print(&apos;前序遍历：&apos;)</span><br><span class="line">    preTraverse(root)</span><br><span class="line">    print(&apos;\n&apos;)</span><br><span class="line">    print(&apos;中序遍历：&apos;)</span><br><span class="line">    midTraverse(root)</span><br><span class="line">    print(&apos;\n&apos;)</span><br><span class="line">    print(&apos;后序遍历：&apos;)</span><br><span class="line">    afterTraverse(root)</span><br><span class="line">    print(&apos;\n&apos;)</span><br></pre></td></tr></table></figure>
+<h2 id="散列表（哈希表）"><a href="#散列表（哈希表）" class="headerlink" title="散列表（哈希表）"></a>散列表（哈希表）</h2><h3 id="散列函数的构造方法"><a href="#散列函数的构造方法" class="headerlink" title="散列函数的构造方法"></a>散列函数的构造方法</h3><p>好的散列函数：计算简单、散列地址分布均匀</p>
+<ol>
+<li>直接定址法<br>例如取关键字的某个线性函数为散列函数：<br>f(key) = a*key + b (a,b为常数）</li>
+<li>数字分析法<br>抽取关键字里的数字，根据数字的特点进行地址分配</li>
+<li>平方取中法<br>将关键字的数字求平方，再截取部分</li>
+<li>折叠法<br>将关键字的数字分割后分别计算，再合并计算，一种玩弄数字的手段。</li>
+<li>除留余数法<br>最为常见的方法之一。<br>对于表长为m的数据集合，散列公式为：<br>f(key) = key mod p (p&lt;=m)<br>mod：取模（求余数）<br>该方法最关键的是p的选择，而且数据量较大的时候，冲突是必然的。一般会选择接近m的质数。</li>
+<li>随机数法<br>选择一个随机数，取关键字的随机函数值为它的散列地址。<br>f(key) = random(key)</li>
+</ol>
+<p>总结，实际情况下根据不同的数据特性采用不同的散列方法，考虑下面一些主要问题：</p>
+<ul>
+<li>计算散列地址所需的时间</li>
+<li>关键字的长度</li>
+<li>散列表的大小</li>
+<li>关键字的分布情况</li>
+<li>记录查找的频率</li>
+</ul>
+<h3 id="处理散列冲突"><a href="#处理散列冲突" class="headerlink" title="处理散列冲突"></a>处理散列冲突</h3><ul>
+<li>开放定址法</li>
+</ul>
+<p>就是一旦发生冲突，就去寻找下一个空的散列地址，只要散列表足够大，空的散列地址总能找到，并将记录存入。</p>
+<p>公式是：<br><img src="http://p4rlzrioq.bkt.clouddn.com/%E6%95%A3%E5%88%97%E8%A1%A81.png" alt=""><br>这种简单的冲突解决办法被称为线性探测，无非就是自家的坑被占了，就逐个拜访后面的坑，有空的就进，也不管这个坑是不是后面有人预定了的。<br>线性探测带来的最大问题就是冲突的堆积，你把别人预定的坑占了，别人也就要像你一样去找坑。</p>
+<p>改进的办法有二次方探测法和随机数探测法。</p>
+<ul>
+<li>再散列函数法<br>发生冲突时就换一个散列函数计算，总会有一个可以把冲突解决掉，它能够使得关键字不产生聚集，但相应地增加了计算的时间。</li>
+<li>链接地址法<br>碰到冲突时，不更换地址，而是将所有关键字为同义词的记录存储在一个链表里，在散列表中只存储同义词子表的头指针，如下图：<br><img src="http://p4rlzrioq.bkt.clouddn.com/%E6%95%A3%E5%88%97%E8%A1%A82.png" alt="image_1b3gig3eu1uh3rujcvuli1qspm.png-59.3kB"></li>
+</ul>
+<p>这样的好处是，不怕冲突多；缺点是降低了散列结构的随机存储性能。本质是用单链表结构辅助散列结构的不足。</p>
+<ul>
+<li>公共溢出区法<br>其实就是为所有的冲突，额外开辟一块存储空间。如果相对基本表而言，冲突的数据很少的时候，使用这种方法比较合适。<br><img src="http://p4rlzrioq.bkt.clouddn.com/%E6%95%A3%E5%88%97%E8%A1%A83.png" alt="image_1b3gim8dp1m4hd0015su1jvm15mg13.png-56.8kB"></li>
+</ul>
+<p><a href="https://blog.csdn.net/dongrixinyu/article/details/78775057" target="_blank" rel="noopener">python 数据结构刷题</a></p>
+<h1 id="手推LR和SVM"><a href="#手推LR和SVM" class="headerlink" title="手推LR和SVM"></a>手推LR和SVM</h1><h2 id="LR"><a href="#LR" class="headerlink" title="LR"></a>LR</h2><p><img src="http://p4rlzrioq.bkt.clouddn.com/%E6%89%8B%E6%8E%A8lr01.jpg" alt=""><br><img src="http://p4rlzrioq.bkt.clouddn.com/%E6%89%8B%E6%8E%A8lr02.jpg" alt=""></p>
+<h2 id="SVM"><a href="#SVM" class="headerlink" title="SVM"></a>SVM</h2><p><img src="http://p4rlzrioq.bkt.clouddn.com/svm1_%E7%9C%8B%E5%9B%BE%E7%8E%8B.jpg" alt=""><br><img src="http://p4rlzrioq.bkt.clouddn.com/svm2_%E7%9C%8B%E5%9B%BE%E7%8E%8B.jpg" alt=""><br><img src="http://p4rlzrioq.bkt.clouddn.com/svm3_%E7%9C%8B%E5%9B%BE%E7%8E%8B.jpg" alt=""><br><img src="http://p4rlzrioq.bkt.clouddn.com/svm4_%E7%9C%8B%E5%9B%BE%E7%8E%8B.jpg" alt=""><br><img src="http://p4rlzrioq.bkt.clouddn.com/svm5_%E7%9C%8B%E5%9B%BE%E7%8E%8B.jpg" alt=""><br><img src="http://p4rlzrioq.bkt.clouddn.com/svm6_%E7%9C%8B%E5%9B%BE%E7%8E%8B.jpg" alt=""></p>
+<h1 id="xgboost调参"><a href="#xgboost调参" class="headerlink" title="xgboost调参"></a>xgboost调参</h1><h2 id="XGBoost的参数"><a href="#XGBoost的参数" class="headerlink" title="XGBoost的参数"></a><strong>XGBoost的参数</strong></h2><p>XGBoost的作者把所有的参数分成了三类：</p>
+<ol>
+<li>通用参数：宏观函数控制。</li>
+<li>Booster参数：控制每一步的booster(tree/regression)。</li>
+<li>学习目标参数：控制训练目标的表现。</li>
+</ol>
+<p>在这里我会类比GBM来讲解，所以作为一种基础知识，强烈推荐先阅读<a href="http://blog.csdn.net/han_xiaoyang/article/details/52663170" target="_blank" rel="noopener">这篇文章</a>。</p>
+<h3 id="通用参数"><a href="#通用参数" class="headerlink" title=" 通用参数"></a><strong> 通用参数</strong></h3><p>这些参数用来控制XGBoost的宏观功能。</p>
+<h4 id="booster-默认gbtree"><a href="#booster-默认gbtree" class="headerlink" title="booster[默认gbtree]"></a><strong>booster[默认gbtree]</strong></h4><ul>
+<li>选择每次迭代的模型，有两种选择：<br>gbtree：基于树的模型<br>gbliner：线性模型</li>
+</ul>
+<h4 id="silent-默认0"><a href="#silent-默认0" class="headerlink" title="silent[默认0]"></a><strong>silent[默认0]</strong></h4><ul>
+<li>当这个参数值为1时，静默模式开启，不会输出任何信息。</li>
+<li>一般这个参数就保持默认的0，因为这样能帮我们更好地理解模型。</li>
+</ul>
+<h4 id="nthread-默认值为最大可能的线程数"><a href="#nthread-默认值为最大可能的线程数" class="headerlink" title="nthread[默认值为最大可能的线程数]"></a><strong>nthread[默认值为最大可能的线程数]</strong></h4><ul>
+<li>这个参数用来进行多线程控制，应当输入系统的核数。</li>
+<li>如果你希望使用CPU全部的核，那就不要输入这个参数，算法会自动检测它。</li>
+</ul>
+<p>还有两个参数，XGBoost会自动设置，目前你不用管它。接下来咱们一起看booster参数。</p>
+<h3 id="booster参数"><a href="#booster参数" class="headerlink" title=" booster参数"></a><strong> booster参数</strong></h3><p>尽管有两种booster可供选择，我这里只介绍<strong>tree booster</strong>，因为它的表现远远胜过<strong>linear booster</strong>，所以linear booster很少用到。</p>
+<h4 id="eta-默认0-3"><a href="#eta-默认0-3" class="headerlink" title="eta[默认0.3]"></a><strong>eta[默认0.3]</strong></h4><ul>
+<li>和GBM中的 learning rate 参数类似。</li>
+<li>通过减少每一步的权重，可以提高模型的鲁棒性。</li>
+<li>典型值为0.01-0.2。</li>
+</ul>
+<h4 id="min-child-weight-默认1"><a href="#min-child-weight-默认1" class="headerlink" title="min_child_weight[默认1]"></a><strong>min_child_weight[默认1]</strong></h4><ul>
+<li>决定最小叶子节点样本权重和。</li>
+<li>和GBM的 min_child_leaf 参数类似，但不完全一样。XGBoost的这个参数是最小_样本权重的和_，而GBM参数是最小_样本总数_。</li>
+<li>这个参数用于避免过拟合。当它的值较大时，可以避免模型学习到局部的特殊样本。</li>
+<li>但是如果这个值过高，会导致欠拟合。这个参数需要使用CV来调整。</li>
+</ul>
+<h4 id="max-depth-默认6"><a href="#max-depth-默认6" class="headerlink" title="max_depth[默认6]"></a><strong>max_depth[默认6]</strong></h4><ul>
+<li>和GBM中的参数相同，这个值为树的最大深度。</li>
+<li>这个值也是用来避免过拟合的。max_depth越大，模型会学到更具体更局部的样本。</li>
+<li>需要使用CV函数来进行调优。</li>
+<li>典型值：3-10</li>
+</ul>
+<h4 id="max-leaf-nodes"><a href="#max-leaf-nodes" class="headerlink" title="max_leaf_nodes"></a><strong>max_leaf_nodes</strong></h4><ul>
+<li>树上最大的节点或叶子的数量。</li>
+<li>可以替代max_depth的作用。因为如果生成的是二叉树，一个深度为n的树最多生成n2n2个叶子。</li>
+<li>如果定义了这个参数，GBM会忽略max_depth参数。</li>
+</ul>
+<h4 id="gamma-默认0"><a href="#gamma-默认0" class="headerlink" title="gamma[默认0]"></a><strong>gamma[默认0]</strong></h4><ul>
+<li>在节点分裂时，只有分裂后损失函数的值下降了，才会分裂这个节点。Gamma指定了节点分裂所需的最小损失函数下降值。</li>
+<li>这个参数的值越大，算法越保守。这个参数的值和损失函数息息相关，所以是需要调整的。</li>
+</ul>
+<h4 id="max-delta-step-默认0"><a href="#max-delta-step-默认0" class="headerlink" title="max_delta_step[默认0]"></a><strong>max_delta_step[默认0]</strong></h4><ul>
+<li>这参数限制每棵树权重改变的最大步长。如果这个参数的值为0，那就意味着没有约束。如果它被赋予了某个正值，那么它会让这个算法更加保守。</li>
+<li>通常，这个参数不需要设置。但是当各类别的样本十分不平衡时，它对逻辑回归是很有帮助的。</li>
+<li>这个参数一般用不到，但是你可以挖掘出来它更多的用处。</li>
+</ul>
+<h4 id="subsample-默认1"><a href="#subsample-默认1" class="headerlink" title="subsample[默认1]"></a><strong>subsample[默认1]</strong></h4><ul>
+<li>和GBM中的subsample参数一模一样。这个参数控制对于每棵树，随机采样的比例。</li>
+<li>减小这个参数的值，算法会更加保守，避免过拟合。但是，如果这个值设置得过小，它可能会导致欠拟合。</li>
+<li>典型值：0.5-1</li>
+</ul>
+<h4 id="colsample-bytree-默认1"><a href="#colsample-bytree-默认1" class="headerlink" title="colsample_bytree[默认1]"></a><strong>colsample_bytree[默认1]</strong></h4><ul>
+<li>和GBM里面的max_features参数类似。用来控制每棵随机采样的列数的占比(每一列是一个特征)。</li>
+<li>典型值：0.5-1</li>
+</ul>
+<h4 id="colsample-bylevel-默认1"><a href="#colsample-bylevel-默认1" class="headerlink" title="colsample_bylevel[默认1]"></a><strong>colsample_bylevel[默认1]</strong></h4><ul>
+<li>用来控制树的每一级的每一次分裂，对列数的采样的占比。</li>
+<li>我个人一般不太用这个参数，因为subsample参数和colsample_bytree参数可以起到相同的作用。但是如果感兴趣，可以挖掘这个参数更多的用处。</li>
+</ul>
+<h4 id="lambda-默认1"><a href="#lambda-默认1" class="headerlink" title="lambda[默认1]"></a><strong>lambda[默认1]</strong></h4><ul>
+<li>权重的L2正则化项。(和Ridge regression类似)。</li>
+<li>这个参数是用来控制XGBoost的正则化部分的。虽然大部分数据科学家很少用到这个参数，但是这个参数在减少过拟合上还是可以挖掘出更多用处的。</li>
+</ul>
+<h4 id="alpha-默认1"><a href="#alpha-默认1" class="headerlink" title="alpha[默认1]"></a><strong>alpha[默认1]</strong></h4><ul>
+<li>权重的L1正则化项。(和Lasso regression类似)。</li>
+<li>可以应用在很高维度的情况下，使得算法的速度更快。</li>
+</ul>
+<h4 id="scale-pos-weight-默认1"><a href="#scale-pos-weight-默认1" class="headerlink" title="scale_pos_weight[默认1]"></a><strong>scale_pos_weight[默认1]</strong></h4><ul>
+<li>在各类别样本十分不平衡时，把这个参数设定为一个正值，可以使算法更快收敛。</li>
+</ul>
+<h3 id="学习目标参数"><a href="#学习目标参数" class="headerlink" title="学习目标参数"></a><strong>学习目标参数</strong></h3><p>这个参数用来控制理想的优化目标和每一步结果的度量方法。</p>
+<h4 id="objective-默认reg-linear"><a href="#objective-默认reg-linear" class="headerlink" title="objective[默认reg:linear]"></a><strong>objective[默认reg:linear]</strong></h4><ul>
+<li><p>这个参数定义需要被最小化的损失函数。最常用的值有： </p>
+<ul>
+<li>binary:logistic 二分类的逻辑回归，返回预测的概率(不是类别)。</li>
+<li><p>multi:softmax 使用softmax的多分类器，返回预测的类别(不是概率)。 </p>
+<ul>
+<li>在这种情况下，你还需要多设一个参数：num_class(类别数目)。</li>
+</ul>
+</li>
+<li>multi:softprob 和multi:softmax参数一样，但是返回的是每个数据属于各个类别的概率。</li>
+</ul>
+</li>
+</ul>
+<h4 id="eval-metric-默认值取决于objective参数的取值"><a href="#eval-metric-默认值取决于objective参数的取值" class="headerlink" title="eval_metric[默认值取决于objective参数的取值]"></a><strong>eval_metric[默认值取决于objective参数的取值]</strong></h4><ul>
+<li>对于有效数据的度量方法。</li>
+<li>对于回归问题，默认值是rmse，对于分类问题，默认值是error。</li>
+<li><p>典型值有： </p>
+<ul>
+<li>rmse 均方根误差(\(\sqrt \frac{\sum_{i=1}^N \epsilon^2}{N}\)</li>
+<li>mae 平均绝对误差(\(\frac{\sum_{i=1}^N |\epsilon|}{N}\)</li>
+<li>logloss 负对数似然函数值</li>
+<li>error 二分类错误率(阈值为0.5)</li>
+<li>merror 多分类错误率</li>
+<li>mlogloss 多分类logloss损失函数</li>
+<li>auc 曲线下面积</li>
+</ul>
+</li>
+</ul>
+<h4 id="seed-默认0"><a href="#seed-默认0" class="headerlink" title="seed(默认0)"></a><strong>seed(默认0)</strong></h4><ul>
+<li>随机数的种子</li>
+<li>设置它可以复现随机数据的结果，也可以用于调整参数</li>
+</ul>
+<p>如果你之前用的是Scikit-learn,你可能不太熟悉这些参数。但是有个好消息，python的XGBoost模块有一个sklearn包，XGBClassifier。这个包中的参数是按sklearn风格命名的。会改变的函数名是：</p>
+<p>1、<strong>eta -&gt; learning_rate</strong><br>2、<strong>lambda -&gt; reg_lambda</strong><br>3、<strong>alpha -&gt; reg_alpha</strong></p>
+<h3 id="参数调优的一般方法"><a href="#参数调优的一般方法" class="headerlink" title="参数调优的一般方法"></a><strong>参数调优的一般方法</strong></h3><p>我们会使用和GBM中相似的方法。需要进行如下步骤：</p>
+<ol>
+<li><p>选择较高的<strong>学习速率(learning rate)</strong>。一般情况下，学习速率的值为0.1。但是，对于不同的问题，理想的学习速率有时候会在0.05到0.3之间波动。选择<strong>对应于此学习速率的理想决策树数量</strong>。XGBoost有一个很有用的函数“cv”，这个函数可以在每一次迭代中使用交叉验证，并返回理想的决策树数量。</p>
+</li>
+<li><p>对于给定的学习速率和决策树数量，进行<strong>决策树特定参数调优</strong>(max_depth, min_child_weight, gamma, subsample, colsample_bytree)。在确定一棵树的过程中，我们可以选择不同的参数，待会儿我会举例说明。</p>
+</li>
+<li><p>xgboost的<strong>正则化参数</strong>的调优。(lambda, alpha)。这些参数可以降低模型的复杂度，从而提高模型的表现。</p>
+</li>
+<li><p>降低学习速率，确定理想参数。</p>
+</li>
+</ol>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+      
+    </div>
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>Donate comment here</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.png" alt="FGY 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="FGY 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    FGY
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://frankblog.site/2018/06/25/数据挖掘面试总结(一)/" title="数据挖掘面试总结(一)">http://frankblog.site/2018/06/25/数据挖掘面试总结(一)/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/面经/" rel="tag"><i class="fa fa-tag"></i> 面经</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/06/25/浅谈Hbase/" rel="next" title="浅谈Hbase">
+                <i class="fa fa-chevron-left"></i> 浅谈Hbase
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+  <aside id="sidebar" class="sidebar">
+    
+      <div id="sidebar-dimmer"></div>
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/风景.jpeg"
+                alt="FGY" />
+            
+              <p class="site-author-name" itemprop="name">FGY</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+            
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">28</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">37</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+
+            
+
+          </nav>
+
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/fgyeason" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.kaggle.com/fgy0303" target="_blank" title="Kaggle">
+                      
+                        <i class="fa fa-fw fa-database"></i>Kaggle</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://music.163.com/#/playlist?id=2130685222" target="_blank" title="云音乐">
+                      
+                        <i class="fa fa-fw fa-music"></i>云音乐</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+
+          
+            <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+              <div class="links-of-blogroll-title">
+                <i class="fa  fa-fw fa-link"></i>
+                Links
+              </div>
+              <ul class="links-of-blogroll-list">
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://xgboost.apachecn.org/cn/latest/" title="XGBoost" target="_blank">XGBoost</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.lfd.uci.edu/~gohlke/pythonlibs/#wordcloud" title="Py_whl" target="_blank">Py_whl</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.coursera.org/" title="Coursera" target="_blank">Coursera</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://juejin.im" title="掘金" target="_blank">掘金</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://uqer.io/data/browse/0/?page=1" title="量化" target="_blank">量化</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="https://www.jiqizhixin.com/" title="机器之心" target="_blank">机器之心</a>
+                  </li>
+                
+                  <li class="links-of-blogroll-item">
+                    <a href="http://tool.chinaz.com/" title="站长工具" target="_blank">站长工具</a>
+                  </li>
+                
+              </ul>
+            </div>
+          
+          
+
+          
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#数据结构"><span class="nav-number">1.</span> <span class="nav-text">数据结构</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#栈的接口"><span class="nav-number">1.1.</span> <span class="nav-text">栈的接口</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#算法"><span class="nav-number">1.2.</span> <span class="nav-text">算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#无序表查找"><span class="nav-number">1.3.</span> <span class="nav-text">无序表查找</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#有序表查找"><span class="nav-number">1.4.</span> <span class="nav-text">有序表查找</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-二分查找-Binary-Search"><span class="nav-number">1.4.1.</span> <span class="nav-text">1. 二分查找(Binary Search)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-插值查找"><span class="nav-number">1.4.2.</span> <span class="nav-text">2. 插值查找</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#线性索引查找"><span class="nav-number">1.5.</span> <span class="nav-text">线性索引查找</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二叉树遍历"><span class="nav-number">1.6.</span> <span class="nav-text">二叉树遍历</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#散列表（哈希表）"><span class="nav-number">1.7.</span> <span class="nav-text">散列表（哈希表）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#散列函数的构造方法"><span class="nav-number">1.7.1.</span> <span class="nav-text">散列函数的构造方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#处理散列冲突"><span class="nav-number">1.7.2.</span> <span class="nav-text">处理散列冲突</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#手推LR和SVM"><span class="nav-number">2.</span> <span class="nav-text">手推LR和SVM</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#LR"><span class="nav-number">2.1.</span> <span class="nav-text">LR</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SVM"><span class="nav-number">2.2.</span> <span class="nav-text">SVM</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#xgboost调参"><span class="nav-number">3.</span> <span class="nav-text">xgboost调参</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#XGBoost的参数"><span class="nav-number">3.1.</span> <span class="nav-text">XGBoost的参数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#通用参数"><span class="nav-number">3.1.1.</span> <span class="nav-text"> 通用参数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#booster-默认gbtree"><span class="nav-number">3.1.1.1.</span> <span class="nav-text">booster[默认gbtree]</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#silent-默认0"><span class="nav-number">3.1.1.2.</span> <span class="nav-text">silent[默认0]</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#nthread-默认值为最大可能的线程数"><span class="nav-number">3.1.1.3.</span> <span class="nav-text">nthread[默认值为最大可能的线程数]</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#booster参数"><span class="nav-number">3.1.2.</span> <span class="nav-text"> booster参数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#eta-默认0-3"><span class="nav-number">3.1.2.1.</span> <span class="nav-text">eta[默认0.3]</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#min-child-weight-默认1"><span class="nav-number">3.1.2.2.</span> <span class="nav-text">min_child_weight[默认1]</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#max-depth-默认6"><span class="nav-number">3.1.2.3.</span> <span class="nav-text">max_depth[默认6]</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#max-leaf-nodes"><span class="nav-number">3.1.2.4.</span> <span class="nav-text">max_leaf_nodes</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#gamma-默认0"><span class="nav-number">3.1.2.5.</span> <span class="nav-text">gamma[默认0]</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#max-delta-step-默认0"><span class="nav-number">3.1.2.6.</span> <span class="nav-text">max_delta_step[默认0]</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#subsample-默认1"><span class="nav-number">3.1.2.7.</span> <span class="nav-text">subsample[默认1]</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#colsample-bytree-默认1"><span class="nav-number">3.1.2.8.</span> <span class="nav-text">colsample_bytree[默认1]</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#colsample-bylevel-默认1"><span class="nav-number">3.1.2.9.</span> <span class="nav-text">colsample_bylevel[默认1]</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#lambda-默认1"><span class="nav-number">3.1.2.10.</span> <span class="nav-text">lambda[默认1]</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#alpha-默认1"><span class="nav-number">3.1.2.11.</span> <span class="nav-text">alpha[默认1]</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#scale-pos-weight-默认1"><span class="nav-number">3.1.2.12.</span> <span class="nav-text">scale_pos_weight[默认1]</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#学习目标参数"><span class="nav-number">3.1.3.</span> <span class="nav-text">学习目标参数</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#objective-默认reg-linear"><span class="nav-number">3.1.3.1.</span> <span class="nav-text">objective[默认reg:linear]</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#eval-metric-默认值取决于objective参数的取值"><span class="nav-number">3.1.3.2.</span> <span class="nav-text">eval_metric[默认值取决于objective参数的取值]</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#seed-默认0"><span class="nav-number">3.1.3.3.</span> <span class="nav-text">seed(默认0)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参数调优的一般方法"><span class="nav-number">3.1.4.</span> <span class="nav-text">参数调优的一般方法</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=110 src="//music.163.com/outchain/player?type=0&id=2130685222&auto=0&height=90"></iframe>
+
+      
+
+    </div>
+  </aside>
+
+
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+<div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">FGY</span>
+
+  
+</div>
+
+
+
+  <div class="powered-by">
+  <i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+    本站访客数: <span id="busuanzi_value_site_uv"></span>人
+  </span>
+  </div>
+<span>|</span>
+  <div class="powered-by">
+  <i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+    访问量: <span id="busuanzi_value_site_pv"></span>次
+  </span>
+  </div>
+
+
+<!--  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+-->
+<!--
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共96.4k字</span>
+</div>
+-->
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+      <div id="needsharebutton-float">
+        <span class="btn">
+          <i class="fa fa-share-alt" aria-hidden="true"></i>
+        </span>
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+
+  <script>
+    
+    
+      flOptions = {};
+      
+          flOptions.iconStyle = "box";
+      
+          flOptions.boxForm = "horizontal";
+      
+          flOptions.position = "middleRight";
+      
+          flOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-float', flOptions);
+    
+  </script>
+
+  
+
+  
+  
+
+
+  
+
+  
+
+<!-- -->
+  
+</body>
+</html>
+
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/love.js"></script>
