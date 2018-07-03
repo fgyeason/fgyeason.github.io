@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://frankblog.site/about/index.html</loc>
+    
+    <lastmod>2018-07-02T09:45:59.305Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://frankblog.site/2018/05/30/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80%EF%BC%88%E4%BA%8C%EF%BC%89/</loc>
     
     <lastmod>2018-07-02T08:10:32.808Z</lastmod>
@@ -26,13 +33,6 @@
     <loc>http://frankblog.site/books/index.html</loc>
     
     <lastmod>2018-06-26T12:25:14.511Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://frankblog.site/about/index.html</loc>
-    
-    <lastmod>2018-06-26T12:23:58.298Z</lastmod>
     
   </url>
   
