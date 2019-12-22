@@ -1,3 +1,4 @@
-# fgyeason.github.io
-My personal website
-# 暂不更新  - 2018.06
+# My personal website
+# 说明
+图床已挂暂停更新  
+            - 2018.06
